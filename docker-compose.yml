@@ -2,7 +2,8 @@ file-system:
   image: file-system
   environment:
     # The start of active environment variables. Set as needed.
-    - MONGODB_IP=database
+    - MONGODB_IP=docstore
+    - POSTGRESQL_IP=authstore
     # - MONGODB_PORT
     # - MONGODB_DATABASE=USE_HASKELL_DB
     # - https_proxy=http://www-proxy.scss.tcd.ie:8080
@@ -11,8 +12,17 @@ file-system:
   ports:
     - "8080:8080"
   links:
-    - database
-database:
+    - docstore
+
+docstore:
   image: mongo:3.2.11
   ports:
     - "27017:27017"
+
+authstore:
+  restart: always
+  image: postgres:9.6.1
+  ports:
+    - "5433:5432"
+  environment:
+    POSTGRES_USER: docker
