@@ -24,6 +24,10 @@ executable auth-service-exe
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
+                     , monad-logger
+                     , persistent
+                     , persistent-postgresql
+                     , persistent-template
                      , auth-service
   default-language:    Haskell2010
 

@@ -1,0 +1,17 @@
+[1 of 1] Compiling Main             ( /private/var/folders/mq/56s5rnr522n7tyq53dlrr1640000gn/T/stack64775/postgresql-libpq-0.9.2.0/Setup.hs, /private/var/folders/mq/56s5rnr522n7tyq53dlrr1640000gn/T/stack64775/postgresql-libpq-0.9.2.0/.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/setup/Main.o )
+Linking /private/var/folders/mq/56s5rnr522n7tyq53dlrr1640000gn/T/stack64775/postgresql-libpq-0.9.2.0/.stack-work/dist/x86_64-osx/Cabal-1.24.0.0/setup/setup ...
+Configuring postgresql-libpq-0.9.2.0...
+Building postgresql-libpq-0.9.2.0...
+Preprocessing library postgresql-libpq-0.9.2.0...
+LibPQ.hsc:1916:9: warning: 'hsc_alignment' macro redefined [-Wmacro-redefined]
+#define hsc_alignment(t ) hsc_printf ( "%lu", (unsigned long)offsetof(struct {char x__; t (y__); }, y__));
+        ^
+/Users/ciaranfinn/.stack/programs/x86_64-osx/ghc-8.0.1/lib/ghc-8.0.1/template-hsc.h:88:9: note: previous definition is here
+#define hsc_alignment(t...) \
+        ^
+1 warning generated.
+[1 of 2] Compiling Database.PostgreSQL.LibPQ.Internal ( src/Database/PostgreSQL/LibPQ/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Database/PostgreSQL/LibPQ/Internal.o )
+[2 of 2] Compiling Database.PostgreSQL.LibPQ ( .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Database/PostgreSQL/LibPQ.hs, .stack-work/dist/x86_64-osx/Cabal-1.24.0.0/build/Database/PostgreSQL/LibPQ.o )
+Installing library in
+/Users/ciaranfinn/.stack/snapshots/x86_64-osx/lts-7.10/8.0.1/lib/x86_64-osx-ghc-8.0.1/postgresql-libpq-0.9.2.0-IWEdPrPraPeE94ud73Ope3
+Registering postgresql-libpq-0.9.2.0...

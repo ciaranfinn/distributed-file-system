@@ -14,6 +14,34 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 0)
 
+/* package monad-logger-0.3.20.1 */
+#define VERSION_monad_logger "0.3.20.1"
+#define MIN_VERSION_monad_logger(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 20)
+
+/* package persistent-2.6 */
+#define VERSION_persistent "2.6"
+#define MIN_VERSION_persistent(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  6 || \
+  (major1) == 2 && (major2) == 6 && (minor) <= 0)
+
+/* package persistent-postgresql-2.6 */
+#define VERSION_persistent_postgresql "2.6"
+#define MIN_VERSION_persistent_postgresql(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  6 || \
+  (major1) == 2 && (major2) == 6 && (minor) <= 0)
+
+/* package persistent-template-2.5.1.6 */
+#define VERSION_persistent_template "2.5.1.6"
+#define MIN_VERSION_persistent_template(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  5 || \
+  (major1) == 2 && (major2) == 5 && (minor) <= 1)
+
 /* tool gcc-4.2.1 */
 #define TOOL_VERSION_gcc "4.2.1"
 #define MIN_TOOL_VERSION_gcc(major1,major2,minor) (\
