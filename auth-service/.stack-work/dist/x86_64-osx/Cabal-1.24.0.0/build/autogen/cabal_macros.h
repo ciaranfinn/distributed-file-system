@@ -91,7 +91,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 1)
 
-#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-wI9v1QGqysGBqaKj7NRCA"
+#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-L5GUpOkZ96VKiSsVIED2ov"
 
-#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-wI9v1QGqysGBqaKj7NRCA"
+#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-L5GUpOkZ96VKiSsVIED2ov"
 

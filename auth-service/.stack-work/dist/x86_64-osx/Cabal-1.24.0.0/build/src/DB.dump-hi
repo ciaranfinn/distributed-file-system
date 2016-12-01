@@ -1,0 +1,2820 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 16:25:28.004764 UTC
+
+interface auth-service-0.1.0.0-L5GUpOkZ96VKiSsVIED2ov:DB [family instance module] 8001
+  interface hash: cac4ad4801bfec87df8517d53c89b181
+  ABI hash: 64a06f9ee706201b3f156de515b5ee7c
+  export-list hash: 87951d73e667e6f9d80a7efb12c97ab6
+  orphan hash: 3c004fad5d505aa140eff2b14f95722d
+  flag hash: c3e571e0a43863f33c0ce3e93f4501b0
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  DB.runMigrate
+module dependencies:
+package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
+                      aeson-compat-0.3.6@aeson-compat-0.3.6-5wE6V2cyaFcB5no9HXBKW5
+                      array-0.5.1.1@array-0.5.1.1
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR
+                      auto-update-0.1.4@auto-update-0.1.4-GAesfFmqoZzBz6e09kRyzb
+                      base-4.9.0.0
+                      base-compat-0.9.1@base-compat-0.9.1-tmPpmtbHbvIDjFWbkjGrR
+                      base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-In9M41tLtcS9QYt3QpGpNY
+                      binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-KWDLbdBYSBoALiMW0LHIz1
+                      blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C
+                      blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
+                      conduit-1.2.8@conduit-1.2.8-5FcKXI45VDc6lGPbFuJAWM
+                      conduit-extra-1.1.15@conduit-extra-1.1.15-53svZ1V22a02WgMiq2YICw
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.2.6.2@directory-1.2.6.2
+                      dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv
+                      easy-file-0.2.1@easy-file-0.2.1-bAUkz2rC2kFhBbPjw2Of5
+                      exceptions-0.8.3@exceptions-0.8.3-7py7fmRxowDFpHmiHGKrTb
+                      fast-logger-2.4.7@fast-logger-2.4.7-E7H6TuZQzia59KuB50vayl
+                      filepath-1.4.1.0@filepath-1.4.1.0
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
+                      http-api-data-0.2.4@http-api-data-0.2.4-3jwS7OrPl3l4oJfG3gRZ5C
+                      integer-gmp-1.0.0.1
+                      lifted-base-0.2.3.8@lifted-base-0.2.3.8-KLkd0w1UJqu6nE8oVTTEBy
+                      mmorph-1.0.9@mmorph-1.0.9-DmSwQqk5nLj7roLAcydGz
+                      monad-control-1.0.1.0@monad-control-1.0.1.0-HoNEBoNfniX3vjSfkI7WTT
+                      monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK
+                      monad-loops-0.4.3@monad-loops-0.4.3-1xZFtRVMQPC4X8bjTBWqNi
+                      mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      old-locale-1.0.0.7@old-locale-1.0.0.7-6glXNhHF891B41ZfuI8hU8
+                      old-time-1.1.0.3@old-time-1.1.0.3-IcvdkJUsE9M8t3io8peAEp
+                      path-pieces-0.2.1@path-pieces-0.2.1-EQ6YdjSujhVE8ECatsqK1q
+                      persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD
+                      persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK
+                      persistent-template-2.5.1.6@persistent-template-2.5.1.6-L1UJyeURwQyFqq8arz68gW
+                      postgresql-libpq-0.9.2.0@postgresql-libpq-0.9.2.0-IWEdPrPraPeE94ud73Ope3
+                      postgresql-simple-0.5.2.1@postgresql-simple-0.5.2.1-3INwbAr3KaOko5GoR6I2w
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
+                      resource-pool-0.2.3.2@resource-pool-0.2.3.2-9vTgJsy3ECMB5KkdzRIRAh
+                      resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z
+                      scientific-0.3.4.9@scientific-0.3.4.9-6oTYuCcx6H5BsTGU7D2Gk3
+                      silently-1.2.5@silently-1.2.5-Ek776fxSdtm4h8aXqt6CNw
+                      stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
+                      stm-chans-3.0.0.4@stm-chans-3.0.0.4-4lLWE8CZnvmDZJW5bKkus1
+                      tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
+                      template-haskell-2.11.0.0
+                      text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
+                      time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-1j5dGjxxtiTDuAsO86iSk0
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-base-0.4.4@transformers-base-0.4.4-25SoAegOdaF8rLEnnb5jPI
+                      unix-2.7.2.0@unix-2.7.2.0
+                      unix-time-0.3.7@unix-time-0.3.7-HcxGsrnTmTlC98pyanzoMW
+                      unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
+                      uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx
+                      vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Generic
+         aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Instances
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Text.Internal
+         base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
+         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistQuery
+         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistStore
+         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistUnique
+         persistent-template-2.5.1.6@persistent-template-2.5.1.6-L1UJyeURwQyFqq8arz68gW:Database.Persist.TH
+         stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         unix-time-0.3.7@unix-time-0.3.7-HcxGsrnTmTlC98pyanzoMW:Data.UnixTime.Diff
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
+                         base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.List.NonEmpty
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Semigroup
+                         base-4.9.0.0:Data.Type.Equality base-4.9.0.0:Data.Version
+                         base-4.9.0.0:Data.Void base-4.9.0.0:GHC.Exts
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv:Data.DList
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         monad-control-1.0.1.0@monad-control-1.0.1.0-HoNEBoNfniX3vjSfkI7WTT:Control.Monad.Trans.Control
+                         monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK:Control.Monad.Logger
+                         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistConfig
+                         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistStore
+                         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Types.Internal
+                         persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK:Database.Persist.Postgresql
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z:Control.Monad.Trans.Resource.Internal
+                         tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashSet
+                         uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal
+                         uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal.Builder
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
+import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class abf0ee780081829844ac5a316c79cb49
+import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Internal 835329596cce5a67256b494ea96b1e48
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:Control.Monad.IO.Class d702028d883e700bd7066b031147030d
+import  -/  base-4.9.0.0:Data.Either bd9f099b82d4ed2d98c56d7144ac6957
+import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
+import  -/  base-4.9.0.0:Data.Proxy aa86c72628cf3b1ceb0816ca84687d80
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.Int 2421020ac5d687542a6612a08a16b1fd
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Read 817c914615ac8e308afc0c675fb3f671
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.ParserCombinators.ReadPrec 9512e2f4b227f507f87a150887202aed
+import  -/  base-4.9.0.0:Text.Read.Lex fe3dd7b823826bf6870140c5363f9596
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Internal 96a214b84fd13ce168aecf88c70c8f1b
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base 8d095ad71634b5551ba5dc1307b7f9e5
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  http-api-data-0.2.4@http-api-data-0.2.4-3jwS7OrPl3l4oJfG3gRZ5C:Web.HttpApiData.Internal 5e05840a26e3e4a6a82ac5352d50abe8
+import  -/  monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK:Control.Monad.Logger 2f87c925edad5966dbd05a4d603919f5
+import  -/  path-pieces-0.2.1@path-pieces-0.2.1-EQ6YdjSujhVE8ECatsqK1q:Web.PathPieces 30e3f3047e2c5650764b43dd339b1722
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist 506a8385e99497f86fb9b5ecfccfc606
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistEntity 16dc9aa41de02addc67315556e1e5675
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistField 274f06d2e8574c3070efae4a1a239d65
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistStore 0a4d86d70e21864c05e2e3e5e796f5b8
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Class 005a1877921756951ff1afadd0b5864c
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Migration 4900fedc186c725cecfb48f350cdc2dd
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Run 965a64b3015b876e71ce73bed1657280
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Types 28ab73798fb587e82ac34b8fd4fe757c
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Types.Internal b631cea7045d3209db836225fbeaca60
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Types.Base e51c6c72241c968081e48ef827196fbe
+import  -/  persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK:Database.Persist.Postgresql be3582dc9599bd8f4ee48c6f9709331d
+import  -/  persistent-template-2.5.1.6@persistent-template-2.5.1.6-L1UJyeURwQyFqq8arz68gW:Database.Persist.TH 45e3119274a417e7451ad87411bcd338
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 00261e8e5b51b919ebe8da24b37dfdbd
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 530216acfbfab25df053b0caac6d6a57
+import  -/  unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base 5eddd47f78c7f92d8ccf632680ed9618
+import  -/  unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Strict a02e9d1868a607a28ba5e020d8376da1
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fEqKey ::
+    GHC.Classes.Eq (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fEqKey_$c==
+                  DB.$fEqKey_$c/= -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fEqKey_$c/= ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.neInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fEqKey_$c== ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.eqInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fFromHttpApiDataKey ::
+    Web.HttpApiData.Internal.FromHttpApiData
+      (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fFromHttpApiDataKey_$cparseUrlPiece
+                  DB.$fFromHttpApiDataKey_$cparseHeader
+                  DB.$fFromHttpApiDataKey_$cparseUrlPiece -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fFromHttpApiDataKey_$cparseHeader ::
+    Data.ByteString.Internal.ByteString
+    -> Data.Either.Either
+         Data.Text.Internal.Text
+         (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1, Strictness: <L,U(U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.HttpApiData.Internal.$fFromHttpApiDataInt64_$cparseHeader
+                  `cast`
+                (<Data.ByteString.Internal.ByteString>_R
+                 ->_R (Data.Either.Either
+                         <Data.Text.Internal.Text>_R
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (DB.N:R:KeyUser[0]))
+                                        (Sym (DB.D:R:KeyUser0[0]))))))_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fFromHttpApiDataKey_$cparseUrlPiece ::
+    Data.Text.Internal.Text
+    -> Data.Either.Either
+         Data.Text.Internal.Text
+         (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Web.HttpApiData.Internal.$fFromHttpApiDataInt64_$cparseUrlPiece
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R (Data.Either.Either
+                         <Data.Text.Internal.Text>_R
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (DB.N:R:KeyUser[0]))
+                                        (Sym (DB.D:R:KeyUser0[0]))))))_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fFromJSONKey ::
+    Data.Aeson.Types.Class.FromJSON
+      (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- Arity: 1, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                DB.$fFromJSONKey_$cparseJSON
+                  `cast`
+                (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                          <Database.Persist.Class.PersistEntity.Key DB.User>_N)) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fFromJSONKey_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Data.Aeson.Types.Instances.$fFromJSONInt64_$cparseJSON
+                  `cast`
+                (<Data.Aeson.Types.Internal.Value>_R
+                 ->_R (Data.Aeson.Types.Internal.Parser
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (DB.N:R:KeyUser[0]))
+                                        (Sym (DB.D:R:KeyUser0[0]))))))_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fOrdKey ::
+    GHC.Classes.Ord (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fEqKey
+                  DB.$fOrdKey_$ccompare
+                  DB.$fOrdKey_$c<
+                  DB.$fOrdKey_$c<=
+                  DB.$fOrdKey_$c>
+                  DB.$fOrdKey_$c>=
+                  DB.$fOrdKey_$cmax
+                  DB.$fOrdKey_$cmin -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fOrdKey_$c< ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.ltInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fOrdKey_$c<= ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.leInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fOrdKey_$c> ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.gtInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fOrdKey_$c>= ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.geInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fOrdKey_$ccompare ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.$fOrdInt64_$ccompare
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <GHC.Types.Ordering>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fOrdKey_$cmax ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.$fOrdInt64_$cmax
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fOrdKey_$cmin ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.$fOrdInt64_$cmin
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPathPieceKey ::
+    Web.PathPieces.PathPiece
+      (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fPathPieceKey_$cfromPathPiece
+                  DB.$fPathPieceKey_$ctoPathPiece -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPathPieceKey_$cfromPathPiece ::
+    Data.Text.Internal.Text
+    -> GHC.Base.Maybe
+         (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1, Strictness: <S(SSS),1*U(U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.PathPieces.$fPathPieceInt64_$sparseIntegral
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R (GHC.Base.Maybe
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (DB.N:R:KeyUser[0]))
+                                        (Sym (DB.D:R:KeyUser0[0]))))))_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPathPieceKey_$ctoPathPiece ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.PathPieces.$fPathPieceInt64_$ctoPathPiece
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <Data.Text.Internal.Text>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser ::
+    Database.Persist.Class.PersistEntity.PersistEntity DB.User
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DB.User
+                  DB.$fPersistFieldKey
+                  DB.$fToJSONKey
+                  DB.$fFromJSONKey_$cparseJSON
+                    `cast`
+                  (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                            <Database.Persist.Class.PersistEntity.Key DB.User>_N))
+                  DB.$fShowKey
+                  DB.$fReadKey
+                  DB.$fEqKey
+                  DB.$fOrdKey
+                  DB.$fPersistEntityUser_$ckeyToValues
+                  DB.$fPersistEntityUser_$ckeyFromValues
+                  DB.$fPersistEntityUser_$s$WUserId
+                  DB.$fPersistEntityUser_$centityDef
+                  DB.$fPersistEntityUser_$cpersistFieldDef
+                  DB.$fPersistEntityUser_$ctoPersistFields
+                  DB.$fPersistEntityUser_$cfromPersistValues
+                  DB.$fPersistEntityUser_$cpersistUniqueKeys
+                  DB.$fPersistEntityUser_$cpersistUniqueToFieldNames
+                  DB.$fPersistEntityUser_$cpersistUniqueToValues
+                  DB.$fPersistEntityUser_$cfieldLens -}
+6ecbaede52b1046e392d3740bd5c7b7a
+  $fPersistEntityUser1 :: [Database.Persist.Types.Base.PersistValue]
+  {- Strictness: x -}
+171f5aa357b1e4a9cf30c974c2716637
+  $fPersistEntityUser10 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "Data.Int"#) -}
+2307902f7e8cdc3c9f79dc1c351dca12
+  $fPersistEntityUser11 :: Database.Persist.Types.Base.FieldType
+  {- Unfolding: (Database.Persist.Types.Base.FTTypeCon
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   DB.$fPersistEntityUser12) -}
+f20119a3ce8006cb9bc808098c646c91
+  $fPersistEntityUser12 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "UserId"#) -}
+7fdd751f5c489b6d113dc843cfa31890
+  $fPersistEntityUser13 :: Database.Persist.Types.Base.EntityDef
+  {- Unfolding: (case Data.Text.Show.unpackCString#
+                        "User"# of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 case Data.Text.Show.unpackCString#
+                        "user"# of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
+                 case Data.Text.Show.unpackCString#
+                        "Id"# of nt2 { Data.Text.Internal.Text ipv6 ipv7 ipv8 ->
+                 case Data.Text.Show.unpackCString#
+                        "id"# of nt3 { Data.Text.Internal.Text ipv9 ipv10 ipv11 ->
+                 case DB.$fPersistEntityUser_$sfromList
+                        @ [Database.Persist.Types.Base.ExtraLine]
+                        (GHC.Types.[]
+                           @ (Data.Text.Internal.Text,
+                              [Database.Persist.Types.Base.ExtraLine])) of dt { DEFAULT ->
+                 Database.Persist.Types.Base.EntityDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt1 `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   (Database.Persist.Types.Base.FieldDef
+                      nt2 `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                      nt3 `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                      DB.$fPersistEntityUser11
+                      Database.Persist.Types.Base.SqlInt64
+                      (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                      GHC.Types.True
+                      (Database.Persist.Types.Base.ForeignRef
+                         nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                         DB.$fPersistEntityUser7))
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   DB.$fPersistEntityUser16
+                   (GHC.Types.[] @ Database.Persist.Types.Base.UniqueDef)
+                   (GHC.Types.[] @ Database.Persist.Types.Base.ForeignDef)
+                   DB.$fPersistEntityUser14
+                   dt
+                   GHC.Types.False } } } } }) -}
+9efc86a7d0a44e9d79bf4004c8841bc3
+  $fPersistEntityUser14 :: [Data.Text.Internal.Text]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Text
+                   DB.$fPersistEntityUser15
+                   (GHC.Types.[] @ Data.Text.Internal.Text)) -}
+1b2f35e2b94aa3f5e48103b71bd388cb
+  $fPersistEntityUser15 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "Show"#) -}
+6918bd2a316edc13be2223004a00112f
+  $fPersistEntityUser16 :: [Database.Persist.Types.Base.FieldDef]
+  {- Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.FieldDef
+                   DB.$fPersistEntityUser17
+                   (GHC.Types.[] @ Database.Persist.Types.Base.FieldDef)) -}
+95ae9c0c2f39c0cccdd77716148d0af8
+  $fPersistEntityUser17 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case DB.$fPersistEntityUser18 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 Database.Persist.Types.Base.FieldDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   DB.$fPersistEntityUser4
+                   Database.Persist.Types.Base.SqlString
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   GHC.Types.True
+                   Database.Persist.Types.Base.NoReference }) -}
+6652da89e7f48cc91659682283de7a55
+  $fPersistEntityUser18 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "name"#) -}
+93490ac12ad5be2808040587272e8c88
+  $fPersistEntityUser19 ::
+    Data.Map.Base.Map Data.Text.Internal.Text a1
+    -> [(Data.Text.Internal.Text, a1)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+58525f007c11907e162cae51ba7490c7
+  $fPersistEntityUser2 ::
+    [(Database.Persist.Types.Base.HaskellName,
+      Database.Persist.Types.Base.DBName)]
+  {- Strictness: x -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser20 ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    Data.Type.Equality.~ Database.Persist.Class.PersistEntity.Key
+                           DB.User
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$fPersistEntityUser21
+                  `cast`
+                (Sym (Data.Type.Equality.N:~[0]
+                          <*>_N) <Database.Persist.Class.PersistEntity.Key
+                                    DB.User>_N <Database.Persist.Class.PersistEntity.Key
+                                                  DB.User>_N) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser21 ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    GHC.Types.~~ Database.Persist.Class.PersistEntity.Key DB.User
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                   @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                   @~ <Database.Persist.Class.PersistEntity.Key DB.User>_N) -}
+f84d418f27c9cb22520df164c440ed8c
+  $fPersistEntityUser3 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case Data.Text.Show.unpackCString#
+                        "name"# of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 Database.Persist.Types.Base.FieldDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   DB.$fPersistEntityUser4
+                   Database.Persist.Types.Base.SqlString
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   GHC.Types.True
+                   Database.Persist.Types.Base.NoReference }) -}
+bb50dfe0b4eba4938e9578f4e8a1effe
+  $fPersistEntityUser4 :: Database.Persist.Types.Base.FieldType
+  {- Unfolding: (Database.Persist.Types.Base.FTTypeCon
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   DB.$fPersistEntityUser5) -}
+558c5ce6ca60fec16d6b97d2d08a5e59
+  $fPersistEntityUser5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "String"#) -}
+de726bacd613821dd02bc2bcc53b6026
+  $fPersistEntityUser6 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case Data.Text.Show.unpackCString#
+                        "Id"# of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 case Data.Text.Show.unpackCString#
+                        "id"# of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
+                 case Data.Text.Show.unpackCString#
+                        "User"# of nt2 { Data.Text.Internal.Text ipv6 ipv7 ipv8 ->
+                 Database.Persist.Types.Base.FieldDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt1 `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   DB.$fPersistEntityUser11
+                   Database.Persist.Types.Base.SqlInt64
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   GHC.Types.True
+                   (Database.Persist.Types.Base.ForeignRef
+                      nt2 `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                      DB.$fPersistEntityUser7) } } }) -}
+90f9c874999c11377e550764ed06459a
+  $fPersistEntityUser7 :: Database.Persist.Types.Base.FieldType
+  {- Unfolding: (Database.Persist.Types.Base.FTTypeCon
+                   DB.$fPersistEntityUser9
+                   DB.$fPersistEntityUser8) -}
+fe4277d3b5459a8e4f1b2b4cfb31a08a
+  $fPersistEntityUser8 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "Int64"#) -}
+d099178064673998908cc8e0f5e0aa6d
+  $fPersistEntityUser9 :: GHC.Base.Maybe Data.Text.Internal.Text
+  {- Unfolding: (GHC.Base.Just
+                   @ Data.Text.Internal.Text
+                   DB.$fPersistEntityUser10) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$centityDef ::
+    GHC.Base.Monad m =>
+    m DB.User -> Database.Persist.Types.Base.EntityDef
+  {- Arity: 2, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ (m :: * -> *)
+                   ($dMonad :: GHC.Base.Monad m)
+                   (ds :: m DB.User) ->
+                 DB.$fPersistEntityUser13) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$cfieldLens ::
+    Database.Persist.Class.PersistEntity.EntityField DB.User field
+    -> forall (f :: * -> *).
+       GHC.Base.Functor f =>
+       (field -> f field)
+       -> Database.Persist.Class.PersistEntity.Entity DB.User
+       -> f (Database.Persist.Class.PersistEntity.Entity DB.User)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><L,U(U,U,U(U))>,
+     Unfolding: (\ @ field
+                   (dk :: Database.Persist.Class.PersistEntity.EntityField
+                            DB.User field)
+                   @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (eta :: field -> f field)
+                   (eta1 :: Database.Persist.Class.PersistEntity.Entity DB.User) ->
+                 case dk `cast` (DB.D:R:EntityFieldUsertyp0[0] <field>_N) of wild {
+                   DB.UserId $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ field
+                             @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <field>_N <Database.Persist.Class.PersistEntity.Key
+                                                               DB.User>_N) of cobox0 { DEFAULT ->
+                      GHC.Base.fmap
+                        @ f
+                        $dFunctor
+                        @ field
+                        @ (Database.Persist.Class.PersistEntity.Entity DB.User)
+                        (\ (key :: field) ->
+                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity ds value ->
+                         Database.Persist.Class.PersistEntity.Entity
+                           @ DB.User
+                           $dPersistEntity
+                           key `cast` (Sub cobox0)
+                           value })
+                        (eta
+                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity ds1 ds2 ->
+                            ds1 `cast` (Sub (Sym cobox0)) })) }
+                   DB.UserName $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ field
+                             @ GHC.Base.String
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <field>_N <GHC.Base.String>_N) of cobox0 { DEFAULT ->
+                      GHC.Base.fmap
+                        @ f
+                        $dFunctor
+                        @ field
+                        @ (Database.Persist.Class.PersistEntity.Entity DB.User)
+                        (\ (x :: field) ->
+                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity key value ->
+                         Database.Persist.Class.PersistEntity.Entity
+                           @ DB.User
+                           $dPersistEntity
+                           key
+                           (case value of wild2 { DB.User ds ->
+                            DB.$WUser x `cast` (Sub cobox0) }) })
+                        (eta
+                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity ds1 ds2 ->
+                            case ds2 of wild2 { DB.User ds ->
+                            ds `cast` (Sub (Sym cobox0)) } })) } }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$cfromPersistValues ::
+    [Database.Persist.Types.Base.PersistValue]
+    -> Data.Either.Either Data.Text.Internal.Text DB.User
+  {- Arity: 1, Strictness: <S,U> -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$ckeyFromValues ::
+    [Database.Persist.Types.Base.PersistValue]
+    -> Data.Either.Either
+         Data.Text.Internal.Text
+         (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [Database.Persist.Types.Base.PersistValue]) ->
+                 case (Database.Persist.Class.PersistField.$fPersistFieldInt64_$cfromPersistValue
+                         (Database.Persist.TH.headNote x))
+                        `cast`
+                      (Data.Either.Either
+                         <Data.Text.Internal.Text>_R
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))))_R of wild {
+                   Data.Either.Left x1
+                   -> Data.Either.Left
+                        @ Data.Text.Internal.Text
+                        @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                        x1
+                   Data.Either.Right y
+                   -> Data.Either.Right
+                        @ Data.Text.Internal.Text
+                        @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                        y `cast`
+                        (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))) }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$ckeyToValues ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> [Database.Persist.Types.Base.PersistValue]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Database.Persist.Class.PersistEntity.Key DB.User) ->
+                 GHC.Types.:
+                   @ Database.Persist.Types.Base.PersistValue
+                   (Database.Persist.Types.Base.PersistInt64
+                      x `cast`
+                      (Trans
+                           (DB.D:R:KeyUser0[0])
+                           (Trans
+                                (DB.N:R:KeyUser[0])
+                                (Trans
+                                     (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0])
+                                     (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0])))))
+                   (GHC.Types.[] @ Database.Persist.Types.Base.PersistValue)) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$cpersistFieldDef ::
+    Database.Persist.Class.PersistEntity.EntityField DB.User typ
+    -> Database.Persist.Types.Base.FieldDef
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ typ
+                   (ds :: Database.Persist.Class.PersistEntity.EntityField
+                            DB.User typ) ->
+                 case ds `cast` (DB.D:R:EntityFieldUsertyp0[0] <typ>_N) of wild {
+                   DB.UserId $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ typ
+                             @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <typ>_N <Database.Persist.Class.PersistEntity.Key
+                                                             DB.User>_N) of cobox0 { DEFAULT ->
+                      DB.$fPersistEntityUser6 }
+                   DB.UserName $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ typ
+                             @ GHC.Base.String
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <typ>_N <GHC.Base.String>_N) of cobox0 { DEFAULT ->
+                      DB.$fPersistEntityUser3 } }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$cpersistUniqueKeys ::
+    DB.User -> [Database.Persist.Class.PersistEntity.Unique DB.User]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: DB.User) ->
+                 case ds of wild { DB.User _name ->
+                 GHC.Types.[]
+                   @ (Database.Persist.Class.PersistEntity.Unique DB.User) }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$cpersistUniqueToFieldNames ::
+    Database.Persist.Class.PersistEntity.Unique DB.User
+    -> [(Database.Persist.Types.Base.HaskellName,
+         Database.Persist.Types.Base.DBName)]
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Database.Persist.Class.PersistEntity.Unique DB.User) ->
+                 DB.$fPersistEntityUser2) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$cpersistUniqueToValues ::
+    Database.Persist.Class.PersistEntity.Unique DB.User
+    -> [Database.Persist.Types.Base.PersistValue]
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Database.Persist.Class.PersistEntity.Unique DB.User) ->
+                 DB.$fPersistEntityUser1) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$ctoPersistFields ::
+    DB.User -> [Database.Persist.Class.PersistField.SomePersistField]
+  {- Arity: 1, Strictness: <S(S),1*U(U)>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: DB.User) ->
+                 case ds of wild { DB.User x ->
+                 GHC.Types.:
+                   @ Database.Persist.Class.PersistField.SomePersistField
+                   (Database.Persist.Class.PersistField.SomePersistField
+                      @ GHC.Base.String
+                      Database.Persist.Class.PersistField.$fPersistField[]0
+                      x)
+                   (GHC.Types.[]
+                      @ Database.Persist.Class.PersistField.SomePersistField) }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistEntityUser_$s$WUserId ::
+    Database.Persist.Class.PersistEntity.EntityField
+      DB.User (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Strictness: m1, Inline: INLINE,
+     Unfolding: InlineRule (0, False, False)
+                (DB.UserId
+                   @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                   DB.$fPersistEntityUser20)
+                  `cast`
+                (Sym (DB.D:R:EntityFieldUsertyp0[0]) <Database.Persist.Class.PersistEntity.Key
+                                                        DB.User>_N) -}
+c346f6e06faeebda6ff47ea559e675c2
+  $fPersistEntityUser_$sfromList ::
+    [(Data.Text.Internal.Text, a)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [(Data.Text.Internal.Text, a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Base.Tip @ Data.Text.Internal.Text @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case kx of dt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                           Data.Map.Base.Bin
+                             @ Data.Text.Internal.Text
+                             @ a
+                             1#
+                             dt
+                             x
+                             (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                             (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a) }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                           case ky of ww4 { Data.Text.Internal.Text ww5 ww6 ww7 ->
+                           case Data.Text.$w$ccompare ww1 ww2 ww3 ww5 ww6 ww7 of wild4 {
+                             DEFAULT
+                             -> DB.$fPersistEntityUser19
+                                  @ a
+                                  (Data.Map.Base.Bin
+                                     @ Data.Text.Internal.Text
+                                     @ a
+                                     1#
+                                     ww
+                                     x
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a))
+                                  wild2
+                             GHC.Types.LT
+                             -> DB.$wpoly_go10
+                                  @ a
+                                  1#
+                                  (Data.Map.Base.Bin
+                                     @ Data.Text.Internal.Text
+                                     @ a
+                                     1#
+                                     ww
+                                     x
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a))
+                                  wild2 } } } } } } }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldKey ::
+    Database.Persist.Class.PersistField.PersistField
+      (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fPersistFieldKey_$ctoPersistValue
+                  DB.$fPersistFieldKey_$cfromPersistValue -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldKey_$cfromPersistValue ::
+    Database.Persist.Types.Base.PersistValue
+    -> Data.Either.Either
+         Data.Text.Internal.Text
+         (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Database.Persist.Class.PersistField.$fPersistFieldInt64_$cfromPersistValue
+                  `cast`
+                (<Database.Persist.Types.Base.PersistValue>_R
+                 ->_R (Data.Either.Either
+                         <Data.Text.Internal.Text>_R
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (DB.N:R:KeyUser[0]))
+                                        (Sym (DB.D:R:KeyUser0[0]))))))_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldKey_$ctoPersistValue ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Types.Base.PersistValue
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m3,
+     Unfolding: InlineRule (0, True, True)
+                Database.Persist.Types.Base.PersistInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <Database.Persist.Types.Base.PersistValue>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldSqlKey ::
+    Database.Persist.Sql.Class.PersistFieldSql
+      (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fPersistFieldKey
+                  DB.$fPersistFieldSqlKey_$csqlType -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldSqlKey_$csqlType ::
+    Data.Proxy.Proxy (Database.Persist.Class.PersistEntity.Key DB.User)
+    -> Database.Persist.Types.Base.SqlType
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Database.Persist.Sql.Class.$fPersistFieldSqlInt64_$csqlType
+                  `cast`
+                ((Data.Proxy.Proxy
+                    <*>_N
+                    <GHC.Int.Int64, Database.Persist.Class.PersistEntity.Key
+                                      DB.User>)_R
+                 ->_R <Database.Persist.Types.Base.SqlType>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldSqlUser ::
+    Database.Persist.Sql.Class.PersistFieldSql DB.User
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DB.User
+                  DB.$fPersistFieldUser
+                  DB.$fPersistFieldSqlUser_$csqlType -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldSqlUser_$csqlType ::
+    Data.Proxy.Proxy DB.User -> Database.Persist.Types.Base.SqlType
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Data.Proxy.Proxy DB.User) ->
+                 Database.Persist.Types.Base.SqlString) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldUser ::
+    Database.Persist.Class.PersistField.PersistField DB.User
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DB.User
+                  DB.$fPersistFieldUser_$ctoPersistValue
+                  DB.$fPersistFieldUser_$cfromPersistValue -}
+b72cca8715d4cac47b9e5ea7fe86ee02
+  $fPersistFieldUser1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 DB.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   DB.$fPersistFieldUser3
+                   DB.$fPersistFieldUser2
+                   0#
+                   ipv }) -}
+88efe8c1e262647c8b64ea64dfb73d20
+  $fPersistFieldUser2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "name"#) -}
+e594a0878362a41836e4d210813d51a6
+  $fPersistFieldUser3 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
+3b3f63e9a57942ea18d2be8195817e01
+  $fPersistFieldUser4 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        DB.$fPersistFieldUser5 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+1736b58cdb216c48952d28dadb62cda2
+  $fPersistFieldUser5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 DB.$wouter1
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   DB.$fPersistFieldUser3
+                   DB.$fPersistFieldUser2
+                   0#
+                   ipv }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldUser_$cfromPersistValue ::
+    Database.Persist.Types.Base.PersistValue
+    -> Data.Either.Either Data.Text.Internal.Text DB.User
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (eta2 :: Database.Persist.Types.Base.PersistValue) ->
+                 case Database.Persist.Class.PersistField.getPersistMap
+                        eta2 of wild {
+                   Data.Either.Left l
+                   -> Data.Either.Left @ Data.Text.Internal.Text @ DB.User l
+                   Data.Either.Right r
+                   -> DB.$fPersistEntityUser_$cfromPersistValues
+                        (GHC.Types.:
+                           @ Database.Persist.Types.Base.PersistValue
+                           (case GHC.Magic.runRW#
+                                   @ 'GHC.Types.PtrRepLifted
+                                   @ Data.Text.Internal.Text
+                                   DB.$fPersistFieldUser1 of ds1 { (#,#) ipv ipv1 ->
+                            case ipv1 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                            case Data.Aeson.Types.Instances.$w$slookup
+                                   @ Database.Persist.Types.Base.PersistValue
+                                   ww1
+                                   ww2
+                                   ww3
+                                   (DB.$fPersistFieldUser_go
+                                      r
+                                      (Data.HashMap.Base.Empty
+                                         @ Data.Text.Internal.Text
+                                         @ Database.Persist.Types.Base.PersistValue)) of wild1 {
+                              GHC.Base.Nothing -> Database.Persist.Types.Base.PersistNull
+                              GHC.Base.Just v -> v } } })
+                           (GHC.Types.[] @ Database.Persist.Types.Base.PersistValue)) }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fPersistFieldUser_$ctoPersistValue ::
+    DB.User -> Database.Persist.Types.Base.PersistValue
+  {- Arity: 1, Strictness: <L,1*U(U)>m12, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: DB.User) ->
+                 case DB.$w$ctoPersistValue w of ww { Unit# ww1 ->
+                 Database.Persist.Types.Base.PersistMap ww1 }) -}
+6df5ae7b35acaa0b254c649e5cca1c48
+  $fPersistFieldUser_go ::
+    [(Data.Text.Internal.Text,
+      Database.Persist.Types.Base.PersistValue)]
+    -> Data.HashMap.Base.HashMap
+         Data.Text.Internal.Text Database.Persist.Types.Base.PersistValue
+    -> Data.HashMap.Base.HashMap
+         Data.Text.Internal.Text Database.Persist.Types.Base.PersistValue
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey ::
+    GHC.Read.Read (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fReadKey_$creadsPrec
+                  DB.$fReadKey_$creadList
+                  DB.$fReadKey_$creadPrec
+                  DB.$fReadKey_$creadListPrec -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Database.Persist.Class.PersistEntity.Key DB.User]
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Database.Persist.Class.PersistEntity.Key DB.User]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                   DB.$fReadKey2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Database.Persist.Class.PersistEntity.Key DB.User>_R))
+                   @ b
+                   eta1) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP
+         (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadDouble10
+                   @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                   DB.$fReadKey3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <Database.Persist.Class.PersistEntity.Key DB.User>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <Database.Persist.Class.PersistEntity.Key DB.User>_R)))) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Database.Persist.Class.PersistEntity.Key DB.User
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: Database.Persist.Class.PersistEntity.Key DB.User
+                          -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 -> DB.$w$creadPrec ww1 @ b w1 }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey4 ::
+    Text.ParserCombinators.ReadP.P
+      [Database.Persist.Class.PersistEntity.Key DB.User]
+  {- Unfolding: (GHC.Read.$wlist
+                   @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                   DB.$fReadKey2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Database.Persist.Class.PersistEntity.Key DB.User>_R))
+                   @ [Database.Persist.Class.PersistEntity.Key DB.User]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [Database.Persist.Class.PersistEntity.Key DB.User])) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS
+      [Database.Persist.Class.PersistEntity.Key DB.User]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [Database.Persist.Class.PersistEntity.Key DB.User]
+                   DB.$fReadKey4) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      [Database.Persist.Class.PersistEntity.Key DB.User]
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                DB.$fReadKey1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                    <[Database.Persist.Class.PersistEntity.Key DB.User]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <[Database.Persist.Class.PersistEntity.Key DB.User]>_R))) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                DB.$fReadKey2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                          <Database.Persist.Class.PersistEntity.Key DB.User>_R)) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fReadKey_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS
+         (Database.Persist.Class.PersistEntity.Key DB.User)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                   ((GHC.Read.$fReadDouble10
+                       @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                       DB.$fReadKey3
+                         `cast`
+                       (Trans
+                            (<Text.ParserCombinators.ReadPrec.Prec>_R
+                             ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                           <Database.Persist.Class.PersistEntity.Key DB.User>_R))
+                            (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                      <Database.Persist.Class.PersistEntity.Key DB.User>_R)))
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <Database.Persist.Class.PersistEntity.Key DB.User>_R)
+                      @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Database.Persist.Class.PersistEntity.Key DB.User)))) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowKey ::
+    GHC.Show.Show (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fShowKey_$cshowsPrec
+                  DB.$fShowKey_$cshow
+                  DB.$fShowKey_$cshowList -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowKey1 ::
+    Database.Persist.Class.PersistEntity.Key DB.User -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Database.Persist.Class.PersistEntity.Key
+                           DB.User)
+                   (w1 :: GHC.Base.String) ->
+                 DB.$w$cshowsPrec 0# w w1) -}
+60cd1e5f1e1e89f00b0a60a8bb56ad12
+  $fShowKey2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+cc1a5bd18a14b26b5a04914e5471e5f8
+  $fShowKey3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "unUserKey = "#) -}
+a5a96ee3a7461f4351a93e2604e47d51
+  $fShowKey4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "UserKey {"#) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowKey_$cshow ::
+    Database.Persist.Class.PersistEntity.Key DB.User -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U(U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Database.Persist.Class.PersistEntity.Key DB.User) ->
+                 DB.$fShowKey_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowKey_$cshowList ::
+    [Database.Persist.Class.PersistEntity.Key DB.User]
+    -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                   DB.$fShowKey1) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowKey_$cshowsPrec ::
+    GHC.Types.Int
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U(U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Database.Persist.Class.PersistEntity.Key DB.User)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 -> DB.$w$cshowsPrec ww1 w1 w2 }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowUser :: GHC.Show.Show DB.User
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DB.User
+                  DB.$fShowUser_$cshowsPrec
+                  DB.$fShowUser_$cshow
+                  DB.$fShowUser_$cshowList -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowUser1 :: DB.User -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: DB.User) (w1 :: GHC.Base.String) ->
+                 case w of ww { DB.User ww1 -> DB.$w$cshowsPrec1 0# ww1 w1 }) -}
+883516e886b858b249b248e568c87c4f
+  $fShowUser2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "User {"#) -}
+c7ded6cf0c1c30ce410e4fbd005a7412
+  $fShowUser3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "userName = "#) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowUser_$cshow :: DB.User -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: DB.User) ->
+                 DB.$fShowUser_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowUser_$cshowList :: [DB.User] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__ @ DB.User DB.$fShowUser1) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fShowUser_$cshowsPrec ::
+    GHC.Types.Int -> DB.User -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S(S),1*U(U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: DB.User) (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { DB.User ww3 ->
+                 DB.$w$cshowsPrec1 ww1 ww3 w2 } }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fToBackendKeySqlBackendUser ::
+    Database.Persist.Class.PersistStore.ToBackendKey
+      Database.Persist.Sql.Types.Internal.SqlBackend DB.User
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Database.Persist.Sql.Types.Internal.SqlBackend
+                  @ DB.User
+                  DB.$fPersistEntityUser
+                  DB.$fToBackendKeySqlBackendUser1
+                    `cast`
+                  ((Data.Type.Equality.~)
+                     <*>_N
+                     (Sym (DB.D:R:PersistEntityBackendUser[0]))
+                     <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_R
+                  Database.Persist.Sql.Orphan.PersistStore.$fPersistCoreSqlBackend
+                  DB.unUserKey
+                  (\ (tpl :: Database.Persist.Class.PersistStore.BackendKey
+                               Database.Persist.Sql.Types.Internal.SqlBackend) ->
+                   tpl)
+                    `cast`
+                  (<Database.Persist.Class.PersistStore.BackendKey
+                      Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                   ->_R Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))) -}
+1054a9953405e1aa3de085a5d0b442d4
+  $fToBackendKeySqlBackendUser1 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$fToBackendKeySqlBackendUser2
+                  `cast`
+                (Sym (Data.Type.Equality.N:~[0]
+                          <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
+a3c6eb24f55f664be2e670039760a05f
+  $fToBackendKeySqlBackendUser2 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    GHC.Types.~~ Database.Persist.Sql.Types.Internal.SqlBackend
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fToHttpApiDataKey ::
+    Web.HttpApiData.Internal.ToHttpApiData
+      (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fToHttpApiDataKey_$ctoUrlPiece
+                  DB.$fToHttpApiDataKey_$ctoHeader
+                  DB.$fToHttpApiDataKey_$ctoUrlPiece -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fToHttpApiDataKey_$ctoHeader ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.HttpApiData.Internal.$fToHttpApiDataInt64_$ctoHeader
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <Data.ByteString.Internal.ByteString>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fToHttpApiDataKey_$ctoUrlPiece ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.HttpApiData.Internal.$fToHttpApiDataInt64_$ctoUrlPiece
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <Data.Text.Internal.Text>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fToJSONKey ::
+    Data.Aeson.Types.Class.ToJSON
+      (Database.Persist.Class.PersistEntity.Key DB.User)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key DB.User)
+                  DB.$fToJSONKey_$ctoJSON
+                  DB.$fToJSONKey_$ctoEncoding -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fToJSONKey_$ctoEncoding ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Data.Aeson.Types.Internal.Encoding
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Aeson.Types.Instances.$fToJSONInt64_$ctoEncoding
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <Data.Aeson.Types.Internal.Encoding>_R) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $fToJSONKey_$ctoJSON ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m4,
+     Unfolding: InlineRule (0, True, True)
+                Data.Aeson.Types.Instances.$fToJSONInt64_$ctoJSON
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans (Sym (DB.N:R:KeyUser[0])) (Sym (DB.D:R:KeyUser0[0]))))
+                 ->_R <Data.Aeson.Types.Internal.Value>_R) -}
+8caad5d465e05ca2b3cee3d18f9522de
+  $s$fApplicativeLoggingT ::
+    GHC.Base.Applicative (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  DB.$s$fApplicativeLoggingT_$s$fFunctorLoggingT
+                  (Control.Monad.Logger.$fApplicativeLoggingT_$cpure
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fApplicativeLoggingT_$c<*>
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fApplicativeLoggingT_$c*>
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fApplicativeLoggingT_$c<*
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad) -}
+b08c5fd5bc6e5c19647435ff244d0a77
+  $s$fApplicativeLoggingT_$creturn ::
+    a -> Control.Monad.Logger.LoggingT GHC.Types.IO a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><S,U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a
+                   (eta :: a)
+                   (eta1 :: Language.Haskell.TH.Syntax.Loc
+                            -> Control.Monad.Logger.LogSource
+                            -> Control.Monad.Logger.LogLevel
+                            -> System.Log.FastLogger.LogStr.LogStr
+                            -> GHC.Types.IO ())
+                   (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (GHC.Base.returnIO @ a eta) `cast` (GHC.Types.N:IO[0] <a>_R) eta2)
+                  `cast`
+                (forall (a :: <*>_N).
+                 <a>_R
+                 ->_R Trans
+                          (<Language.Haskell.TH.Syntax.Loc
+                            -> Control.Monad.Logger.LogSource
+                            -> Control.Monad.Logger.LogLevel
+                            -> System.Log.FastLogger.LogStr.LogStr
+                            -> GHC.Types.IO ()>_R
+                           ->_R Sym (GHC.Types.N:IO[0] <a>_R))
+                          (Sym (Control.Monad.Logger.N:LoggingT[0]
+                                    <GHC.Types.IO>_R <a>_N))) -}
+1469e3b5b3b9955f0f72988c4fa1fd30
+  $s$fApplicativeLoggingT_$dMonad :: GHC.Base.Monad GHC.Types.IO
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) GHC.Base.$fMonadIO -}
+d79ba21ae89b4b682fc9353d412c3e51
+  $s$fApplicativeLoggingT_$s$fFunctorLoggingT ::
+    GHC.Base.Functor (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  (Control.Monad.Logger.$fFunctorLoggingT_$cfmap
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fFunctorLoggingT_$c<$
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad) -}
+56309b6bbe8c14d64c409ffb8bb6207c
+  $s$fApplicativeResourceT ::
+    GHC.Base.Applicative
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                  DB.$s$fApplicativeResourceT_$s$fApplicativeResourceT_$cp1Applicative
+                  DB.$s$fApplicativeResourceT_$s$fApplicativeResourceT_$cpure
+                  (Control.Monad.Trans.Resource.Internal.$fApplicativeResourceT_$c<*>
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeResourceT_$dApplicative)
+                  (Control.Monad.Trans.Resource.Internal.$fApplicativeResourceT_$c*>
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeResourceT_$dApplicative)
+                  (Control.Monad.Trans.Resource.Internal.$fApplicativeResourceT_$c<*
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeResourceT_$dApplicative) -}
+57443097e40fa967d9e93b79f8b79e6f
+  $s$fApplicativeResourceT_$dApplicative ::
+    GHC.Base.Applicative GHC.Types.IO
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) GHC.Base.$fApplicativeIO -}
+32f63d78ee768609c55b047c3ab2deba
+  $s$fApplicativeResourceT_$dFunctor :: GHC.Base.Functor GHC.Types.IO
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) GHC.Base.$fFunctorIO -}
+efb07a60c798eccd0d35f20ade03f9b4
+  $s$fApplicativeResourceT_$s$fApplicativeResourceT_$cp1Applicative ::
+    GHC.Base.Functor
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$s$fApplicativeResourceT_$s$fFunctorResourceT -}
+26eeaa0196b12db44d1a420ad3b519bd
+  $s$fApplicativeResourceT_$s$fApplicativeResourceT_$cpure ::
+    a -> Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><S,U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a
+                   (eta :: a)
+                   (eta1 :: GHC.IORef.IORef
+                              Control.Monad.Trans.Resource.Internal.ReleaseMap)
+                   (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (GHC.Base.returnIO @ a eta) `cast` (GHC.Types.N:IO[0] <a>_R) eta2)
+                  `cast`
+                (forall (a :: <*>_N).
+                 <a>_R
+                 ->_R Trans
+                          (<GHC.IORef.IORef
+                              Control.Monad.Trans.Resource.Internal.ReleaseMap>_R
+                           ->_R Sym (GHC.Types.N:IO[0] <a>_R))
+                          (Sym (Control.Monad.Trans.Resource.Internal.N:ResourceT[0]
+                                    <GHC.Types.IO>_R <a>_N))) -}
+399562bef1b42e96414e6b2563bc10ae
+  $s$fApplicativeResourceT_$s$fFunctorResourceT ::
+    GHC.Base.Functor
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                  (Control.Monad.Trans.Resource.Internal.$fFunctorResourceT_$cfmap
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeResourceT_$dFunctor)
+                  (Control.Monad.Trans.Resource.Internal.$fFunctorResourceT_$c<$
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeResourceT_$dFunctor) -}
+8731a1acc34493151e6ada783f91d20e
+  $s$fMonadBaseControlbLoggingT ::
+    Control.Monad.Trans.Control.MonadBaseControl
+      GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Types.IO
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBaseControlbLoggingT_$cp1MonadBaseControl
+                  (Control.Monad.Logger.$fMonadBaseControlbLoggingT_$cliftBaseWith
+                     @ GHC.Types.IO
+                     @ GHC.Types.IO
+                     Control.Monad.Trans.Control.$fMonadBaseControlIOIO)
+                  (Control.Monad.Logger.$fMonadBaseControlbLoggingT_$crestoreM
+                     @ GHC.Types.IO
+                     @ GHC.Types.IO
+                     Control.Monad.Trans.Control.$fMonadBaseControlIOIO) -}
+736c0cbb31d34f6c2c14c8f120355ace
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBaseControlbLoggingT_$cp1MonadBaseControl ::
+    Control.Monad.Base.MonadBase
+      GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT -}
+d22b447f544a81c5cdae0a4dbb869514
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT ::
+    Control.Monad.Base.MonadBase
+      GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Types.IO
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  GHC.Base.$fApplicativeIO
+                  DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase
+                  GHC.Base.$fMonadIO
+                  DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
+                  DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cliftBase -}
+00e48e2fb32111b3fdffb58836ffd130
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cliftBase ::
+    GHC.Types.IO α -> Control.Monad.Logger.LoggingT GHC.Types.IO α
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ α (eta :: GHC.Types.IO α) ->
+                 let {
+                   eta1 :: GHC.Types.IO α = GHC.Base.id @ (GHC.Types.IO α) eta
+                 } in
+                 (\ (ds :: Language.Haskell.TH.Syntax.Loc
+                           -> Control.Monad.Logger.LogSource
+                           -> Control.Monad.Logger.LogLevel
+                           -> System.Log.FastLogger.LogStr.LogStr
+                           -> GHC.Types.IO ()) ->
+                  eta1)
+                   `cast`
+                 (Sym (Control.Monad.Logger.N:LoggingT[0]
+                           <GHC.Types.IO>_R <α>_N))) -}
+fb23629ac40a3f333817abbfb84236a2
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase ::
+    GHC.Base.Applicative (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) DB.$s$fApplicativeLoggingT -}
+137d8a7a99b48cbd743f5ecbef476b88
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase ::
+    GHC.Base.Monad (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT -}
+bfc212413c307f606a8a89e75bcf9c93
+  $s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT ::
+    GHC.Base.Monad (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  (Control.Monad.Logger.$fMonadLoggingT_$cp1Monad
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fMonadLoggingT_$c>>=
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fMonadLoggingT_$c>>
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  DB.$s$fApplicativeLoggingT_$creturn
+                  DB.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT_$cfail -}
+1d9f70bf9f7c2cce73bbf545d177d300
+  $s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT_$cfail ::
+    GHC.Base.String -> Control.Monad.Logger.LoggingT GHC.Types.IO a
+  {- Arity: 1, Strictness: <B,U>x,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (eta :: GHC.Base.String) ->
+                 Control.Monad.Logger.$fMonadLoggingT1
+                   @ GHC.Types.IO
+                   @ a
+                   DB.$s$fApplicativeLoggingT_$dMonad
+                   eta) -}
+ca810a928543e29470514045f852ffb6
+  $s$fMonadIOLoggingT ::
+    Control.Monad.IO.Class.MonadIO
+      (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
+                  DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cliftBase -}
+5856acb1963cb288f662941bf441c1fb
+  $s$fMonadIONoLoggingT ::
+    Control.Monad.IO.Class.MonadIO
+      (Control.Monad.Logger.NoLoggingT
+         (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.NoLoggingT
+                       (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+                  DB.$s$fMonadIONoLoggingT_$s$fMonadIONoLoggingT_$cp1MonadIO
+                  (Control.Monad.Logger.$fMonadIONoLoggingT_$cliftIO
+                     @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                     DB.$s$fMonadIONoLoggingT1) -}
+7bbe6520da67ddc09643a3ccfdb60b47
+  $s$fMonadIONoLoggingT1 ::
+    Control.Monad.IO.Class.MonadIO
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$s$fMonadIONoLoggingT_$s$fMonadIOResourceT -}
+93d64893fc884808718446ef7b8e5c24
+  $s$fMonadIONoLoggingT_$dMonad ::
+    GHC.Base.Monad
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$s$fMonadIONoLoggingT_$s$fMonadResourceT -}
+83b3108142dc78c6c47d557543aed830
+  $s$fMonadIONoLoggingT_$s$fMonadIONoLoggingT_$cp1MonadIO ::
+    GHC.Base.Monad
+      (Control.Monad.Logger.NoLoggingT
+         (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$s$fMonadIONoLoggingT_$s$fMonadNoLoggingT -}
+22df309b0285e53ca1bfdd18ddcae261
+  $s$fMonadIONoLoggingT_$s$fMonadIOResourceT ::
+    Control.Monad.IO.Class.MonadIO
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                  DB.$s$fMonadIONoLoggingT_$dMonad
+                  DB.$s$fMonadIONoLoggingT_$s$fMonadIOResourceT_$cliftIO -}
+4cfb6d4d70e95754fca0c7fe0ea96c7d
+  $s$fMonadIONoLoggingT_$s$fMonadIOResourceT_$cliftIO ::
+    GHC.Types.IO a
+    -> Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (eta :: GHC.Types.IO a) ->
+                 let {
+                   eta1 :: GHC.Types.IO a = GHC.Base.id @ (GHC.Types.IO a) eta
+                 } in
+                 (\ (ds :: GHC.IORef.IORef
+                             Control.Monad.Trans.Resource.Internal.ReleaseMap) ->
+                  eta1)
+                   `cast`
+                 (Sym (Control.Monad.Trans.Resource.Internal.N:ResourceT[0]
+                           <GHC.Types.IO>_R <a>_N))) -}
+d491181e1e294e05879e602958e4f708
+  $s$fMonadIONoLoggingT_$s$fMonadNoLoggingT ::
+    GHC.Base.Monad
+      (Control.Monad.Logger.NoLoggingT
+         (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.NoLoggingT
+                       (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+                  (Control.Monad.Logger.$fMonadNoLoggingT_$cp1Monad
+                     @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                     DB.$s$fMonadIONoLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fMonadNoLoggingT_$c>>=
+                     @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                     DB.$s$fMonadIONoLoggingT_$dMonad)
+                  DB.$s$fMonadIONoLoggingT_$s$fMonadNoLoggingT_$c>>
+                  (Control.Monad.Logger.$fApplicativeNoLoggingT_$creturn
+                     @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                     DB.$s$fMonadIONoLoggingT_$dMonad)
+                  DB.$s$fMonadIONoLoggingT_$s$fMonadNoLoggingT_$cfail -}
+b75e7eb032be107aaa7f481e4c87bf1c
+  $s$fMonadIONoLoggingT_$s$fMonadNoLoggingT_$c>> ::
+    Control.Monad.Logger.NoLoggingT
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO) a
+    -> Control.Monad.Logger.NoLoggingT
+         (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO) b
+    -> Control.Monad.Logger.NoLoggingT
+         (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO) b
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <C(C(S(SL))),1*C1(C1(U(U,A)))><L,1*C1(C1(U(U,U)))><L,U><S,U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a
+                   @ b
+                   (m1 :: Control.Monad.Logger.NoLoggingT
+                            (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO) a)
+                   (k :: Control.Monad.Logger.NoLoggingT
+                           (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                           b) ->
+                 Control.Monad.Logger.$fMonadNoLoggingT_$c>>=
+                   @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                   DB.$s$fMonadIONoLoggingT_$dMonad
+                   @ a
+                   @ b
+                   m1
+                   (\ (ds :: a) -> k)) -}
+46f528b1a84b2fd51d85b8ec4f00432f
+  $s$fMonadIONoLoggingT_$s$fMonadNoLoggingT_$cfail ::
+    GHC.Base.String
+    -> Control.Monad.Logger.NoLoggingT
+         (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO) a
+  {- Arity: 1, Strictness: <B,U>x,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (eta :: GHC.Base.String) ->
+                 Control.Monad.Logger.$fMonadNoLoggingT1
+                   @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                   @ a
+                   DB.$s$fMonadIONoLoggingT_$dMonad
+                   eta) -}
+2b5fb4f35e9c65c5f3ec2bb5812fdb3f
+  $s$fMonadIONoLoggingT_$s$fMonadResourceT ::
+    GHC.Base.Monad
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+                  DB.$s$fMonadIONoLoggingT_$s$fMonadResourceT_$cp1Monad
+                  (Control.Monad.Trans.Resource.Internal.$fMonadResourceT_$c>>=
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Trans.Resource.Internal.$fMonadResourceT_$c>>
+                     @ GHC.Types.IO
+                     DB.$s$fApplicativeLoggingT_$dMonad)
+                  DB.$s$fApplicativeResourceT_$s$fApplicativeResourceT_$cpure
+                  DB.$s$fMonadIONoLoggingT_$s$fMonadResourceT_$cfail -}
+013311904f91874fe9c42cca73d29352
+  $s$fMonadIONoLoggingT_$s$fMonadResourceT_$cfail ::
+    GHC.Base.String
+    -> Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO a
+  {- Arity: 1, Strictness: <B,U>x,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (eta :: GHC.Base.String) ->
+                 Control.Monad.Trans.Resource.Internal.$fMonadResourceT1
+                   @ GHC.Types.IO
+                   @ a
+                   DB.$s$fApplicativeLoggingT_$dMonad
+                   eta) -}
+fc2bd6a0297f0d94e1ca0575696674c8
+  $s$fMonadIONoLoggingT_$s$fMonadResourceT_$cp1Monad ::
+    GHC.Base.Applicative
+      (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                DB.$s$fApplicativeResourceT -}
+018cc91c58af27e725327631c423f06a
+  $s$fMonadLoggerLoggingT ::
+    Control.Monad.Logger.MonadLogger
+      (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
+                  DB.$s$fMonadLoggerLoggingT_$s$fMonadLoggerLoggingT_$cmonadLoggerLog -}
+0971a7aeebccdf144cb6a28d2efe4288
+  $s$fMonadLoggerLoggingT_$s$fMonadLoggerLoggingT_$cmonadLoggerLog ::
+    System.Log.FastLogger.LogStr.ToLogStr msg =>
+    Language.Haskell.TH.Syntax.Loc
+    -> Control.Monad.Logger.LogSource
+    -> Control.Monad.Logger.LogLevel
+    -> msg
+    -> Control.Monad.Logger.LoggingT GHC.Types.IO ()
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,1*C1(U(U,U))><L,U><L,U><L,U><L,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ msg
+                   ($dToLogStr :: System.Log.FastLogger.LogStr.ToLogStr msg)
+                   (a :: Language.Haskell.TH.Syntax.Loc)
+                   (b :: Control.Monad.Logger.LogSource)
+                   (c :: Control.Monad.Logger.LogLevel)
+                   (d :: msg) ->
+                 let {
+                   lvl39 :: System.Log.FastLogger.LogStr.LogStr
+                   = $dToLogStr
+                       `cast`
+                     (System.Log.FastLogger.LogStr.N:ToLogStr[0] <msg>_N)
+                       d
+                 } in
+                 (\ (f :: Language.Haskell.TH.Syntax.Loc
+                          -> Control.Monad.Logger.LogSource
+                          -> Control.Monad.Logger.LogLevel
+                          -> System.Log.FastLogger.LogStr.LogStr
+                          -> GHC.Types.IO ()) ->
+                  GHC.Base.id @ (GHC.Types.IO ()) (f a b c lvl39))
+                   `cast`
+                 (Sym (Control.Monad.Logger.N:LoggingT[0]
+                           <GHC.Types.IO>_R <()>_N))) -}
+51fec603e6fe1bf4d239a28e0a4e2456
+  $tc'User :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5521959595456923522##
+                   14214432474528154169##
+                   DB.$trModule
+                   DB.$tc'User1) -}
+1485f54000f1f815d97676826d3ace4e
+  $tc'User1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'User"#) -}
+3ae4706f35604aaaea55ea5187dcd553
+  $tcUser :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9122244378154375809##
+                   11201297805785686776##
+                   DB.$trModule
+                   DB.$tcUser1) -}
+e844ecd674d1e0e4ee2982ad3e47191d
+  $tcUser1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "User"#) -}
+7bf5fa7388f5f19750068efa0390062e
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module DB.$trModule2 DB.$trModule1) -}
+2b78a794596ada6678a9b1734125c795
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "DB"#) -}
+4649b701a9d4f95798914c52ccc3d51d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "auth-service-0.1.0.0-L5GUpOkZ96VKiSsVIED2ov"#) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $w$creadPrec ::
+    GHC.Prim.Int#
+    -> forall b.
+       (Database.Persist.Class.PersistEntity.Key DB.User
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [0] -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U(U)><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Database.Persist.Class.PersistEntity.Key DB.User)
+                   (w1 :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       DB.$fShowKey4
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          DB.$fShowKey3
+                          (Database.Persist.Sql.Orphan.PersistStore.$w$cshowsPrec
+                             0#
+                             w `cast` (Trans (DB.D:R:KeyUser0[0]) (DB.N:R:KeyUser[0]))
+                             (GHC.Base.++ @ GHC.Types.Char DB.$fShowKey2 x)))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p w1
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w1)) }) -}
+65efbe007b3528b3311c21b069033bc6
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> GHC.Base.String -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       DB.$fShowUser3
+                       (GHC.Types.:
+                          @ GHC.Types.Char
+                          GHC.Show.shows8
+                          (GHC.Show.showLitString
+                             ww1
+                             (GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows8
+                                (GHC.Base.++ @ GHC.Types.Char DB.$fShowKey2 x))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char DB.$fShowUser2 (g w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           DB.$fShowUser2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w))) }) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  $w$ctoPersistValue ::
+    DB.User
+    -> (# [(Data.Text.Internal.Text,
+            Database.Persist.Types.Base.PersistValue)] #)
+  {- Arity: 1, Strictness: <L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (w :: DB.User) ->
+                 (# case w of wild { DB.User x ->
+                    GHC.Types.:
+                      @ (Data.Text.Internal.Text,
+                         Database.Persist.Types.Base.PersistValue)
+                      (DB.$fPersistFieldUser4,
+                       Database.Persist.Types.Base.PersistText
+                         (case GHC.Magic.runRW#
+                                 @ 'GHC.Types.PtrRepLifted
+                                 @ Data.Text.Internal.Text
+                                 (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case GHC.Prim.newByteArray#
+                                         @ GHC.Prim.RealWorld
+                                         8#
+                                         s1 of ds1 { (#,#) ipv ipv1 ->
+                                  Database.Persist.Class.PersistField.$wouter10
+                                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                    Database.Persist.Class.PersistField.$fPersistField(,)1
+                                    x
+                                    0#
+                                    ipv }) of ds1 { (#,#) ipv ipv1 ->
+                          ipv1 }))
+                      (GHC.Types.[]
+                         @ (Data.Text.Internal.Text,
+                            Database.Persist.Types.Base.PersistValue)) } #)) -}
+1f0a8c9c66736dc5be33598fed836497
+  $w$s$wupdateOrSnocWithKey ::
+    (Data.Text.Internal.Text -> v -> v -> v)
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> GHC.Prim.Array#
+         (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+    -> GHC.Prim.Array#
+         (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+  {- Arity: 6, Strictness: <L,C(C1(C1(U)))><L,U><L,U><L,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ v
+                   (w :: Data.Text.Internal.Text -> v -> v -> v)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w1 :: v)
+                   (w2 :: GHC.Prim.Array#
+                            (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)) ->
+                 letrec {
+                   $wgo1 :: GHC.Prim.ByteArray#
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Int#
+                            -> v
+                            -> GHC.Prim.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                     {- Arity: 7, Strictness: <L,U><L,U><L,U><L,U><S,U><S,U><S,U>,
+                        Inline: [0] -}
+                   = \ (ww3 :: GHC.Prim.ByteArray#)
+                       (ww4 :: GHC.Prim.Int#)
+                       (ww5 :: GHC.Prim.Int#)
+                       (w3 :: v)
+                       (ww6 :: GHC.Prim.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v))
+                       (ww7 :: GHC.Prim.Int#)
+                       (ww8 :: GHC.Prim.Int#) ->
+                     let {
+                       k2 :: Data.Text.Internal.Text = Data.Text.Internal.Text ww3 ww4 ww5
+                     } in
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.>=# ww7 ww8) of wild {
+                       GHC.Types.False
+                       -> case GHC.Prim.indexArray#
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 ww6
+                                 ww7 of ds { Unit# ipv3 ->
+                          case ipv3 of wild1 { Data.HashMap.Base.L kx y ->
+                          case kx of wild2 { Data.Text.Internal.Text dt3 dt4 dt5 ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.==# ww5 dt5) of wild3 {
+                            GHC.Types.False
+                            -> $wgo1 ww3 ww4 ww5 w3 ww6 (GHC.Prim.+# ww7 1#) ww8
+                            GHC.Types.True
+                            -> case {__pkg_ccall text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s _hs_text_memcmp GHC.Prim.ByteArray#
+                                                                                                                  -> GHC.Prim.Word#
+                                                                                                                  -> GHC.Prim.ByteArray#
+                                                                                                                  -> GHC.Prim.Word#
+                                                                                                                  -> GHC.Prim.Word#
+                                                                                                                  -> GHC.Prim.State#
+                                                                                                                       GHC.Prim.RealWorld
+                                                                                                                  -> (# GHC.Prim.State#
+                                                                                                                          GHC.Prim.RealWorld,
+                                                                                                                        GHC.Prim.Int# #)}
+                                      ww3
+                                      (GHC.Prim.int2Word# ww4)
+                                      dt3
+                                      (GHC.Prim.int2Word# dt4)
+                                      (GHC.Prim.int2Word# ww5)
+                                      GHC.Prim.realWorld# of wild4 { (#,#) ds11 ds12 ->
+                               case GHC.Prim.narrow32Int# ds12 of wild5 {
+                                 DEFAULT -> $wgo1 ww3 ww4 ww5 w3 ww6 (GHC.Prim.+# ww7 1#) ww8
+                                 0#
+                                 -> case GHC.Prim.thawArray#
+                                           @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                           @ GHC.Prim.RealWorld
+                                           ww6
+                                           0#
+                                           (GHC.Prim.sizeofArray#
+                                              @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                              ww6)
+                                           GHC.Prim.realWorld# of ds1 { (#,#) ipv4 ipv5 ->
+                                    case GHC.Prim.writeArray#
+                                           @ GHC.Prim.RealWorld
+                                           @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                           ipv5
+                                           ww7
+                                           (Data.HashMap.Base.L
+                                              @ Data.Text.Internal.Text
+                                              @ v
+                                              k2
+                                              (w k2 w3 y))
+                                           ipv4 of s' { DEFAULT ->
+                                    case GHC.Prim.unsafeFreezeArray#
+                                           @ GHC.Prim.RealWorld
+                                           @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                           ipv5
+                                           s' of ds2 { (#,#) ipv6 ipv7 ->
+                                    ipv7 } } } } } } } } }
+                       GHC.Types.True
+                       -> case GHC.Prim.newArray#
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 @ GHC.Prim.RealWorld
+                                 (GHC.Prim.+# ww8 1#)
+                                 (Data.HashMap.Array.undefinedElem
+                                    @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v))
+                                 GHC.Prim.realWorld# of ds { (#,#) ipv3 ipv4 ->
+                          case GHC.Prim.copyArray#
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 @ GHC.Prim.RealWorld
+                                 ww6
+                                 0#
+                                 ipv4
+                                 0#
+                                 ww8
+                                 ipv3 of s2 { DEFAULT ->
+                          case GHC.Prim.writeArray#
+                                 @ GHC.Prim.RealWorld
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 ipv4
+                                 ww8
+                                 (Data.HashMap.Base.L @ Data.Text.Internal.Text @ v k2 w3)
+                                 s2 of s' { DEFAULT ->
+                          case GHC.Prim.unsafeFreezeArray#
+                                 @ GHC.Prim.RealWorld
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 ipv4
+                                 s' of ds1 { (#,#) ipv5 ipv6 ->
+                          ipv6 } } } } }
+                 } in
+                 $wgo1
+                   ww
+                   ww1
+                   ww2
+                   w1
+                   w2
+                   0#
+                   (GHC.Prim.sizeofArray#
+                      @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                      w2)) -}
+d730fafa7884ba5dbec87ab838d5fcaf
+  $w$sgo10 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+  {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
+     Inline: [0] -}
+c33974d8089ec397390913ccf97ee0eb
+  $w$sunsafeInsert ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><L,U><S,1*U>, Inline: [0],
+     Unfolding: (\ @ v
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: v)
+                   (w1 :: Data.HashMap.Base.HashMap Data.Text.Internal.Text v) ->
+                 case {__pkg_ccall hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G hashable_fnv_hash_offset GHC.Prim.ByteArray#
+                                                                                                                     -> GHC.Prim.Int#
+                                                                                                                     -> GHC.Prim.Int#
+                                                                                                                     -> GHC.Prim.Int#
+                                                                                                                     -> GHC.Prim.State#
+                                                                                                                          GHC.Prim.RealWorld
+                                                                                                                     -> (# GHC.Prim.State#
+                                                                                                                             GHC.Prim.RealWorld,
+                                                                                                                           GHC.Prim.Int# #)}
+                        ww
+                        (GHC.Prim.uncheckedIShiftL# ww1 1#)
+                        (GHC.Prim.uncheckedIShiftL# ww2 1#)
+                        -2578643520546668380#
+                        GHC.Prim.realWorld# of wild { (#,#) ds ds1 ->
+                 case DB.$wpoly_go1
+                        @ GHC.Prim.RealWorld
+                        @ v
+                        (GHC.Prim.int2Word# ds1)
+                        ww
+                        ww1
+                        ww2
+                        w
+                        0#
+                        w1
+                        GHC.Prim.realWorld# of ds2 { (#,#) ipv ipv1 ->
+                 ipv1 } }) -}
+c2170c67075c5f076a8ec155988f7329
+  $wouter ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+fd80f4731e773864974f9cbf737dacd5
+  $wouter1 ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+ba19ec4a90fd6f311f59a591caf7653e
+  $wpoly_go1 ::
+    GHC.Prim.Word#
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s,
+          Data.HashMap.Base.HashMap Data.Text.Internal.Text v #)
+  {- Arity: 8,
+     Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><S,1*U><L,U>,
+     Inline: [0] -}
+852d12cc4efcd2aa574fb54322c35868
+  $wpoly_go10 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+    -> [(Data.Text.Internal.Text, a)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  axiom D:R:EntityFieldUsertyp0::
+      Database.Persist.Class.PersistEntity.EntityField DB.User
+        = DB.R:EntityFieldUsertyp
+af8d1b38129b9558670cd43e7eb7b3ea
+  axiom D:R:KeyUser0::
+      Database.Persist.Class.PersistEntity.Key DB.User = DB.R:KeyUser
+af8d1b38129b9558670cd43e7eb7b3ea
+  axiom D:R:PersistEntityBackendUser::
+      Database.Persist.Class.PersistEntity.PersistEntityBackend DB.User
+        = Database.Persist.Sql.Types.Internal.SqlBackend
+28e4d462d8ab576fe89e318ad8865f9e
+  axiom D:R:UniqueUser0::
+      Database.Persist.Class.PersistEntity.Unique DB.User
+        = DB.R:UniqueUser
+af8d1b38129b9558670cd43e7eb7b3ea
+  data instance Database.Persist.Class.PersistEntity.EntityField
+                  DB.User typ where
+    UserId :: typ
+              Data.Type.Equality.~ Database.Persist.Class.PersistEntity.Key
+                                     DB.User =>
+              Database.Persist.Class.PersistEntity.EntityField DB.User typ
+    UserName :: typ Data.Type.Equality.~ GHC.Base.String =>
+                Database.Persist.Class.PersistEntity.EntityField DB.User typ
+    RecFlag: Recursive
+af8d1b38129b9558670cd43e7eb7b3ea
+  newtype instance Database.Persist.Class.PersistEntity.Key DB.User
+    = UserKey {unUserKey :: Database.Persist.Class.PersistStore.BackendKey
+                              Database.Persist.Sql.Types.Internal.SqlBackend}
+    RecFlag: Recursive
+28e4d462d8ab576fe89e318ad8865f9e
+  data instance Database.Persist.Class.PersistEntity.Unique DB.User
+    RecFlag: Recursive
+af8d1b38129b9558670cd43e7eb7b3ea
+  data User = User {userName :: !GHC.Base.String}
+e04cae7564a5156bea801014da580ec7
+  type UserId = Database.Persist.Class.PersistEntity.Key DB.User
+2394a801287a270009b788f0e6102d3e
+  runMigrate :: GHC.Types.IO ()
+  {- Unfolding: ((DB.runMigrate8 DB.runMigrate7 DB.runMigrate1)
+                   `cast`
+                 (Control.Monad.Logger.N:LoggingT[0] <GHC.Types.IO>_R <()>_N)
+                   Control.Monad.Logger.runStderrLoggingT1
+                     `cast`
+                   (<Language.Haskell.TH.Syntax.Loc>_R
+                    ->_R <Control.Monad.Logger.LogSource>_R
+                    ->_R <Control.Monad.Logger.LogLevel>_R
+                    ->_R <System.Log.FastLogger.LogStr.LogStr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
+b2a70ed6c6e82bb43f1325624b2b31e4
+  runMigrate1 ::
+    Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
+    -> Control.Monad.Logger.LoggingT GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: (\ (pool :: Data.Pool.Pool
+                              Database.Persist.Sql.Types.Internal.SqlBackend) ->
+                 let {
+                   eta :: GHC.Types.IO ()
+                   = Control.Monad.Trans.Resource.runResourceT
+                       @ GHC.Types.IO
+                       @ ()
+                       Control.Monad.Trans.Control.$fMonadBaseControlIOIO
+                       (Data.Pool.withResource
+                          @ (Control.Monad.Logger.NoLoggingT
+                               (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+                          @ Database.Persist.Sql.Types.Internal.SqlBackend
+                          @ ()
+                          Database.Persist.Sql.Run.$s$fMonadBaseControlbNoLoggingT
+                          pool
+                          DB.runMigrate2)
+                         `cast`
+                       (Control.Monad.Logger.N:NoLoggingT[0]
+                            <Control.Monad.Trans.Resource.Internal.ResourceT
+                               GHC.Types.IO>_R <()>_N)
+                 } in
+                 (\ (ds :: Language.Haskell.TH.Syntax.Loc
+                           -> Control.Monad.Logger.LogSource
+                           -> Control.Monad.Logger.LogLevel
+                           -> System.Log.FastLogger.LogStr.LogStr
+                           -> GHC.Types.IO ()) ->
+                  eta)
+                   `cast`
+                 (Sym (Control.Monad.Logger.N:LoggingT[0]
+                           <GHC.Types.IO>_R <()>_N))) -}
+7be8aa3e9dea8cdcd7cee16ec067f3bb
+  runMigrate2 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    -> Control.Monad.Logger.NoLoggingT
+         (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO) ()
+  {- Arity: 1,
+     Unfolding: (Database.Persist.Sql.Run.runSqlConn
+                   @ (Control.Monad.Logger.NoLoggingT
+                        (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ ()
+                   Database.Persist.Sql.Run.$s$fMonadBaseControlbNoLoggingT
+                   DB.runMigrate6
+                     `cast`
+                   (GHC.Classes.(%,%)
+                      <Database.Persist.Class.PersistStore.IsPersistBackend
+                         Database.Persist.Sql.Types.Internal.SqlBackend>_N
+                      ((Data.Type.Equality.~)
+                         <*>_N
+                         (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                         <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
+                   DB.runMigrate3) -}
+6372a925435b9a36d2da8d5b2190742f
+  runMigrate3 ::
+    Control.Monad.Trans.Reader.ReaderT
+      Database.Persist.Sql.Types.Internal.SqlBackend
+      (Control.Monad.Logger.NoLoggingT
+         (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+      ()
+  {- Unfolding: (DB.runMigrate5
+                   DB.runMigrate4
+                     `cast`
+                   (Trans
+                        (<Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <(((), [Data.Text.Internal.Text]),
+                                         [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)])>_R))
+                        (Trans
+                             (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                       <*>_N
+                                       <Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                                       <GHC.Types.IO>_R
+                                       <(((), [Data.Text.Internal.Text]),
+                                         [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)])>_N))
+                             (Trans
+                                  (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                            <[(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)]>_N
+                                            <Control.Monad.Trans.Reader.ReaderT
+                                               Database.Persist.Sql.Types.Internal.SqlBackend
+                                               GHC.Types.IO>_R
+                                            <((), [Data.Text.Internal.Text])>_N))
+                                  (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                            <[Data.Text.Internal.Text]>_N
+                                            <Control.Monad.Trans.Writer.Lazy.WriterT
+                                               Database.Persist.Sql.Types.CautiousMigration
+                                               (Control.Monad.Trans.Reader.ReaderT
+                                                  Database.Persist.Sql.Types.Internal.SqlBackend
+                                                  GHC.Types.IO)>_R
+                                            <()>_N)))))) -}
+c1db2505b2ca31ec0340cfe572a4df53
+  runMigrate4 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (((), [Data.Text.Internal.Text]),
+           [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)]) #)
+  {- Arity: 2,
+     Unfolding: (\ (w2 :: Database.Persist.Sql.Types.Internal.SqlBackend)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w2 of ww { Database.Persist.Sql.Types.Internal.SqlBackend ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ->
+                 Database.Persist.Sql.Migration.$wmigrate
+                   DB.runMigrate_w
+                   DB.$fPersistEntityUser13
+                   ww1
+                   ww5
+                   ww7
+                   w3 }) -}
+f6885264964c65b9e351d951c03b32b0
+  runMigrate5 ::
+    Database.Persist.Sql.Types.Migration
+    -> Control.Monad.Trans.Reader.ReaderT
+         Database.Persist.Sql.Types.Internal.SqlBackend
+         (Control.Monad.Logger.NoLoggingT
+            (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+         ()
+  {- Unfolding: (Database.Persist.Sql.Migration.runMigrationUnsafe
+                   @ (Control.Monad.Logger.NoLoggingT
+                        (Control.Monad.Trans.Resource.Internal.ResourceT GHC.Types.IO))
+                   DB.$s$fMonadIONoLoggingT) -}
+78e9abac9319b773088b4fdeaa471640
+  runMigrate6 ::
+    (Database.Persist.Class.PersistStore.IsPersistBackend
+       Database.Persist.Sql.Types.Internal.SqlBackend,
+     Database.Persist.Sql.Types.Internal.SqlBackend
+     Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Database.Persist.Sql.Types.Internal.$fIsPersistBackendSqlBackend,
+                  DB.$fToBackendKeySqlBackendUser2
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
+9b13323e25404655ade668f7c07eba26
+  runMigrate7 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 10#) -}
+c64e32095053fbfed5c3f2d8f6a65bff
+  runMigrate8 ::
+    GHC.Types.Int
+    -> (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
+        -> Control.Monad.Logger.LoggingT GHC.Types.IO ())
+    -> Control.Monad.Logger.LoggingT GHC.Types.IO ()
+  {- Unfolding: (Database.Persist.Postgresql.withPostgresqlPool
+                   @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ ()
+                   DB.$s$fMonadBaseControlbLoggingT
+                   DB.$s$fMonadLoggerLoggingT
+                   DB.$s$fMonadIOLoggingT
+                   DB.runMigrate6
+                     `cast`
+                   (GHC.Classes.(%,%)
+                      <Database.Persist.Class.PersistStore.IsPersistBackend
+                         Database.Persist.Sql.Types.Internal.SqlBackend>_N
+                      ((Data.Type.Equality.~)
+                         <*>_N
+                         (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                         <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
+                   DB.runMigrate9) -}
+1cc9de00d1a48350e80d8dd77b6534aa
+  runMigrate9 :: Database.Persist.Postgresql.ConnectionString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 let {
+                   addr# :: GHC.Prim.Addr#
+                   = "host=localhost dbname=postgres user=docker port=5433"#
+                 } in
+                 case {__pkg_ccall bytestring-0.10.8.1@bytestring-0.10.8.1 strlen GHC.Prim.Addr#
+                                                                                  -> GHC.Prim.State#
+                                                                                       GHC.Prim.RealWorld
+                                                                                  -> (# GHC.Prim.State#
+                                                                                          GHC.Prim.RealWorld,
+                                                                                        GHC.Prim.Word# #)}
+                        addr#
+                        ipv of wild { (#,#) ds3 ds4 ->
+                 Data.ByteString.Internal.PS
+                   addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds4) } }) -}
+a5a67aa06354ad1aa309c5c23332093f
+  runMigrate_w :: [Database.Persist.Types.Base.EntityDef]
+  {- Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.EntityDef
+                   DB.$fPersistEntityUser13
+                   (GHC.Types.[] @ Database.Persist.Types.Base.EntityDef)) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  unUserKey ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistStore.BackendKey
+         Database.Persist.Sql.Types.Internal.SqlBackend
+  RecSel Left DB.R:KeyUser
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                DB.unUserKey1
+                  `cast`
+                (<Database.Persist.Class.PersistEntity.Key DB.User>_R
+                 ->_R Trans (DB.D:R:KeyUser0[0]) (DB.N:R:KeyUser[0])) -}
+af8d1b38129b9558670cd43e7eb7b3ea
+  unUserKey1 ::
+    Database.Persist.Class.PersistEntity.Key DB.User
+    -> Database.Persist.Class.PersistEntity.Key DB.User
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Database.Persist.Class.PersistEntity.Key DB.User) ->
+                 ds) -}
+75382fca6f456552be558d08bcc192ea
+  userName :: DB.User -> GHC.Base.String
+  RecSel Left DB.User
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: DB.User) -> case ds of wild { DB.User ds1 -> ds1 }) -}
+instance GHC.Classes.Eq [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fEqKey
+instance Web.HttpApiData.Internal.FromHttpApiData [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fFromHttpApiDataKey
+instance Data.Aeson.Types.Class.FromJSON [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fFromJSONKey
+instance GHC.Classes.Ord [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fOrdKey
+instance Web.PathPieces.PathPiece [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fPathPieceKey
+instance Database.Persist.Class.PersistEntity.PersistEntity [DB.User]
+  = DB.$fPersistEntityUser
+instance Database.Persist.Class.PersistField.PersistField [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fPersistFieldKey
+instance Database.Persist.Sql.Class.PersistFieldSql [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fPersistFieldSqlKey
+instance Database.Persist.Sql.Class.PersistFieldSql [DB.User]
+  = DB.$fPersistFieldSqlUser
+instance Database.Persist.Class.PersistField.PersistField [DB.User]
+  = DB.$fPersistFieldUser
+instance GHC.Read.Read [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fReadKey
+instance GHC.Show.Show [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fShowKey
+instance GHC.Show.Show [DB.User] = DB.$fShowUser
+instance Database.Persist.Class.PersistStore.ToBackendKey [Database.Persist.Sql.Types.Internal.SqlBackend,
+                                                           DB.User]
+  = DB.$fToBackendKeySqlBackendUser
+instance Web.HttpApiData.Internal.ToHttpApiData [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fToHttpApiDataKey
+instance Data.Aeson.Types.Class.ToJSON [Database.Persist.Class.PersistEntity.Key]
+  = DB.$fToJSONKey
+family instance Database.Persist.Class.PersistEntity.EntityField [DB.User]
+  = DB.D:R:EntityFieldUsertyp0
+family instance Database.Persist.Class.PersistEntity.Key [DB.User]
+  = DB.D:R:KeyUser0
+family instance Database.Persist.Class.PersistEntity.PersistEntityBackend [DB.User]
+  = DB.D:R:PersistEntityBackendUser
+family instance Database.Persist.Class.PersistEntity.Unique [DB.User]
+  = DB.D:R:UniqueUser0
+"SPEC/DB $WUserId @ (Key User)" [ALWAYS] forall (dt :: Database.Persist.Class.PersistEntity.Key
+                                                         DB.User
+                                                       Data.Type.Equality.~ Database.Persist.Class.PersistEntity.Key
+                                                                              DB.User)
+  DB.$WUserId @ (Database.Persist.Class.PersistEntity.Key DB.User) dt
+  = DB.$fPersistEntityUser_$s$WUserId
+"SPEC/DB $fApplicativeLoggingT @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                   GHC.Types.IO)
+  Control.Monad.Logger.$fApplicativeLoggingT @ GHC.Types.IO $dMonad
+  = DB.$s$fApplicativeLoggingT
+"SPEC/DB $fApplicativeLoggingT_$creturn @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                            GHC.Types.IO)
+  Control.Monad.Logger.$fApplicativeLoggingT_$creturn @ GHC.Types.IO
+                                                      $dMonad
+  = DB.$s$fApplicativeLoggingT_$creturn
+"SPEC/DB $fApplicativeResourceT @ IO" [ALWAYS] forall ($dApplicative :: GHC.Base.Applicative
+                                                                          GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fApplicativeResourceT @ GHC.Types.IO
+                                                               $dApplicative
+  = DB.$s$fApplicativeResourceT
+"SPEC/DB $fApplicativeResourceT_$cp1Applicative @ IO" [ALWAYS] forall ($dApplicative :: GHC.Base.Applicative
+                                                                                          GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fApplicativeResourceT_$cp1Applicative @ GHC.Types.IO
+                                                                               $dApplicative
+  = DB.$s$fApplicativeResourceT_$s$fApplicativeResourceT_$cp1Applicative
+"SPEC/DB $fApplicativeResourceT_$cpure @ IO" [ALWAYS] forall ($dApplicative :: GHC.Base.Applicative
+                                                                                 GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fApplicativeResourceT_$cpure @ GHC.Types.IO
+                                                                      $dApplicative
+  = DB.$s$fApplicativeResourceT_$s$fApplicativeResourceT_$cpure
+"SPEC/DB $fFunctorLoggingT @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                               GHC.Types.IO)
+  Control.Monad.Logger.$fFunctorLoggingT @ GHC.Types.IO $dMonad
+  = DB.$s$fApplicativeLoggingT_$s$fFunctorLoggingT
+"SPEC/DB $fFunctorResourceT @ IO" [ALWAYS] forall ($dFunctor :: GHC.Base.Functor
+                                                                  GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fFunctorResourceT @ GHC.Types.IO
+                                                           $dFunctor
+  = DB.$s$fApplicativeResourceT_$s$fFunctorResourceT
+"SPEC/DB $fMonadBaseControlbLoggingT @ IO @ IO" [ALWAYS] forall ($dMonadBaseControl :: Control.Monad.Trans.Control.MonadBaseControl
+                                                                                         GHC.Types.IO
+                                                                                         GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBaseControlbLoggingT @ GHC.Types.IO
+                                                   @ GHC.Types.IO
+                                                   $dMonadBaseControl
+  = DB.$s$fMonadBaseControlbLoggingT
+"SPEC/DB $fMonadBaseControlbLoggingT_$cp1MonadBaseControl @ IO @ IO" [ALWAYS] forall ($dMonadBaseControl :: Control.Monad.Trans.Control.MonadBaseControl
+                                                                                                              GHC.Types.IO
+                                                                                                              GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBaseControlbLoggingT_$cp1MonadBaseControl @ GHC.Types.IO
+                                                                        @ GHC.Types.IO
+                                                                        $dMonadBaseControl
+  = DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBaseControlbLoggingT_$cp1MonadBaseControl
+"SPEC/DB $fMonadBasebLoggingT @ IO @ IO" [ALWAYS] forall ($dMonadBase :: Control.Monad.Base.MonadBase
+                                                                           GHC.Types.IO
+                                                                           GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBasebLoggingT @ GHC.Types.IO
+                                            @ GHC.Types.IO
+                                            $dMonadBase
+  = DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT
+"SPEC/DB $fMonadBasebLoggingT_$cliftBase @ IO @ IO" [ALWAYS] forall ($dMonadBase :: Control.Monad.Base.MonadBase
+                                                                                      GHC.Types.IO
+                                                                                      GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBasebLoggingT_$cliftBase @ GHC.Types.IO
+                                                       @ GHC.Types.IO
+                                                       $dMonadBase
+  = DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cliftBase
+"SPEC/DB $fMonadBasebLoggingT_$cp2MonadBase @ IO @ IO" [ALWAYS] forall ($dMonadBase :: Control.Monad.Base.MonadBase
+                                                                                         GHC.Types.IO
+                                                                                         GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBasebLoggingT_$cp2MonadBase @ GHC.Types.IO
+                                                          @ GHC.Types.IO
+                                                          $dMonadBase
+  = DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase
+"SPEC/DB $fMonadBasebLoggingT_$cp4MonadBase @ IO @ IO" [ALWAYS] forall ($dMonadBase :: Control.Monad.Base.MonadBase
+                                                                                         GHC.Types.IO
+                                                                                         GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBasebLoggingT_$cp4MonadBase @ GHC.Types.IO
+                                                          @ GHC.Types.IO
+                                                          $dMonadBase
+  = DB.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
+"SPEC/DB $fMonadIOLoggingT @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                 GHC.Types.IO)
+  Control.Monad.Logger.$fMonadIOLoggingT @ GHC.Types.IO $dMonadIO
+  = DB.$s$fMonadIOLoggingT
+"SPEC/DB $fMonadIONoLoggingT @ (ResourceT IO)" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                               (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                                                  GHC.Types.IO))
+  Control.Monad.Logger.$fMonadIONoLoggingT @ (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                GHC.Types.IO)
+                                           $dMonadIO
+  = DB.$s$fMonadIONoLoggingT
+"SPEC/DB $fMonadIONoLoggingT_$cp1MonadIO @ (ResourceT IO)" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                                           (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                                                              GHC.Types.IO))
+  Control.Monad.Logger.$fMonadIONoLoggingT_$cp1MonadIO @ (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                            GHC.Types.IO)
+                                                       $dMonadIO
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadIONoLoggingT_$cp1MonadIO
+"SPEC/DB $fMonadIOResourceT @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                  GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fMonadIOResourceT @ GHC.Types.IO
+                                                           $dMonadIO
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadIOResourceT
+"SPEC/DB $fMonadIOResourceT_$cliftIO @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                           GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fMonadIOResourceT_$cliftIO @ GHC.Types.IO
+                                                                    $dMonadIO
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadIOResourceT_$cliftIO
+"SPEC/DB $fMonadLoggerLoggingT @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                     GHC.Types.IO)
+  Control.Monad.Logger.$fMonadLoggerLoggingT @ GHC.Types.IO $dMonadIO
+  = DB.$s$fMonadLoggerLoggingT
+"SPEC/DB $fMonadLoggerLoggingT_$cmonadLoggerLog @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                                      GHC.Types.IO)
+  Control.Monad.Logger.$fMonadLoggerLoggingT_$cmonadLoggerLog @ GHC.Types.IO
+                                                              $dMonadIO
+  = DB.$s$fMonadLoggerLoggingT_$s$fMonadLoggerLoggingT_$cmonadLoggerLog
+"SPEC/DB $fMonadLoggingT @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                             GHC.Types.IO)
+  Control.Monad.Logger.$fMonadLoggingT @ GHC.Types.IO $dMonad
+  = DB.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT
+"SPEC/DB $fMonadLoggingT_$cfail @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                    GHC.Types.IO)
+  Control.Monad.Logger.$fMonadLoggingT_$cfail @ GHC.Types.IO $dMonad
+  = DB.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT_$cfail
+"SPEC/DB $fMonadNoLoggingT @ (ResourceT IO)" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                           (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                                              GHC.Types.IO))
+  Control.Monad.Logger.$fMonadNoLoggingT @ (Control.Monad.Trans.Resource.Internal.ResourceT
+                                              GHC.Types.IO)
+                                         $dMonad
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadNoLoggingT
+"SPEC/DB $fMonadNoLoggingT_$c>> @ (ResourceT IO)" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                                (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                                                   GHC.Types.IO))
+  Control.Monad.Logger.$fMonadNoLoggingT_$c>> @ (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                   GHC.Types.IO)
+                                              $dMonad
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadNoLoggingT_$c>>
+"SPEC/DB $fMonadNoLoggingT_$cfail @ (ResourceT IO)" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                                  (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                                                     GHC.Types.IO))
+  Control.Monad.Logger.$fMonadNoLoggingT_$cfail @ (Control.Monad.Trans.Resource.Internal.ResourceT
+                                                     GHC.Types.IO)
+                                                $dMonad
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadNoLoggingT_$cfail
+"SPEC/DB $fMonadResourceT @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                              GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fMonadResourceT @ GHC.Types.IO
+                                                         $dMonad
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadResourceT
+"SPEC/DB $fMonadResourceT_$cfail @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                     GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fMonadResourceT_$cfail @ GHC.Types.IO
+                                                                $dMonad
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadResourceT_$cfail
+"SPEC/DB $fMonadResourceT_$cp1Monad @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                        GHC.Types.IO)
+  Control.Monad.Trans.Resource.Internal.$fMonadResourceT_$cp1Monad @ GHC.Types.IO
+                                                                   $dMonad
+  = DB.$s$fMonadIONoLoggingT_$s$fMonadResourceT_$cp1Monad
+"SPEC/DB fromList @ Text _" [ALWAYS] forall @ a
+                                            ($dOrd :: GHC.Classes.Ord Data.Text.Internal.Text)
+  Data.Map.Base.fromList @ Data.Text.Internal.Text @ a $dOrd
+  = DB.$fPersistEntityUser_$sfromList @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

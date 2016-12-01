@@ -16,7 +16,12 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Lib
+                     , DB
   build-depends:       base >= 4.7 && < 5
+                     , monad-logger
+                     , persistent
+                     , persistent-postgresql
+                     , persistent-template
   default-language:    Haskell2010
 
 executable auth-service-exe
@@ -24,10 +29,6 @@ executable auth-service-exe
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
-                     , monad-logger
-                     , persistent
-                     , persistent-postgresql
-                     , persistent-template
                      , auth-service
   default-language:    Haskell2010
 
