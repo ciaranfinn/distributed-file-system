@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-04 23:32:49.08545 UTC
+2016-12-05 01:14:03.248251 UTC
 
 interface main@main:Main 8001
-  interface hash: d20aa03f85763d7cca023e27d566463a
-  ABI hash: 55fb94ba1e8cee05cc9003b04963d4dd
+  interface hash: 987259963f9a882158f8434f6f0bf85b
+  ABI hash: 53f211a4c0d3d23f4b9043fc998b9a53
   export-list hash: 758baa627fad4afc46b2136115896568
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: e879c5cfd4c6d1b32ec34cc187403fba
@@ -101,7 +101,7 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
-                         auth-service-0.1.0.0@auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz:Model
+                         auth-service-0.1.0.0@auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz:DB
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
                          base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
@@ -141,7 +141,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
-import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz:Model 2882980b71b66452285c9764f0dd7c76
+import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz:DB 90f2170ac9d8d893004e28eeb82accc5
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 d6831ef04cb9301b090dfae6f7bb7ec7
@@ -156,15 +156,15 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-67b319c1a2072b279d60c78364fa648f
+8b3a863e8ad25e4b75f5cf4e6ef0184a
   main :: GHC.Types.IO ()
-  {- Unfolding: InlineRule (0, True, True) Model.runMigrate -}
-c72b5466dd470cc9e614b1c6a6080b86
+  {- Unfolding: InlineRule (0, True, True) DB.runMigrate -}
+73aee2b08d2443b3d856d75fc93ffc30
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
-     Unfolding: (GHC.TopHandler.runMainIO1 @ () Model.runMigrate) -}
+     Unfolding: (GHC.TopHandler.runMainIO1 @ () DB.runMigrate) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

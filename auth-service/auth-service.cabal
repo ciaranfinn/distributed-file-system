@@ -15,8 +15,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:   Model
-                     , DB
+  exposed-modules:   DB
   build-depends:       base >= 4.7 && < 5
                      , monad-logger
                      , persistent

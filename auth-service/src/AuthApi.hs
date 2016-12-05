@@ -6,17 +6,13 @@
 
 module AuthApi () where
 
-import Control.Monad       (mzero)
-import Data.Aeson          (FromJSON(..), ToJSON(..))
-import Data.Proxy
-import GHC.Generics
-import Network.HTTP.Client (defaultManagerSettings, newManager)
-import Servant.API
-import Model               (User)
+import Data.Aeson
+import Servant
 
 
-type AuthAPI = "authorise" :> ReqBody '[JSON] User
-             :> Post '[JSON] UserDetailed
+type AuthAPI = "authorise"
+             :> ReqBody '[JSON] User
+             :> Post '[JSON] User
 
 api :: Proxy AuthAPI
 api = Proxy
