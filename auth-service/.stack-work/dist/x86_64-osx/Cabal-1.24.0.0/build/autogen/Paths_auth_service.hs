@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/ciaranfinn/Desktop/distributed-systems/auth-service/.stack-work/install/x86_64-osx/lts-7.10/8.0.1/bin"
-libdir     = "/Users/ciaranfinn/Desktop/distributed-systems/auth-service/.stack-work/install/x86_64-osx/lts-7.10/8.0.1/lib/x86_64-osx-ghc-8.0.1/auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz"
+libdir     = "/Users/ciaranfinn/Desktop/distributed-systems/auth-service/.stack-work/install/x86_64-osx/lts-7.10/8.0.1/lib/x86_64-osx-ghc-8.0.1/auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ"
 datadir    = "/Users/ciaranfinn/Desktop/distributed-systems/auth-service/.stack-work/install/x86_64-osx/lts-7.10/8.0.1/share/x86_64-osx-ghc-8.0.1/auth-service-0.1.0.0"
 libexecdir = "/Users/ciaranfinn/Desktop/distributed-systems/auth-service/.stack-work/install/x86_64-osx/lts-7.10/8.0.1/libexec"
 sysconfdir = "/Users/ciaranfinn/Desktop/distributed-systems/auth-service/.stack-work/install/x86_64-osx/lts-7.10/8.0.1/etc"

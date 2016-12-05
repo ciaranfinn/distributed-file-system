@@ -1,24 +1,29 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-05 01:14:03.248251 UTC
+2016-12-05 20:10:02.499573 UTC
 
 interface main@main:Main 8001
-  interface hash: 987259963f9a882158f8434f6f0bf85b
-  ABI hash: 53f211a4c0d3d23f4b9043fc998b9a53
-  export-list hash: 758baa627fad4afc46b2136115896568
-  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
-  flag hash: e879c5cfd4c6d1b32ec34cc187403fba
+  interface hash: 9156a163d44c50d73afec3493cec5615
+  ABI hash: c50a25ab54e7c8837792244ce53130c0
+  export-list hash: f27c5df367d7285b60011d110586960d
+  orphan hash: 7c3560eee66c4468308fe62dfed79e8a
+  flag hash: a0d4534c7f37e0e51e81fc1a548cf058
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  Main.connStr
   Main.main
+  Main.serviceRunPort
 module dependencies:
 package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       aeson-compat-0.3.6@aeson-compat-0.3.6-5wE6V2cyaFcB5no9HXBKW5
+                      ansi-terminal-0.6.2.3@ansi-terminal-0.6.2.3-448ipfN5j28Ha0AgPiJmdI
+                      appar-0.1.4@appar-0.1.4-1in4Ewd8JBkAYDZSWXLSe0
                       array-0.5.1.1@array-0.5.1.1
+                      async-2.1.1@async-2.1.1-xFiBzw9xoB8HPZAuxUY2o
                       attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR
-                      auth-service-0.1.0.0@auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz
+                      auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ
                       auto-update-0.1.4@auto-update-0.1.4-GAesfFmqoZzBz6e09kRyzb
                       base-4.9.0.0
                       base-compat-0.9.1@base-compat-0.9.1-tmPpmtbHbvIDjFWbkjGrR
@@ -27,29 +32,44 @@ package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-KWDLbdBYSBoALiMW0LHIz1
                       blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C
                       blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D
+                      byteorder-1.0.4@byteorder-1.0.4-BbL4c17EpZrL9PcZm0xys9
                       bytestring-0.10.8.1@bytestring-0.10.8.1
+                      bytestring-conversion-0.3.1@bytestring-conversion-0.3.1-EvX949he2UAKBbGbE7IZfu
                       case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
                       conduit-1.2.8@conduit-1.2.8-5FcKXI45VDc6lGPbFuJAWM
                       conduit-extra-1.1.15@conduit-extra-1.1.15-53svZ1V22a02WgMiq2YICw
                       containers-0.5.7.1@containers-0.5.7.1
+                      cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU
+                      data-default-class-0.1.2.0@data-default-class-0.1.2.0-FYQpjIylblBDctdkHAFeXA
                       deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.2.6.2@directory-1.2.6.2
                       dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv
+                      double-conversion-2.0.1.0@double-conversion-2.0.1.0-GBJeLbJOvPcIufCPOIwofV
                       easy-file-0.2.1@easy-file-0.2.1-bAUkz2rC2kFhBbPjw2Of5
                       exceptions-0.8.3@exceptions-0.8.3-7py7fmRxowDFpHmiHGKrTb
                       fast-logger-2.4.7@fast-logger-2.4.7-E7H6TuZQzia59KuB50vayl
+                      file-embed-0.0.10@file-embed-0.0.10-IXfudWSq57y1Athysk5ifZ
                       filepath-1.4.1.0@filepath-1.4.1.0
                       ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
                       hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
                       http-api-data-0.2.4@http-api-data-0.2.4-3jwS7OrPl3l4oJfG3gRZ5C
-                      integer-gmp-1.0.0.1
+                      http-date-0.0.6.1@http-date-0.0.6.1-150spKQYCuoIrltdbMmYGs
+                      http-media-0.6.4@http-media-0.6.4-82jDVCpdN5H696EFF5l5I4
+                      http-types-0.9.1@http-types-0.9.1-8WdUZL4twHzANJbxvb1Aoj
+                      http2-1.6.2@http2-1.6.2-FAbjmjQAybhLjdn6FTjXH8 integer-gmp-1.0.0.1
+                      iproute-1.7.1@iproute-1.7.1-9hsGfRvggCmFA0ueZi5Sd9
                       lifted-base-0.2.3.8@lifted-base-0.2.3.8-KLkd0w1UJqu6nE8oVTTEBy
+                      memory-0.13@memory-0.13-ABHR5331zHK9scHPRr7afU
+                      mime-types-0.1.0.7@mime-types-0.1.0.7-AxQ64wFjikqCSdK5pSeZvh
                       mmorph-1.0.9@mmorph-1.0.9-DmSwQqk5nLj7roLAcydGz
                       monad-control-1.0.1.0@monad-control-1.0.1.0-HoNEBoNfniX3vjSfkI7WTT
                       monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK
                       monad-loops-0.4.3@monad-loops-0.4.3-1xZFtRVMQPC4X8bjTBWqNi
                       mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG
+                      network-uri-2.6.1.0@network-uri-2.6.1.0-DDHh2FNiPirBRgkuU9DEt2
                       old-locale-1.0.0.7@old-locale-1.0.0.7-6glXNhHF891B41ZfuI8hU8
                       old-time-1.1.0.3@old-time-1.1.0.3-IcvdkJUsE9M8t3io8peAEp
+                      parsec-3.1.11@parsec-3.1.11-BCos4GEVCuDB8dnOCBHO6X
                       path-pieces-0.2.1@path-pieces-0.2.1-EQ6YdjSujhVE8ECatsqK1q
                       persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD
                       persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK
@@ -58,13 +78,20 @@ package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       postgresql-simple-0.5.2.1@postgresql-simple-0.5.2.1-3INwbAr3KaOko5GoR6I2w
                       pretty-1.1.3.3@pretty-1.1.3.3
                       primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      psqueues-0.2.2.2@psqueues-0.2.2.2-Abmw1tivvf7JJikDhHX0px
                       random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
                       resource-pool-0.2.3.2@resource-pool-0.2.3.2-9vTgJsy3ECMB5KkdzRIRAh
                       resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z
                       scientific-0.3.4.9@scientific-0.3.4.9-6oTYuCcx6H5BsTGU7D2Gk3
+                      servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc
+                      servant-server-0.8.1@servant-server-0.8.1-2W4dYHeOEv33BK078P3wA
                       silently-1.2.5@silently-1.2.5-Ek776fxSdtm4h8aXqt6CNw
+                      simple-sendfile-0.2.25@simple-sendfile-0.2.25-FZS0Stqtwd5AOyFRQgM4IV
                       stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
                       stm-chans-3.0.0.4@stm-chans-3.0.0.4-4lLWE8CZnvmDZJW5bKkus1
+                      streaming-commons-0.1.16@streaming-commons-0.1.16-KtRawhq8O97EWCabefpk66
+                      string-conversions-0.4@string-conversions-0.4-8T0UFmRDEly2gsNJzmHrNQ
+                      stringsearch-0.3.6.6@stringsearch-0.3.6.6-KFZuUgmBRr4GSrTHv7XvSl
                       tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
                       template-haskell-2.11.0.0
                       text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
@@ -73,10 +100,20 @@ package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       transformers-0.5.2.0@transformers-0.5.2.0
                       transformers-base-0.4.4@transformers-base-0.4.4-25SoAegOdaF8rLEnnb5jPI
                       unix-2.7.2.0@unix-2.7.2.0
+                      unix-compat-0.4.2.0@unix-compat-0.4.2.0-GNHotEMWE5dJ4oYFhgibIV
                       unix-time-0.3.7@unix-time-0.3.7-HcxGsrnTmTlC98pyanzoMW
                       unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
+                      utf8-string-1.0.1.1@utf8-string-1.0.1.1-2T8mBCuEDlXDo8zed8Onw4
                       uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx
+                      vault-0.3.0.6@vault-0.3.0.6-CA9Xj82tAPe9nD32xVMgDG
                       vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+                      wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW
+                      wai-app-static-3.1.6.1@wai-app-static-3.1.6.1-6csRgbgolyoCCOLw42RlBs
+                      wai-extra-3.0.19@wai-extra-3.0.19-JgWV2EEhKqI9Cbv1ALadHO
+                      wai-logger-2.3.0@wai-logger-2.3.0-IfusT8I9ees2102USHAF8e
+                      warp-3.2.9@warp-3.2.9-1T06si5IpgT9ocLo3cujDp
+                      word8-0.1.2@word8-0.1.2-2E1SgvvAV2fK8vZPDHbRan
+                      zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV
 orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Generic
          aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Instances
          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.ByteString.Char8
@@ -85,6 +122,7 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
          hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
+         network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG:Network.Socket
          persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistQuery
          persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistStore
          persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistUnique
@@ -101,7 +139,7 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
-                         auth-service-0.1.0.0@auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz:DB
+                         auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
                          base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
@@ -118,8 +156,11 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
                          dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv:Data.DList
                          ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         iproute-1.7.1@iproute-1.7.1-9hsGfRvggCmFA0ueZi5Sd9:Data.IP.Addr
+                         iproute-1.7.1@iproute-1.7.1-9hsGfRvggCmFA0ueZi5Sd9:Data.IP.Range
                          monad-control-1.0.1.0@monad-control-1.0.1.0-HoNEBoNfniX3vjSfkI7WTT:Control.Monad.Trans.Control
                          monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK:Control.Monad.Logger
+                         network-uri-2.6.1.0@network-uri-2.6.1.0-DDHh2FNiPirBRgkuU9DEt2:Network.URI
                          persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistConfig
                          persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistStore
                          persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Types.Internal
@@ -128,6 +169,11 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
                          resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z:Control.Monad.Trans.Resource.Internal
+                         servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.API.ContentTypes
+                         servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.API.Verbs
+                         servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.Utils.Links
+                         servant-server-0.8.1@servant-server-0.8.1-2W4dYHeOEv33BK078P3wA:Servant.Server.Internal
+                         servant-server-0.8.1@servant-server-0.8.1-2W4dYHeOEv33BK078P3wA:Servant.Server.Internal.BasicAuth
                          tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
                          template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
@@ -141,9 +187,224 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
-import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz:DB 90f2170ac9d8d893004e28eeb82accc5
+                         zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
+import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models beeae1e1c4c615bdc706a5d52c4dd450
+import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Service c444e377de237c95388585fe23024f5a
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK:Control.Monad.Logger 2f87c925edad5966dbd05a4d603919f5
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Run 965a64b3015b876e71ce73bed1657280
+import  -/  persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK:Database.Persist.Postgresql be3582dc9599bd8f4ee48c6f9709331d
+import  -/  wai-extra-3.0.19@wai-extra-3.0.19-JgWV2EEhKqI9Cbv1ALadHO:Network.Wai.Middleware.RequestLogger a9d8d6f627db2dcf2becabbc6ea0162a
+import  -/  warp-3.2.9@warp-3.2.9-1T06si5IpgT9ocLo3cujDp:Network.Wai.Handler.Warp 5f0233bfcc72ca4f3a56a82674b89f28
+import  -/  warp-3.2.9@warp-3.2.9-1T06si5IpgT9ocLo3cujDp:Network.Wai.Handler.Warp.Run f739b096247fcb26e4d9e1ef935c9f91
+71d3d6258f745a40746711548c382b5c
+  $s$fApplicativeLoggingT ::
+    GHC.Base.Applicative (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  Main.$s$fApplicativeLoggingT_$s$fFunctorLoggingT
+                  (Control.Monad.Logger.$fApplicativeLoggingT_$cpure
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fApplicativeLoggingT_$c<*>
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fApplicativeLoggingT_$c*>
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fApplicativeLoggingT_$c<*
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad) -}
+6bc7426125e43696d96bcfa6eed1120a
+  $s$fApplicativeLoggingT_$creturn ::
+    a -> Control.Monad.Logger.LoggingT GHC.Types.IO a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><S,U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a
+                   (eta :: a)
+                   (eta1 :: Language.Haskell.TH.Syntax.Loc
+                            -> Control.Monad.Logger.LogSource
+                            -> Control.Monad.Logger.LogLevel
+                            -> System.Log.FastLogger.LogStr.LogStr
+                            -> GHC.Types.IO ())
+                   (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (GHC.Base.returnIO @ a eta) `cast` (GHC.Types.N:IO[0] <a>_R) eta2)
+                  `cast`
+                (forall (a :: <*>_N).
+                 <a>_R
+                 ->_R Trans
+                          (<Language.Haskell.TH.Syntax.Loc
+                            -> Control.Monad.Logger.LogSource
+                            -> Control.Monad.Logger.LogLevel
+                            -> System.Log.FastLogger.LogStr.LogStr
+                            -> GHC.Types.IO ()>_R
+                           ->_R Sym (GHC.Types.N:IO[0] <a>_R))
+                          (Sym (Control.Monad.Logger.N:LoggingT[0]
+                                    <GHC.Types.IO>_R <a>_N))) -}
+09d335295363d853864eb0092fd46b18
+  $s$fApplicativeLoggingT_$dMonad :: GHC.Base.Monad GHC.Types.IO
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) GHC.Base.$fMonadIO -}
+4567c5f544f0909bf93ddb94633d2aa3
+  $s$fApplicativeLoggingT_$s$fFunctorLoggingT ::
+    GHC.Base.Functor (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  (Control.Monad.Logger.$fFunctorLoggingT_$cfmap
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fFunctorLoggingT_$c<$
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad) -}
+9b6d5e31feb3fd403e6309d4a03f225b
+  $s$fMonadBaseControlbLoggingT ::
+    Control.Monad.Trans.Control.MonadBaseControl
+      GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Types.IO
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBaseControlbLoggingT_$cp1MonadBaseControl
+                  (Control.Monad.Logger.$fMonadBaseControlbLoggingT_$cliftBaseWith
+                     @ GHC.Types.IO
+                     @ GHC.Types.IO
+                     Control.Monad.Trans.Control.$fMonadBaseControlIOIO)
+                  (Control.Monad.Logger.$fMonadBaseControlbLoggingT_$crestoreM
+                     @ GHC.Types.IO
+                     @ GHC.Types.IO
+                     Control.Monad.Trans.Control.$fMonadBaseControlIOIO) -}
+0e8ff1bc88098ff5a4443240b9bab584
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBaseControlbLoggingT_$cp1MonadBaseControl ::
+    Control.Monad.Base.MonadBase
+      GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT -}
+9829b8b193f5221a6337191aeaa67b06
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT ::
+    Control.Monad.Base.MonadBase
+      GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Types.IO
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  GHC.Base.$fApplicativeIO
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase
+                  GHC.Base.$fMonadIO
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cliftIO -}
+d819fd2fd1502642cf3635eedefc2481
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase ::
+    GHC.Base.Applicative (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$s$fApplicativeLoggingT -}
+e342cd5064a49c6a47faf44b9b00c6df
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase ::
+    GHC.Base.Monad (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT -}
+622f2c31e50cb0c8c5635f25480582df
+  $s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cliftIO ::
+    GHC.Types.IO a -> Control.Monad.Logger.LoggingT GHC.Types.IO a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,A>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (eta :: GHC.Types.IO a) ->
+                 let {
+                   eta1 :: GHC.Types.IO a = GHC.Base.id @ (GHC.Types.IO a) eta
+                 } in
+                 (\ (ds :: Language.Haskell.TH.Syntax.Loc
+                           -> Control.Monad.Logger.LogSource
+                           -> Control.Monad.Logger.LogLevel
+                           -> System.Log.FastLogger.LogStr.LogStr
+                           -> GHC.Types.IO ()) ->
+                  eta1)
+                   `cast`
+                 (Sym (Control.Monad.Logger.N:LoggingT[0]
+                           <GHC.Types.IO>_R <a>_N))) -}
+a1feb1209d4c91f85320b782558a313c
+  $s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT ::
+    GHC.Base.Monad (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  (Control.Monad.Logger.$fMonadLoggingT_$cp1Monad
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fMonadLoggingT_$c>>=
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad)
+                  (Control.Monad.Logger.$fMonadLoggingT_$c>>
+                     @ GHC.Types.IO
+                     Main.$s$fApplicativeLoggingT_$dMonad)
+                  Main.$s$fApplicativeLoggingT_$creturn
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT_$cfail -}
+b3d0e6d35987e80a795650db75debc8f
+  $s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT_$cfail ::
+    GHC.Base.String -> Control.Monad.Logger.LoggingT GHC.Types.IO a
+  {- Arity: 1, Strictness: <B,U>x,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (eta :: GHC.Base.String) ->
+                 Control.Monad.Logger.$fMonadLoggingT1
+                   @ GHC.Types.IO
+                   @ a
+                   Main.$s$fApplicativeLoggingT_$dMonad
+                   eta) -}
+92264ac9b23f2144cb242ec0ede54c6b
+  $s$fMonadIOLoggingT ::
+    Control.Monad.IO.Class.MonadIO
+      (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cliftIO -}
+833319c3f7570142ddb16cd7c5c860bd
+  $s$fMonadLoggerLoggingT ::
+    Control.Monad.Logger.MonadLogger
+      (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
+                  Main.$s$fMonadLoggerLoggingT_$s$fMonadLoggerLoggingT_$cmonadLoggerLog -}
+7d86bd8cf4d6d18bb34e443f4be4ecd5
+  $s$fMonadLoggerLoggingT_$s$fMonadLoggerLoggingT_$cmonadLoggerLog ::
+    System.Log.FastLogger.LogStr.ToLogStr msg =>
+    Language.Haskell.TH.Syntax.Loc
+    -> Control.Monad.Logger.LogSource
+    -> Control.Monad.Logger.LogLevel
+    -> msg
+    -> Control.Monad.Logger.LoggingT GHC.Types.IO ()
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,1*C1(U(U,U))><L,U><L,U><L,U><L,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ msg
+                   ($dToLogStr :: System.Log.FastLogger.LogStr.ToLogStr msg)
+                   (a :: Language.Haskell.TH.Syntax.Loc)
+                   (b :: Control.Monad.Logger.LogSource)
+                   (c :: Control.Monad.Logger.LogLevel)
+                   (d :: msg) ->
+                 let {
+                   lvl21 :: System.Log.FastLogger.LogStr.LogStr
+                   = $dToLogStr
+                       `cast`
+                     (System.Log.FastLogger.LogStr.N:ToLogStr[0] <msg>_N)
+                       d
+                 } in
+                 (\ (f :: Language.Haskell.TH.Syntax.Loc
+                          -> Control.Monad.Logger.LogSource
+                          -> Control.Monad.Logger.LogLevel
+                          -> System.Log.FastLogger.LogStr.LogStr
+                          -> GHC.Types.IO ()) ->
+                  GHC.Base.id @ (GHC.Types.IO ()) (f a b c lvl21))
+                   `cast`
+                 (Sym (Control.Monad.Logger.N:LoggingT[0]
+                           <GHC.Types.IO>_R <()>_N))) -}
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -156,15 +417,334 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-8b3a863e8ad25e4b75f5cf4e6ef0184a
+f1dcc66070a646abebb1b99a2d0b1e06
+  connStr :: Database.Persist.Postgresql.ConnectionString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 let {
+                   addr# :: GHC.Prim.Addr#
+                   = "host=localhost dbname=postgres user=docker port=5433"#
+                 } in
+                 case {__pkg_ccall bytestring-0.10.8.1@bytestring-0.10.8.1 strlen GHC.Prim.Addr#
+                                                                                  -> GHC.Prim.State#
+                                                                                       GHC.Prim.RealWorld
+                                                                                  -> (# GHC.Prim.State#
+                                                                                          GHC.Prim.RealWorld,
+                                                                                        GHC.Prim.Word# #)}
+                        addr#
+                        ipv of wild { (#,#) ds3 ds4 ->
+                 Data.ByteString.Internal.PS
+                   addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds4) } }) -}
+156c4c16c510ffea0447ac8425488ab3
   main :: GHC.Types.IO ()
-  {- Unfolding: InlineRule (0, True, True) DB.runMigrate -}
-73aee2b08d2443b3d856d75fc93ffc30
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e69edad7ceedc0226ebde3e116a194d4
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ((Database.Persist.Postgresql.createPostgresqlPoolModified
+                          @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
+                          @ Database.Persist.Sql.Types.Internal.SqlBackend
+                          Main.$s$fMonadIOLoggingT
+                          Main.$s$fMonadBaseControlbLoggingT
+                          Main.$s$fMonadLoggerLoggingT
+                          Main.main3
+                            `cast`
+                          (GHC.Classes.(%,%)
+                             <Database.Persist.Class.PersistStore.IsPersistBackend
+                                Database.Persist.Sql.Types.Internal.SqlBackend>_N
+                             ((Data.Type.Equality.~)
+                                <*>_N
+                                (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                                <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
+                          Main.main6
+                            `cast`
+                          (<Database.PostgreSQL.Simple.Internal.Connection>_R
+                           ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                          Main.connStr
+                          Main.main5)
+                         `cast`
+                       (Control.Monad.Logger.N:LoggingT[0]
+                            <GHC.Types.IO>_R
+                            <Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_N)
+                         Control.Monad.Logger.runStderrLoggingT1
+                           `cast`
+                         (<Language.Haskell.TH.Syntax.Loc>_R
+                          ->_R <Control.Monad.Logger.LogSource>_R
+                          ->_R <Control.Monad.Logger.LogLevel>_R
+                          ->_R <System.Log.FastLogger.LogStr.LogStr>_R
+                          ->_R Sym (GHC.Types.N:IO[0] <()>_R)))
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           <Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of ww { Data.Pool.Pool ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case Data.Pool.$w$swithResource
+                        @ Database.Persist.Sql.Types.Internal.SqlBackend
+                        @ ()
+                        ww1
+                        ww2
+                        ww3
+                        ww5
+                        ww6
+                        Main.main2
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 Network.Wai.Handler.Warp.Run.$wrunSettings
+                   Main.serviceRunPort
+                   Network.Wai.Handler.Warp.Settings.defaultSettings16
+                   Network.Wai.Handler.Warp.Settings.defaultOnException1
+                     `cast`
+                   (<GHC.Base.Maybe Network.Wai.Internal.Request>_R
+                    ->_R <GHC.Exception.SomeException>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultOnExceptionResponse
+                   Network.Wai.Handler.Warp.Settings.defaultSettings14
+                     `cast`
+                   (<Network.Socket.Types.SockAddr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings13
+                     `cast`
+                   (<Network.Socket.Types.SockAddr>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings12
+                   (GHC.Base.Nothing @ Network.Wai.Handler.Warp.Timeout.Manager)
+                   Network.Wai.Handler.Warp.Settings.defaultSettings11
+                   Network.Wai.Handler.Warp.Settings.defaultSettings11
+                   Network.Wai.Handler.Warp.Settings.defaultSettings9
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings10
+                     `cast`
+                   (<(forall a. GHC.Types.IO a -> GHC.Types.IO a)
+                     -> GHC.Types.IO ()>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   GHC.Types.False
+                   Network.Wai.Handler.Warp.Settings.defaultSettings8
+                     `cast`
+                   (<GHC.Types.IO ()>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings6
+                   Network.Wai.Handler.Warp.Settings.defaultSettings4
+                   Network.Wai.Handler.Warp.Settings.ProxyProtocolNone
+                   Network.Wai.Handler.Warp.Settings.defaultSettings3
+                   GHC.Types.True
+                   Network.Wai.Handler.Warp.Settings.defaultSettings2
+                     `cast`
+                   (<Network.Wai.Internal.Request>_R
+                    ->_R <Network.HTTP.Types.Status.Status>_R
+                    ->_R <GHC.Base.Maybe GHC.Integer.Type.Integer>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   Network.Wai.Handler.Warp.Settings.defaultSettings1
+                     `cast`
+                   (<Network.Wai.Internal.Request>_R
+                    ->_R <Data.ByteString.Internal.ByteString>_R
+                    ->_R <GHC.Integer.Type.Integer>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (Network.Wai.Middleware.RequestLogger.logStdout
+                      (Servant.Server.serveWithContext
+                         @ AuthApi.AuthServiceApi
+                         @ '[]
+                         Service.$sserve2
+                           `cast`
+                         (Sym (Servant.Server.Internal.N:HasServer[0]
+                                   <*>_N
+                                   <"users"
+                                    Servant.API.Sub.:> Servant.API.Verbs.Verb
+                                                         'Network.HTTP.Types.Method.GET
+                                                         200
+                                                         '[Servant.API.ContentTypes.JSON]
+                                                         [Database.Persist.Class.PersistEntity.Entity
+                                                            Models.User]>_N
+                                   <'[]>_N))
+                         (Data.Proxy.Proxy @ * @ AuthApi.AuthServiceApi)
+                         Servant.Server.Internal.Context.$WEmptyContext
+                         (Service.allUsers
+                            `cast`
+                          (Trans
+                               (Service.N:App[0] <[Database.Persist.Class.PersistEntity.Entity
+                                                     Models.User]>_N)
+                               (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                    <*>_N
+                                    <Data.Pool.Pool
+                                       Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                                    <Control.Monad.Trans.Except.ExceptT
+                                       Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
+                                    <[Database.Persist.Class.PersistEntity.Entity Models.User]>_N))
+                            ww)
+                           `cast`
+                         (Trans
+                              (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                             <Network.HTTP.Types.Method.StdMethod>_N
+                                             <'[Servant.API.ContentTypes.JSON]>_N
+                                             <[Database.Persist.Class.PersistEntity.Entity
+                                                 Models.User]>_N
+                                             <'Network.HTTP.Types.Method.GET>_N
+                                             <200>_N
+                                             <Control.Monad.Trans.Except.ExceptT
+                                                Servant.Server.Internal.ServantErr.ServantErr
+                                                GHC.Types.IO>_N)))
+                              (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                             <*>_N
+                                             <"users">_N
+                                             <Servant.API.Verbs.Verb
+                                                'Network.HTTP.Types.Method.GET
+                                                200
+                                                '[Servant.API.ContentTypes.JSON]
+                                                [Database.Persist.Class.PersistEntity.Entity
+                                                   Models.User]>_N
+                                             <Control.Monad.Trans.Except.ExceptT
+                                                Servant.Server.Internal.ServantErr.ServantErr
+                                                GHC.Types.IO>_N))))))
+                   ipv2 } } }) -}
+f356836652aa57680b8bceef5b6aadcc
+  main2 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend -> GHC.Types.IO ()
   {- Arity: 1,
-     Unfolding: (GHC.TopHandler.runMainIO1 @ () DB.runMigrate) -}
+     Unfolding: (Database.Persist.Sql.Run.runSqlConn
+                   @ GHC.Types.IO
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ ()
+                   Control.Monad.Trans.Control.$fMonadBaseControlIOIO
+                   Main.main3
+                     `cast`
+                   (GHC.Classes.(%,%)
+                      <Database.Persist.Class.PersistStore.IsPersistBackend
+                         Database.Persist.Sql.Types.Internal.SqlBackend>_N
+                      ((Data.Type.Equality.~)
+                         <*>_N
+                         (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                         <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
+                   Models.dbMigration) -}
+3b9a495c8f395f6cb74d9af58d5f237a
+  main3 ::
+    (Database.Persist.Class.PersistStore.IsPersistBackend
+       Database.Persist.Sql.Types.Internal.SqlBackend,
+     Database.Persist.Sql.Types.Internal.SqlBackend
+     Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Database.Persist.Sql.Types.Internal.$fIsPersistBackendSqlBackend,
+                  Main.main4
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
+3371ccfc795241aa3ac149766a813c92
+  main4 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    GHC.Types.~~ Database.Persist.Sql.Types.Internal.SqlBackend
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
+15ac3f4c96e6c65b6a71a18a4b2c5b87
+  main5 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 10#) -}
+f2167f1e9f2e6612a2fffe827321581d
+  main6 ::
+    Database.PostgreSQL.Simple.Internal.Connection
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ (ds :: Database.PostgreSQL.Simple.Internal.Connection)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# eta, GHC.Tuple.() #)) -}
+97578c63ea6e329b891375707df3b253
+  main7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+ea181f4c0bb6dadd84d5dfe1cb8a014e
+  serviceRunPort :: Network.Wai.Handler.Warp.Types.Port
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8000#) -}
+"SPEC/Main $fApplicativeLoggingT @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                     GHC.Types.IO)
+  Control.Monad.Logger.$fApplicativeLoggingT @ GHC.Types.IO $dMonad
+  = Main.$s$fApplicativeLoggingT
+"SPEC/Main $fApplicativeLoggingT_$creturn @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                              GHC.Types.IO)
+  Control.Monad.Logger.$fApplicativeLoggingT_$creturn @ GHC.Types.IO
+                                                      $dMonad
+  = Main.$s$fApplicativeLoggingT_$creturn
+"SPEC/Main $fFunctorLoggingT @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                 GHC.Types.IO)
+  Control.Monad.Logger.$fFunctorLoggingT @ GHC.Types.IO $dMonad
+  = Main.$s$fApplicativeLoggingT_$s$fFunctorLoggingT
+"SPEC/Main $fMonadBaseControlbLoggingT @ IO @ IO" [ALWAYS] forall ($dMonadBaseControl :: Control.Monad.Trans.Control.MonadBaseControl
+                                                                                           GHC.Types.IO
+                                                                                           GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBaseControlbLoggingT @ GHC.Types.IO
+                                                   @ GHC.Types.IO
+                                                   $dMonadBaseControl
+  = Main.$s$fMonadBaseControlbLoggingT
+"SPEC/Main $fMonadBaseControlbLoggingT_$cp1MonadBaseControl @ IO @ IO" [ALWAYS] forall ($dMonadBaseControl :: Control.Monad.Trans.Control.MonadBaseControl
+                                                                                                                GHC.Types.IO
+                                                                                                                GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBaseControlbLoggingT_$cp1MonadBaseControl @ GHC.Types.IO
+                                                                        @ GHC.Types.IO
+                                                                        $dMonadBaseControl
+  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBaseControlbLoggingT_$cp1MonadBaseControl
+"SPEC/Main $fMonadBasebLoggingT @ IO @ IO" [ALWAYS] forall ($dMonadBase :: Control.Monad.Base.MonadBase
+                                                                             GHC.Types.IO
+                                                                             GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBasebLoggingT @ GHC.Types.IO
+                                            @ GHC.Types.IO
+                                            $dMonadBase
+  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT
+"SPEC/Main $fMonadBasebLoggingT_$cp2MonadBase @ IO @ IO" [ALWAYS] forall ($dMonadBase :: Control.Monad.Base.MonadBase
+                                                                                           GHC.Types.IO
+                                                                                           GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBasebLoggingT_$cp2MonadBase @ GHC.Types.IO
+                                                          @ GHC.Types.IO
+                                                          $dMonadBase
+  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase
+"SPEC/Main $fMonadBasebLoggingT_$cp4MonadBase @ IO @ IO" [ALWAYS] forall ($dMonadBase :: Control.Monad.Base.MonadBase
+                                                                                           GHC.Types.IO
+                                                                                           GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBasebLoggingT_$cp4MonadBase @ GHC.Types.IO
+                                                          @ GHC.Types.IO
+                                                          $dMonadBase
+  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
+"SPEC/Main $fMonadIOLoggingT @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                   GHC.Types.IO)
+  Control.Monad.Logger.$fMonadIOLoggingT @ GHC.Types.IO $dMonadIO
+  = Main.$s$fMonadIOLoggingT
+"SPEC/Main $fMonadIOLoggingT_$cliftIO @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                            GHC.Types.IO)
+  Control.Monad.Logger.$fMonadIOLoggingT_$cliftIO @ GHC.Types.IO
+                                                  $dMonadIO
+  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cliftIO
+"SPEC/Main $fMonadLoggerLoggingT @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                       GHC.Types.IO)
+  Control.Monad.Logger.$fMonadLoggerLoggingT @ GHC.Types.IO $dMonadIO
+  = Main.$s$fMonadLoggerLoggingT
+"SPEC/Main $fMonadLoggerLoggingT_$cmonadLoggerLog @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
+                                                                                        GHC.Types.IO)
+  Control.Monad.Logger.$fMonadLoggerLoggingT_$cmonadLoggerLog @ GHC.Types.IO
+                                                              $dMonadIO
+  = Main.$s$fMonadLoggerLoggingT_$s$fMonadLoggerLoggingT_$cmonadLoggerLog
+"SPEC/Main $fMonadLoggingT @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                               GHC.Types.IO)
+  Control.Monad.Logger.$fMonadLoggingT @ GHC.Types.IO $dMonad
+  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT
+"SPEC/Main $fMonadLoggingT_$cfail @ IO" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                      GHC.Types.IO)
+  Control.Monad.Logger.$fMonadLoggingT_$cfail @ GHC.Types.IO $dMonad
+  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT_$cfail
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

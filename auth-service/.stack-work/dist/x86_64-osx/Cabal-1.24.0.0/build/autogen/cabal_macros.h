@@ -119,6 +119,13 @@
   (major1) == 3 && (major2) <  2 || \
   (major1) == 3 && (major2) == 2 && (minor) <= 1)
 
+/* package wai-extra-3.0.19 */
+#define VERSION_wai_extra "3.0.19"
+#define MIN_VERSION_wai_extra(major1,major2,minor) (\
+  (major1) <  3 || \
+  (major1) == 3 && (major2) <  0 || \
+  (major1) == 3 && (major2) == 0 && (minor) <= 19)
+
 /* package warp-3.2.9 */
 #define VERSION_warp "3.2.9"
 #define MIN_VERSION_warp(major1,major2,minor) (\
@@ -175,7 +182,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 1)
 
-#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz"
+#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ"
 
-#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-JwBzpQmQVS12AcEZyGm9zz"
+#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ"
 

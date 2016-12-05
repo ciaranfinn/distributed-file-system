@@ -1,0 +1,2741 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-05 20:40:16.869644 UTC
+
+interface auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models [family instance module] 8001
+  interface hash: 8c64a32976f5002e8c0191a0a44896ba
+  ABI hash: fdde53ecd07e466e41056c53fc863805
+  export-list hash: 78ffe0eeca34b5122a8b5bd89404f86c
+  orphan hash: 8442d7ba8c942bcbb6749a44c2cff784
+  flag hash: 0914d48463066c71190c16b7c3b393cb
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Models.dbAction
+  Models.dbMigration
+  Models.Credentials
+module dependencies:
+package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
+                      aeson-compat-0.3.6@aeson-compat-0.3.6-5wE6V2cyaFcB5no9HXBKW5
+                      array-0.5.1.1@array-0.5.1.1
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR
+                      auto-update-0.1.4@auto-update-0.1.4-GAesfFmqoZzBz6e09kRyzb
+                      base-4.9.0.0
+                      base-compat-0.9.1@base-compat-0.9.1-tmPpmtbHbvIDjFWbkjGrR
+                      base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-In9M41tLtcS9QYt3QpGpNY
+                      binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-KWDLbdBYSBoALiMW0LHIz1
+                      blaze-html-0.8.1.2@blaze-html-0.8.1.2-2kD96kJB6JEGow1dP8IL6C
+                      blaze-markup-0.7.1.0@blaze-markup-0.7.1.0-5a5pBG0fO8kJX4ke3K7j3D
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
+                      conduit-1.2.8@conduit-1.2.8-5FcKXI45VDc6lGPbFuJAWM
+                      conduit-extra-1.1.15@conduit-extra-1.1.15-53svZ1V22a02WgMiq2YICw
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.2.6.2@directory-1.2.6.2
+                      dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv
+                      easy-file-0.2.1@easy-file-0.2.1-bAUkz2rC2kFhBbPjw2Of5
+                      exceptions-0.8.3@exceptions-0.8.3-7py7fmRxowDFpHmiHGKrTb
+                      fast-logger-2.4.7@fast-logger-2.4.7-E7H6TuZQzia59KuB50vayl
+                      filepath-1.4.1.0@filepath-1.4.1.0
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
+                      http-api-data-0.2.4@http-api-data-0.2.4-3jwS7OrPl3l4oJfG3gRZ5C
+                      integer-gmp-1.0.0.1
+                      lifted-base-0.2.3.8@lifted-base-0.2.3.8-KLkd0w1UJqu6nE8oVTTEBy
+                      mmorph-1.0.9@mmorph-1.0.9-DmSwQqk5nLj7roLAcydGz
+                      monad-control-1.0.1.0@monad-control-1.0.1.0-HoNEBoNfniX3vjSfkI7WTT
+                      monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK
+                      monad-loops-0.4.3@monad-loops-0.4.3-1xZFtRVMQPC4X8bjTBWqNi
+                      mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      old-locale-1.0.0.7@old-locale-1.0.0.7-6glXNhHF891B41ZfuI8hU8
+                      old-time-1.1.0.3@old-time-1.1.0.3-IcvdkJUsE9M8t3io8peAEp
+                      path-pieces-0.2.1@path-pieces-0.2.1-EQ6YdjSujhVE8ECatsqK1q
+                      persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD
+                      persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK
+                      persistent-template-2.5.1.6@persistent-template-2.5.1.6-L1UJyeURwQyFqq8arz68gW
+                      postgresql-libpq-0.9.2.0@postgresql-libpq-0.9.2.0-IWEdPrPraPeE94ud73Ope3
+                      postgresql-simple-0.5.2.1@postgresql-simple-0.5.2.1-3INwbAr3KaOko5GoR6I2w
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
+                      resource-pool-0.2.3.2@resource-pool-0.2.3.2-9vTgJsy3ECMB5KkdzRIRAh
+                      resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z
+                      scientific-0.3.4.9@scientific-0.3.4.9-6oTYuCcx6H5BsTGU7D2Gk3
+                      silently-1.2.5@silently-1.2.5-Ek776fxSdtm4h8aXqt6CNw
+                      stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
+                      stm-chans-3.0.0.4@stm-chans-3.0.0.4-4lLWE8CZnvmDZJW5bKkus1
+                      tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
+                      template-haskell-2.11.0.0
+                      text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
+                      time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-1j5dGjxxtiTDuAsO86iSk0
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-base-0.4.4@transformers-base-0.4.4-25SoAegOdaF8rLEnnb5jPI
+                      unix-2.7.2.0@unix-2.7.2.0
+                      unix-time-0.3.7@unix-time-0.3.7-HcxGsrnTmTlC98pyanzoMW
+                      unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
+                      uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx
+                      vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Generic
+         aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Instances
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Text.Internal
+         base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
+         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistQuery
+         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistStore
+         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistUnique
+         persistent-template-2.5.1.6@persistent-template-2.5.1.6-L1UJyeURwQyFqq8arz68gW:Database.Persist.TH
+         stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         unix-time-0.3.7@unix-time-0.3.7-HcxGsrnTmTlC98pyanzoMW:Data.UnixTime.Diff
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
+                         base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.List.NonEmpty
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Semigroup
+                         base-4.9.0.0:Data.Type.Equality base-4.9.0.0:Data.Version
+                         base-4.9.0.0:Data.Void base-4.9.0.0:GHC.Exts
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv:Data.DList
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         monad-control-1.0.1.0@monad-control-1.0.1.0-HoNEBoNfniX3vjSfkI7WTT:Control.Monad.Trans.Control
+                         monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK:Control.Monad.Logger
+                         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistConfig
+                         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistStore
+                         persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Types.Internal
+                         persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK:Database.Persist.Postgresql
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z:Control.Monad.Trans.Resource.Internal
+                         tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base
+                         unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashSet
+                         uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal
+                         uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal.Builder
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
+import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class abf0ee780081829844ac5a316c79cb49
+import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Instances 2c13cb6d5919167465d00f7e7945f76b
+import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Internal 835329596cce5a67256b494ea96b1e48
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:Control.Monad.IO.Class d702028d883e700bd7066b031147030d
+import  -/  base-4.9.0.0:Data.Either bd9f099b82d4ed2d98c56d7144ac6957
+import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
+import  -/  base-4.9.0.0:Data.Proxy aa86c72628cf3b1ceb0816ca84687d80
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Int 2421020ac5d687542a6612a08a16b1fd
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Read 817c914615ac8e308afc0c675fb3f671
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.ParserCombinators.ReadPrec 9512e2f4b227f507f87a150887202aed
+import  -/  base-4.9.0.0:Text.Read.Lex fe3dd7b823826bf6870140c5363f9596
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Internal 96a214b84fd13ce168aecf88c70c8f1b
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base 8d095ad71634b5551ba5dc1307b7f9e5
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  http-api-data-0.2.4@http-api-data-0.2.4-3jwS7OrPl3l4oJfG3gRZ5C:Web.HttpApiData.Internal 5e05840a26e3e4a6a82ac5352d50abe8
+import  -/  mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM:Control.Monad.Reader 859b39f57eb3bed457106c30aac21473
+import  -/  mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM:Control.Monad.Reader.Class a2c7beb266585be238cfe9f5989c52b7
+import  -/  path-pieces-0.2.1@path-pieces-0.2.1-EQ6YdjSujhVE8ECatsqK1q:Web.PathPieces 30e3f3047e2c5650764b43dd339b1722
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistEntity 16dc9aa41de02addc67315556e1e5675
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistField 274f06d2e8574c3070efae4a1a239d65
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistStore 0a4d86d70e21864c05e2e3e5e796f5b8
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Class 005a1877921756951ff1afadd0b5864c
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Migration 4900fedc186c725cecfb48f350cdc2dd
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Run 965a64b3015b876e71ce73bed1657280
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Types 28ab73798fb587e82ac34b8fd4fe757c
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Types.Internal b631cea7045d3209db836225fbeaca60
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Types.Base e51c6c72241c968081e48ef827196fbe
+import  -/  persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK:Database.Persist.Postgresql be3582dc9599bd8f4ee48c6f9709331d
+import  -/  persistent-template-2.5.1.6@persistent-template-2.5.1.6-L1UJyeURwQyFqq8arz68gW:Database.Persist.TH 45e3119274a417e7451ad87411bcd338
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 00261e8e5b51b919ebe8da24b37dfdbd
+import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 530216acfbfab25df053b0caac6d6a57
+import  -/  unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base 5eddd47f78c7f92d8ccf632680ed9618
+import  -/  unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Strict a02e9d1868a607a28ba5e020d8376da1
+d9e661071ed9dced2a1e978316e7aedd
+  $fEqKey ::
+    GHC.Classes.Eq
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fEqKey_$c==
+                  Models.$fEqKey_$c/= -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fEqKey_$c/= ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.neInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fEqKey_$c== ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.eqInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fFromHttpApiDataKey ::
+    Web.HttpApiData.Internal.FromHttpApiData
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fFromHttpApiDataKey_$cparseUrlPiece
+                  Models.$fFromHttpApiDataKey_$cparseHeader
+                  Models.$fFromHttpApiDataKey_$cparseUrlPiece -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fFromHttpApiDataKey_$cparseHeader ::
+    Data.ByteString.Internal.ByteString
+    -> Data.Either.Either
+         Data.Text.Internal.Text
+         (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1, Strictness: <L,U(U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.HttpApiData.Internal.$fFromHttpApiDataInt64_$cparseHeader
+                  `cast`
+                (<Data.ByteString.Internal.ByteString>_R
+                 ->_R (Data.Either.Either
+                         <Data.Text.Internal.Text>_R
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (Models.N:R:KeyCredentials[0]))
+                                        (Sym (Models.D:R:KeyCredentials0[0]))))))_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fFromHttpApiDataKey_$cparseUrlPiece ::
+    Data.Text.Internal.Text
+    -> Data.Either.Either
+         Data.Text.Internal.Text
+         (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Web.HttpApiData.Internal.$fFromHttpApiDataInt64_$cparseUrlPiece
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R (Data.Either.Either
+                         <Data.Text.Internal.Text>_R
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (Models.N:R:KeyCredentials[0]))
+                                        (Sym (Models.D:R:KeyCredentials0[0]))))))_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fFromJSONCredentials ::
+    Data.Aeson.Types.Class.FromJSON Models.Credentials
+  DFunId
+  {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Models.$fFromJSONCredentials_$cparseJSON
+                  `cast`
+                (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                          <Models.Credentials>_N)) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fFromJSONCredentials_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser Models.Credentials
+  {- Arity: 1, Strictness: <S,1*U> -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fFromJSONEntity ::
+    Data.Aeson.Types.Class.FromJSON
+      (Database.Persist.Class.PersistEntity.Entity Models.Credentials)
+  DFunId
+  {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Models.$fFromJSONEntity_$cparseJSON
+                  `cast`
+                (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                          <Database.Persist.Class.PersistEntity.Entity
+                             Models.Credentials>_N)) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fFromJSONEntity_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (Database.Persist.Class.PersistEntity.Entity Models.Credentials)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (w3 :: Data.Aeson.Types.Internal.Value) ->
+                 Database.Persist.Class.PersistEntity.$wentityIdFromJSON
+                   @ Models.Credentials
+                   Models.$fPersistEntityCredentials
+                   Models.$fFromJSONCredentials_$cparseJSON
+                     `cast`
+                   (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <Models.Credentials>_N))
+                   w3) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fFromJSONKey ::
+    Data.Aeson.Types.Class.FromJSON
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- Arity: 1, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Models.$fPersistEntityCredentials_$cparseJSON
+                  `cast`
+                (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                          <Database.Persist.Class.PersistEntity.Key
+                             Models.Credentials>_N)) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fOrdKey ::
+    GHC.Classes.Ord
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fEqKey
+                  Models.$fOrdKey_$ccompare
+                  Models.$fOrdKey_$c<
+                  Models.$fOrdKey_$c<=
+                  Models.$fOrdKey_$c>
+                  Models.$fOrdKey_$c>=
+                  Models.$fOrdKey_$cmax
+                  Models.$fOrdKey_$cmin -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fOrdKey_$c< ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.ltInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fOrdKey_$c<= ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.leInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fOrdKey_$c> ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.gtInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fOrdKey_$c>= ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.geInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <GHC.Types.Bool>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fOrdKey_$ccompare ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.$fOrdInt64_$ccompare
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <GHC.Types.Ordering>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fOrdKey_$cmax ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.$fOrdInt64_$cmax
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fOrdKey_$cmin ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                GHC.Int.$fOrdInt64_$cmin
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                          (Trans
+                               (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                               (Trans
+                                    (Sym (Models.N:R:KeyCredentials[0]))
+                                    (Sym (Models.D:R:KeyCredentials0[0]))))) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPathPieceKey ::
+    Web.PathPieces.PathPiece
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fPathPieceKey_$cfromPathPiece
+                  Models.$fPathPieceKey_$ctoPathPiece -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPathPieceKey_$cfromPathPiece ::
+    Data.Text.Internal.Text
+    -> GHC.Base.Maybe
+         (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1, Strictness: <S(SSS),1*U(U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.PathPieces.$fPathPieceInt64_$sparseIntegral
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R (GHC.Base.Maybe
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (Models.N:R:KeyCredentials[0]))
+                                        (Sym (Models.D:R:KeyCredentials0[0]))))))_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPathPieceKey_$ctoPathPiece ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.PathPieces.$fPathPieceInt64_$ctoPathPiece
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <Data.Text.Internal.Text>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials ::
+    Database.Persist.Class.PersistEntity.PersistEntity
+      Models.Credentials
+  DFunId
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Models.Credentials
+                  Models.$fPersistFieldKey
+                  Models.$fToJSONKey
+                  Models.$fPersistEntityCredentials_$cparseJSON
+                    `cast`
+                  (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                            <Database.Persist.Class.PersistEntity.Key Models.Credentials>_N))
+                  Models.$fShowKey
+                  Models.$fReadKey
+                  Models.$fEqKey
+                  Models.$fOrdKey
+                  Models.$fPersistEntityCredentials_$ckeyToValues
+                  Models.$fPersistEntityCredentials_$ckeyFromValues
+                  Models.$fPersistEntityCredentials_$s$WCredentialsId
+                  Models.$fPersistEntityCredentials_$centityDef
+                  Models.$fPersistEntityCredentials_$cpersistFieldDef
+                  Models.$fPersistEntityCredentials_$ctoPersistFields
+                  Models.$fPersistEntityCredentials_$cfromPersistValues
+                  Models.$fPersistEntityCredentials_$cpersistUniqueKeys
+                  Models.$fPersistEntityCredentials_$cpersistUniqueToFieldNames
+                  Models.$fPersistEntityCredentials_$cpersistUniqueToValues
+                  Models.$fPersistEntityCredentials_$cfieldLens -}
+268e306461401ce1ace659f79d8aa28d
+  $fPersistEntityCredentials1 ::
+    [(Database.Persist.Types.Base.HaskellName,
+      Database.Persist.Types.Base.DBName)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Database.Persist.Types.Base.HaskellName,
+                      Database.Persist.Types.Base.DBName)
+                   Models.$fPersistEntityCredentials2
+                   (GHC.Types.[]
+                      @ (Database.Persist.Types.Base.HaskellName,
+                         Database.Persist.Types.Base.DBName))) -}
+531c503b50f3d64fd60e0bc494392a5d
+  $fPersistEntityCredentials10 ::
+    Database.Persist.Types.Base.FieldType
+  {- Unfolding: (Database.Persist.Types.Base.FTTypeCon
+                   Models.$fPersistEntityCredentials12
+                   Models.$fPersistEntityCredentials11) -}
+e74c4da70dd9a01d445342cac256e08f
+  $fPersistEntityCredentials11 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "Int64"#) -}
+d4e207898ca5e7950b973fef909f4360
+  $fPersistEntityCredentials12 ::
+    GHC.Base.Maybe Data.Text.Internal.Text
+  {- Unfolding: (GHC.Base.Just
+                   @ Data.Text.Internal.Text
+                   Models.$fPersistEntityCredentials13) -}
+884ca0f4fba2e096a330a0eb465b2b7d
+  $fPersistEntityCredentials13 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "Data.Int"#) -}
+954a641d7d045448b28afe8cf7aaca58
+  $fPersistEntityCredentials14 ::
+    Database.Persist.Types.Base.FieldType
+  {- Unfolding: (Database.Persist.Types.Base.FTTypeCon
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   Models.$fPersistEntityCredentials15) -}
+596ae33f456771a35a454251aef77500
+  $fPersistEntityCredentials15 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "CredentialsId"#) -}
+71bc2596209c99107c82ff77527793c7
+  $fPersistEntityCredentials16 ::
+    Database.Persist.Types.Base.EntityDef
+  {- Unfolding: (case Data.Text.Show.unpackCString#
+                        "Credentials"# of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 case Data.Text.Show.unpackCString#
+                        "credentials"# of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
+                 case Data.Text.Show.unpackCString#
+                        "Id"# of nt2 { Data.Text.Internal.Text ipv6 ipv7 ipv8 ->
+                 case Data.Text.Show.unpackCString#
+                        "id"# of nt3 { Data.Text.Internal.Text ipv9 ipv10 ipv11 ->
+                 case Models.$fPersistEntityCredentials_$sfromList
+                        @ [Database.Persist.Types.Base.ExtraLine]
+                        (GHC.Types.[]
+                           @ (Data.Text.Internal.Text,
+                              [Database.Persist.Types.Base.ExtraLine])) of dt { DEFAULT ->
+                 Database.Persist.Types.Base.EntityDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt1 `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   (Database.Persist.Types.Base.FieldDef
+                      nt2 `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                      nt3 `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                      Models.$fPersistEntityCredentials14
+                      Database.Persist.Types.Base.SqlInt64
+                      (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                      GHC.Types.True
+                      (Database.Persist.Types.Base.ForeignRef
+                         nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                         Models.$fPersistEntityCredentials10))
+                   Models.$fPersistEntityCredentials23
+                   Models.$fPersistEntityCredentials21
+                   Models.$fPersistEntityCredentials19
+                   (GHC.Types.[] @ Database.Persist.Types.Base.ForeignDef)
+                   Models.$fPersistEntityCredentials17
+                   dt
+                   GHC.Types.False } } } } }) -}
+fe085ab2a9124b9e13118ae57d7c8ec5
+  $fPersistEntityCredentials17 :: [Data.Text.Internal.Text]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Text
+                   Models.$fPersistEntityCredentials18
+                   (GHC.Types.[] @ Data.Text.Internal.Text)) -}
+8736477fbfe3d9dddccfb41d7d81f80f
+  $fPersistEntityCredentials18 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "Show"#) -}
+382bb4254695431b387912b070107194
+  $fPersistEntityCredentials19 ::
+    [Database.Persist.Types.Base.UniqueDef]
+  {- Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.UniqueDef
+                   Models.$fPersistEntityCredentials20
+                   (GHC.Types.[] @ Database.Persist.Types.Base.UniqueDef)) -}
+8f408dc6f655ef2989543fb7a253d4b8
+  $fPersistEntityCredentials2 ::
+    (Database.Persist.Types.Base.HaskellName,
+     Database.Persist.Types.Base.DBName)
+  {- Strictness: m,
+     Unfolding: ((Models.$fPersistEntityCredentials3
+                    `cast`
+                  (Sym (Database.Persist.Types.Base.N:HaskellName[0])),
+                  Models.$fPersistEntityCredentials3
+                    `cast`
+                  (Sym (Database.Persist.Types.Base.N:DBName[0])))) -}
+25f3171a3531a757bbe1733129d3d41a
+  $fPersistEntityCredentials20 ::
+    Database.Persist.Types.Base.UniqueDef
+  {- Unfolding: (case Data.Text.Show.unpackCString#
+                        "UniqueName"# of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 case Data.Text.Show.unpackCString#
+                        "unique_name"# of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
+                 Database.Persist.Types.Base.UniqueDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt1 `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   Models.$fPersistEntityCredentials1
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr) } }) -}
+899bc270c2017359636194346991289d
+  $fPersistEntityCredentials21 ::
+    [Database.Persist.Types.Base.FieldDef]
+  {- Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.FieldDef
+                   Models.$fPersistEntityCredentials8
+                   Models.$fPersistEntityCredentials22) -}
+360bc9097cc74de4fa075e1c0bbc632a
+  $fPersistEntityCredentials22 ::
+    [Database.Persist.Types.Base.FieldDef]
+  {- Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.FieldDef
+                   Models.$fPersistEntityCredentials4
+                   (GHC.Types.[] @ Database.Persist.Types.Base.FieldDef)) -}
+027c44383ea429bd07129da725696d4b
+  $fPersistEntityCredentials23 :: [Database.Persist.Types.Base.Attr]
+  {- Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.Attr
+                   Models.$fPersistEntityCredentials24
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)) -}
+e6bce7d3d78fa4e31bb82da06a5154dc
+  $fPersistEntityCredentials24 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "json"#) -}
+a11dbc8bf28f4e853e4b6398ee076864
+  $fPersistEntityCredentials25 ::
+    Data.Map.Base.Map Data.Text.Internal.Text a1
+    -> [(Data.Text.Internal.Text, a1)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials26 ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    Data.Type.Equality.~ Database.Persist.Class.PersistEntity.Key
+                           Models.Credentials
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Models.$fPersistEntityCredentials27
+                  `cast`
+                (Sym (Data.Type.Equality.N:~[0]
+                          <*>_N) <Database.Persist.Class.PersistEntity.Key
+                                    Models.Credentials>_N <Database.Persist.Class.PersistEntity.Key
+                                                             Models.Credentials>_N) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials27 ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    GHC.Types.~~ Database.Persist.Class.PersistEntity.Key
+                   Models.Credentials
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   @~ <Database.Persist.Class.PersistEntity.Key
+                         Models.Credentials>_N) -}
+c93604d3e0d28659738713e45df562fd
+  $fPersistEntityCredentials3 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "name"#) -}
+109bb0bb1420d823535b9d6cf8a8c3f7
+  $fPersistEntityCredentials4 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case Models.$fPersistEntityCredentials7 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 Database.Persist.Types.Base.FieldDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   Models.$fPersistEntityCredentials5
+                   Database.Persist.Types.Base.SqlString
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   GHC.Types.True
+                   Database.Persist.Types.Base.NoReference }) -}
+17abf3eaa111ed5f33954cb2a7573412
+  $fPersistEntityCredentials5 ::
+    Database.Persist.Types.Base.FieldType
+  {- Unfolding: (Database.Persist.Types.Base.FTTypeCon
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   Models.$fPersistEntityCredentials6) -}
+cf717d09786afaa09a9b99f0eeaf4f6a
+  $fPersistEntityCredentials6 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "String"#) -}
+35b4c2253b313344acd02a5d286e7ade
+  $fPersistEntityCredentials7 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "password"#) -}
+85d930296c9515eb79c873647b2d9263
+  $fPersistEntityCredentials8 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case Models.$fPersistEntityCredentials3 of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 Database.Persist.Types.Base.FieldDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   Models.$fPersistEntityCredentials5
+                   Database.Persist.Types.Base.SqlString
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   GHC.Types.True
+                   Database.Persist.Types.Base.NoReference }) -}
+e362cd4c05796ffdb6d0eb7347dc593b
+  $fPersistEntityCredentials9 :: Database.Persist.Types.Base.FieldDef
+  {- Unfolding: (case Data.Text.Show.unpackCString#
+                        "Id"# of nt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 case Data.Text.Show.unpackCString#
+                        "id"# of nt1 { Data.Text.Internal.Text ipv3 ipv4 ipv5 ->
+                 case Data.Text.Show.unpackCString#
+                        "Credentials"# of nt2 { Data.Text.Internal.Text ipv6 ipv7 ipv8 ->
+                 Database.Persist.Types.Base.FieldDef
+                   nt `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                   nt1 `cast` (Sym (Database.Persist.Types.Base.N:DBName[0]))
+                   Models.$fPersistEntityCredentials14
+                   Database.Persist.Types.Base.SqlInt64
+                   (GHC.Types.[] @ Database.Persist.Types.Base.Attr)
+                   GHC.Types.True
+                   (Database.Persist.Types.Base.ForeignRef
+                      nt2 `cast` (Sym (Database.Persist.Types.Base.N:HaskellName[0]))
+                      Models.$fPersistEntityCredentials10) } } }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$centityDef ::
+    GHC.Base.Monad m =>
+    m Models.Credentials -> Database.Persist.Types.Base.EntityDef
+  {- Arity: 2, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ (m :: * -> *)
+                   ($dMonad :: GHC.Base.Monad m)
+                   (ds :: m Models.Credentials) ->
+                 Models.$fPersistEntityCredentials16) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$cfieldLens ::
+    Database.Persist.Class.PersistEntity.EntityField
+      Models.Credentials field
+    -> forall (f :: * -> *).
+       GHC.Base.Functor f =>
+       (field -> f field)
+       -> Database.Persist.Class.PersistEntity.Entity Models.Credentials
+       -> f (Database.Persist.Class.PersistEntity.Entity
+               Models.Credentials)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><L,U(U,U,U(U,U))>,
+     Unfolding: (\ @ field
+                   (dk :: Database.Persist.Class.PersistEntity.EntityField
+                            Models.Credentials field)
+                   @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (eta :: field -> f field)
+                   (eta1 :: Database.Persist.Class.PersistEntity.Entity
+                              Models.Credentials) ->
+                 case dk
+                        `cast`
+                      (Models.D:R:EntityFieldCredentialstyp0[0] <field>_N) of wild {
+                   Models.CredentialsId $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ field
+                             @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <field>_N <Database.Persist.Class.PersistEntity.Key
+                                                               Models.Credentials>_N) of cobox0 { DEFAULT ->
+                      GHC.Base.fmap
+                        @ f
+                        $dFunctor
+                        @ field
+                        @ (Database.Persist.Class.PersistEntity.Entity Models.Credentials)
+                        (\ (key :: field) ->
+                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity ds value ->
+                         Database.Persist.Class.PersistEntity.Entity
+                           @ Models.Credentials
+                           $dPersistEntity
+                           key `cast` (Sub cobox0)
+                           value })
+                        (eta
+                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity ds1 ds2 ->
+                            ds1 `cast` (Sub (Sym cobox0)) })) }
+                   Models.CredentialsName $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ field
+                             @ GHC.Base.String
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <field>_N <GHC.Base.String>_N) of cobox0 { DEFAULT ->
+                      GHC.Base.fmap
+                        @ f
+                        $dFunctor
+                        @ field
+                        @ (Database.Persist.Class.PersistEntity.Entity Models.Credentials)
+                        (\ (x :: field) ->
+                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity key value ->
+                         Database.Persist.Class.PersistEntity.Entity
+                           @ Models.Credentials
+                           $dPersistEntity
+                           key
+                           (case value of wild2 { Models.Credentials ds ds1 ->
+                            case x `cast` (Sub cobox0) of dt { DEFAULT ->
+                            Models.Credentials dt ds1 } }) })
+                        (eta
+                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity ds1 ds2 ->
+                            case ds2 of wild2 { Models.Credentials ds ds4 ->
+                            ds `cast` (Sub (Sym cobox0)) } })) }
+                   Models.CredentialsPassword $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ field
+                             @ GHC.Base.String
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <field>_N <GHC.Base.String>_N) of cobox0 { DEFAULT ->
+                      GHC.Base.fmap
+                        @ f
+                        $dFunctor
+                        @ field
+                        @ (Database.Persist.Class.PersistEntity.Entity Models.Credentials)
+                        (\ (x :: field) ->
+                         case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity key value ->
+                         Database.Persist.Class.PersistEntity.Entity
+                           @ Models.Credentials
+                           $dPersistEntity
+                           key
+                           (case value of wild2 { Models.Credentials ds ds1 ->
+                            case x `cast` (Sub cobox0) of dt { DEFAULT ->
+                            Models.Credentials ds dt } }) })
+                        (eta
+                           (case eta1 of wild1 { Database.Persist.Class.PersistEntity.Entity $dPersistEntity ds1 ds2 ->
+                            case ds2 of wild2 { Models.Credentials ds ds4 ->
+                            ds4 `cast` (Sub (Sym cobox0)) } })) } }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$cfromPersistValues ::
+    [Database.Persist.Types.Base.PersistValue]
+    -> Data.Either.Either Data.Text.Internal.Text Models.Credentials
+  {- Arity: 1, Strictness: <S,U> -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$ckeyFromValues ::
+    [Database.Persist.Types.Base.PersistValue]
+    -> Data.Either.Either
+         Data.Text.Internal.Text
+         (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [Database.Persist.Types.Base.PersistValue]) ->
+                 case (Database.Persist.Class.PersistField.$fPersistFieldInt64_$cfromPersistValue
+                         (Database.Persist.TH.headNote x))
+                        `cast`
+                      (Data.Either.Either
+                         <Data.Text.Internal.Text>_R
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))))_R of wild {
+                   Data.Either.Left x1
+                   -> Data.Either.Left
+                        @ Data.Text.Internal.Text
+                        @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                        x1
+                   Data.Either.Right y
+                   -> Data.Either.Right
+                        @ Data.Text.Internal.Text
+                        @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                        y `cast`
+                        (Trans
+                             (Sym (Models.N:R:KeyCredentials[0]))
+                             (Sym (Models.D:R:KeyCredentials0[0]))) }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$ckeyToValues ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> [Database.Persist.Types.Base.PersistValue]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Database.Persist.Class.PersistEntity.Key
+                           Models.Credentials) ->
+                 GHC.Types.:
+                   @ Database.Persist.Types.Base.PersistValue
+                   (Database.Persist.Types.Base.PersistInt64
+                      x `cast`
+                      (Trans
+                           (Models.D:R:KeyCredentials0[0])
+                           (Trans
+                                (Models.N:R:KeyCredentials[0])
+                                (Trans
+                                     (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0])
+                                     (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0])))))
+                   (GHC.Types.[] @ Database.Persist.Types.Base.PersistValue)) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Data.Aeson.Types.Instances.$fFromJSONInt64_$cparseJSON
+                  `cast`
+                (<Data.Aeson.Types.Internal.Value>_R
+                 ->_R (Data.Aeson.Types.Internal.Parser
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (Models.N:R:KeyCredentials[0]))
+                                        (Sym (Models.D:R:KeyCredentials0[0]))))))_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$cpersistFieldDef ::
+    Database.Persist.Class.PersistEntity.EntityField
+      Models.Credentials typ
+    -> Database.Persist.Types.Base.FieldDef
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ typ
+                   (ds :: Database.Persist.Class.PersistEntity.EntityField
+                            Models.Credentials typ) ->
+                 case ds
+                        `cast`
+                      (Models.D:R:EntityFieldCredentialstyp0[0] <typ>_N) of wild {
+                   Models.CredentialsId $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ typ
+                             @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <typ>_N <Database.Persist.Class.PersistEntity.Key
+                                                             Models.Credentials>_N) of cobox0 { DEFAULT ->
+                      Models.$fPersistEntityCredentials9 }
+                   Models.CredentialsName $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ typ
+                             @ GHC.Base.String
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <typ>_N <GHC.Base.String>_N) of cobox0 { DEFAULT ->
+                      Models.$fPersistEntityCredentials8 }
+                   Models.CredentialsPassword $d~
+                   -> case GHC.Types.HEq_sc
+                             @ GHC.Types.*
+                             @ GHC.Types.*
+                             @ typ
+                             @ GHC.Base.String
+                             $d~
+                               `cast`
+                             (Data.Type.Equality.N:~[0]
+                                  <GHC.Types.*>_N <typ>_N <GHC.Base.String>_N) of cobox0 { DEFAULT ->
+                      Models.$fPersistEntityCredentials4 } }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$cpersistUniqueKeys ::
+    Models.Credentials
+    -> [Database.Persist.Class.PersistEntity.Unique Models.Credentials]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Models.Credentials) ->
+                 case ds of wild { Models.Credentials _name _password ->
+                 GHC.Types.:
+                   @ (Database.Persist.Class.PersistEntity.Unique Models.Credentials)
+                   (Models.UniqueName _name)
+                     `cast`
+                   (Sym (Models.D:R:UniqueCredentials0[0]))
+                   (GHC.Types.[]
+                      @ (Database.Persist.Class.PersistEntity.Unique
+                           Models.Credentials)) }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$cpersistUniqueToFieldNames ::
+    Database.Persist.Class.PersistEntity.Unique Models.Credentials
+    -> [(Database.Persist.Types.Base.HaskellName,
+         Database.Persist.Types.Base.DBName)]
+  {- Arity: 1, Strictness: <S,1*U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Database.Persist.Class.PersistEntity.Unique
+                            Models.Credentials) ->
+                 case ds of tpl { DEFAULT ->
+                 Models.$fPersistEntityCredentials1 }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$cpersistUniqueToValues ::
+    Database.Persist.Class.PersistEntity.Unique Models.Credentials
+    -> [Database.Persist.Types.Base.PersistValue]
+  {- Arity: 1, Strictness: <S,1*U(1*U)>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Database.Persist.Class.PersistEntity.Unique
+                            Models.Credentials) ->
+                 case ds
+                        `cast`
+                      (Models.D:R:UniqueCredentials0[0]) of wild { Models.UniqueName x ->
+                 GHC.Types.:
+                   @ Database.Persist.Types.Base.PersistValue
+                   (Database.Persist.Class.PersistField.$fPersistField[]0_$ctoPersistValue
+                      x)
+                   (GHC.Types.[] @ Database.Persist.Types.Base.PersistValue) }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$ctoPersistFields ::
+    Models.Credentials
+    -> [Database.Persist.Class.PersistField.SomePersistField]
+  {- Arity: 1, Strictness: <S(SS),1*U(U,U)>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Models.Credentials) ->
+                 case ds of wild { Models.Credentials x x1 ->
+                 GHC.Types.:
+                   @ Database.Persist.Class.PersistField.SomePersistField
+                   (Database.Persist.Class.PersistField.SomePersistField
+                      @ GHC.Base.String
+                      Database.Persist.Class.PersistField.$fPersistField[]0
+                      x)
+                   (GHC.Types.:
+                      @ Database.Persist.Class.PersistField.SomePersistField
+                      (Database.Persist.Class.PersistField.SomePersistField
+                         @ GHC.Base.String
+                         Database.Persist.Class.PersistField.$fPersistField[]0
+                         x1)
+                      (GHC.Types.[]
+                         @ Database.Persist.Class.PersistField.SomePersistField)) }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistEntityCredentials_$s$WCredentialsId ::
+    Database.Persist.Class.PersistEntity.EntityField
+      Models.Credentials
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Strictness: m1, Inline: INLINE,
+     Unfolding: InlineRule (0, False, False)
+                (Models.CredentialsId
+                   @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   Models.$fPersistEntityCredentials26)
+                  `cast`
+                (Sym (Models.D:R:EntityFieldCredentialstyp0[0]) <Database.Persist.Class.PersistEntity.Key
+                                                                   Models.Credentials>_N) -}
+5a7c962bdd1666799d2a131638104bab
+  $fPersistEntityCredentials_$sfromList ::
+    [(Data.Text.Internal.Text, a)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [(Data.Text.Internal.Text, a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Base.Tip @ Data.Text.Internal.Text @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case kx of dt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                           Data.Map.Base.Bin
+                             @ Data.Text.Internal.Text
+                             @ a
+                             1#
+                             dt
+                             x
+                             (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                             (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a) }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                           case ky of ww4 { Data.Text.Internal.Text ww5 ww6 ww7 ->
+                           case Data.Text.$w$ccompare ww1 ww2 ww3 ww5 ww6 ww7 of wild4 {
+                             DEFAULT
+                             -> Models.$fPersistEntityCredentials25
+                                  @ a
+                                  (Data.Map.Base.Bin
+                                     @ Data.Text.Internal.Text
+                                     @ a
+                                     1#
+                                     ww
+                                     x
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a))
+                                  wild2
+                             GHC.Types.LT
+                             -> Models.$wpoly_go10
+                                  @ a
+                                  1#
+                                  (Data.Map.Base.Bin
+                                     @ Data.Text.Internal.Text
+                                     @ a
+                                     1#
+                                     ww
+                                     x
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
+                                     (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a))
+                                  wild2 } } } } } } }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldCredentials ::
+    Database.Persist.Class.PersistField.PersistField Models.Credentials
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Models.Credentials
+                  Models.$fPersistFieldCredentials_$ctoPersistValue
+                  Models.$fPersistFieldCredentials_$cfromPersistValue -}
+2dcd5d36737e0def342fbdb0f01ee4b2
+  $fPersistFieldCredentials1 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Models.$fPersistFieldCredentials4
+                   Models.$fPersistFieldCredentials2) -}
+7fe64be4a2c74bb3cecc9cc6582b25c4
+  $fPersistFieldCredentials2 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Models.$fPersistFieldCredentials3
+                   (GHC.Types.[] @ GHC.Base.String)) -}
+16f217e2b55d7248b028c5078b0b64f5
+  $fPersistFieldCredentials3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "password"#) -}
+90f81baedae809574cd23bd651bb401e
+  $fPersistFieldCredentials4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "name"#) -}
+a0fb215006207747d32e5a2896c715d5
+  $fPersistFieldCredentials5 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
+0e49c62954163bb5183d206df0ea9a37
+  $fPersistFieldCredentials6 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Models.$fPersistFieldCredentials7 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+73422a0a1258dc56b729715aa591f20e
+  $fPersistFieldCredentials7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Models.$wouter1
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Models.$fPersistFieldCredentials5
+                   Models.$fPersistFieldCredentials3
+                   0#
+                   ipv }) -}
+1af4cfa79596b169c4f7b51a0f6e574d
+  $fPersistFieldCredentials8 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Models.$fPersistFieldCredentials9 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+1ad7e4dd51c4505e4ca3d9e58f03379b
+  $fPersistFieldCredentials9 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Models.$wouter2
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Models.$fPersistFieldCredentials5
+                   Models.$fPersistFieldCredentials4
+                   0#
+                   ipv }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldCredentials_$cfromPersistValue ::
+    Database.Persist.Types.Base.PersistValue
+    -> Data.Either.Either Data.Text.Internal.Text Models.Credentials
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (eta2 :: Database.Persist.Types.Base.PersistValue) ->
+                 case Database.Persist.Class.PersistField.getPersistMap
+                        eta2 of wild {
+                   Data.Either.Left l
+                   -> Data.Either.Left
+                        @ Data.Text.Internal.Text
+                        @ Models.Credentials
+                        l
+                   Data.Either.Right r
+                   -> let {
+                        columns :: Data.HashMap.Base.HashMap
+                                     Data.Text.Internal.Text
+                                     Database.Persist.Types.Base.PersistValue
+                        = Models.$fPersistFieldCredentials_go
+                            r
+                            (Data.HashMap.Base.Empty
+                               @ Data.Text.Internal.Text
+                               @ Database.Persist.Types.Base.PersistValue)
+                      } in
+                      Models.$fPersistEntityCredentials_$cfromPersistValues
+                        (GHC.Base.map
+                           @ [GHC.Types.Char]
+                           @ Database.Persist.Types.Base.PersistValue
+                           (\ (name :: GHC.Base.String) ->
+                            case GHC.Magic.runRW#
+                                   @ 'GHC.Types.PtrRepLifted
+                                   @ Data.Text.Internal.Text
+                                   (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                    case GHC.Prim.newByteArray#
+                                           @ GHC.Prim.RealWorld
+                                           8#
+                                           s1 of ds1 { (#,#) ipv ipv1 ->
+                                    Models.$wouter
+                                      (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                      Models.$fPersistFieldCredentials5
+                                      name
+                                      0#
+                                      ipv }) of ds1 { (#,#) ipv ipv1 ->
+                            case ipv1 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                            case Data.Aeson.Types.Instances.$w$slookup
+                                   @ Database.Persist.Types.Base.PersistValue
+                                   ww1
+                                   ww2
+                                   ww3
+                                   columns of wild1 {
+                              GHC.Base.Nothing -> Database.Persist.Types.Base.PersistNull
+                              GHC.Base.Just v -> v } } })
+                           Models.$fPersistFieldCredentials1) }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldCredentials_$ctoPersistValue ::
+    Models.Credentials -> Database.Persist.Types.Base.PersistValue
+  {- Arity: 1, Strictness: <L,1*U(U,U)>m12, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Models.Credentials) ->
+                 case Models.$w$ctoPersistValue w of ww { Unit# ww1 ->
+                 Database.Persist.Types.Base.PersistMap ww1 }) -}
+468c7af3fb20bd07bbb6fc5464dc3b8b
+  $fPersistFieldCredentials_go ::
+    [(Data.Text.Internal.Text,
+      Database.Persist.Types.Base.PersistValue)]
+    -> Data.HashMap.Base.HashMap
+         Data.Text.Internal.Text Database.Persist.Types.Base.PersistValue
+    -> Data.HashMap.Base.HashMap
+         Data.Text.Internal.Text Database.Persist.Types.Base.PersistValue
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldKey ::
+    Database.Persist.Class.PersistField.PersistField
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fPersistFieldKey_$ctoPersistValue
+                  Models.$fPersistFieldKey_$cfromPersistValue -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldKey_$cfromPersistValue ::
+    Database.Persist.Types.Base.PersistValue
+    -> Data.Either.Either
+         Data.Text.Internal.Text
+         (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Database.Persist.Class.PersistField.$fPersistFieldInt64_$cfromPersistValue
+                  `cast`
+                (<Database.Persist.Types.Base.PersistValue>_R
+                 ->_R (Data.Either.Either
+                         <Data.Text.Internal.Text>_R
+                         (Trans
+                              (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                              (Trans
+                                   (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                                   (Trans
+                                        (Sym (Models.N:R:KeyCredentials[0]))
+                                        (Sym (Models.D:R:KeyCredentials0[0]))))))_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldKey_$ctoPersistValue ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Types.Base.PersistValue
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m3,
+     Unfolding: InlineRule (0, True, True)
+                Database.Persist.Types.Base.PersistInt64
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <Database.Persist.Types.Base.PersistValue>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldSqlCredentials ::
+    Database.Persist.Sql.Class.PersistFieldSql Models.Credentials
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Models.Credentials
+                  Models.$fPersistFieldCredentials
+                  Models.$fPersistFieldSqlCredentials_$csqlType -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldSqlCredentials_$csqlType ::
+    Data.Proxy.Proxy Models.Credentials
+    -> Database.Persist.Types.Base.SqlType
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Data.Proxy.Proxy Models.Credentials) ->
+                 Database.Persist.Types.Base.SqlString) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldSqlKey ::
+    Database.Persist.Sql.Class.PersistFieldSql
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fPersistFieldKey
+                  Models.$fPersistFieldSqlKey_$csqlType -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fPersistFieldSqlKey_$csqlType ::
+    Data.Proxy.Proxy
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+    -> Database.Persist.Types.Base.SqlType
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Database.Persist.Sql.Class.$fPersistFieldSqlInt64_$csqlType
+                  `cast`
+                ((Data.Proxy.Proxy
+                    <*>_N
+                    <GHC.Int.Int64, Database.Persist.Class.PersistEntity.Key
+                                      Models.Credentials>)_R
+                 ->_R <Database.Persist.Types.Base.SqlType>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey ::
+    GHC.Read.Read
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fReadKey_$creadsPrec
+                  Models.$fReadKey_$creadList
+                  Models.$fReadKey_$creadPrec
+                  Models.$fReadKey_$creadListPrec -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Database.Persist.Class.PersistEntity.Key Models.Credentials]
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Database.Persist.Class.PersistEntity.Key
+                               Models.Credentials]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   Models.$fReadKey2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Database.Persist.Class.PersistEntity.Key Models.Credentials>_R))
+                   @ b
+                   eta1) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP
+         (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadDouble10
+                   @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   Models.$fReadKey3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <Database.Persist.Class.PersistEntity.Key
+                                          Models.Credentials>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <Database.Persist.Class.PersistEntity.Key
+                                     Models.Credentials>_R)))) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Database.Persist.Class.PersistEntity.Key Models.Credentials
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: Database.Persist.Class.PersistEntity.Key Models.Credentials
+                          -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Models.$w$creadPrec ww1 @ b w1 }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey4 ::
+    Text.ParserCombinators.ReadP.P
+      [Database.Persist.Class.PersistEntity.Key Models.Credentials]
+  {- Unfolding: (GHC.Read.$wlist
+                   @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   Models.$fReadKey2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Database.Persist.Class.PersistEntity.Key Models.Credentials>_R))
+                   @ [Database.Persist.Class.PersistEntity.Key Models.Credentials]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [Database.Persist.Class.PersistEntity.Key
+                           Models.Credentials])) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS
+      [Database.Persist.Class.PersistEntity.Key Models.Credentials]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [Database.Persist.Class.PersistEntity.Key Models.Credentials]
+                   Models.$fReadKey4) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      [Database.Persist.Class.PersistEntity.Key Models.Credentials]
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Models.$fReadKey1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                    <[Database.Persist.Class.PersistEntity.Key
+                                        Models.Credentials]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <[Database.Persist.Class.PersistEntity.Key
+                                   Models.Credentials]>_R))) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Models.$fReadKey2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                          <Database.Persist.Class.PersistEntity.Key
+                             Models.Credentials>_R)) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fReadKey_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS
+         (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   ((GHC.Read.$fReadDouble10
+                       @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                       Models.$fReadKey3
+                         `cast`
+                       (Trans
+                            (<Text.ParserCombinators.ReadPrec.Prec>_R
+                             ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                           <Database.Persist.Class.PersistEntity.Key
+                                              Models.Credentials>_R))
+                            (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                      <Database.Persist.Class.PersistEntity.Key
+                                         Models.Credentials>_R)))
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <Database.Persist.Class.PersistEntity.Key Models.Credentials>_R)
+                      @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Database.Persist.Class.PersistEntity.Key
+                              Models.Credentials)))) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowCredentials :: GHC.Show.Show Models.Credentials
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Models.Credentials
+                  Models.$fShowCredentials_$cshowsPrec
+                  Models.$fShowCredentials_$cshow
+                  Models.$fShowCredentials_$cshowList -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowCredentials1 :: Models.Credentials -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Models.Credentials) (w1 :: GHC.Base.String) ->
+                 case w of ww { Models.Credentials ww1 ww2 ->
+                 Models.$w$cshowsPrec1 0# ww1 ww2 w1 }) -}
+f4f9f5734c917d689e3b6a1d4b545f5d
+  $fShowCredentials2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "credentialsPassword = "#) -}
+3699ccbf957714a5a66fa2990ab653c2
+  $fShowCredentials3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+c15fb6c465d0fd6aa0a6c058456d3189
+  $fShowCredentials4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "credentialsName = "#) -}
+895c52a614386574a89dc529f1a629c9
+  $fShowCredentials5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Credentials {"#) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowCredentials_$cshow :: Models.Credentials -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(SS),1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Models.Credentials) ->
+                 Models.$fShowCredentials_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowCredentials_$cshowList ::
+    [Models.Credentials] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Models.Credentials
+                   Models.$fShowCredentials1) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowCredentials_$cshowsPrec ::
+    GHC.Types.Int -> Models.Credentials -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S(SS),1*U(U,U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Models.Credentials)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Models.Credentials ww3 ww4 ->
+                 Models.$w$cshowsPrec1 ww1 ww3 ww4 w2 } }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowKey ::
+    GHC.Show.Show
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fShowKey_$cshowsPrec
+                  Models.$fShowKey_$cshow
+                  Models.$fShowKey_$cshowList -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowKey1 ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Database.Persist.Class.PersistEntity.Key
+                           Models.Credentials)
+                   (w1 :: GHC.Base.String) ->
+                 Models.$w$cshowsPrec 0# w w1) -}
+d9f6059a55fede9942ae5a3d75024fcb
+  $fShowKey2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+1561a79e2ef07e53a654a810568df70f
+  $fShowKey3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "unCredentialsKey = "#) -}
+641dfc199c5a6e62820ba6d84c34e6f3
+  $fShowKey4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "CredentialsKey {"#) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowKey_$cshow ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U(U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Database.Persist.Class.PersistEntity.Key
+                           Models.Credentials) ->
+                 Models.$fShowKey_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowKey_$cshowList ::
+    [Database.Persist.Class.PersistEntity.Key Models.Credentials]
+    -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   Models.$fShowKey1) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fShowKey_$cshowsPrec ::
+    GHC.Types.Int
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U(U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Models.$w$cshowsPrec ww1 w1 w2 }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToBackendKeySqlBackendCredentials ::
+    Database.Persist.Class.PersistStore.ToBackendKey
+      Database.Persist.Sql.Types.Internal.SqlBackend Models.Credentials
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Database.Persist.Sql.Types.Internal.SqlBackend
+                  @ Models.Credentials
+                  Models.$fPersistEntityCredentials
+                  Models.$fToBackendKeySqlBackendCredentials_$cp2ToBackendKey
+                  Database.Persist.Sql.Orphan.PersistStore.$fPersistCoreSqlBackend
+                  Models.unCredentialsKey
+                  (\ (tpl :: Database.Persist.Class.PersistStore.BackendKey
+                               Database.Persist.Sql.Types.Internal.SqlBackend) ->
+                   tpl)
+                    `cast`
+                  (<Database.Persist.Class.PersistStore.BackendKey
+                      Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                   ->_R Trans
+                            (Sym (Models.N:R:KeyCredentials[0]))
+                            (Sym (Models.D:R:KeyCredentials0[0]))) -}
+70d8cf470f0de3546bf9e972bb12d99e
+  $fToBackendKeySqlBackendCredentials1 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    GHC.Types.~~ Database.Persist.Sql.Types.Internal.SqlBackend
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToBackendKeySqlBackendCredentials_$cp2ToBackendKey ::
+    Database.Persist.Class.PersistEntity.PersistEntityBackend
+      Models.Credentials
+    Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Models.$fToBackendKeySqlBackendCredentials1
+                  `cast`
+                (Sym (Data.Type.Equality.N:~[0]
+                          <*>_N) (Sym (Models.D:R:PersistEntityBackendCredentials[0])) <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToHttpApiDataKey ::
+    Web.HttpApiData.Internal.ToHttpApiData
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fToHttpApiDataKey_$ctoUrlPiece
+                  Models.$fToHttpApiDataKey_$ctoHeader
+                  Models.$fToHttpApiDataKey_$ctoUrlPiece -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToHttpApiDataKey_$ctoHeader ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.HttpApiData.Internal.$fToHttpApiDataInt64_$ctoHeader
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <Data.ByteString.Internal.ByteString>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToHttpApiDataKey_$ctoUrlPiece ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S(S),1*U(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Web.HttpApiData.Internal.$fToHttpApiDataInt64_$ctoUrlPiece
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <Data.Text.Internal.Text>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONCredentials ::
+    Data.Aeson.Types.Class.ToJSON Models.Credentials
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Models.Credentials
+                  Models.$fToJSONCredentials_$ctoJSON
+                  Models.$fToJSONCredentials_$ctoEncoding -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONCredentials_$ctoEncoding ::
+    Models.Credentials -> Data.Aeson.Types.Internal.Encoding
+  {- Arity: 1, Strictness: <S(SS),1*U(U,U)>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: Models.Credentials) ->
+                 Data.Aeson.Encode.Builder.encodeToBuilder
+                   (Models.$fToJSONCredentials_$ctoJSON eta))
+                  `cast`
+                (<Models.Credentials>_R
+                 ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONCredentials_$ctoJSON ::
+    Models.Credentials -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S(SS),1*U(U,U)>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Models.Credentials) ->
+                 case w of ww { Models.Credentials ww1 ww2 ->
+                 case Models.$w$ctoJSON ww1 ww2 of ww3 { Unit# ww4 ->
+                 Data.Aeson.Types.Internal.Object ww4 } }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONEntity ::
+    Data.Aeson.Types.Class.ToJSON
+      (Database.Persist.Class.PersistEntity.Entity Models.Credentials)
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Entity Models.Credentials)
+                  Models.$fToJSONEntity_$ctoJSON
+                  Models.$fToJSONEntity_$ctoEncoding -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONEntity_$ctoEncoding ::
+    Database.Persist.Class.PersistEntity.Entity Models.Credentials
+    -> Data.Aeson.Types.Internal.Encoding
+  {- Arity: 1, Strictness: <S(LLS(SS)),1*U(A,1*U(U),1*U(U,U))>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: Database.Persist.Class.PersistEntity.Entity
+                             Models.Credentials) ->
+                 Data.Aeson.Encode.Builder.encodeToBuilder
+                   (Models.$fToJSONEntity_$ctoJSON eta))
+                  `cast`
+                (<Database.Persist.Class.PersistEntity.Entity Models.Credentials>_R
+                 ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONEntity_$ctoJSON ::
+    Database.Persist.Class.PersistEntity.Entity Models.Credentials
+    -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S(LLS(SS)),1*U(A,1*U(U),1*U(U,U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Database.Persist.Class.PersistEntity.Entity
+                           Models.Credentials) ->
+                 case w of ww { Database.Persist.Class.PersistEntity.Entity ww1 ww2 ww3 ->
+                 case ww3 of ww4 { Models.Credentials ww5 ww6 ->
+                 Models.$w$ctoJSON1 ww2 ww5 ww6 } }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONKey ::
+    Data.Aeson.Types.Class.ToJSON
+      (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                  Models.$fToJSONKey_$ctoJSON
+                  Models.$fToJSONKey_$ctoEncoding -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONKey_$ctoEncoding ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Data.Aeson.Types.Internal.Encoding
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Aeson.Types.Instances.$fToJSONInt64_$ctoEncoding
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <Data.Aeson.Types.Internal.Encoding>_R) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $fToJSONKey_$ctoJSON ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m4,
+     Unfolding: InlineRule (0, True, True)
+                Data.Aeson.Types.Instances.$fToJSONInt64_$ctoJSON
+                  `cast`
+                (Trans
+                     (Sym (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0]))
+                     (Trans
+                          (Sym (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0]))
+                          (Trans
+                               (Sym (Models.N:R:KeyCredentials[0]))
+                               (Sym (Models.D:R:KeyCredentials0[0]))))
+                 ->_R <Data.Aeson.Types.Internal.Value>_R) -}
+4732ea85a0eb5b6495c1c79d46dbb725
+  $tc'Credentials :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   773370893552408681##
+                   3835884163401597066##
+                   Models.$trModule
+                   Models.$tc'Credentials1) -}
+617e1ea2ef3bf4bdbf6824564523261a
+  $tc'Credentials1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Credentials"#) -}
+b9374666a19f33507a5bf34ec43ce4b4
+  $tcCredentials :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13907897645174775094##
+                   15986849298104192632##
+                   Models.$trModule
+                   Models.$tcCredentials1) -}
+f0fd5ee8f7d6d9f251308a391b6b7993
+  $tcCredentials1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Credentials"#) -}
+d12517b15e6b400e200b2617436a3290
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Models.$trModule2
+                   Models.$trModule1) -}
+b5929fcb9cdf666c716381ad5fdc1256
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Models"#) -}
+2915abd7bbdf07e17ff3528f502374fe
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ"#) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $w$creadPrec ::
+    GHC.Prim.Int#
+    -> forall b.
+       (Database.Persist.Class.PersistEntity.Key Models.Credentials
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [0] -}
+d9e661071ed9dced2a1e978316e7aedd
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U(U)><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Database.Persist.Class.PersistEntity.Key Models.Credentials)
+                   (w1 :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Models.$fShowKey4
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Models.$fShowKey3
+                          (Database.Persist.Sql.Orphan.PersistStore.$w$cshowsPrec
+                             0#
+                             w `cast`
+                             (Trans
+                                  (Models.D:R:KeyCredentials0[0]) (Models.N:R:KeyCredentials[0]))
+                             (GHC.Base.++ @ GHC.Types.Char Models.$fShowKey2 x)))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p w1
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w1)) }) -}
+04739ce0d5750c528fcb1fdf5efd9b0e
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><S,U><S,U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Models.$fShowCredentials5
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Models.$fShowCredentials4
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows8
+                             (GHC.Show.showLitString
+                                ww1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows8
+                                   (GHC.Base.++
+                                      @ GHC.Types.Char
+                                      Models.$fShowCredentials3
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         Models.$fShowCredentials2
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.shows8
+                                            (GHC.Show.showLitString
+                                               ww2
+                                               (GHC.Types.:
+                                                  @ GHC.Types.Char
+                                                  GHC.Show.shows8
+                                                  (GHC.Base.++
+                                                     @ GHC.Types.Char
+                                                     Models.$fShowKey2
+                                                     x))))))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p w
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
+b4256463cfce60900ff775358b77ad97
+  $w$ctoJSON ::
+    GHC.Base.String
+    -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String) (ww1 :: GHC.Base.String) ->
+                 case Data.Aeson.Types.Internal.$sfromList1
+                        @ Data.Aeson.Types.Internal.Value
+                        (GHC.Types.:
+                           @ Data.Aeson.Types.Internal.Pair
+                           (Models.$fPersistEntityCredentials3,
+                            case GHC.Magic.runRW#
+                                   @ 'GHC.Types.PtrRepLifted
+                                   @ Data.Text.Internal.Text
+                                   (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                    case GHC.Prim.newByteArray#
+                                           @ GHC.Prim.RealWorld
+                                           8#
+                                           s1 of ds1 { (#,#) ipv ipv1 ->
+                                    Models.$wouter4
+                                      (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                      Models.$fPersistFieldCredentials5
+                                      ww
+                                      0#
+                                      ipv }) of ds1 { (#,#) ipv ipv1 ->
+                            case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                            Data.Aeson.Types.Internal.String dt } })
+                           (GHC.Types.:
+                              @ Data.Aeson.Types.Internal.Pair
+                              (Models.$fPersistEntityCredentials7,
+                               case GHC.Magic.runRW#
+                                      @ 'GHC.Types.PtrRepLifted
+                                      @ Data.Text.Internal.Text
+                                      (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                       case GHC.Prim.newByteArray#
+                                              @ GHC.Prim.RealWorld
+                                              8#
+                                              s1 of ds1 { (#,#) ipv ipv1 ->
+                                       Models.$wouter3
+                                         (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                         Models.$fPersistFieldCredentials5
+                                         ww1
+                                         0#
+                                         ipv }) of ds1 { (#,#) ipv ipv1 ->
+                               case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                               Data.Aeson.Types.Internal.String dt } })
+                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair)))
+                        (Data.HashMap.Base.Empty
+                           @ Data.Text.Internal.Text
+                           @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
+                 (# dt #) }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $w$ctoJSON1 ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> Data.Aeson.Types.Internal.Value
+  {- Arity: 3, Strictness: <L,1*U(U)><S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: Database.Persist.Class.PersistEntity.Key
+                            Models.Credentials)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String) ->
+                 case Models.$w$ctoJSON ww1 ww2 of ww3 { Unit# ww4 ->
+                 case ww
+                        `cast`
+                      (Trans
+                           (Models.D:R:KeyCredentials0[0])
+                           (Trans
+                                (Models.N:R:KeyCredentials[0])
+                                (Trans
+                                     (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0])
+                                     (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0])))) of wild { GHC.Int.I64# x# ->
+                 case GHC.Integer.Type.smallInteger x# of dt { DEFAULT ->
+                 case Database.Persist.Class.PersistEntity.entityIdFromJSON1 of ww5 { Data.Text.Internal.Text ww6 ww7 ww8 ->
+                 case Data.Aeson.Types.Instances.$w$sinsert
+                        @ Data.Aeson.Types.Internal.Value
+                        ww6
+                        ww7
+                        ww8
+                        (Data.Aeson.Types.Internal.Number
+                           (Data.Scientific.Scientific dt 0#))
+                        ww4 of dt1 { DEFAULT ->
+                 Data.Aeson.Types.Internal.Object dt1 } } } } }) -}
+d9e661071ed9dced2a1e978316e7aedd
+  $w$ctoPersistValue ::
+    Models.Credentials
+    -> (# [(Data.Text.Internal.Text,
+            Database.Persist.Types.Base.PersistValue)] #)
+  {- Arity: 1, Strictness: <L,1*U(U,U)>, Inline: [0],
+     Unfolding: (\ (w :: Models.Credentials) ->
+                 (# case w of wild { Models.Credentials x x1 ->
+                    GHC.Types.:
+                      @ (Data.Text.Internal.Text,
+                         Database.Persist.Types.Base.PersistValue)
+                      (Models.$fPersistFieldCredentials8,
+                       Database.Persist.Types.Base.PersistText
+                         (case GHC.Magic.runRW#
+                                 @ 'GHC.Types.PtrRepLifted
+                                 @ Data.Text.Internal.Text
+                                 (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case GHC.Prim.newByteArray#
+                                         @ GHC.Prim.RealWorld
+                                         8#
+                                         s1 of ds1 { (#,#) ipv ipv1 ->
+                                  Database.Persist.Class.PersistField.$wouter10
+                                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                    Database.Persist.Class.PersistField.$fPersistField(,)1
+                                    x
+                                    0#
+                                    ipv }) of ds1 { (#,#) ipv ipv1 ->
+                          ipv1 }))
+                      (GHC.Types.:
+                         @ (Data.Text.Internal.Text,
+                            Database.Persist.Types.Base.PersistValue)
+                         (Models.$fPersistFieldCredentials6,
+                          Database.Persist.Types.Base.PersistText
+                            (case GHC.Magic.runRW#
+                                    @ 'GHC.Types.PtrRepLifted
+                                    @ Data.Text.Internal.Text
+                                    (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                     case GHC.Prim.newByteArray#
+                                            @ GHC.Prim.RealWorld
+                                            8#
+                                            s1 of ds1 { (#,#) ipv ipv1 ->
+                                     Database.Persist.Class.PersistField.$wouter10
+                                       (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                                       Database.Persist.Class.PersistField.$fPersistField(,)1
+                                       x1
+                                       0#
+                                       ipv }) of ds1 { (#,#) ipv ipv1 ->
+                             ipv1 }))
+                         (GHC.Types.[]
+                            @ (Data.Text.Internal.Text,
+                               Database.Persist.Types.Base.PersistValue))) } #)) -}
+d9dbe0ac43d5cedcc2a6d26bb52bd244
+  $w$s$wupdateOrSnocWithKey ::
+    (Data.Text.Internal.Text -> v -> v -> v)
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> GHC.Prim.Array#
+         (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+    -> GHC.Prim.Array#
+         (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+  {- Arity: 6, Strictness: <L,C(C1(C1(U)))><L,U><L,U><L,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ v
+                   (w :: Data.Text.Internal.Text -> v -> v -> v)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w1 :: v)
+                   (w2 :: GHC.Prim.Array#
+                            (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)) ->
+                 letrec {
+                   $wgo1 :: GHC.Prim.ByteArray#
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Int#
+                            -> v
+                            -> GHC.Prim.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                     {- Arity: 7, Strictness: <L,U><L,U><L,U><L,U><S,U><S,U><S,U>,
+                        Inline: [0] -}
+                   = \ (ww3 :: GHC.Prim.ByteArray#)
+                       (ww4 :: GHC.Prim.Int#)
+                       (ww5 :: GHC.Prim.Int#)
+                       (w3 :: v)
+                       (ww6 :: GHC.Prim.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v))
+                       (ww7 :: GHC.Prim.Int#)
+                       (ww8 :: GHC.Prim.Int#) ->
+                     let {
+                       k2 :: Data.Text.Internal.Text = Data.Text.Internal.Text ww3 ww4 ww5
+                     } in
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.>=# ww7 ww8) of wild {
+                       GHC.Types.False
+                       -> case GHC.Prim.indexArray#
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 ww6
+                                 ww7 of ds { Unit# ipv3 ->
+                          case ipv3 of wild1 { Data.HashMap.Base.L kx y ->
+                          case kx of wild2 { Data.Text.Internal.Text dt3 dt4 dt5 ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.==# ww5 dt5) of wild3 {
+                            GHC.Types.False
+                            -> $wgo1 ww3 ww4 ww5 w3 ww6 (GHC.Prim.+# ww7 1#) ww8
+                            GHC.Types.True
+                            -> case {__pkg_ccall text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s _hs_text_memcmp GHC.Prim.ByteArray#
+                                                                                                                  -> GHC.Prim.Word#
+                                                                                                                  -> GHC.Prim.ByteArray#
+                                                                                                                  -> GHC.Prim.Word#
+                                                                                                                  -> GHC.Prim.Word#
+                                                                                                                  -> GHC.Prim.State#
+                                                                                                                       GHC.Prim.RealWorld
+                                                                                                                  -> (# GHC.Prim.State#
+                                                                                                                          GHC.Prim.RealWorld,
+                                                                                                                        GHC.Prim.Int# #)}
+                                      ww3
+                                      (GHC.Prim.int2Word# ww4)
+                                      dt3
+                                      (GHC.Prim.int2Word# dt4)
+                                      (GHC.Prim.int2Word# ww5)
+                                      GHC.Prim.realWorld# of wild4 { (#,#) ds11 ds12 ->
+                               case GHC.Prim.narrow32Int# ds12 of wild5 {
+                                 DEFAULT -> $wgo1 ww3 ww4 ww5 w3 ww6 (GHC.Prim.+# ww7 1#) ww8
+                                 0#
+                                 -> case GHC.Prim.thawArray#
+                                           @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                           @ GHC.Prim.RealWorld
+                                           ww6
+                                           0#
+                                           (GHC.Prim.sizeofArray#
+                                              @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                              ww6)
+                                           GHC.Prim.realWorld# of ds1 { (#,#) ipv4 ipv5 ->
+                                    case GHC.Prim.writeArray#
+                                           @ GHC.Prim.RealWorld
+                                           @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                           ipv5
+                                           ww7
+                                           (Data.HashMap.Base.L
+                                              @ Data.Text.Internal.Text
+                                              @ v
+                                              k2
+                                              (w k2 w3 y))
+                                           ipv4 of s' { DEFAULT ->
+                                    case GHC.Prim.unsafeFreezeArray#
+                                           @ GHC.Prim.RealWorld
+                                           @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                           ipv5
+                                           s' of ds2 { (#,#) ipv6 ipv7 ->
+                                    ipv7 } } } } } } } } }
+                       GHC.Types.True
+                       -> case GHC.Prim.newArray#
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 @ GHC.Prim.RealWorld
+                                 (GHC.Prim.+# ww8 1#)
+                                 (Data.HashMap.Array.undefinedElem
+                                    @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v))
+                                 GHC.Prim.realWorld# of ds { (#,#) ipv3 ipv4 ->
+                          case GHC.Prim.copyArray#
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 @ GHC.Prim.RealWorld
+                                 ww6
+                                 0#
+                                 ipv4
+                                 0#
+                                 ww8
+                                 ipv3 of s2 { DEFAULT ->
+                          case GHC.Prim.writeArray#
+                                 @ GHC.Prim.RealWorld
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 ipv4
+                                 ww8
+                                 (Data.HashMap.Base.L @ Data.Text.Internal.Text @ v k2 w3)
+                                 s2 of s' { DEFAULT ->
+                          case GHC.Prim.unsafeFreezeArray#
+                                 @ GHC.Prim.RealWorld
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 ipv4
+                                 s' of ds1 { (#,#) ipv5 ipv6 ->
+                          ipv6 } } } } }
+                 } in
+                 $wgo1
+                   ww
+                   ww1
+                   ww2
+                   w1
+                   w2
+                   0#
+                   (GHC.Prim.sizeofArray#
+                      @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                      w2)) -}
+427f08863e9e8a23f42c9cb548cd8e58
+  $w$sgo10 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+    -> Data.Map.Base.Map Data.Text.Internal.Text a1
+  {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
+     Inline: [0] -}
+0ad616bda4e3eebf17074d55aa58740a
+  $w$sunsafeInsert ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><L,U><S,1*U>, Inline: [0],
+     Unfolding: (\ @ v
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: v)
+                   (w1 :: Data.HashMap.Base.HashMap Data.Text.Internal.Text v) ->
+                 case {__pkg_ccall hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G hashable_fnv_hash_offset GHC.Prim.ByteArray#
+                                                                                                                     -> GHC.Prim.Int#
+                                                                                                                     -> GHC.Prim.Int#
+                                                                                                                     -> GHC.Prim.Int#
+                                                                                                                     -> GHC.Prim.State#
+                                                                                                                          GHC.Prim.RealWorld
+                                                                                                                     -> (# GHC.Prim.State#
+                                                                                                                             GHC.Prim.RealWorld,
+                                                                                                                           GHC.Prim.Int# #)}
+                        ww
+                        (GHC.Prim.uncheckedIShiftL# ww1 1#)
+                        (GHC.Prim.uncheckedIShiftL# ww2 1#)
+                        -2578643520546668380#
+                        GHC.Prim.realWorld# of wild { (#,#) ds ds1 ->
+                 case Models.$wpoly_go1
+                        @ GHC.Prim.RealWorld
+                        @ v
+                        (GHC.Prim.int2Word# ds1)
+                        ww
+                        ww1
+                        ww2
+                        w
+                        0#
+                        w1
+                        GHC.Prim.realWorld# of ds2 { (#,#) ipv ipv1 ->
+                 ipv1 } }) -}
+3652821ad79e045f4fece1a849157f76
+  $wouter ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+4cdba43f4e53855e5a979002391c6ed6
+  $wouter1 ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+9f081375551826e5f321c2d5c91100c4
+  $wouter2 ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+34db5d9704944898c291b5717fc15fc0
+  $wouter3 ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+0ae4d50af4d624e3542309993de5ce95
+  $wouter4 ::
+    Data.Text.Array.MArray GHC.Prim.RealWorld
+    -> GHC.Types.Int
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
+     Inline: [0] -}
+a70b1797761ea680e8a7542e47543cc8
+  $wpoly_go1 ::
+    GHC.Prim.Word#
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s,
+          Data.HashMap.Base.HashMap Data.Text.Internal.Text v #)
+  {- Arity: 8,
+     Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><S,1*U><L,U>,
+     Inline: [0] -}
+e9953d05fc857c63412b3b666825d380
+  $wpoly_go10 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+    -> [(Data.Text.Internal.Text, a)]
+    -> Data.Map.Base.Map Data.Text.Internal.Text a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+d9e661071ed9dced2a1e978316e7aedd
+  data Credentials
+    = Credentials {credentialsName :: !GHC.Base.String,
+                   credentialsPassword :: !GHC.Base.String}
+276a294eaa212e8b501aa6d71eda571d
+  type CredentialsId =
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+d9e661071ed9dced2a1e978316e7aedd
+  axiom D:R:EntityFieldCredentialstyp0::
+      Database.Persist.Class.PersistEntity.EntityField Models.Credentials
+        = Models.R:EntityFieldCredentialstyp
+d9e661071ed9dced2a1e978316e7aedd
+  axiom D:R:KeyCredentials0::
+      Database.Persist.Class.PersistEntity.Key Models.Credentials
+        = Models.R:KeyCredentials
+d9e661071ed9dced2a1e978316e7aedd
+  axiom D:R:PersistEntityBackendCredentials::
+      Database.Persist.Class.PersistEntity.PersistEntityBackend
+        Models.Credentials
+        = Database.Persist.Sql.Types.Internal.SqlBackend
+d9e661071ed9dced2a1e978316e7aedd
+  axiom D:R:UniqueCredentials0::
+      Database.Persist.Class.PersistEntity.Unique Models.Credentials
+        = Models.R:UniqueCredentials
+d9e661071ed9dced2a1e978316e7aedd
+  data instance Database.Persist.Class.PersistEntity.EntityField
+                  Models.Credentials typ where
+    CredentialsId :: typ
+                     Data.Type.Equality.~ Database.Persist.Class.PersistEntity.Key
+                                            Models.Credentials =>
+                     Database.Persist.Class.PersistEntity.EntityField
+                       Models.Credentials typ
+    CredentialsName :: typ Data.Type.Equality.~ GHC.Base.String =>
+                       Database.Persist.Class.PersistEntity.EntityField
+                         Models.Credentials typ
+    CredentialsPassword :: typ Data.Type.Equality.~ GHC.Base.String =>
+                           Database.Persist.Class.PersistEntity.EntityField
+                             Models.Credentials typ
+    RecFlag: Recursive
+d9e661071ed9dced2a1e978316e7aedd
+  newtype instance Database.Persist.Class.PersistEntity.Key
+                     Models.Credentials
+    = CredentialsKey {unCredentialsKey :: Database.Persist.Class.PersistStore.BackendKey
+                                            Database.Persist.Sql.Types.Internal.SqlBackend}
+    RecFlag: Recursive
+d9e661071ed9dced2a1e978316e7aedd
+  data instance Database.Persist.Class.PersistEntity.Unique
+                  Models.Credentials
+    = UniqueName GHC.Base.String
+    RecFlag: Recursive
+83d7cb769d284e017c29bf1732f21004
+  credentialsName :: Models.Credentials -> GHC.Base.String
+  RecSel Left Models.Credentials
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Models.Credentials) ->
+                 case ds of wild { Models.Credentials ds1 ds2 -> ds1 }) -}
+fabee50ece53701bdfb33e153af2d93f
+  credentialsPassword :: Models.Credentials -> GHC.Base.String
+  RecSel Left Models.Credentials
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Models.Credentials) ->
+                 case ds of wild { Models.Credentials ds1 ds2 -> ds2 }) -}
+640507edcc537b98da8bc292baf841be
+  dbAction ::
+    (Control.Monad.Reader.Class.MonadReader
+       Database.Persist.Sql.Types.ConnectionPool m,
+     Control.Monad.IO.Class.MonadIO m) =>
+    Database.Persist.Sql.Types.SqlPersistT GHC.Types.IO b -> m b
+  {- Arity: 3,
+     Strictness: <S(S(LC(C(S))LLL)LLL),U(1*U(A,1*C1(C1(U)),A,A,A),1*U,A,A)><L,1*U(A,1*U)><L,C(U)>,
+     Unfolding: (\ @ (m :: * -> *)
+                   @ b
+                   ($dMonadReader :: Control.Monad.Reader.Class.MonadReader
+                                       Database.Persist.Sql.Types.ConnectionPool m)
+                   ($dMonadIO :: Control.Monad.IO.Class.MonadIO m)
+                   (eta :: Database.Persist.Sql.Types.SqlPersistT GHC.Types.IO b) ->
+                 let {
+                   lvl13 :: GHC.Types.IO b -> m b
+                   = Control.Monad.IO.Class.liftIO @ m $dMonadIO @ b
+                 } in
+                 let {
+                   lvl14 :: Database.Persist.Sql.Types.Internal.SqlBackend
+                            -> GHC.Types.IO b
+                     {- Arity: 1 -}
+                   = Database.Persist.Sql.Run.runSqlConn
+                       @ GHC.Types.IO
+                       @ Database.Persist.Sql.Types.Internal.SqlBackend
+                       @ b
+                       Control.Monad.Trans.Control.$fMonadBaseControlIOIO
+                       Models.dbAction1
+                         `cast`
+                       (GHC.Classes.(%,%)
+                          <Database.Persist.Class.PersistStore.IsPersistBackend
+                             Database.Persist.Sql.Types.Internal.SqlBackend>_N
+                          ((Data.Type.Equality.~)
+                             <*>_N
+                             (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                             <Database.Persist.Sql.Types.Internal.SqlBackend>_N)_N)_R
+                       eta
+                 } in
+                 GHC.Base.>>=
+                   @ m
+                   (Control.Monad.Reader.Class.$p1MonadReader
+                      @ Database.Persist.Sql.Types.ConnectionPool
+                      @ m
+                      $dMonadReader)
+                   @ (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend)
+                   @ b
+                   (Control.Monad.Reader.Class.ask
+                      @ (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend)
+                      @ m
+                      $dMonadReader)
+                   (\ (pool :: Data.Pool.Pool
+                                 Database.Persist.Sql.Types.Internal.SqlBackend) ->
+                    lvl13
+                      (\ (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                       case pool of ww { Data.Pool.Pool ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                       Data.Pool.$w$swithResource
+                         @ Database.Persist.Sql.Types.Internal.SqlBackend
+                         @ b
+                         ww1
+                         ww2
+                         ww3
+                         ww5
+                         ww6
+                         lvl14
+                         w2 })
+                        `cast`
+                      (Sym (GHC.Types.N:IO[0] <b>_R)))) -}
+d654cb818fb15f2e9bd60d23a3aa432d
+  dbAction1 ::
+    (Database.Persist.Class.PersistStore.IsPersistBackend
+       Database.Persist.Sql.Types.Internal.SqlBackend,
+     Database.Persist.Sql.Types.Internal.SqlBackend
+     Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Database.Persist.Sql.Types.Internal.$fIsPersistBackendSqlBackend,
+                  Models.$fToBackendKeySqlBackendCredentials1
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
+74746ef12f2b60432fe0de443f9ec8d5
+  dbMigration ::
+    Database.Persist.Sql.Types.SqlPersistT GHC.Types.IO ()
+  {- Unfolding: (Database.Persist.Sql.Migration.runMigration
+                   @ GHC.Types.IO
+                   Control.Monad.IO.Class.$fMonadIOIO
+                   Models.dbMigration1
+                     `cast`
+                   (Trans
+                        (<Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <(((), [Data.Text.Internal.Text]),
+                                         [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)])>_R))
+                        (Trans
+                             (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                       <*>_N
+                                       <Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                                       <GHC.Types.IO>_R
+                                       <(((), [Data.Text.Internal.Text]),
+                                         [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)])>_N))
+                             (Trans
+                                  (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                            <[(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)]>_N
+                                            <Control.Monad.Trans.Reader.ReaderT
+                                               Database.Persist.Sql.Types.Internal.SqlBackend
+                                               GHC.Types.IO>_R
+                                            <((), [Data.Text.Internal.Text])>_N))
+                                  (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                            <[Data.Text.Internal.Text]>_N
+                                            <Control.Monad.Trans.Writer.Lazy.WriterT
+                                               Database.Persist.Sql.Types.CautiousMigration
+                                               (Control.Monad.Trans.Reader.ReaderT
+                                                  Database.Persist.Sql.Types.Internal.SqlBackend
+                                                  GHC.Types.IO)>_R
+                                            <()>_N)))))) -}
+42cb547987adb8e0de5ceb392015c79a
+  dbMigration1 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (((), [Data.Text.Internal.Text]),
+           [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)]) #)
+  {- Arity: 2,
+     Unfolding: (\ (w2 :: Database.Persist.Sql.Types.Internal.SqlBackend)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w2 of ww { Database.Persist.Sql.Types.Internal.SqlBackend ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ->
+                 Database.Persist.Sql.Migration.$wmigrate
+                   Models.dbMigration_w
+                   Models.$fPersistEntityCredentials16
+                   ww1
+                   ww5
+                   ww7
+                   w3 }) -}
+daa754cb315170c57b2040f72fd171fd
+  dbMigration_w :: [Database.Persist.Types.Base.EntityDef]
+  {- Unfolding: (GHC.Types.:
+                   @ Database.Persist.Types.Base.EntityDef
+                   Models.$fPersistEntityCredentials16
+                   (GHC.Types.[] @ Database.Persist.Types.Base.EntityDef)) -}
+d9e661071ed9dced2a1e978316e7aedd
+  unCredentialsKey ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistStore.BackendKey
+         Database.Persist.Sql.Types.Internal.SqlBackend
+  RecSel Left Models.R:KeyCredentials
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Models.unCredentialsKey1
+                  `cast`
+                (<Database.Persist.Class.PersistEntity.Key Models.Credentials>_R
+                 ->_R Trans
+                          (Models.D:R:KeyCredentials0[0]) (Models.N:R:KeyCredentials[0])) -}
+d9e661071ed9dced2a1e978316e7aedd
+  unCredentialsKey1 ::
+    Database.Persist.Class.PersistEntity.Key Models.Credentials
+    -> Database.Persist.Class.PersistEntity.Key Models.Credentials
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Database.Persist.Class.PersistEntity.Key
+                            Models.Credentials) ->
+                 ds) -}
+instance GHC.Classes.Eq [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fEqKey
+instance Web.HttpApiData.Internal.FromHttpApiData [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fFromHttpApiDataKey
+instance Data.Aeson.Types.Class.FromJSON [Models.Credentials]
+  = Models.$fFromJSONCredentials
+instance Data.Aeson.Types.Class.FromJSON [Database.Persist.Class.PersistEntity.Entity]
+  = Models.$fFromJSONEntity
+instance Data.Aeson.Types.Class.FromJSON [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fFromJSONKey
+instance GHC.Classes.Ord [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fOrdKey
+instance Web.PathPieces.PathPiece [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fPathPieceKey
+instance Database.Persist.Class.PersistEntity.PersistEntity [Models.Credentials]
+  = Models.$fPersistEntityCredentials
+instance Database.Persist.Class.PersistField.PersistField [Models.Credentials]
+  = Models.$fPersistFieldCredentials
+instance Database.Persist.Class.PersistField.PersistField [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fPersistFieldKey
+instance Database.Persist.Sql.Class.PersistFieldSql [Models.Credentials]
+  = Models.$fPersistFieldSqlCredentials
+instance Database.Persist.Sql.Class.PersistFieldSql [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fPersistFieldSqlKey
+instance GHC.Read.Read [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fReadKey
+instance GHC.Show.Show [Models.Credentials]
+  = Models.$fShowCredentials
+instance GHC.Show.Show [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fShowKey
+instance Database.Persist.Class.PersistStore.ToBackendKey [Database.Persist.Sql.Types.Internal.SqlBackend,
+                                                           Models.Credentials]
+  = Models.$fToBackendKeySqlBackendCredentials
+instance Web.HttpApiData.Internal.ToHttpApiData [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fToHttpApiDataKey
+instance Data.Aeson.Types.Class.ToJSON [Models.Credentials]
+  = Models.$fToJSONCredentials
+instance Data.Aeson.Types.Class.ToJSON [Database.Persist.Class.PersistEntity.Entity]
+  = Models.$fToJSONEntity
+instance Data.Aeson.Types.Class.ToJSON [Database.Persist.Class.PersistEntity.Key]
+  = Models.$fToJSONKey
+family instance Database.Persist.Class.PersistEntity.EntityField [Models.Credentials]
+  = Models.D:R:EntityFieldCredentialstyp0
+family instance Database.Persist.Class.PersistEntity.Key [Models.Credentials]
+  = Models.D:R:KeyCredentials0
+family instance Database.Persist.Class.PersistEntity.PersistEntityBackend [Models.Credentials]
+  = Models.D:R:PersistEntityBackendCredentials
+family instance Database.Persist.Class.PersistEntity.Unique [Models.Credentials]
+  = Models.D:R:UniqueCredentials0
+"SPEC/Models $WCredentialsId @ (Key Credentials)" [ALWAYS] forall (dt :: Database.Persist.Class.PersistEntity.Key
+                                                                           Models.Credentials
+                                                                         Data.Type.Equality.~ Database.Persist.Class.PersistEntity.Key
+                                                                                                Models.Credentials)
+  Models.$WCredentialsId @ (Database.Persist.Class.PersistEntity.Key
+                              Models.Credentials)
+                         dt
+  = Models.$fPersistEntityCredentials_$s$WCredentialsId
+"SPEC/Models fromList @ Text _" [ALWAYS] forall @ a
+                                                ($dOrd :: GHC.Classes.Ord Data.Text.Internal.Text)
+  Data.Map.Base.fromList @ Data.Text.Internal.Text @ a $dOrd
+  = Models.$fPersistEntityCredentials_$sfromList @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

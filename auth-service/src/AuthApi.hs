@@ -4,15 +4,16 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeOperators     #-}
 
-module AuthApi () where
+module AuthApi (AuthServiceApi,ResponseData(..)) where
 
-import Data.Aeson
 import Servant
+import Models (Credentials)
+import Database.Persist.Postgresql
+import GHC.Generics
+import Data.Aeson
+import Data.Aeson.TH
 
+data ResponseData = ResponseData { status :: String
+                             } deriving (Generic, ToJSON)
 
-type AuthAPI = "authorise"
-             :> ReqBody '[JSON] User
-             :> Post '[JSON] User
-
-api :: Proxy AuthAPI
-api = Proxy
+type AuthServiceApi = "verify" :> ReqBody '[JSON] Credentials :> Post '[JSON] ResponseData
