@@ -5,9 +5,9 @@ description:         Please see README.md
 homepage:            https://github.com/githubuser/auth-service#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2016 Author name here
+author:              Ciaran Finn
+maintainer:          cifinn@tcd.ie
+copyright:           2016 Ciaran Finn
 category:            Web
 build-type:          Simple
 -- extra-source-files:
@@ -15,13 +15,25 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Lib
+  exposed-modules:   Model
                      , DB
   build-depends:       base >= 4.7 && < 5
                      , monad-logger
                      , persistent
                      , persistent-postgresql
                      , persistent-template
+                     , time
+                     , text
+                     , mtl
+                     , aeson
+                     , bytestring
+                     , bson
+                     , servant
+                     , servant-server
+                     , servant-client
+                     , transformers
+                     , warp
+                     , wai
   default-language:    Haskell2010
 
 executable auth-service-exe

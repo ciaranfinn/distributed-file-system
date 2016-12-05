@@ -4,11 +4,10 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE MultiParamTypeClasses      #-}
 {-# LANGUAGE OverloadedStrings          #-}
-{-# LANGUAGE QuasiQuotes                #-}
-{-# LANGUAGE TemplateHaskell            #-}
-{-# LANGUAGE TypeFamilies               #-}
 
-module DB (runMigrate,User) where
+module DB (runMigrate) where
+
+import Model (migrateAll)
 
 import Database.Persist
 import Database.Persist.Postgresql
@@ -18,13 +17,11 @@ import Control.Monad.Logger    (runStderrLoggingT)
 
 connStr = "host=localhost dbname=postgres user=docker port=5433"
 
+data Response = Response{
+    status :: Bool,
+    auth_token :: String
+} deriving (ToJSON)
 
-share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
-User
-    name String
-    password String Maybe
-    deriving Show
-|]
 
 runMigrate :: IO ()
 runMigrate = runStderrLoggingT $ withPostgresqlPool connStr 10 $ \pool -> liftIO $ do
