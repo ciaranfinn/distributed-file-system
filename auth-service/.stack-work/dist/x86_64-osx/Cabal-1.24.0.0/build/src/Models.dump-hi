@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-06 00:08:59.327074 UTC
+2016-12-06 00:17:13.616847 UTC
 
 interface auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models [family instance module] 8001
-  interface hash: 1659b86278f918ddfcc445b46d8b30e2
-  ABI hash: 84d6cc6ba84496559b12689db55bb90e
-  export-list hash: fdff1ff782d7587b242a2815b4d9f537
+  interface hash: f97c0b51cf0a73a8af55b82c2827c980
+  ABI hash: 2da805af4f49647187f395ae8f90db0b
+  export-list hash: bf857485bd54de1d3918167cac668a5d
   orphan hash: b38b227705693f1ab820970b9424a795
   flag hash: 0914d48463066c71190c16b7c3b393cb
   sig of: Nothing
@@ -14,7 +14,12 @@ interface auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models [family instance mo
 exports:
   Models.dbAction
   Models.dbMigration
+  Models.migrateAll
   Models.User{Models.User userEmail userPassword}
+  Models.UserId
+  Database.Persist.Class.PersistEntity.EntityField{Models.UserEmail Models.UserId Models.UserPassword}
+  Database.Persist.Class.PersistEntity.Key{Models.UserKey unUserKey}
+  Database.Persist.Class.PersistEntity.Unique{Models.UniqueName}
 module dependencies:
 package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       aeson-compat-0.3.6@aeson-compat-0.3.6-5wE6V2cyaFcB5no9HXBKW5
@@ -2500,7 +2505,7 @@ f193d4e4ebacfa005e33a3ca1e6b984a
                     `cast`
                   (Sym (Data.Type.Equality.N:~[0]
                             <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
-b122e12e4af858a99478b9a5ac6f2c3c
+25dd7591f47a55afec9e76b26384b3d8
   dbMigration ::
     Database.Persist.Sql.Types.SqlPersistT GHC.Types.IO ()
   {- Unfolding: (Database.Persist.Sql.Migration.runMigration
@@ -2535,7 +2540,7 @@ b122e12e4af858a99478b9a5ac6f2c3c
                                                   Database.Persist.Sql.Types.Internal.SqlBackend
                                                   GHC.Types.IO)>_R
                                             <()>_N)))))) -}
-cf0cc5c2216c5de916a7cfced0240a9f
+58d2f2bf28241fd2d45f8d0d7b51a170
   dbMigration1 ::
     Database.Persist.Sql.Types.Internal.SqlBackend
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -2543,22 +2548,59 @@ cf0cc5c2216c5de916a7cfced0240a9f
           (((), [Data.Text.Internal.Text]),
            [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)]) #)
   {- Arity: 2,
-     Unfolding: (\ (w2 :: Database.Persist.Sql.Types.Internal.SqlBackend)
+     Strictness: <S(LLLLLLC(C(C(C(S(SS)))))LLLLLLLL),1*U(C(C1(U(U,U(C(U(U,A)),C(U(U,U)),C(C1(U(U,U))),C(C1(C1(U))))))),A,A,A,U(U),A,1*C1(C1(C1(C1(U(U,1*U))))),A,A,A,A,A,A,A,A)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (w2 :: Database.Persist.Sql.Types.Internal.SqlBackend)
                    (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w2 of ww { Database.Persist.Sql.Types.Internal.SqlBackend ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ->
                  Database.Persist.Sql.Migration.$wmigrate
-                   Models.dbMigration_w
+                   Models.dbMigration2
                    Models.$fPersistEntityUser16
                    ww1
                    ww5
                    ww7
                    w3 }) -}
-077a29b1285fbb0b85b897e00b71ff95
-  dbMigration_w :: [Database.Persist.Types.Base.EntityDef]
-  {- Unfolding: (GHC.Types.:
+3adc75b4df41e1e7080e75ebf0aecded
+  dbMigration2 :: [Database.Persist.Types.Base.EntityDef]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
                    @ Database.Persist.Types.Base.EntityDef
                    Models.$fPersistEntityUser16
                    (GHC.Types.[] @ Database.Persist.Types.Base.EntityDef)) -}
+10257c3b28f952f662791115e4151bdf
+  migrateAll :: Database.Persist.Sql.Types.Migration
+  {- Arity: 2,
+     Strictness: <S(LLLLLLC(C(C(C(S(SS)))))LLLLLLLL),1*U(C(C1(U(U,U(C(U(U,A)),C(U(U,U)),C(C1(U(U,U))),C(C1(C1(U))))))),A,A,A,U(U),A,1*C1(C1(C1(C1(U(U,1*U))))),A,A,A,A,A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Models.dbMigration1
+                  `cast`
+                (Trans
+                     (<Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                      ->_R Sym (GHC.Types.N:IO[0]
+                                    <(((), [Data.Text.Internal.Text]),
+                                      [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)])>_R))
+                     (Trans
+                          (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                    <*>_N
+                                    <Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                                    <GHC.Types.IO>_R
+                                    <(((), [Data.Text.Internal.Text]),
+                                      [(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)])>_N))
+                          (Trans
+                               (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                         <[(GHC.Types.Bool, Database.Persist.Sql.Types.Sql)]>_N
+                                         <Control.Monad.Trans.Reader.ReaderT
+                                            Database.Persist.Sql.Types.Internal.SqlBackend
+                                            GHC.Types.IO>_R
+                                         <((), [Data.Text.Internal.Text])>_N))
+                               (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                         <[Data.Text.Internal.Text]>_N
+                                         <Control.Monad.Trans.Writer.Lazy.WriterT
+                                            Database.Persist.Sql.Types.CautiousMigration
+                                            (Control.Monad.Trans.Reader.ReaderT
+                                               Database.Persist.Sql.Types.Internal.SqlBackend
+                                               GHC.Types.IO)>_R
+                                         <()>_N))))) -}
 94b286d9bc8144ffe652c164c58d187e
   unUserKey ::
     Database.Persist.Class.PersistEntity.Key Models.User

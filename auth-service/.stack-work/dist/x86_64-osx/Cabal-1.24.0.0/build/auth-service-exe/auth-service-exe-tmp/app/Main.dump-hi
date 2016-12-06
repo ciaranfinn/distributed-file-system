@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-05 20:10:02.499573 UTC
+2016-12-06 00:40:57.581604 UTC
 
 interface main@main:Main 8001
-  interface hash: 9156a163d44c50d73afec3493cec5615
-  ABI hash: c50a25ab54e7c8837792244ce53130c0
+  interface hash: d6db35e4ade59ecc0365df92455eef0d
+  ABI hash: 26361957c6f2aa614a71b68e17ee4264
   export-list hash: f27c5df367d7285b60011d110586960d
   orphan hash: 7c3560eee66c4468308fe62dfed79e8a
   flag hash: a0d4534c7f37e0e51e81fc1a548cf058
@@ -139,6 +139,7 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
+                         auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:AuthApi
                          auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
@@ -188,8 +189,8 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models beeae1e1c4c615bdc706a5d52c4dd450
-import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Service c444e377de237c95388585fe23024f5a
+import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models 2da805af4f49647187f395ae8f90db0b
+import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Service 685fe0bf06bd59ce064f1eae9441dabf
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 import  -/  monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK:Control.Monad.Logger 2f87c925edad5966dbd05a4d603919f5
@@ -441,12 +442,12 @@ f1dcc66070a646abebb1b99a2d0b1e06
                    (GHC.ForeignPtr.PlainForeignPtr ipv1)
                    0#
                    (GHC.Prim.word2Int# ds4) } }) -}
-156c4c16c510ffea0447ac8425488ab3
+67134477af9b00b7e12e36bd862fa4ab
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-e69edad7ceedc0226ebde3e116a194d4
+40847342bfb5e8c61a010da4686922b1
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -550,63 +551,9 @@ e69edad7ceedc0226ebde3e116a194d4
                     ->_R <GHC.Integer.Type.Integer>_R
                     ->_R Sym (GHC.Types.N:IO[0] <()>_R))
                    (GHC.Base.Nothing @ GHC.Types.Int)
-                   (Network.Wai.Middleware.RequestLogger.logStdout
-                      (Servant.Server.serveWithContext
-                         @ AuthApi.AuthServiceApi
-                         @ '[]
-                         Service.$sserve2
-                           `cast`
-                         (Sym (Servant.Server.Internal.N:HasServer[0]
-                                   <*>_N
-                                   <"users"
-                                    Servant.API.Sub.:> Servant.API.Verbs.Verb
-                                                         'Network.HTTP.Types.Method.GET
-                                                         200
-                                                         '[Servant.API.ContentTypes.JSON]
-                                                         [Database.Persist.Class.PersistEntity.Entity
-                                                            Models.User]>_N
-                                   <'[]>_N))
-                         (Data.Proxy.Proxy @ * @ AuthApi.AuthServiceApi)
-                         Servant.Server.Internal.Context.$WEmptyContext
-                         (Service.allUsers
-                            `cast`
-                          (Trans
-                               (Service.N:App[0] <[Database.Persist.Class.PersistEntity.Entity
-                                                     Models.User]>_N)
-                               (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                    <*>_N
-                                    <Data.Pool.Pool
-                                       Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                                    <Control.Monad.Trans.Except.ExceptT
-                                       Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
-                                    <[Database.Persist.Class.PersistEntity.Entity Models.User]>_N))
-                            ww)
-                           `cast`
-                         (Trans
-                              (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
-                                             <Network.HTTP.Types.Method.StdMethod>_N
-                                             <'[Servant.API.ContentTypes.JSON]>_N
-                                             <[Database.Persist.Class.PersistEntity.Entity
-                                                 Models.User]>_N
-                                             <'Network.HTTP.Types.Method.GET>_N
-                                             <200>_N
-                                             <Control.Monad.Trans.Except.ExceptT
-                                                Servant.Server.Internal.ServantErr.ServantErr
-                                                GHC.Types.IO>_N)))
-                              (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
-                                             <*>_N
-                                             <"users">_N
-                                             <Servant.API.Verbs.Verb
-                                                'Network.HTTP.Types.Method.GET
-                                                200
-                                                '[Servant.API.ContentTypes.JSON]
-                                                [Database.Persist.Class.PersistEntity.Entity
-                                                   Models.User]>_N
-                                             <Control.Monad.Trans.Except.ExceptT
-                                                Servant.Server.Internal.ServantErr.ServantErr
-                                                GHC.Types.IO>_N))))))
+                   (Network.Wai.Middleware.RequestLogger.logStdout (Service.app ww))
                    ipv2 } } }) -}
-f356836652aa57680b8bceef5b6aadcc
+e769e73e4136a32805fe65a76cf7a543
   main2 ::
     Database.Persist.Sql.Types.Internal.SqlBackend -> GHC.Types.IO ()
   {- Arity: 1,
@@ -660,7 +607,7 @@ f2167f1e9f2e6612a2fffe827321581d
      Unfolding: (\ (ds :: Database.PostgreSQL.Simple.Internal.Connection)
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  (# eta, GHC.Tuple.() #)) -}
-97578c63ea6e329b891375707df3b253
+3b1069c021725bf7364ca83ae3208712
   main7 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

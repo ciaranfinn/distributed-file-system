@@ -1,23 +1,23 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-05 20:06:13.812312 UTC
+2016-12-06 00:40:56.147788 UTC
 
 interface auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Service 8001
-  interface hash: 0c6a333127af3c82ef1601b1e561da7f
-  ABI hash: c444e377de237c95388585fe23024f5a
-  export-list hash: 6eb93faf93516a00c0177b30593bd8b5
-  orphan hash: d736d69f8d8563f7f5d4e8732cb02314
+  interface hash: 92667ac9f72f54e1a221da759b2a7818
+  ABI hash: 685fe0bf06bd59ce064f1eae9441dabf
+  export-list hash: 561b2a3c2c80dd2cc21942aff4f60596
+  orphan hash: 28fa75be0771033ea4c76dde6193729f
   flag hash: cb79fe25b2e43a87f3e6eff39d25ce76
   sig of: Nothing
   used TH splices: False
   where
 exports:
-  Service.allUsers
   Service.app
   Service.appApi
   Service.appToServer
+  Service.authService
   Service.convertApp
-  Service.userServer
+  Service.createUser
   Service.App{Service.App runApp}
 module dependencies: AuthApi Models
 package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
@@ -129,6 +129,7 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
+                         auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:AuthApi
                          auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:Models
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
@@ -176,24 +177,31 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  AuthApi 692c2efb002c5887908640ffdbe67044
-  exports: 2e76f9dda790adc5649dfdcfda8b51b0
-  AuthServiceApi 66ff40552300453c186b4baaf3095b6f
-import  -/  Models beeae1e1c4c615bdc706a5d52c4dd450
-  exports: 31577eb3b6cc4eaa67d38b87570b966a
-  User ed613bc560852f77f142d4e786a4167d
+import  -/  AuthApi 44b0b93d12321087b093107499802f2c
+  exports: aa5aee5679cecd5b7e384ff86b337c29
+  AuthServiceApi b7ee42e3aca0adc200f5285532721c20
+  ResponseData eea1561bbc88ab25a979510af0828471
+  ResponseData 4c34033f989d1f0bb0c0e7a6994926ee
+  status 24ceedebf902cc8abf667907fc40a7e7
+import  -/  Models 2da805af4f49647187f395ae8f90db0b
+  exports: bf857485bd54de1d3918167cac668a5d
+  User ac332ef42756887d181e077caffb3f51
+  User 94b286d9bc8144ffe652c164c58d187e
   dbAction 3bda264f39ec2b91c0819eff97748ff8
+  userEmail a9c376ae0255c6a516026c441c952903
+  userPassword c338a3c196995f2ac874706e152a6af1
 import  -/  base-4.9.0.0:Control.Monad.IO.Class d702028d883e700bd7066b031147030d
 import  -/  base-4.9.0.0:Data.Proxy aa86c72628cf3b1ceb0816ca84687d80
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 import  -/  mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM:Control.Monad.Error.Class f139fe3464686c34428880c6a5173636
 import  -/  mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM:Control.Monad.Except 99ba8f4995df0e7f2f512551a0ca666a
 import  -/  mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM:Control.Monad.Reader 859b39f57eb3bed457106c30aac21473
 import  -/  mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM:Control.Monad.Reader.Class a2c7beb266585be238cfe9f5989c52b7
-import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistEntity 16dc9aa41de02addc67315556e1e5675
-import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistQuery 898ff247336cf9e932a4a05f18e08420
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Class.PersistStore 0a4d86d70e21864c05e2e3e5e796f5b8
+import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Orphan.PersistStore 1f3788b76df3f62841a363559f78d694
 import  -/  persistent-2.6@persistent-2.6-1lE9S4auQBGDBFFzb0JIqD:Database.Persist.Sql.Types 28ab73798fb587e82ac34b8fd4fe757c
 import  -/  persistent-postgresql-2.6@persistent-postgresql-2.6-GvBYHyPf2H6GQQdyjSi6nK:Database.Persist.Postgresql be3582dc9599bd8f4ee48c6f9709331d
 import  -/  servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.Utils.Enter 7de8c2005e1a9cd734a0b0a1a905d073
@@ -1583,19 +1591,18 @@ db9e14d88bb44fb9249a8b031e380cbd
                                             GHC.Types.IO>_R
                                          <a>_N))
                                (Sym (Service.N:App[0]) <a>_N))) -}
-e12b9cd54753b4cdb2094f7427ecc22d
+20be24fe47e4282ed02b0122b02dd323
   $s$fAllCTRender:a ::
     Servant.API.ContentTypes.AllCTRender
-      '[Servant.API.ContentTypes.JSON]
-      [Database.Persist.Class.PersistEntity.Entity Models.User]
+      '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ '[Servant.API.ContentTypes.JSON]
-                  @ [Database.Persist.Class.PersistEntity.Entity Models.User]
+                  @ AuthApi.ResponseData
                   (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
                      @ Servant.API.ContentTypes.JSON
                      @ '[]
-                     @ [Database.Persist.Class.PersistEntity.Entity Models.User]
+                     @ AuthApi.ResponseData
                      Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:Accept[0]
@@ -1607,7 +1614,7 @@ e12b9cd54753b4cdb2094f7427ecc22d
                   (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
                      @ Servant.API.ContentTypes.JSON
                      @ '[]
-                     @ [Database.Persist.Class.PersistEntity.Entity Models.User]
+                     @ AuthApi.ResponseData
                      Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:Accept[0]
@@ -1616,237 +1623,181 @@ e12b9cd54753b4cdb2094f7427ecc22d
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Service.$s$fAllCTRender:a1) -}
-f3041a2c9474089abf2a87efd4620cf1
+6512c9b57fe92f48cd3f9cb97a9d5909
   $s$fAllCTRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
-      '[Servant.API.ContentTypes.JSON]
-      [Database.Persist.Class.PersistEntity.Entity Models.User]
+      '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
-1fc687ad75b550c9d00df29636f8b9e1
+6b710ea90f8d7a6abc4cf7358f854c85
   $s$fAllCTRender:a2 ::
-    Data.Aeson.Types.Class.ToJSON
-      [Database.Persist.Class.PersistEntity.Entity Models.User]
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Service.$s$fAllCTRender:a_$s$fToJSON[] -}
-fa839692f6668bf9b96ac433de7196cf
-  $s$fAllCTRender:a3 ::
-    Servant.API.ContentTypes.MimeRender
-      Servant.API.ContentTypes.JSON
-      [Database.Persist.Class.PersistEntity.Entity Models.User]
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
-8bb150189a70ec73594c38b11b50e543
-  $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
-    Servant.API.ContentTypes.AllMimeRender
-      '[Servant.API.ContentTypes.JSON]
-      [Database.Persist.Class.PersistEntity.Entity Models.User]
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ '[Servant.API.ContentTypes.JSON]
-                  @ [Database.Persist.Class.PersistEntity.Entity Models.User]
-                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
-                     @ Servant.API.ContentTypes.JSON
-                     @ [Database.Persist.Class.PersistEntity.Entity Models.User]
-                     Service.$s$fAllCTRender:a3)
-                  Service.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender -}
-419e9aa9312aa13fcd470dc9dac15b81
-  $s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
-    -> [Database.Persist.Class.PersistEntity.Entity Models.User]
+    -> AuthApi.ResponseData
     -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
          Data.ByteString.Lazy.Internal.ByteString)]
-  {- Arity: 2, Strictness: <L,A><L,1*U>m2,
+  {- Arity: 2, Strictness: <L,A><L,1*U(1*U)>m2,
      Unfolding: InlineRule (2, True, False)
                 (\ (eta :: Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON])
-                   (eta1 :: [Database.Persist.Class.PersistEntity.Entity
-                               Models.User]) ->
+                   (eta1 :: AuthApi.ResponseData) ->
                  GHC.Types.:
                    @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                       Data.ByteString.Lazy.Internal.ByteString)
-                   ((Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
-                       @ [Database.Persist.Class.PersistEntity.Entity Models.User]
-                       Service.$s$fAllCTRender:a2)
-                      `cast`
-                    (Servant.API.ContentTypes.N:Accept[0]
-                         <GHC.Types.*>_N <Servant.API.ContentTypes.JSON>_N)
-                      (Data.Proxy.Proxy @ GHC.Types.* @ Servant.API.ContentTypes.JSON),
-                    Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender
-                      (Data.Proxy.Proxy @ GHC.Types.* @ Servant.API.ContentTypes.JSON)
-                      eta1)
+                   (Servant.API.ContentTypes.$fAcceptTYPEJSON1,
+                    Data.ByteString.Builder.toLazyByteString
+                      (Data.Aeson.Encode.Builder.encodeToBuilder
+                         (AuthApi.$fToJSONResponseData1 eta1)
+                           `cast`
+                         (Data.Aeson.Types.Generic.N:Tagged[0]
+                              <Data.Aeson.Types.Generic.True>_P
+                              <Data.Aeson.Types.Internal.Value>_R)))
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-120fdbfd2cf85695bffc8c1c297b206a
+b4c173baf1909ade41f9f8ac67dd9635
+  $s$fAllCTRender:a3 ::
+    Servant.API.ContentTypes.MimeRender
+      Servant.API.ContentTypes.JSON AuthApi.ResponseData
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
+0690b68a3c48d2bf7a1d537ac5375ba8
+  $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
+    Servant.API.ContentTypes.AllMimeRender
+      '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.API.ContentTypes.JSON]
+                  @ AuthApi.ResponseData
+                  (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
+                     @ Servant.API.ContentTypes.JSON
+                     @ AuthApi.ResponseData
+                     Service.$s$fAllCTRender:a3)
+                  Service.$s$fAllCTRender:a2 -}
+1cf402cdfa316acb2e55f93bd08d7ebf
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeRender
-      Servant.API.ContentTypes.JSON
-      [Database.Persist.Class.PersistEntity.Entity Models.User]
+      Servant.API.ContentTypes.JSON AuthApi.ResponseData
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ *
                   @ Servant.API.ContentTypes.JSON
-                  @ [Database.Persist.Class.PersistEntity.Entity Models.User]
+                  @ AuthApi.ResponseData
                   (Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
-                     @ [Database.Persist.Class.PersistEntity.Entity Models.User]
-                     Service.$s$fAllCTRender:a2)
+                     @ AuthApi.ResponseData
+                     AuthApi.$fToJSONResponseData)
                   Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
-deba6e7a65cb5e5c88604d99ad4477b9
+8530fa52b178b3085ea870f006943bc9
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
-    -> [Database.Persist.Class.PersistEntity.Entity Models.User]
-    -> Data.ByteString.Lazy.Internal.ByteString
-  {- Arity: 2, Strictness: <L,A><L,1*U>,
+    -> AuthApi.ResponseData -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 2, Strictness: <L,A><L,1*U(1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
-                   (eta :: [Database.Persist.Class.PersistEntity.Entity
-                              Models.User]) ->
+                   (eta :: AuthApi.ResponseData) ->
                  Data.ByteString.Builder.toLazyByteString
-                   (case eta of wild {
-                      []
-                      -> Data.Aeson.Types.Internal.fromEncoding
-                           Data.Aeson.Encode.Builder.emptyArray_
-                      : x xs
-                      -> Data.Aeson.Types.Internal.fromEncoding
-                           (GHC.Base.$
-                              @ 'GHC.Types.PtrRepLifted
-                              @ Data.ByteString.Builder.Internal.Builder
-                              @ Data.Aeson.Types.Internal.Encoding
-                              (\ (tpl :: Data.ByteString.Builder.Internal.Builder) -> tpl)
-                                `cast`
-                              (<Data.ByteString.Builder.Internal.Builder>_R
-                               ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0]))
-                              (Data.ByteString.Builder.Internal.append
-                                 (Data.ByteString.Builder.Prim.primBounded
-                                    @ GHC.Types.Char
-                                    (Data.ByteString.Builder.Prim.Internal.toB
-                                       @ GHC.Types.Char
-                                       Data.ByteString.Builder.Prim.ASCII.char7)
-                                    (GHC.Types.C# '['#))
-                                 (Data.ByteString.Builder.Internal.append
-                                    (Data.Aeson.Types.Internal.fromEncoding
-                                       (Data.Aeson.Encode.Builder.encodeToBuilder
-                                          (Models.$fToJSONEntity_$ctoJSON x))
-                                         `cast`
-                                       (Sym (Data.Aeson.Types.Internal.N:Encoding[0])))
-                                    (Data.ByteString.Builder.Internal.append
-                                       (GHC.Base.foldr
-                                          @ (Database.Persist.Class.PersistEntity.Entity
-                                               Models.User)
-                                          @ Data.ByteString.Builder.Internal.Builder
-                                          (\ (v :: Database.Persist.Class.PersistEntity.Entity
-                                                     Models.User)
-                                             (vs :: Data.ByteString.Builder.Internal.Builder)[OneShot] ->
-                                           Data.ByteString.Builder.Internal.append
-                                             (Data.ByteString.Builder.Prim.primBounded
-                                                @ GHC.Types.Char
-                                                (Data.ByteString.Builder.Prim.Internal.toB
-                                                   @ GHC.Types.Char
-                                                   Data.ByteString.Builder.Prim.ASCII.char7)
-                                                (GHC.Types.C# ','#))
-                                             (Data.ByteString.Builder.Internal.append
-                                                (Data.Aeson.Types.Internal.fromEncoding
-                                                   (Data.Aeson.Encode.Builder.encodeToBuilder
-                                                      (Models.$fToJSONEntity_$ctoJSON v))
-                                                     `cast`
-                                                   (Sym (Data.Aeson.Types.Internal.N:Encoding[0])))
-                                                vs))
-                                          Data.ByteString.Builder.Internal.empty
-                                          xs)
-                                       (Data.ByteString.Builder.Prim.primBounded
-                                          @ GHC.Types.Char
-                                          (Data.ByteString.Builder.Prim.Internal.toB
-                                             @ GHC.Types.Char
-                                             Data.ByteString.Builder.Prim.ASCII.char7)
-                                          (GHC.Types.C# ']'#)))))) })) -}
-a9f4844adbc455e0654e2d1997f8f61e
-  $s$fAllCTRender:a_$s$fToJSON[] ::
-    Data.Aeson.Types.Class.ToJSON
-      [Database.Persist.Class.PersistEntity.Entity Models.User]
+                   (Data.Aeson.Types.Internal.fromEncoding
+                      (Data.Aeson.Encode.Builder.encodeToBuilder
+                         (AuthApi.$fToJSONResponseData_$ctoJSON eta))
+                        `cast`
+                      (Sym (Data.Aeson.Types.Internal.N:Encoding[0])))) -}
+cb813cab54e347939cec20591acc3d75
+  $s$fAllMimeUnrender:a ::
+    Servant.API.ContentTypes.AllMimeUnrender
+      '[Servant.API.ContentTypes.JSON] Models.User
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
-                  @ [Database.Persist.Class.PersistEntity.Entity Models.User]
-                  (\ (eta :: [Database.Persist.Class.PersistEntity.Entity
-                                Models.User]) ->
-                   case Data.Vector.Generic.new
-                          @ Data.Vector.Vector
-                          @ Data.Aeson.Types.Internal.Value
-                          (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
-                          (Data.Vector.Generic.New.unstream
-                             @ Data.Vector.Vector
-                             @ Data.Aeson.Types.Internal.Value
-                             (Data.Vector.$fVectorVectora @ Data.Aeson.Types.Internal.Value)
-                             (Data.Vector.Fusion.Bundle.Monadic.unsafeFromList
-                                @ Data.Vector.Fusion.Util.Id
-                                @ Data.Aeson.Types.Internal.Value
-                                @ Data.Vector.Vector
-                                Data.Vector.Fusion.Util.$fMonadId
-                                Data.Vector.Fusion.Bundle.Size.Unknown
-                                (GHC.Base.build
-                                   @ Data.Aeson.Types.Internal.Value
-                                   (\ @ b1
-                                      (c :: Data.Aeson.Types.Internal.Value -> b1 -> b1)[OneShot]
-                                      (n :: b1)[OneShot] ->
-                                    GHC.Base.foldr
-                                      @ (Database.Persist.Class.PersistEntity.Entity Models.User)
-                                      @ b1
-                                      (GHC.Base.mapFB
-                                         @ Data.Aeson.Types.Internal.Value
-                                         @ b1
-                                         @ (Database.Persist.Class.PersistEntity.Entity Models.User)
-                                         c
-                                         Models.$fToJSONEntity_$ctoJSON)
-                                      n
-                                      eta)))) of dt { Data.Vector.Vector ipv ipv1 ipv2 ->
-                   Data.Aeson.Types.Internal.Array dt })
-                  (Data.Aeson.Types.Instances.$fToJSON[]_$ctoEncoding
-                     @ (Database.Persist.Class.PersistEntity.Entity Models.User)
-                     Models.$fToJSONEntity) -}
-934e5d87fe073bfc212334029df60b13
+                  @ '[Servant.API.ContentTypes.JSON]
+                  @ Models.User
+                  (Servant.API.ContentTypes.$fAllMimeUnrender:a_$cp1AllMimeUnrender
+                     @ Servant.API.ContentTypes.JSON
+                     @ Models.User
+                     @ '[]
+                     Service.$s$fAllMimeUnrender:a1
+                     (Servant.API.ContentTypes.$fAllMimeUnrender[]a @ Models.User))
+                  (Servant.API.ContentTypes.$fAllMimeUnrender:a_$callMimeUnrender
+                     @ Servant.API.ContentTypes.JSON
+                     @ Models.User
+                     @ '[]
+                     Service.$s$fAllMimeUnrender:a1
+                     (Servant.API.ContentTypes.$fAllMimeUnrender[]a @ Models.User)) -}
+600a7a4ed7165458e2362579fdc34b6a
+  $s$fAllMimeUnrender:a1 ::
+    Servant.API.ContentTypes.MimeUnrender
+      Servant.API.ContentTypes.JSON Models.User
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Service.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa -}
+28d4c3df226b42962217181fca905b08
+  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa ::
+    Servant.API.ContentTypes.MimeUnrender
+      Servant.API.ContentTypes.JSON Models.User
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ Servant.API.ContentTypes.JSON
+                  @ Models.User
+                  (Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cp1MimeUnrender
+                     @ Models.User
+                     Models.$fFromJSONEntity_$cparseJSON1
+                       `cast`
+                     (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <Models.User>_N)))
+                  Service.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
+6c64d0687ead15f90e509252564253d7
+  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender ::
+    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> Data.Either.Either GHC.Base.String Models.User
+  {- Arity: 2, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
+                   (eta :: Data.ByteString.Lazy.Internal.ByteString) ->
+                 Servant.API.ContentTypes.eitherDecodeLenient
+                   @ Models.User
+                   Models.$fFromJSONEntity_$cparseJSON1
+                     `cast`
+                   (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <Models.User>_N))
+                   eta) -}
+24eddfaa062d22df9eb9668050f27a89
   $sserve2 ::
     Data.Proxy.Proxy
       ("users"
-       Servant.API.Sub.:> Servant.API.Verbs.Verb
-                            'Network.HTTP.Types.Method.GET
-                            200
-                            '[Servant.API.ContentTypes.JSON]
-                            [Database.Persist.Class.PersistEntity.Entity Models.User])
+       Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                             '[Servant.API.ContentTypes.JSON] Models.User
+                           Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                '[Servant.API.ContentTypes.JSON]
+                                                AuthApi.ResponseData))
     -> Servant.Server.Internal.Context.Context '[]
     -> Servant.Server.Internal.RoutingApplication.Delayed
          env
          (Servant.Server.Internal.Server
             ("users"
-             Servant.API.Sub.:> Servant.API.Verbs.Verb
-                                  'Network.HTTP.Types.Method.GET
-                                  200
-                                  '[Servant.API.ContentTypes.JSON]
-                                  [Database.Persist.Class.PersistEntity.Entity Models.User]))
+             Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                   '[Servant.API.ContentTypes.JSON] Models.User
+                                 Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                      '[Servant.API.ContentTypes.JSON]
+                                                      AuthApi.ResponseData)))
     -> Servant.Server.Internal.Router.Router env
-  {- Arity: 3, Strictness: <S,1*H><L,A><L,U>m1, Inline: INLINE[0],
+  {- Arity: 3, Strictness: <S,1*H><L,U><L,1*U>m1, Inline: INLINE[0],
      Unfolding: InlineRule (3, True, False)
                 (\ @ env
                    (w :: Data.Proxy.Proxy
                            ("users"
-                            Servant.API.Sub.:> Servant.API.Verbs.Verb
-                                                 'Network.HTTP.Types.Method.GET
-                                                 200
-                                                 '[Servant.API.ContentTypes.JSON]
-                                                 [Database.Persist.Class.PersistEntity.Entity
-                                                    Models.User]))
+                            Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                  '[Servant.API.ContentTypes.JSON] Models.User
+                                                Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                     '[Servant.API.ContentTypes.JSON]
+                                                                     AuthApi.ResponseData)))
                    (w1 :: Servant.Server.Internal.Context.Context '[])
                    (w2 :: Servant.Server.Internal.RoutingApplication.Delayed
                             env
                             (Servant.Server.Internal.Server
                                ("users"
-                                Servant.API.Sub.:> Servant.API.Verbs.Verb
-                                                     'Network.HTTP.Types.Method.GET
-                                                     200
-                                                     '[Servant.API.ContentTypes.JSON]
-                                                     [Database.Persist.Class.PersistEntity.Entity
-                                                        Models.User]))) ->
+                                Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                      '[Servant.API.ContentTypes.JSON] Models.User
+                                                    Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                         '[Servant.API.ContentTypes.JSON]
+                                                                         AuthApi.ResponseData)))) ->
                  case w of w3 { Data.Proxy.Proxy ->
                  Servant.Server.Internal.Router.StaticRouter
                    @ env
@@ -1854,7 +1805,7 @@ a9f4844adbc455e0654e2d1997f8f61e
                    (case GHC.Magic.runRW#
                            @ 'GHC.Types.PtrRepLifted
                            @ Data.Text.Internal.Text
-                           Service.$sserve5 of ds1 { (#,#) ipv ipv1 ->
+                           Service.$sserve6 of ds1 { (#,#) ipv ipv1 ->
                     case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                     Data.Map.Base.Bin
                       @ Data.Text.Internal.Text
@@ -1862,8 +1813,41 @@ a9f4844adbc455e0654e2d1997f8f61e
                            env Servant.Server.Internal.RoutingApplication.RoutingApplication)
                       1#
                       dt
-                      (Service.$sserve3
+                      (Servant.Server.Internal.$w$croute2
+                         @ *
+                         @ '[Servant.API.ContentTypes.JSON]
+                         @ Models.User
+                         @ (Servant.API.Verbs.Verb
+                              'Network.HTTP.Types.Method.POST
+                              200
+                              '[Servant.API.ContentTypes.JSON]
+                              AuthApi.ResponseData)
+                         @ '[]
+                         Service.$sserve5
+                           `cast`
+                         (Sym (Servant.API.ContentTypes.N:AllCTUnrender[0]
+                                   <'[Servant.API.ContentTypes.JSON]>_N <Models.User>_N))
+                         Service.$sserve3
+                           `cast`
+                         (Sym (Servant.Server.Internal.N:HasServer[0]
+                                   <*>_N
+                                   <Servant.API.Verbs.Verb
+                                      'Network.HTTP.Types.Method.POST
+                                      200
+                                      '[Servant.API.ContentTypes.JSON]
+                                      AuthApi.ResponseData>_N
+                                   <'[]>_N))
                          @ env
+                         (Data.Proxy.Proxy
+                            @ *
+                            @ (Servant.API.ReqBody.ReqBody
+                                 '[Servant.API.ContentTypes.JSON] Models.User
+                               Servant.API.Sub.:> Servant.API.Verbs.Verb
+                                                    'Network.HTTP.Types.Method.POST
+                                                    200
+                                                    '[Servant.API.ContentTypes.JSON]
+                                                    AuthApi.ResponseData))
+                         w1
                          w2
                            `cast`
                          (Servant.Server.Internal.RoutingApplication.Delayed
@@ -1871,12 +1855,11 @@ a9f4844adbc455e0654e2d1997f8f61e
                             (Sub (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                       <*>_N
                                       <"users">_N
-                                      <Servant.API.Verbs.Verb
-                                         'Network.HTTP.Types.Method.GET
-                                         200
-                                         '[Servant.API.ContentTypes.JSON]
-                                         [Database.Persist.Class.PersistEntity.Entity
-                                            Models.User]>_N
+                                      <Servant.API.ReqBody.ReqBody
+                                         '[Servant.API.ContentTypes.JSON] Models.User
+                                       Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                            '[Servant.API.ContentTypes.JSON]
+                                                            AuthApi.ResponseData>_N
                                       <Control.Monad.Trans.Except.ExceptT
                                          Servant.Server.Internal.ServantErr.ServantErr
                                          GHC.Types.IO>_N)))_R)
@@ -1892,31 +1875,48 @@ a9f4844adbc455e0654e2d1997f8f61e
                    (GHC.Types.[]
                       @ (env
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication)) }) -}
-1b02d982d8d148fb0d704cb79b501db5
+37a9f60be61c6860563c3f3774615c64
   $sserve3 ::
-    Servant.Server.Internal.RoutingApplication.Delayed
-      env
-      (Servant.Server.Internal.Server
-         (Servant.API.Verbs.Verb
-            'Network.HTTP.Types.Method.GET
-            200
-            '[Servant.API.ContentTypes.JSON]
-            [Database.Persist.Class.PersistEntity.Entity Models.User]))
+    Data.Proxy.Proxy
+      (Servant.API.Verbs.Verb
+         'Network.HTTP.Types.Method.POST
+         200
+         '[Servant.API.ContentTypes.JSON]
+         AuthApi.ResponseData)
+    -> Servant.Server.Internal.Context.Context '[]
+    -> Servant.Server.Internal.RoutingApplication.Delayed
+         env
+         (Servant.Server.Internal.Server
+            (Servant.API.Verbs.Verb
+               'Network.HTTP.Types.Method.POST
+               200
+               '[Servant.API.ContentTypes.JSON]
+               AuthApi.ResponseData))
     -> Servant.Server.Internal.Router.Router env
-  {- Unfolding: (\ @ env ->
+  {- Arity: 2, Strictness: <S,1*H><L,A>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ env
+                   (w3 :: Data.Proxy.Proxy
+                            (Servant.API.Verbs.Verb
+                               'Network.HTTP.Types.Method.POST
+                               200
+                               '[Servant.API.ContentTypes.JSON]
+                               AuthApi.ResponseData))
+                   (w4 :: Servant.Server.Internal.Context.Context '[]) ->
+                 case w3 of w5 { Data.Proxy.Proxy ->
                  Servant.Server.Internal.$w$croute8
                    @ Network.HTTP.Types.Method.StdMethod
                    @ '[Servant.API.ContentTypes.JSON]
-                   @ [Database.Persist.Class.PersistEntity.Entity Models.User]
-                   @ 'Network.HTTP.Types.Method.GET
+                   @ AuthApi.ResponseData
+                   @ 'Network.HTTP.Types.Method.POST
                    @ 200
                    @ '[]
                    Service.$s$fAllCTRender:a
-                   Servant.API.Verbs.$fReflectMethodStdMethodGET_$creflectMethod
+                   Servant.API.Verbs.$fReflectMethodStdMethodPOST_$creflectMethod
                      `cast`
                    (Sym (Servant.API.Verbs.N:ReflectMethod[0]
                              <Network.HTTP.Types.Method.StdMethod>_N
-                             <'Network.HTTP.Types.Method.GET>_N))
+                             <'Network.HTTP.Types.Method.POST>_N))
                    Service.$sserve4
                      `cast`
                    (Trans
@@ -1926,15 +1926,32 @@ a9f4844adbc455e0654e2d1997f8f61e
                    (Data.Proxy.Proxy
                       @ *
                       @ (Servant.API.Verbs.Verb
-                           'Network.HTTP.Types.Method.GET
+                           'Network.HTTP.Types.Method.POST
                            200
                            '[Servant.API.ContentTypes.JSON]
-                           [Database.Persist.Class.PersistEntity.Entity Models.User]))) -}
+                           AuthApi.ResponseData)) }) -}
 a5a62a28287dcfc1b74dc55cc7e2feca
   $sserve4 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (200) -}
-c11eb66507e35ee4b9a9cd04c16b4d0c
+ee386f6538660dc5454634f552835c7c
   $sserve5 ::
+    Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> GHC.Base.Maybe (Data.Either.Either GHC.Base.String Models.User)
+  {- Arity: 3, Strictness: <L,A><L,1*U><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ (w1 :: Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON])
+                   (w2 :: Data.ByteString.Lazy.Internal.ByteString)
+                   (w3 :: Data.ByteString.Lazy.Internal.ByteString) ->
+                 Servant.API.ContentTypes.$w$chandleCTypeH
+                   @ '[Servant.API.ContentTypes.JSON]
+                   @ Models.User
+                   Service.$s$fAllMimeUnrender:a
+                   w2
+                   w3) -}
+c10af91e38189169af382eb59ee950fe
+  $sserve6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -1948,11 +1965,11 @@ c11eb66507e35ee4b9a9cd04c16b4d0c
                  Servant.Server.Internal.$wouter
                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                    Servant.Server.Internal.$fHasServerTYPE:>context20
-                   Service.$sserve6
+                   Service.$sserve7
                    0#
                    ipv }) -}
-f765bd10f4d7fe06b342176eeff9b573
-  $sserve6 :: [GHC.Types.Char]
+527e3662bc9229fcecf82abe490a56d9
+  $sserve7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "users"#) -}
 c4dd0754e7324d92e86f13c201b88e31
   $tc'App :: GHC.Types.TyCon
@@ -2001,129 +2018,12 @@ db9e14d88bb44fb9249a8b031e380cbd
                        (Control.Monad.Trans.Except.ExceptT
                           Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO)
                        a}
-bea2d8285c51def0f47e0884b34ba3e7
-  allUsers ::
-    Service.App
-      [Database.Persist.Class.PersistEntity.Entity Models.User]
-  {- Unfolding: (Models.dbAction
-                   @ Service.App
-                   @ [Database.Persist.Class.PersistEntity.Entity Models.User]
-                   Service.$fMonadReaderApp
-                   Service.$fMonadIOApp
-                   Service.allUsers1
-                     `cast`
-                   (Trans
-                        (<Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                         ->_R Sym (GHC.Types.N:IO[0]
-                                       <[Database.Persist.Class.PersistEntity.Entity
-                                           Models.User]>_R))
-                        (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                  <*>_N
-                                  <Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                                  <GHC.Types.IO>_R
-                                  <[Database.Persist.Class.PersistEntity.Entity
-                                      Models.User]>_N)))) -}
-08461f6ed68cde142245ad604053c1be
-  allUsers1 ::
-    Database.Persist.Sql.Types.Internal.SqlBackend
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          [Database.Persist.Class.PersistEntity.Entity Models.User] #)
-  {- Arity: 2,
-     Unfolding: (\ (r1 :: Database.Persist.Sql.Types.Internal.SqlBackend)
-                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case (Service.allUsers_m1
-                         `cast`
-                       (Control.Monad.Trans.Reader.N:ReaderT[0]
-                            <*>_N
-                            <Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                            <GHC.Types.IO>_R
-                            <Data.Acquire.Internal.Acquire
-                               (Data.Conduit.Internal.Conduit.Source
-                                  GHC.Types.IO
-                                  (Database.Persist.Class.PersistEntity.Entity Models.User))>_N)
-                         r1)
-                        `cast`
-                      (GHC.Types.N:IO[0]
-                           <Data.Acquire.Internal.Acquire
-                              (Data.Conduit.Internal.Conduit.Source
-                                 GHC.Types.IO
-                                 (Database.Persist.Class.PersistEntity.Entity Models.User))>_R)
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 (Data.Acquire.Internal.with
-                    @ GHC.Types.IO
-                    @ (Data.Conduit.Internal.Conduit.Source
-                         GHC.Types.IO
-                         (Database.Persist.Class.PersistEntity.Entity Models.User))
-                    @ [Database.Persist.Class.PersistEntity.Entity Models.User]
-                    Control.Monad.Trans.Control.$fMonadBaseControlIOIO
-                    ipv1
-                    (Database.Persist.Class.PersistQuery.selectList1 @ Models.User)
-                      `cast`
-                    (<Data.Conduit.Internal.Conduit.Source
-                        GHC.Types.IO
-                        (Database.Persist.Class.PersistEntity.Entity Models.User)>_R
-                     ->_R Sym (GHC.Types.N:IO[0]
-                                   <[Database.Persist.Class.PersistEntity.Entity Models.User]>_R)))
-                   `cast`
-                 (GHC.Types.N:IO[0]
-                      <[Database.Persist.Class.PersistEntity.Entity Models.User]>_R)
-                   ipv }) -}
-29399e2da2b26b1b71b9de4f33d39247
-  allUsers2 ::
-    (Database.Persist.Class.PersistEntity.PersistEntity Models.User,
-     Database.Persist.Sql.Types.Internal.SqlBackend
-     Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend)
-  {- Unfolding: ((Models.$fPersistEntityUser,
-                  Service.allUsers3
-                    `cast`
-                  (Sym (Data.Type.Equality.N:~[0]
-                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
-49b83308ac24cbd036aaa013f8b71604
-  allUsers3 ::
-    Database.Persist.Sql.Types.Internal.SqlBackend
-    GHC.Types.~~ Database.Persist.Sql.Types.Internal.SqlBackend
-  {- HasNoCafRefs,
-     Unfolding: (GHC.Types.Eq#
-                   @ *
-                   @ *
-                   @ Database.Persist.Sql.Types.Internal.SqlBackend
-                   @ Database.Persist.Sql.Types.Internal.SqlBackend
-                   @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
-f48174728ae36407dcf49b7a9825e44e
-  allUsers_m1 ::
-    Control.Monad.Trans.Reader.ReaderT
-      Database.Persist.Sql.Types.Internal.SqlBackend
-      GHC.Types.IO
-      (Data.Acquire.Internal.Acquire
-         (Data.Conduit.Internal.Conduit.Source
-            GHC.Types.IO
-            (Database.Persist.Class.PersistEntity.Entity Models.User)))
-  {- Unfolding: (Database.Persist.Sql.Orphan.PersistQuery.$fPersistQueryReadSqlBackend_$cselectSourceRes
-                   @ Models.User
-                   @ GHC.Types.IO
-                   @ GHC.Types.IO
-                   Service.allUsers2
-                     `cast`
-                   (GHC.Classes.(%,%)
-                      <Database.Persist.Class.PersistEntity.PersistEntity Models.User>_N
-                      ((Data.Type.Equality.~)
-                         <*>_N
-                         (Sym (Models.D:R:PersistEntityBackendUser[0]))
-                         (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
-                   Control.Monad.IO.Class.$fMonadIOIO
-                   Control.Monad.IO.Class.$fMonadIOIO
-                   (GHC.Types.[]
-                      @ (Database.Persist.Class.PersistEntity.Filter Models.User))
-                   (GHC.Types.[]
-                      @ (Database.Persist.Class.PersistEntity.SelectOpt Models.User))) -}
-b23ed814d816e9c8c2d258ab99f31470
+9bfb909b47055d80c5e8d496ed882413
   app ::
     Database.Persist.Sql.Types.ConnectionPool
     -> Network.Wai.Application
   {- Arity: 1, Strictness: <L,U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (cp :: Database.Persist.Sql.Types.ConnectionPool) ->
+     Unfolding: (\ (cp :: Database.Persist.Sql.Types.ConnectionPool) ->
                  Servant.Server.serveWithContext
                    @ AuthApi.AuthServiceApi
                    @ '[]
@@ -2132,109 +2032,170 @@ b23ed814d816e9c8c2d258ab99f31470
                    (Sym (Servant.Server.Internal.N:HasServer[0]
                              <*>_N
                              <"users"
-                              Servant.API.Sub.:> Servant.API.Verbs.Verb
-                                                   'Network.HTTP.Types.Method.GET
-                                                   200
-                                                   '[Servant.API.ContentTypes.JSON]
-                                                   [Database.Persist.Class.PersistEntity.Entity
-                                                      Models.User]>_N
+                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                    '[Servant.API.ContentTypes.JSON] Models.User
+                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                       '[Servant.API.ContentTypes.JSON]
+                                                                       AuthApi.ResponseData)>_N
                              <'[]>_N))
                    (Data.Proxy.Proxy @ * @ AuthApi.AuthServiceApi)
                    Servant.Server.Internal.Context.$WEmptyContext
-                   (Service.allUsers
+                   (\ (a1 :: Models.User) ->
+                    (Service.createUser a1)
                       `cast`
                     (Trans
-                         (Service.N:App[0] <[Database.Persist.Class.PersistEntity.Entity
-                                               Models.User]>_N)
+                         (Service.N:App[0] <AuthApi.ResponseData>_N)
                          (Control.Monad.Trans.Reader.N:ReaderT[0]
                               <*>_N
                               <Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
                               <Control.Monad.Trans.Except.ExceptT
                                  Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
-                              <[Database.Persist.Class.PersistEntity.Entity Models.User]>_N))
+                              <AuthApi.ResponseData>_N))
                       cp)
                      `cast`
                    (Trans
-                        (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
-                                       <Network.HTTP.Types.Method.StdMethod>_N
-                                       <'[Servant.API.ContentTypes.JSON]>_N
-                                       <[Database.Persist.Class.PersistEntity.Entity Models.User]>_N
-                                       <'Network.HTTP.Types.Method.GET>_N
-                                       <200>_N
-                                       <Control.Monad.Trans.Except.ExceptT
-                                          Servant.Server.Internal.ServantErr.ServantErr
-                                          GHC.Types.IO>_N)))
-                        (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
-                                       <*>_N
-                                       <"users">_N
-                                       <Servant.API.Verbs.Verb
-                                          'Network.HTTP.Types.Method.GET
-                                          200
-                                          '[Servant.API.ContentTypes.JSON]
-                                          [Database.Persist.Class.PersistEntity.Entity
-                                             Models.User]>_N
-                                       <Control.Monad.Trans.Except.ExceptT
-                                          Servant.Server.Internal.ServantErr.ServantErr
-                                          GHC.Types.IO>_N))))) -}
-5abd9d593ad14d514ae3a2db4b96170d
+                        (<Models.User>_R
+                         ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                            <Network.HTTP.Types.Method.StdMethod>_N
+                                            <'[Servant.API.ContentTypes.JSON]>_N
+                                            <AuthApi.ResponseData>_N
+                                            <'Network.HTTP.Types.Method.POST>_N
+                                            <200>_N
+                                            <Control.Monad.Trans.Except.ExceptT
+                                               Servant.Server.Internal.ServantErr.ServantErr
+                                               GHC.Types.IO>_N)))
+                        (Trans
+                             (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m5[0]
+                                            <*>_N
+                                            <'[Servant.API.ContentTypes.JSON]>_N
+                                            <Models.User>_N
+                                            <Servant.API.Verbs.Verb
+                                               'Network.HTTP.Types.Method.POST
+                                               200
+                                               '[Servant.API.ContentTypes.JSON]
+                                               AuthApi.ResponseData>_N
+                                            <Control.Monad.Trans.Except.ExceptT
+                                               Servant.Server.Internal.ServantErr.ServantErr
+                                               GHC.Types.IO>_N)))
+                             (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                            <*>_N
+                                            <"users">_N
+                                            <Servant.API.ReqBody.ReqBody
+                                               '[Servant.API.ContentTypes.JSON] Models.User
+                                             Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                  '[Servant.API.ContentTypes.JSON]
+                                                                  AuthApi.ResponseData>_N
+                                            <Control.Monad.Trans.Except.ExceptT
+                                               Servant.Server.Internal.ServantErr.ServantErr
+                                               GHC.Types.IO>_N)))))) -}
+5ca946a09159d3fd0f897724f4c6bdaa
   appApi :: Data.Proxy.Proxy AuthApi.AuthServiceApi
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ AuthApi.AuthServiceApi) -}
-445ab91099af9b207cc00ec7de4cd0fb
+ba4ed304e9f1222ede4a51e80dfcf187
   appToServer ::
     Database.Persist.Sql.Types.ConnectionPool
     -> Servant.Server.Internal.Server AuthApi.AuthServiceApi
-  {- Arity: 1, Strictness: <L,U>,
+  {- Arity: 1, Strictness: <L,U><L,U>,
      Unfolding: InlineRule (0, True, True)
                 Service.appToServer1
                   `cast`
                 (<Database.Persist.Sql.Types.ConnectionPool>_R
                  ->_R Trans
-                          (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
-                                         <Network.HTTP.Types.Method.StdMethod>_N
-                                         <'[Servant.API.ContentTypes.JSON]>_N
-                                         <[Database.Persist.Class.PersistEntity.Entity
-                                             Models.User]>_N
-                                         <'Network.HTTP.Types.Method.GET>_N
-                                         <200>_N
-                                         <Control.Monad.Trans.Except.ExceptT
-                                            Servant.Server.Internal.ServantErr.ServantErr
-                                            GHC.Types.IO>_N)))
-                          (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
-                                         <*>_N
-                                         <"users">_N
-                                         <Servant.API.Verbs.Verb
-                                            'Network.HTTP.Types.Method.GET
-                                            200
-                                            '[Servant.API.ContentTypes.JSON]
-                                            [Database.Persist.Class.PersistEntity.Entity
-                                               Models.User]>_N
-                                         <Control.Monad.Trans.Except.ExceptT
-                                            Servant.Server.Internal.ServantErr.ServantErr
-                                            GHC.Types.IO>_N)))) -}
-c409d25676cb08f5a7534b7b18ab77ba
+                          (<Models.User>_R
+                           ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                              <Network.HTTP.Types.Method.StdMethod>_N
+                                              <'[Servant.API.ContentTypes.JSON]>_N
+                                              <AuthApi.ResponseData>_N
+                                              <'Network.HTTP.Types.Method.POST>_N
+                                              <200>_N
+                                              <Control.Monad.Trans.Except.ExceptT
+                                                 Servant.Server.Internal.ServantErr.ServantErr
+                                                 GHC.Types.IO>_N)))
+                          (Trans
+                               (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m5[0]
+                                              <*>_N
+                                              <'[Servant.API.ContentTypes.JSON]>_N
+                                              <Models.User>_N
+                                              <Servant.API.Verbs.Verb
+                                                 'Network.HTTP.Types.Method.POST
+                                                 200
+                                                 '[Servant.API.ContentTypes.JSON]
+                                                 AuthApi.ResponseData>_N
+                                              <Control.Monad.Trans.Except.ExceptT
+                                                 Servant.Server.Internal.ServantErr.ServantErr
+                                                 GHC.Types.IO>_N)))
+                               (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                              <*>_N
+                                              <"users">_N
+                                              <Servant.API.ReqBody.ReqBody
+                                                 '[Servant.API.ContentTypes.JSON] Models.User
+                                               Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                    '[Servant.API.ContentTypes.JSON]
+                                                                    AuthApi.ResponseData>_N
+                                              <Control.Monad.Trans.Except.ExceptT
+                                                 Servant.Server.Internal.ServantErr.ServantErr
+                                                 GHC.Types.IO>_N))))) -}
+3148f3d21aa22786e8a8e9fc87c6add3
   appToServer1 ::
     Database.Persist.Sql.Types.ConnectionPool
+    -> Models.User
     -> Control.Monad.Trans.Except.ExceptT
          Servant.Server.Internal.ServantErr.ServantErr
          GHC.Types.IO
-         [Database.Persist.Class.PersistEntity.Entity Models.User]
-  {- Arity: 1, Strictness: <L,U>,
-     Unfolding: InlineRule (1, True, True)
-                (\ (cp :: Database.Persist.Sql.Types.ConnectionPool) ->
-                 Service.allUsers
+         AuthApi.ResponseData
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (cp :: Database.Persist.Sql.Types.ConnectionPool)
+                   (a1 :: Models.User) ->
+                 (Service.createUser a1)
                    `cast`
                  (Trans
-                      (Service.N:App[0] <[Database.Persist.Class.PersistEntity.Entity
-                                            Models.User]>_N)
+                      (Service.N:App[0] <AuthApi.ResponseData>_N)
                       (Control.Monad.Trans.Reader.N:ReaderT[0]
                            <*>_N
                            <Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
                            <Control.Monad.Trans.Except.ExceptT
                               Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
-                           <[Database.Persist.Class.PersistEntity.Entity Models.User]>_N))
+                           <AuthApi.ResponseData>_N))
                    cp) -}
+764df14d30a306ce044ba9c25f5cfc4b
+  authService ::
+    Servant.Server.Internal.ServerT AuthApi.AuthServiceApi Service.App
+  {- Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Service.createUser
+                  `cast`
+                (Trans
+                     (<Models.User>_R
+                      ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
+                                         <Network.HTTP.Types.Method.StdMethod>_N
+                                         <'[Servant.API.ContentTypes.JSON]>_N
+                                         <AuthApi.ResponseData>_N
+                                         <'Network.HTTP.Types.Method.POST>_N
+                                         <200>_N
+                                         <Service.App>_N)))
+                     (Trans
+                          (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m5[0]
+                                         <*>_N
+                                         <'[Servant.API.ContentTypes.JSON]>_N
+                                         <Models.User>_N
+                                         <Servant.API.Verbs.Verb
+                                            'Network.HTTP.Types.Method.POST
+                                            200
+                                            '[Servant.API.ContentTypes.JSON]
+                                            AuthApi.ResponseData>_N
+                                         <Service.App>_N)))
+                          (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
+                                         <*>_N
+                                         <"users">_N
+                                         <Servant.API.ReqBody.ReqBody
+                                            '[Servant.API.ContentTypes.JSON] Models.User
+                                          Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                               '[Servant.API.ContentTypes.JSON]
+                                                               AuthApi.ResponseData>_N
+                                         <Service.App>_N))))) -}
 47720b5856d0a575d9a58cf25cab6ac8
   convertApp ::
     Database.Persist.Sql.Types.ConnectionPool
@@ -2273,6 +2234,135 @@ fe0f5e93cd8524a03e79d035299ffc57
                               Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                            <a>_N))
                    cp) -}
+8fba7c5b6147950cf1bd8cc4cff2e1f4
+  createUser :: Models.User -> Service.App AuthApi.ResponseData
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (user :: Models.User) ->
+                 let {
+                   m1 :: Service.App
+                           (Database.Persist.Class.PersistEntity.Key Models.User)
+                   = Models.dbAction
+                       @ Service.App
+                       @ (Database.Persist.Class.PersistEntity.Key Models.User)
+                       Service.$fMonadReaderApp
+                       Service.$fMonadIOApp
+                       (Service.createUser1 user)
+                 } in
+                 (\ (r1 :: Data.Pool.Pool
+                             Database.Persist.Sql.Types.Internal.SqlBackend)
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case (m1
+                          `cast`
+                        (Trans
+                             (Service.N:App[0] <Database.Persist.Class.PersistEntity.Key
+                                                  Models.User>_N)
+                             (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                  <*>_N
+                                  <Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                                  <Control.Monad.Trans.Except.ExceptT
+                                     Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
+                                  <Database.Persist.Class.PersistEntity.Key Models.User>_N))
+                          r1)
+                         `cast`
+                       (Trans
+                            (Control.Monad.Trans.Except.N:ExceptT[0]
+                                 <Servant.Server.Internal.ServantErr.ServantErr>_N
+                                 <GHC.Types.IO>_R
+                                 <Database.Persist.Class.PersistEntity.Key Models.User>_N)
+                            (GHC.Types.N:IO[0]
+                                 <Data.Either.Either
+                                    Servant.Server.Internal.ServantErr.ServantErr
+                                    (Database.Persist.Class.PersistEntity.Key Models.User)>_R))
+                         s of ds1 { (#,#) ipv ipv1 ->
+                  case ipv1 of wild {
+                    Data.Either.Left e1
+                    -> (# ipv,
+                          Data.Either.Left
+                            @ Servant.Server.Internal.ServantErr.ServantErr
+                            @ AuthApi.ResponseData
+                            e1 #)
+                    Data.Either.Right x
+                    -> (# ipv,
+                          Data.Either.Right
+                            @ Servant.Server.Internal.ServantErr.ServantErr
+                            @ AuthApi.ResponseData
+                            (AuthApi.ResponseData
+                               (case x `cast`
+                                     (Trans
+                                          (Models.D:R:KeyUser0[0])
+                                          (Trans
+                                               (Models.N:R:KeyUser[0])
+                                               (Trans
+                                                    (Database.Persist.Sql.Orphan.PersistStore.D:R:BackendKeySqlBackend0[0])
+                                                    (Database.Persist.Sql.Orphan.PersistStore.N:R:BackendKeySqlBackend[0])))) of wild1 { GHC.Int.I64# x# ->
+                                case GHC.Show.$wshowSignedInt
+                                       0#
+                                       x#
+                                       (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                                GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) #) } })
+                   `cast`
+                 (Trans
+                      (<Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                       ->_R Trans
+                                (Sym (GHC.Types.N:IO[0]
+                                          <Data.Either.Either
+                                             Servant.Server.Internal.ServantErr.ServantErr
+                                             AuthApi.ResponseData>_R))
+                                (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                          <Servant.Server.Internal.ServantErr.ServantErr>_N
+                                          <GHC.Types.IO>_R
+                                          <AuthApi.ResponseData>_N)))
+                      (Trans
+                           (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                     <*>_N
+                                     <Data.Pool.Pool
+                                        Database.Persist.Sql.Types.Internal.SqlBackend>_R
+                                     <Control.Monad.Trans.Except.ExceptT
+                                        Servant.Server.Internal.ServantErr.ServantErr
+                                        GHC.Types.IO>_R
+                                     <AuthApi.ResponseData>_N))
+                           (Sym (Service.N:App[0]) <AuthApi.ResponseData>_N)))) -}
+3d648343ded3b84f42e2f60489c9ebfe
+  createUser1 ::
+    Models.User
+    -> Control.Monad.Trans.Reader.ReaderT
+         Database.Persist.Sql.Types.Internal.SqlBackend
+         GHC.Types.IO
+         (Database.Persist.Class.PersistEntity.Key Models.User)
+  {- Unfolding: (Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cinsert
+                   @ GHC.Types.IO
+                   @ Models.User
+                   Control.Monad.IO.Class.$fMonadIOIO
+                   Service.createUser2
+                     `cast`
+                   (GHC.Classes.(%,%)
+                      <Database.Persist.Class.PersistEntity.PersistEntity Models.User>_N
+                      ((Data.Type.Equality.~)
+                         <*>_N
+                         (Sym (Models.D:R:PersistEntityBackendUser[0]))
+                         (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R) -}
+ddfffb4f8f4c14c12f29f1e870ada7e9
+  createUser2 ::
+    (Database.Persist.Class.PersistEntity.PersistEntity Models.User,
+     Database.Persist.Sql.Types.Internal.SqlBackend
+     Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend)
+  {- Strictness: m,
+     Unfolding: ((Models.$fPersistEntityUser,
+                  Service.createUser3
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
+7192ab01387f219cd6fa7fdf2def86da
+  createUser3 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    GHC.Types.~~ Database.Persist.Sql.Types.Internal.SqlBackend
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
 29e16f25aa7be6668a1f7c509d79e70a
   runApp ::
     Service.App a
@@ -2293,29 +2383,6 @@ fe0f5e93cd8524a03e79d035299ffc57
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, True)
                 (\ @ a (ds :: Service.App a) -> ds) -}
-d6d8019ff347629fe8cf26d22c85dba6
-  userServer ::
-    Servant.Server.Internal.ServerT AuthApi.AuthServiceApi Service.App
-  {- Unfolding: InlineRule (0, True, True)
-                Service.allUsers
-                  `cast`
-                (Trans
-                     (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
-                                    <Network.HTTP.Types.Method.StdMethod>_N
-                                    <'[Servant.API.ContentTypes.JSON]>_N
-                                    <[Database.Persist.Class.PersistEntity.Entity Models.User]>_N
-                                    <'Network.HTTP.Types.Method.GET>_N
-                                    <200>_N
-                                    <Service.App>_N)))
-                     (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
-                                    <*>_N
-                                    <"users">_N
-                                    <Servant.API.Verbs.Verb
-                                       'Network.HTTP.Types.Method.GET
-                                       200
-                                       '[Servant.API.ContentTypes.JSON]
-                                       [Database.Persist.Class.PersistEntity.Entity Models.User]>_N
-                                    <Service.App>_N)))) -}
 instance GHC.Base.Applicative [Service.App]
   = Service.$fApplicativeApp
 instance GHC.Base.Functor [Service.App] = Service.$fFunctorApp
@@ -2328,41 +2395,39 @@ instance Control.Monad.IO.Class.MonadIO [Service.App]
 instance Control.Monad.Reader.Class.MonadReader [Data.Pool.Pool,
                                                  Service.App]
   = Service.$fMonadReaderApp
-"SPEC/Service $fAllCTRender:a @ JSON @ '[] @ [Entity User]" [ALWAYS] forall ($dAccept :: Servant.API.ContentTypes.Accept
-                                                                                           Servant.API.ContentTypes.JSON)
-                                                                            ($dAllMime :: Servant.API.ContentTypes.AllMime
-                                                                                            '[])
-                                                                            ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
-                                                                                                  '[Servant.API.ContentTypes.JSON]
-                                                                                                  [Database.Persist.Class.PersistEntity.Entity
-                                                                                                     Models.User])
+"SPEC/Service $fAllCTRender:a @ JSON @ '[] @ ResponseData" [ALWAYS] forall ($dAccept :: Servant.API.ContentTypes.Accept
+                                                                                          Servant.API.ContentTypes.JSON)
+                                                                           ($dAllMime :: Servant.API.ContentTypes.AllMime
+                                                                                           '[])
+                                                                           ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
+                                                                                                 '[Servant.API.ContentTypes.JSON]
+                                                                                                 AuthApi.ResponseData)
   Servant.API.ContentTypes.$fAllCTRender:a @ Servant.API.ContentTypes.JSON
                                            @ '[]
-                                           @ [Database.Persist.Class.PersistEntity.Entity
-                                                Models.User]
+                                           @ AuthApi.ResponseData
                                            $dAccept
                                            $dAllMime
                                            $dAllMimeRender
   = Service.$s$fAllCTRender:a
-"SPEC/Service $fAllMimeRender:a0 @ JSON @ [Entity User]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
-                                                                                            Servant.API.ContentTypes.JSON
-                                                                                            [Database.Persist.Class.PersistEntity.Entity
-                                                                                               Models.User])
+"SPEC/Service $fAllMimeRender:a0 @ JSON @ ResponseData" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                           Servant.API.ContentTypes.JSON
+                                                                                           AuthApi.ResponseData)
   Servant.API.ContentTypes.$fAllMimeRender:a0 @ Servant.API.ContentTypes.JSON
-                                              @ [Database.Persist.Class.PersistEntity.Entity
-                                                   Models.User]
+                                              @ AuthApi.ResponseData
                                               $dMimeRender
   = Service.$s$fAllCTRender:a_$s$fAllMimeRender:a0
-"SPEC/Service $fAllMimeRender:a0_$callMimeRender @ JSON @ [Entity
-                                                            User]" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
-                                                                                                                                                                        Servant.API.ContentTypes.JSON
-                                                                                                                                                                        [Database.Persist.Class.PersistEntity.Entity
-                                                                                                                                                                           Models.User])
-  Servant.API.ContentTypes.$fAllMimeRender:a0_$callMimeRender @ Servant.API.ContentTypes.JSON
-                                                              @ [Database.Persist.Class.PersistEntity.Entity
-                                                                   Models.User]
-                                                              $dMimeRender
-  = Service.$s$fAllCTRender:a_$s$fAllMimeRender:a0_$callMimeRender
+"SPEC/Service $fAllMimeUnrender:a @ JSON @ User @ '[]" [ALWAYS] forall ($dMimeUnrender :: Servant.API.ContentTypes.MimeUnrender
+                                                                                            Servant.API.ContentTypes.JSON
+                                                                                            Models.User)
+                                                                       ($dAllMimeUnrender :: Servant.API.ContentTypes.AllMimeUnrender
+                                                                                               '[]
+                                                                                               Models.User)
+  Servant.API.ContentTypes.$fAllMimeUnrender:a @ Servant.API.ContentTypes.JSON
+                                               @ Models.User
+                                               @ '[]
+                                               $dMimeUnrender
+                                               $dAllMimeUnrender
+  = Service.$s$fAllMimeUnrender:a
 "SPEC/Service $fApplicativeReaderT_$c<*> @ (ExceptT ServantErr IO) _" [ALWAYS] forall @ r
                                                                                       ($dApplicative :: GHC.Base.Applicative
                                                                                                           (Control.Monad.Trans.Except.ExceptT
@@ -2385,20 +2450,26 @@ instance Control.Monad.Reader.Class.MonadReader [Data.Pool.Pool,
                                                      @ r
                                                      $dFunctor
   = Service.$fFunctorApp_$s$fFunctorReaderT_$cfmap @ r
-"SPEC/Service $fMimeRenderTYPEJSONa @ [Entity User]" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
-                                                                                    [Database.Persist.Class.PersistEntity.Entity
-                                                                                       Models.User])
-  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ [Database.Persist.Class.PersistEntity.Entity
-                                                      Models.User]
+"SPEC/Service $fMimeRenderTYPEJSONa @ ResponseData" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
+                                                                                   AuthApi.ResponseData)
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ AuthApi.ResponseData
                                                  $dToJSON
   = Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa
-"SPEC/Service $fMimeRenderTYPEJSONa_$cmimeRender @ [Entity User]" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
-                                                                                                 [Database.Persist.Class.PersistEntity.Entity
-                                                                                                    Models.User])
-  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ [Database.Persist.Class.PersistEntity.Entity
-                                                                   Models.User]
+"SPEC/Service $fMimeRenderTYPEJSONa_$cmimeRender @ ResponseData" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
+                                                                                                AuthApi.ResponseData)
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ AuthApi.ResponseData
                                                               $dToJSON
   = Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender
+"SPEC/Service $fMimeUnrenderTYPEJSONa @ User" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON
+                                                                               Models.User)
+  Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa @ Models.User
+                                                   $dFromJSON
+  = Service.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa
+"SPEC/Service $fMimeUnrenderTYPEJSONa_$cmimeUnrender @ User" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON
+                                                                                              Models.User)
+  Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cmimeUnrender @ Models.User
+                                                                  $dFromJSON
+  = Service.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender
 "SPEC/Service $fMonadReaderT_$c>> @ (ExceptT ServantErr IO) _" [ALWAYS] forall @ r
                                                                                ($dMonad :: GHC.Base.Monad
                                                                                              (Control.Monad.Trans.Except.ExceptT
@@ -2432,13 +2503,6 @@ instance Control.Monad.Reader.Class.MonadReader [Data.Pool.Pool,
                                                    @ r
                                                    $dMonad
   = Service.$fMonadApp_$s$fMonadReaderT_$cfail @ r
-"SPEC/Service $fToJSON[] @ (Entity User)" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
-                                                                         (Database.Persist.Class.PersistEntity.Entity
-                                                                            Models.User))
-  Data.Aeson.Types.Instances.$fToJSON[] @ (Database.Persist.Class.PersistEntity.Entity
-                                             Models.User)
-                                        $dToJSON
-  = Service.$s$fAllCTRender:a_$s$fToJSON[]
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

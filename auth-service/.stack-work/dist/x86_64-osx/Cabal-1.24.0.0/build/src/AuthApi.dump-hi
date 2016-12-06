@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-06 00:08:59.878882 UTC
+2016-12-06 00:40:55.525828 UTC
 
 interface auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:AuthApi [family instance module] 8001
-  interface hash: 0fc3c6c3529e9c4ab765b39fb545b28f
-  ABI hash: b914d0cde18c9148d856ad7e88e751b1
+  interface hash: a663acc7b942beb51fe01ebd5d0b28a0
+  ABI hash: 44b0b93d12321087b093107499802f2c
   export-list hash: aa5aee5679cecd5b7e384ff86b337c29
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: d36aeae6dbc808ed13205c6874028e80
@@ -174,8 +174,8 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 5c6008252675af8a24566bc8465eebdc
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.TH f58263d850f953be61627aac2a67fb77
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class abf0ee780081829844ac5a316c79cb49
-import  -/  Models 84d6cc6ba84496559b12689db55bb90e
-  exports: fdff1ff782d7587b242a2815b4d9f537
+import  -/  Models 2da805af4f49647187f395ae8f90db0b
+  exports: bf857485bd54de1d3918167cac668a5d
   User 94b286d9bc8144ffe652c164c58d187e
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:GHC.Generics 8e2a7658e8b966c1d29d0d5fd4129f38
@@ -479,9 +479,9 @@ b6d7077921e0ad843e641c7e2abd92fa
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-ff3e8063c633df79825fe5a008101343
+b7ee42e3aca0adc200f5285532721c20
   type AuthServiceApi =
-    "verify"
+    "users"
     Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                           '[Servant.API.ContentTypes.JSON] Models.User
                         Servant.API.Sub.:> Servant.API.Verbs.Post

@@ -16,4 +16,5 @@ import Data.Aeson.TH
 data ResponseData = ResponseData { status :: String
                              } deriving (Generic, ToJSON)
 
-type AuthServiceApi = "verify" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
+type AuthServiceApi = "users" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
+                  :<|>"verify" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
