@@ -70,6 +70,13 @@
   (major1) == 2 && (major2) <  5 || \
   (major1) == 2 && (major2) == 5 && (minor) <= 1)
 
+/* package pwstore-fast-2.4.4 */
+#define VERSION_pwstore_fast "2.4.4"
+#define MIN_VERSION_pwstore_fast(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  4 || \
+  (major1) == 2 && (major2) == 4 && (minor) <= 4)
+
 /* package servant-0.8.1 */
 #define VERSION_servant "0.8.1"
 #define MIN_VERSION_servant(major1,major2,minor) (\
@@ -182,7 +189,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 1)
 
-#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ"
+#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS"
 
-#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ"
+#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS"
 
