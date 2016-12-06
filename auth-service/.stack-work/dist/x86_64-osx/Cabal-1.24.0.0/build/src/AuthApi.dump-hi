@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-05 22:16:14.562718 UTC
+2016-12-06 00:08:59.878882 UTC
 
 interface auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:AuthApi [family instance module] 8001
-  interface hash: 5de61b971f1f8a118bf4b5be011a560a
-  ABI hash: 84254e598d70ed2963a81f70ec9c7f2f
-  export-list hash: 10a3eeda2f000d0ede5c628b1c74b344
+  interface hash: 0fc3c6c3529e9c4ab765b39fb545b28f
+  ABI hash: b914d0cde18c9148d856ad7e88e751b1
+  export-list hash: aa5aee5679cecd5b7e384ff86b337c29
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: d36aeae6dbc808ed13205c6874028e80
   sig of: Nothing
@@ -13,7 +13,7 @@ interface auth-service-0.1.0.0-AuA6V8MYMHu6qIHpXBhabJ:AuthApi [family instance m
   where
 exports:
   AuthApi.AuthServiceApi
-  AuthApi.ResponseData
+  AuthApi.ResponseData{AuthApi.ResponseData status}
 module dependencies: Models
 package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       aeson-compat-0.3.6@aeson-compat-0.3.6-5wE6V2cyaFcB5no9HXBKW5
@@ -174,9 +174,9 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 5c6008252675af8a24566bc8465eebdc
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.TH f58263d850f953be61627aac2a67fb77
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class abf0ee780081829844ac5a316c79cb49
-import  -/  Models fdde53ecd07e466e41056c53fc863805
-  exports: 78ffe0eeca34b5122a8b5bd89404f86c
-  Credentials d9e661071ed9dced2a1e978316e7aedd
+import  -/  Models 84d6cc6ba84496559b12689db55bb90e
+  exports: fdff1ff782d7587b242a2815b4d9f537
+  User 94b286d9bc8144ffe652c164c58d187e
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:GHC.Generics 8e2a7658e8b966c1d29d0d5fd4129f38
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
@@ -186,7 +186,7 @@ import  -/  servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.API.ReqBo
 import  -/  servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.API.Sub e4e89bb4a51d80b0579d311b33f93ee7
 import  -/  servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.API.Verbs 31df30f8af0b109678fb8b73f33bca20
 import  -/  servant-server-0.8.1@servant-server-0.8.1-2W4dYHeOEv33BK078P3wA:Servant 4e8fd52b06af1cb338d7389eb77ee11b
-f886bca8073cf63b4e0481d7411c6139
+4c34033f989d1f0bb0c0e7a6994926ee
   $fGenericResponseData :: GHC.Generics.Generic AuthApi.ResponseData
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -194,7 +194,7 @@ f886bca8073cf63b4e0481d7411c6139
                   @ AuthApi.ResponseData
                   AuthApi.$fGenericResponseData_$cfrom
                   AuthApi.$fGenericResponseData_$cto -}
-f886bca8073cf63b4e0481d7411c6139
+4c34033f989d1f0bb0c0e7a6994926ee
   $fGenericResponseData_$cfrom ::
     AuthApi.ResponseData -> GHC.Generics.Rep AuthApi.ResponseData x
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
@@ -210,7 +210,7 @@ f886bca8073cf63b4e0481d7411c6139
                            (Sym (GHC.Generics.N:M1[0]
                                      <GHC.Generics.S>_P
                                      <'GHC.Generics.MetaSel
-                                        ('GHC.Base.Just "yo")
+                                        ('GHC.Base.Just "status")
                                         'GHC.Generics.NoSourceUnpackedness
                                         'GHC.Generics.NoSourceStrictness
                                         'GHC.Generics.DecidedLazy>_P
@@ -223,7 +223,7 @@ f886bca8073cf63b4e0481d7411c6139
                                           <GHC.Generics.M1
                                              GHC.Generics.S
                                              ('GHC.Generics.MetaSel
-                                                ('GHC.Base.Just "yo")
+                                                ('GHC.Base.Just "status")
                                                 'GHC.Generics.NoSourceUnpackedness
                                                 'GHC.Generics.NoSourceStrictness
                                                 'GHC.Generics.DecidedLazy)
@@ -245,14 +245,14 @@ f886bca8073cf63b4e0481d7411c6139
                                                   (GHC.Generics.M1
                                                      GHC.Generics.S
                                                      ('GHC.Generics.MetaSel
-                                                        ('GHC.Base.Just "yo")
+                                                        ('GHC.Base.Just "status")
                                                         'GHC.Generics.NoSourceUnpackedness
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.K1
                                                         GHC.Generics.R GHC.Base.String))>_R))
                                      (Sub (Sym (AuthApi.Rep_ResponseData[0]))))) <x>_N)) }) -}
-f886bca8073cf63b4e0481d7411c6139
+4c34033f989d1f0bb0c0e7a6994926ee
   $fGenericResponseData_$cto ::
     GHC.Generics.Rep AuthApi.ResponseData x -> AuthApi.ResponseData
   {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
@@ -279,7 +279,7 @@ f886bca8073cf63b4e0481d7411c6139
                                           (GHC.Generics.M1
                                              GHC.Generics.S
                                              ('GHC.Generics.MetaSel
-                                                ('GHC.Base.Just "yo")
+                                                ('GHC.Base.Just "status")
                                                 'GHC.Generics.NoSourceUnpackedness
                                                 'GHC.Generics.NoSourceStrictness
                                                 'GHC.Generics.DecidedLazy)
@@ -294,7 +294,7 @@ f886bca8073cf63b4e0481d7411c6139
                                             <GHC.Generics.M1
                                                GHC.Generics.S
                                                ('GHC.Generics.MetaSel
-                                                  ('GHC.Base.Just "yo")
+                                                  ('GHC.Base.Just "status")
                                                   'GHC.Generics.NoSourceUnpackedness
                                                   'GHC.Generics.NoSourceStrictness
                                                   'GHC.Generics.DecidedLazy)
@@ -302,7 +302,7 @@ f886bca8073cf63b4e0481d7411c6139
                                        (GHC.Generics.N:M1[0]
                                             <GHC.Generics.S>_P
                                             <'GHC.Generics.MetaSel
-                                               ('GHC.Base.Just "yo")
+                                               ('GHC.Base.Just "status")
                                                'GHC.Generics.NoSourceUnpackedness
                                                'GHC.Generics.NoSourceStrictness
                                                'GHC.Generics.DecidedLazy>_P
@@ -310,7 +310,7 @@ f886bca8073cf63b4e0481d7411c6139
                                                GHC.Generics.R GHC.Base.String>_R))) <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
-f886bca8073cf63b4e0481d7411c6139
+4c34033f989d1f0bb0c0e7a6994926ee
   $fToJSONResponseData ::
     Data.Aeson.Types.Class.ToJSON AuthApi.ResponseData
   DFunId
@@ -319,7 +319,7 @@ f886bca8073cf63b4e0481d7411c6139
                   @ AuthApi.ResponseData
                   AuthApi.$fToJSONResponseData_$ctoJSON
                   AuthApi.$fToJSONResponseData_$ctoEncoding -}
-f886bca8073cf63b4e0481d7411c6139
+4c34033f989d1f0bb0c0e7a6994926ee
   $fToJSONResponseData1 ::
     AuthApi.ResponseData
     -> Data.Aeson.Types.Generic.Tagged
@@ -354,14 +354,14 @@ f886bca8073cf63b4e0481d7411c6139
 b3a43a40071d6a6a046dd3dfe734118b
   $fToJSONResponseData2 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-f906f369b64252daeedefd40646fe7cc
+62e10b312658f9de35241d6ae187d07a
   $fToJSONResponseData3 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
                         AuthApi.$fToJSONResponseData4 of ds7 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-affa2573e043e935ea387ea48471bbb1
+67d8985318ccf26075285c5b1ca7fff7
   $fToJSONResponseData4 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -379,10 +379,10 @@ affa2573e043e935ea387ea48471bbb1
                    AuthApi.$fToJSONResponseData5
                    0#
                    ipv }) -}
-4d1a23d5845c0c10e8b479e57baf2c2f
+61f3874f3179f28a2db98e38823565bd
   $fToJSONResponseData5 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "yo"#) -}
-f886bca8073cf63b4e0481d7411c6139
+  {- Unfolding: (GHC.CString.unpackCString# "status"#) -}
+4c34033f989d1f0bb0c0e7a6994926ee
   $fToJSONResponseData_$ctoEncoding ::
     AuthApi.ResponseData -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <L,1*U(1*U)>, Inline: INLINE (sat-args=0),
@@ -393,7 +393,7 @@ f886bca8073cf63b4e0481d7411c6139
                   `cast`
                 (<AuthApi.ResponseData>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-f886bca8073cf63b4e0481d7411c6139
+4c34033f989d1f0bb0c0e7a6994926ee
   $fToJSONResponseData_$ctoJSON ::
     AuthApi.ResponseData -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <L,1*U(1*U)>m1,
@@ -479,14 +479,14 @@ b6d7077921e0ad843e641c7e2abd92fa
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-9071d590ec5d86adf3febcad604a70d7
+ff3e8063c633df79825fe5a008101343
   type AuthServiceApi =
     "verify"
     Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
-                          '[Servant.API.ContentTypes.JSON] Models.Credentials
+                          '[Servant.API.ContentTypes.JSON] Models.User
                         Servant.API.Sub.:> Servant.API.Verbs.Post
                                              '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData)
-f886bca8073cf63b4e0481d7411c6139
+4c34033f989d1f0bb0c0e7a6994926ee
   axiom Rep_ResponseData::
       GHC.Generics.Rep AuthApi.ResponseData
         = GHC.Generics.D1
@@ -500,15 +500,15 @@ f886bca8073cf63b4e0481d7411c6139
                   "ResponseData" 'GHC.Generics.PrefixI 'GHC.Types.True)
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "yo")
+                     ('GHC.Base.Just "status")
                      'GHC.Generics.NoSourceUnpackedness
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String)))
-f886bca8073cf63b4e0481d7411c6139
-  data ResponseData = ResponseData {yo :: GHC.Base.String}
-f00bcf642e3d7563e8587f4f8583bd08
-  yo :: AuthApi.ResponseData -> GHC.Base.String
+4c34033f989d1f0bb0c0e7a6994926ee
+  data ResponseData = ResponseData {status :: GHC.Base.String}
+24ceedebf902cc8abf667907fc40a7e7
+  status :: AuthApi.ResponseData -> GHC.Base.String
   RecSel Left AuthApi.ResponseData
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
      Unfolding: InlineRule (1, True, False)

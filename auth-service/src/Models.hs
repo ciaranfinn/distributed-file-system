@@ -11,7 +11,7 @@
 {-# LANGUAGE TemplateHaskell            #-}
 {-# LANGUAGE TypeFamilies               #-}
 
-module Models (Credentials,dbAction,dbMigration) where
+module Models where
 
 import           Control.Monad.Reader
 import           Database.Persist.Postgresql
@@ -19,10 +19,10 @@ import           Database.Persist.TH  (mkMigrate, mkPersist, persistLowerCase, s
 
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
-Credentials json
-    name String
+User json
+    email String
     password String
-    UniqueName name
+    UniqueName email
     deriving Show
 |]
 

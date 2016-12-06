@@ -10,7 +10,7 @@ import           Control.Monad.Except
 import           Control.Monad.Reader                 (MonadIO, MonadReader,ReaderT, runReaderT)
 import           Control.Monad.Reader.Class
 import           AuthApi                              (AuthServiceApi,ResponseData(..))
-import           Models                               (dbAction,Credentials)
+import           Models
 import           Servant
 
 
@@ -37,6 +37,7 @@ authService = verify
 
 -- Service Actions --
 
-verify :: Credentials -> App ResponseData
-verify = do
+verify :: User -> App ResponseData
+verify u = do
+    newAct <- dbAction (insert (User (userEmail u) (userPassword u)))
     return ResponseData {status = "a" }

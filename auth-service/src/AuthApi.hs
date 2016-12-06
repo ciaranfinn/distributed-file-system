@@ -7,7 +7,7 @@
 module AuthApi (AuthServiceApi,ResponseData(..)) where
 
 import Servant
-import Models (Credentials)
+import Models
 import Database.Persist.Postgresql
 import GHC.Generics
 import Data.Aeson
@@ -16,4 +16,4 @@ import Data.Aeson.TH
 data ResponseData = ResponseData { status :: String
                              } deriving (Generic, ToJSON)
 
-type AuthServiceApi = "verify" :> ReqBody '[JSON] Credentials :> Post '[JSON] ResponseData
+type AuthServiceApi = "verify" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
