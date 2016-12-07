@@ -4,7 +4,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeOperators     #-}
 
-module AuthApi (AuthServiceApi,ResponseData(..),RepsoneToken(..)) where
+module AuthApi (AuthServiceApi,ResponseData(..),ResponseToken(..),Token(..)) where
 
 import Servant
 import Models
@@ -17,10 +17,15 @@ data ResponseData = ResponseData
                   { status :: String
                   } deriving (Generic, ToJSON)
 
-data RepsoneToken = RepsoneToken
+data ResponseToken = ResponseToken
                   { token :: String
                   } deriving (Generic, ToJSON)
 
+data Token = Token
+             { email :: String,
+               expiryTime :: String
+             } deriving (Generic, ToJSON, FromJSON)
+
 
 type AuthServiceApi = "users" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
-                  :<|>"verify" :> ReqBody '[JSON] User :> Post '[JSON] RepsoneToken
+                  :<|>"verify" :> ReqBody '[JSON] User :> Post '[JSON] ResponseToken

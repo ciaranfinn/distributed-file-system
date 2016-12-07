@@ -35,6 +35,20 @@
   (major1) == 0 && (major2) <  10 || \
   (major1) == 0 && (major2) == 10 && (minor) <= 8)
 
+/* package cryptocipher-0.6.2 */
+#define VERSION_cryptocipher "0.6.2"
+#define MIN_VERSION_cryptocipher(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  6 || \
+  (major1) == 0 && (major2) == 6 && (minor) <= 2)
+
+/* package cryptonite-0.19 */
+#define VERSION_cryptonite "0.19"
+#define MIN_VERSION_cryptonite(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  19 || \
+  (major1) == 0 && (major2) == 19 && (minor) <= 0)
+
 /* package monad-logger-0.3.20.1 */
 #define VERSION_monad_logger "0.3.20.1"
 #define MIN_VERSION_monad_logger(major1,major2,minor) (\
@@ -189,7 +203,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 1)
 
-#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS"
+#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
 
-#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS"
+#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
 

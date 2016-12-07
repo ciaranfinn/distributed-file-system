@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-06 19:00:12.754998 UTC
+2016-12-07 18:00:08.770745 UTC
 
 interface main@main:Main 8001
-  interface hash: c20f84ed573d3112a9c41ab56cb41385
-  ABI hash: e8b4ee8333b08b5c04e69e0990f1b26e
-  export-list hash: 0aa6552e792c4c0268e068c5d0c00fad
+  interface hash: 049e4cfd82aeaf1a168449a1787a6a21
+  ABI hash: 890002e5242c70a396b1e810b95bdd77
+  export-list hash: f3b9d1110623779dd5f6641882868707
   orphan hash: 7c3560eee66c4468308fe62dfed79e8a
   flag hash: a0d4534c7f37e0e51e81fc1a548cf058
   sig of: Nothing
@@ -23,7 +23,7 @@ package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       array-0.5.1.1@array-0.5.1.1
                       async-2.1.1@async-2.1.1-xFiBzw9xoB8HPZAuxUY2o
                       attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR
-                      auth-service-0.1.0.0@auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS
+                      auth-service-0.1.0.0@auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU
                       auto-update-0.1.4@auto-update-0.1.4-GAesfFmqoZzBz6e09kRyzb
                       base-4.9.0.0
                       base-compat-0.9.1@base-compat-0.9.1-tmPpmtbHbvIDjFWbkjGrR
@@ -143,8 +143,8 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
-                         auth-service-0.1.0.0@auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS:AuthApi
-                         auth-service-0.1.0.0@auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS:Models
+                         auth-service-0.1.0.0@auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:AuthApi
+                         auth-service-0.1.0.0@auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:Models
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
                          base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
@@ -193,8 +193,8 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS:Models 4bf13596aab15cc435d69d599db2c276
-import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-2QNg42Sa5kx2ocY5Srn8qS:Service d567066f2693908749b9efe60326903b
+import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:Models c845168f25478b68c3add6967b52ad6f
+import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:Service 241b8f32f5526f372b638909e2e0ddcd
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 import  -/  monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK:Control.Monad.Logger 2f87c925edad5966dbd05a4d603919f5
@@ -446,12 +446,12 @@ f1dcc66070a646abebb1b99a2d0b1e06
                    (GHC.ForeignPtr.PlainForeignPtr ipv1)
                    0#
                    (GHC.Prim.word2Int# ds4) } }) -}
-f221b9e92b408d3da489cb3615150bdd
+12fd997a4489467d4c60b99cb467ac9a
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-a220eb38d24c9e717874c7bad5efb919
+e32fb0ac5351e8cf4f9e3d0966fa860f
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -557,7 +557,7 @@ a220eb38d24c9e717874c7bad5efb919
                    (GHC.Base.Nothing @ GHC.Types.Int)
                    (Network.Wai.Middleware.RequestLogger.logStdout (Service.app ww))
                    ipv2 } } }) -}
-3fe7b7008310d53a56ea59e2043e520d
+3a4c90f93cea323e3646a163722964c9
   main2 ::
     Database.Persist.Sql.Types.Internal.SqlBackend -> GHC.Types.IO ()
   {- Arity: 1,
@@ -611,7 +611,7 @@ f2167f1e9f2e6612a2fffe827321581d
      Unfolding: (\ (ds :: Database.PostgreSQL.Simple.Internal.Connection)
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  (# eta, GHC.Tuple.() #)) -}
-73431eb2841765d2b300457fd924f518
+23a9c59062f631f386660f38ab67de62
   main7 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
