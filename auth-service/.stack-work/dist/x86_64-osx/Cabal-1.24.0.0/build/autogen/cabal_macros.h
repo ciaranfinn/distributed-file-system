@@ -21,6 +21,13 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 0)
 
+/* package base64-bytestring-1.0.0.1 */
+#define VERSION_base64_bytestring "1.0.0.1"
+#define MIN_VERSION_base64_bytestring(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  0 || \
+  (major1) == 1 && (major2) == 0 && (minor) <= 0)
+
 /* package bson-0.3.2.3 */
 #define VERSION_bson "0.3.2.3"
 #define MIN_VERSION_bson(major1,major2,minor) (\
@@ -133,6 +140,13 @@
   (major1) == 0 && (major2) <  5 || \
   (major1) == 0 && (major2) == 5 && (minor) <= 2)
 
+/* package utf8-string-1.0.1.1 */
+#define VERSION_utf8_string "1.0.1.1"
+#define MIN_VERSION_utf8_string(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  0 || \
+  (major1) == 1 && (major2) == 0 && (minor) <= 1)
+
 /* package wai-3.2.1.1 */
 #define VERSION_wai "3.2.1.1"
 #define MIN_VERSION_wai(major1,major2,minor) (\
@@ -203,7 +217,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 1)
 
-#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
+#define CURRENT_COMPONENT_ID "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
 
-#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
+#define CURRENT_PACKAGE_KEY "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
 

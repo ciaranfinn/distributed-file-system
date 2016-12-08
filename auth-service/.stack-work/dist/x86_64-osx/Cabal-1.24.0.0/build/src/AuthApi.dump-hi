@@ -1,21 +1,21 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-07 17:19:11.035385 UTC
+2016-12-08 15:09:21.533077 UTC
 
-interface auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:AuthApi [family instance module] 8001
-  interface hash: 1429fc48386e596ad69017526b051031
-  ABI hash: 3da916033f0b030d07027517c255271e
-  export-list hash: 75723a35b07df244ae1b135d33f41211
-  orphan hash: 7bd73a6521610f30e7f959dafae52f01
+interface auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:AuthApi [family instance module] 8001
+  interface hash: a43175f8f4f27a3b4f7ecfe90f747b51
+  ABI hash: 01192683a04ec30d35ae20435a0fc8d2
+  export-list hash: 97bf19fe58b6056072ed327275218829
+  orphan hash: ef06412821529af5c65052fbe8f6b7a5
   flag hash: d36aeae6dbc808ed13205c6874028e80
   sig of: Nothing
   used TH splices: False
   where
 exports:
   AuthApi.AuthServiceApi
-  AuthApi.ResponseData{AuthApi.ResponseData status}
-  AuthApi.ResponseToken{AuthApi.ResponseToken token}
-  AuthApi.Token{AuthApi.Token email expiryTime}
+  AuthApi.ResponseData{AuthApi.ResponseData status valid}
+  AuthApi.Token{AuthApi.Token token}
+  AuthApi.TokenData{AuthApi.TokenData email expiryTime}
 module dependencies: Models
 package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       aeson-compat-0.3.6@aeson-compat-0.3.6-5wE6V2cyaFcB5no9HXBKW5
@@ -126,7 +126,7 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
-                         auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:Models
+                         auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:Models
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
                          base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
@@ -176,9 +176,9 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 5c6008252675af8a24566bc8465eebdc
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.TH f58263d850f953be61627aac2a67fb77
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class abf0ee780081829844ac5a316c79cb49
-import  -/  Models c845168f25478b68c3add6967b52ad6f
-  exports: a53e57fa6ca74bca2bcdbd24ada5383c
-  User b7365e6a16ec2a76b4fc276c9e8eb90a
+import  -/  Models 6b88886524ba0346e4244bb7af6c6bd0
+  exports: be767d544c2e9265f6d4fb2f70eeed39
+  User fb341dca24a5b678c5c687d70314f39f
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:GHC.Generics 8e2a7658e8b966c1d29d0d5fd4129f38
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
@@ -189,7 +189,7 @@ import  -/  servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.API.ReqBo
 import  -/  servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.API.Sub e4e89bb4a51d80b0579d311b33f93ee7
 import  -/  servant-0.8.1@servant-0.8.1-C41nqWozRFwEkLnlLTnUQc:Servant.API.Verbs 31df30f8af0b109678fb8b73f33bca20
 import  -/  servant-server-0.8.1@servant-server-0.8.1-2W4dYHeOEv33BK078P3wA:Servant 4e8fd52b06af1cb338d7389eb77ee11b
-621fd329e5e9e92e2a797ae7d88d5ec4
+e255ab3803b7e22f6ef93498dc63f478
   $fFromJSONToken :: Data.Aeson.Types.Class.FromJSON AuthApi.Token
   DFunId
   {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=0),
@@ -197,8 +197,169 @@ import  -/  servant-server-0.8.1@servant-server-0.8.1-2W4dYHeOEv33BK078P3wA:Serv
                 AuthApi.$fFromJSONToken_$cparseJSON
                   `cast`
                 (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <AuthApi.Token>_N)) -}
-84193f31a199bd72f07bc11a69ffa9cb
+9414209c5e522e8d7821def6c8649768
   $fFromJSONToken1 ::
+    Data.Aeson.Types.Internal.Options
+    -> GHC.Base.Maybe Data.Text.Internal.Text
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Generic.Tagged
+         Data.Aeson.Types.Generic.True
+         (Data.Aeson.Types.Internal.Parser
+            (GHC.Generics.M1
+               GHC.Generics.S
+               ('GHC.Generics.MetaSel
+                  ('GHC.Base.Just "token")
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0 GHC.Base.String)
+               a))
+  {- Arity: 2, Strictness: <L,U(U,U,U,U,U,U)><L,1*U>,
+     Unfolding: (\ @ a
+                   (opts :: Data.Aeson.Types.Internal.Options)
+                   (mlab :: GHC.Base.Maybe Data.Text.Internal.Text) ->
+                 let {
+                   g :: Data.Aeson.Types.Internal.Object
+                        -> Data.Aeson.Types.Internal.Parser
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "token")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String)
+                                a)
+                   = Data.Aeson.Types.Generic.$fFromRecordM10_$cparseRecord
+                       @ ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "token")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                       @ (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                       AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel
+                       AuthApi.$fFromJSONToken2
+                         `cast`
+                       (Sym (Data.Aeson.Types.Class.N:GFromJSON[0]
+                                 <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char]>_N))
+                       @ a
+                       opts
+                       mlab
+                 } in
+                 (\ (x :: Data.Aeson.Types.Internal.Value) ->
+                  Data.Aeson.Types.Instances.withObject
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "token")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.Rec0 GHC.Base.String)
+                         a)
+                    Data.Aeson.Types.Generic.$fConsFromJSON'fTrue1
+                    g
+                    x)
+                   `cast`
+                 (<Data.Aeson.Types.Internal.Value>_R
+                  ->_R Sym (Data.Aeson.Types.Generic.N:Tagged[0]
+                                <Data.Aeson.Types.Generic.True>_P
+                                <Data.Aeson.Types.Internal.Parser
+                                   (GHC.Generics.M1
+                                      GHC.Generics.S
+                                      ('GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "token")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy)
+                                      (GHC.Generics.Rec0 GHC.Base.String)
+                                      a)>_R))) -}
+0021dfc9933cf5a02539f4f5ea103180
+  $fFromJSONToken2 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1)
+  {- Arity: 2, Strictness: <L,A><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a1
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.Internal.Value) ->
+                 AuthApi.$w$dGFromJSON @ a1 w1) -}
+a64bfc172dbef0f651fea36262d548ce
+  $fFromJSONToken3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "String"#) -}
+439e7c171cf473378767b95dad2f5eac
+  $fFromJSONToken4 :: GHC.Generics.SingI ('GHC.Base.Just "token")
+  {- Unfolding: InlineRule (0, True, True)
+                AuthApi.$fFromJSONToken5
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "token">_N) -}
+9013a9ba66c2e7d3754e3824873cafea
+  $fFromJSONToken5 ::
+    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "token")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "token")
+                   @ "token"
+                   @~ <'GHC.Base.Just "token">_N
+                   AuthApi.$fFromJSONToken6
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"token">_N)) -}
+92559c81b27bbf88f05d290bb62bd442
+  $fFromJSONToken6 :: GHC.Generics.R:SingSymbols "token"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "token"
+                   AuthApi.$fFromJSONToken7
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"token">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"token">_N))) -}
+85892b204116b309556b85ee2125a29f
+  $fFromJSONToken7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "token"#) -}
+2f79def09ef4e7859012b5602406d2ff
+  $fFromJSONToken8 ::
+    GHC.Generics.M1
+      GHC.Generics.S
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "token")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+      (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+      a
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a
+                   (eta :: GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "token")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                             a) ->
+                 GHC.Types.True) -}
+c6db87314edb3175340662674872e8df
+  $fFromJSONTokenData ::
+    Data.Aeson.Types.Class.FromJSON AuthApi.TokenData
+  DFunId
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                AuthApi.$fFromJSONTokenData_$cparseJSON
+                  `cast`
+                (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                          <AuthApi.TokenData>_N)) -}
+9de7e8f7cc0f225193b80cbd55bb35ea
+  $fFromJSONTokenData1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
     -> Data.Aeson.Types.Internal.Value
@@ -229,21 +390,11 @@ import  -/  servant-server-0.8.1@servant-server-0.8.1-2W4dYHeOEv33BK078P3wA:Serv
                    (w1 :: GHC.Base.Maybe Data.Text.Internal.Text)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
                  AuthApi.$w$dConsFromJSON' @ a w w2) -}
-4111288d974c63a8752c553a259ca163
-  $fFromJSONToken10 :: GHC.Generics.R:SingSymbols "expiryTime"
-  {- Strictness: m,
-     Unfolding: (GHC.Generics.SSym
-                   @ "expiryTime"
-                   AuthApi.$fFromJSONToken11
-                     `cast`
-                   (Trans
-                        (Sym (GHC.TypeLits.N:SSymbol[0] <"expiryTime">_P))
-                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"expiryTime">_N))) -}
-194a51c40fc8af0828415d773ab5d866
-  $fFromJSONToken11 :: [GHC.Types.Char]
+0ddc6cddbdb6c01dfcaa2713180dbdd8
+  $fFromJSONTokenData10 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "expiryTime"#) -}
-983afad83d4a7ca105aefac1d8cae49b
-  $fFromJSONToken12 ::
+1ce82a4967b6c3fc4b047ae3c6929d6a
+  $fFromJSONTokenData11 ::
     (GHC.Generics.:*:)
       (GHC.Generics.M1
          GHC.Generics.S
@@ -285,42 +436,42 @@ import  -/  servant-server-0.8.1@servant-server-0.8.1-2W4dYHeOEv33BK078P3wA:Serv
                                 (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-d7b2ec692f7ed1a49f220e670aa7da72
-  $fFromJSONToken2 :: GHC.Generics.SingI ('GHC.Base.Just "email")
+0120903f66a978c7a2f191518e81d11f
+  $fFromJSONTokenData2 :: GHC.Generics.SingI ('GHC.Base.Just "email")
   {- Unfolding: InlineRule (0, True, True)
-                AuthApi.$fFromJSONToken3
+                AuthApi.$fFromJSONTokenData3
                   `cast`
                 (Trans
                      (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "email">_N) -}
-576ad16fa453ed5c400f6035148a3d6b
-  $fFromJSONToken3 ::
+5965430b553057a05dd1dff7a54cbc57
+  $fFromJSONTokenData3 ::
     GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "email")
   {- Unfolding: (GHC.Generics.SJust
                    @ GHC.Types.Symbol
                    @ ('GHC.Base.Just "email")
                    @ "email"
                    @~ <'GHC.Base.Just "email">_N
-                   AuthApi.$fFromJSONToken4
+                   AuthApi.$fFromJSONTokenData4
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"email">_N)) -}
-2496354dea337cbac2caf92ee4dd8a65
-  $fFromJSONToken4 :: GHC.Generics.R:SingSymbols "email"
+1a030f515e96db5456b0434a37d9f1e3
+  $fFromJSONTokenData4 :: GHC.Generics.R:SingSymbols "email"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
                    @ "email"
-                   AuthApi.$fFromJSONToken5
+                   AuthApi.$fFromJSONTokenData5
                      `cast`
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"email">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"email">_N))) -}
-c40936edcd09b9e9c3056fd0389a5677
-  $fFromJSONToken5 :: [GHC.Types.Char]
+b5c9d5e219515af2b5a88f4f383b05c8
+  $fFromJSONTokenData5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "email"#) -}
-63bcfe85560f4112f4c79abe2a025111
-  $fFromJSONToken6 ::
+89edf5b95d48863bc8f70cb1dcd283ff
+  $fFromJSONTokenData6 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -330,23 +481,20 @@ c40936edcd09b9e9c3056fd0389a5677
                 (\ @ a1
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: Data.Aeson.Types.Internal.Value) ->
-                 AuthApi.$w$dGFromJSON @ a1 w1) -}
-330472d669755261dc1d9f4e2a51d47f
-  $fFromJSONToken7 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "String"#) -}
-b3496166c3bb92491949d9ea77994fa2
-  $fFromJSONToken8 ::
+                 AuthApi.$w$dGFromJSON1 @ a1 w1) -}
+fcf70e9bec04c8903b3aeeb0fc6f9cbc
+  $fFromJSONTokenData7 ::
     GHC.Generics.SingI ('GHC.Base.Just "expiryTime")
   {- Unfolding: InlineRule (0, True, True)
-                AuthApi.$fFromJSONToken9
+                AuthApi.$fFromJSONTokenData8
                   `cast`
                 (Trans
                      (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "expiryTime">_N) -}
-61b347a9419dbcf24ae38bbd582dc544
-  $fFromJSONToken9 ::
+aa13c3ca9dcf73d3821b2241d7eac3fe
+  $fFromJSONTokenData8 ::
     GHC.Generics.R:SingMaybeb
       GHC.Types.Symbol ('GHC.Base.Just "expiryTime")
   {- Unfolding: (GHC.Generics.SJust
@@ -354,13 +502,23 @@ b3496166c3bb92491949d9ea77994fa2
                    @ ('GHC.Base.Just "expiryTime")
                    @ "expiryTime"
                    @~ <'GHC.Base.Just "expiryTime">_N
-                   AuthApi.$fFromJSONToken10
+                   AuthApi.$fFromJSONTokenData9
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"expiryTime">_N)) -}
-621fd329e5e9e92e2a797ae7d88d5ec4
-  $fFromJSONToken_$cparseJSON ::
+60571d3cad80a482bd0274a6bc77503e
+  $fFromJSONTokenData9 :: GHC.Generics.R:SingSymbols "expiryTime"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "expiryTime"
+                   AuthApi.$fFromJSONTokenData10
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"expiryTime">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"expiryTime">_N))) -}
+c6db87314edb3175340662674872e8df
+  $fFromJSONTokenData_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
-    -> Data.Aeson.Types.Internal.Parser AuthApi.Token
+    -> Data.Aeson.Types.Internal.Parser AuthApi.TokenData
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: (\ (x :: Data.Aeson.Types.Internal.Value) ->
                  let {
@@ -397,7 +555,7 @@ b3496166c3bb92491949d9ea77994fa2
                                                 'GHC.Generics.DecidedLazy)
                                              (GHC.Generics.Rec0 GHC.Base.String))
                        @ Data.Aeson.Types.Generic.True
-                       AuthApi.$fFromJSONToken12
+                       AuthApi.$fFromJSONTokenData11
                          `cast`
                        (Sym (Data.Aeson.Types.Generic.N:IsRecord[0]
                                  <GHC.Generics.M1
@@ -417,7 +575,7 @@ b3496166c3bb92491949d9ea77994fa2
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 GHC.Base.String)>_N
                                  <Data.Aeson.Types.Generic.True>_N))
-                       AuthApi.$fFromJSONToken1
+                       AuthApi.$fFromJSONTokenData1
                          `cast`
                        (Sym (Data.Aeson.Types.Generic.N:ConsFromJSON'[0]
                                  <GHC.Generics.S1
@@ -443,7 +601,7 @@ b3496166c3bb92491949d9ea77994fa2
                     @ r
                     (path :: Data.Aeson.Types.Internal.JSONPath)
                     (kf :: Data.Aeson.Types.Internal.Failure f1 r)
-                    (ks :: Data.Aeson.Types.Internal.Success AuthApi.Token f1 r) ->
+                    (ks :: Data.Aeson.Types.Internal.Success AuthApi.TokenData f1 r) ->
                   m `cast`
                   (Data.Aeson.Types.Internal.N:Parser[0]
                        <(GHC.Generics.:*:)
@@ -484,7 +642,7 @@ b3496166c3bb92491949d9ea77994fa2
                                 GHC.Prim.Any) ->
                      ks
                        (case a2 of wild { GHC.Generics.:*: ds ds1 ->
-                        AuthApi.Token
+                        AuthApi.TokenData
                           ds
                             `cast`
                           (Trans
@@ -514,9 +672,10 @@ b3496166c3bb92491949d9ea77994fa2
                                (GHC.Generics.N:K1[0]
                                     <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P)) })))
                    `cast`
-                 (Sym (Data.Aeson.Types.Internal.N:Parser[0] <AuthApi.Token>_R))) -}
-1af41a00d571f726fc454a6efd8214a8
-  $fFromJSONToken_$s$fSelectorMetaMetaSel ::
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <AuthApi.TokenData>_R))) -}
+9539c8041ca0d12fedfd1c0fb9080720
+  $fFromJSONTokenData_$s$fSelectorMetaMetaSel ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
          ('GHC.Base.Just "email")
@@ -531,13 +690,13 @@ b3496166c3bb92491949d9ea77994fa2
                        'GHC.Generics.NoSourceUnpackedness
                        'GHC.Generics.NoSourceStrictness
                        'GHC.Generics.DecidedLazy)
-                  AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName
+                  AuthApi.$fFromJSONTokenData_$s$fSelectorMetaMetaSel_$cselName
                   (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
                      @ ('GHC.Base.Just "email")
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
-                     AuthApi.$fFromJSONToken2
+                     AuthApi.$fFromJSONTokenData2
                      GHC.Generics.$WSNoSourceUnpackedness
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
@@ -552,7 +711,7 @@ b3496166c3bb92491949d9ea77994fa2
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
-                     AuthApi.$fFromJSONToken2
+                     AuthApi.$fFromJSONTokenData2
                      GHC.Generics.$WSNoSourceUnpackedness
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
@@ -567,7 +726,7 @@ b3496166c3bb92491949d9ea77994fa2
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
-                     AuthApi.$fFromJSONToken2
+                     AuthApi.$fFromJSONTokenData2
                      GHC.Generics.$WSNoSourceUnpackedness
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
@@ -577,8 +736,8 @@ b3496166c3bb92491949d9ea77994fa2
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-0dc84ea66ff32efbd7a1444fce1a5188
-  $fFromJSONToken_$s$fSelectorMetaMetaSel1 ::
+9de5c4a307c1dc37d3a513ff64148b12
+  $fFromJSONTokenData_$s$fSelectorMetaMetaSel1 ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
          ('GHC.Base.Just "expiryTime")
@@ -593,13 +752,13 @@ b3496166c3bb92491949d9ea77994fa2
                        'GHC.Generics.NoSourceUnpackedness
                        'GHC.Generics.NoSourceStrictness
                        'GHC.Generics.DecidedLazy)
-                  AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName1
+                  AuthApi.$fFromJSONTokenData_$s$fSelectorMetaMetaSel_$cselName1
                   (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
                      @ ('GHC.Base.Just "expiryTime")
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
-                     AuthApi.$fFromJSONToken8
+                     AuthApi.$fFromJSONTokenData7
                      GHC.Generics.$WSNoSourceUnpackedness
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
@@ -614,7 +773,7 @@ b3496166c3bb92491949d9ea77994fa2
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
-                     AuthApi.$fFromJSONToken8
+                     AuthApi.$fFromJSONTokenData7
                      GHC.Generics.$WSNoSourceUnpackedness
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
@@ -629,7 +788,7 @@ b3496166c3bb92491949d9ea77994fa2
                      @ 'GHC.Generics.NoSourceUnpackedness
                      @ 'GHC.Generics.NoSourceStrictness
                      @ 'GHC.Generics.DecidedLazy
-                     AuthApi.$fFromJSONToken8
+                     AuthApi.$fFromJSONTokenData7
                      GHC.Generics.$WSNoSourceUnpackedness
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
@@ -639,8 +798,8 @@ b3496166c3bb92491949d9ea77994fa2
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-d4eecc75aaed63225029d1131e39ab12
-  $fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName ::
+beab1be987642e12d2f9aff2ad9e1069
+  $fFromJSONTokenData_$s$fSelectorMetaMetaSel_$cselName ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
                                                                     -> GHC.Types.*) (a :: k).
@@ -662,9 +821,9 @@ d4eecc75aaed63225029d1131e39ab12
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
-                 AuthApi.$fFromJSONToken5) -}
-9c2b2ee0d57315640c88e80c7cb27be3
-  $fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName1 ::
+                 AuthApi.$fFromJSONTokenData5) -}
+8dc057c60f0bc40159cfedef768f9119
+  $fFromJSONTokenData_$s$fSelectorMetaMetaSel_$cselName1 ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
                                                                     -> GHC.Types.*) (a :: k).
@@ -686,8 +845,196 @@ d4eecc75aaed63225029d1131e39ab12
                                 'GHC.Generics.NoSourceUnpackedness
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
-                 AuthApi.$fFromJSONToken11) -}
-dc65d435c55992171f18235ce5563a98
+                 AuthApi.$fFromJSONTokenData10) -}
+e255ab3803b7e22f6ef93498dc63f478
+  $fFromJSONToken_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser AuthApi.Token
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (x :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          (GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "token")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 GHC.Base.String)
+                             GHC.Prim.Any)
+                   = Data.Aeson.Types.Generic.$fConsFromJSONf_$cconsParseJSON
+                       @ (GHC.Generics.M1
+                            GHC.Generics.S
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "token")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.Rec0 GHC.Base.String))
+                       @ Data.Aeson.Types.Generic.True
+                       AuthApi.$fFromJSONToken8
+                         `cast`
+                       (Sym (Data.Aeson.Types.Generic.N:IsRecord[0]
+                                 <GHC.Generics.M1
+                                    GHC.Generics.S
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "token")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)>_N
+                                 <Data.Aeson.Types.Generic.True>_N))
+                       AuthApi.$fFromJSONToken1
+                         `cast`
+                       (Sym (Data.Aeson.Types.Generic.N:ConsFromJSON'[0]
+                                 <GHC.Generics.M1
+                                    GHC.Generics.S
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "token")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 GHC.Base.String)>_N
+                                 <Data.Aeson.Types.Generic.True>_N))
+                       @ GHC.Prim.Any
+                       Data.Aeson.Types.Internal.defaultOptions
+                       x
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success AuthApi.Token f1 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       <GHC.Generics.M1
+                          GHC.Generics.S
+                          ('GHC.Generics.MetaSel
+                             ('GHC.Base.Just "token")
+                             'GHC.Generics.NoSourceUnpackedness
+                             'GHC.Generics.NoSourceStrictness
+                             'GHC.Generics.DecidedLazy)
+                          (GHC.Generics.Rec0 GHC.Base.String)
+                          GHC.Prim.Any>_R)
+                    @ f1
+                    @ r
+                    path
+                    kf
+                    (\ (a2 :: GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "token")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String)
+                                GHC.Prim.Any) ->
+                     ks
+                       (AuthApi.Token
+                          a2
+                            `cast`
+                          (Trans
+                               (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.S>_P
+                                    <'GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "token")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy>_P
+                                    <GHC.Generics.K1
+                                       GHC.Generics.R GHC.Base.String>_R <GHC.Prim.Any>_N)
+                               (GHC.Generics.N:K1[0]
+                                    <GHC.Generics.R>_P <GHC.Base.String>_R <GHC.Prim.Any>_P)))))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0] <AuthApi.Token>_R))) -}
+83c17be313c3d9f6e115cb5dd5944648
+  $fFromJSONToken_$s$fSelectorMetaMetaSel ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "token")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "token")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "token")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     AuthApi.$fFromJSONToken4
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "token")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     AuthApi.$fFromJSONToken4
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "token")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     AuthApi.$fFromJSONToken4
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+c99206ebee4ebd01281a62f39e1efac9
+  $fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "token")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "token")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 AuthApi.$fFromJSONToken7) -}
+70fcdda1a527e8afecbc46ea7ed8c52c
   $fGenericResponseData :: GHC.Generics.Generic AuthApi.ResponseData
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -695,250 +1042,199 @@ dc65d435c55992171f18235ce5563a98
                   @ AuthApi.ResponseData
                   AuthApi.$fGenericResponseData_$cfrom
                   AuthApi.$fGenericResponseData_$cto -}
-dc65d435c55992171f18235ce5563a98
+70fcdda1a527e8afecbc46ea7ed8c52c
   $fGenericResponseData_$cfrom ::
     AuthApi.ResponseData -> GHC.Generics.Rep AuthApi.ResponseData x
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
      Unfolding: InlineRule (1, True, False)
                 (\ @ x (ds :: AuthApi.ResponseData) ->
-                 case ds of wild { AuthApi.ResponseData g1 ->
-                 g1
+                 case ds of wild { AuthApi.ResponseData g1 g2 ->
+                 (GHC.Generics.:*:
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "status")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "valid")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Types.Bool))
+                    @ x
+                    g1
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "status")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R) <x>_N))
+                    g2
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <GHC.Types.Bool>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "valid")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R GHC.Types.Bool>_R) <x>_N)))
                    `cast`
                  (Trans
-                      (Sym (GHC.Generics.N:K1[0]
-                                <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                      (Sym (GHC.Generics.N:M1[0]
+                                <GHC.Generics.C>_P
+                                <'GHC.Generics.MetaCons
+                                   "ResponseData" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                <GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "status")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                 GHC.Generics.:*: GHC.Generics.M1
+                                                    GHC.Generics.S
+                                                    ('GHC.Generics.MetaSel
+                                                       ('GHC.Base.Just "valid")
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.K1
+                                                       GHC.Generics.R GHC.Types.Bool)>_R))
                       (Trans
                            (Sym (GHC.Generics.N:M1[0]
-                                     <GHC.Generics.S>_P
-                                     <'GHC.Generics.MetaSel
-                                        ('GHC.Base.Just "status")
-                                        'GHC.Generics.NoSourceUnpackedness
-                                        'GHC.Generics.NoSourceStrictness
-                                        'GHC.Generics.DecidedLazy>_P
-                                     <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R))
-                           (Trans
-                                (Sym (GHC.Generics.N:M1[0]
-                                          <GHC.Generics.C>_P
-                                          <'GHC.Generics.MetaCons
-                                             "ResponseData" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
-                                          <GHC.Generics.M1
-                                             GHC.Generics.S
-                                             ('GHC.Generics.MetaSel
-                                                ('GHC.Base.Just "status")
-                                                'GHC.Generics.NoSourceUnpackedness
-                                                'GHC.Generics.NoSourceStrictness
-                                                'GHC.Generics.DecidedLazy)
-                                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)>_R))
-                                (Trans
-                                     (Sym (GHC.Generics.N:M1[0]
-                                               <GHC.Generics.D>_P
-                                               <'GHC.Generics.MetaData
-                                                  "ResponseData"
-                                                  "AuthApi"
-                                                  "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
-                                                  'GHC.Types.False>_P
-                                               <GHC.Generics.M1
-                                                  GHC.Generics.C
-                                                  ('GHC.Generics.MetaCons
-                                                     "ResponseData"
-                                                     'GHC.Generics.PrefixI
-                                                     'GHC.Types.True)
-                                                  (GHC.Generics.M1
-                                                     GHC.Generics.S
-                                                     ('GHC.Generics.MetaSel
-                                                        ('GHC.Base.Just "status")
-                                                        'GHC.Generics.NoSourceUnpackedness
-                                                        'GHC.Generics.NoSourceStrictness
-                                                        'GHC.Generics.DecidedLazy)
-                                                     (GHC.Generics.K1
-                                                        GHC.Generics.R GHC.Base.String))>_R))
-                                     (Sub (Sym (AuthApi.Rep_ResponseData[0]))))) <x>_N)) }) -}
-dc65d435c55992171f18235ce5563a98
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "ResponseData"
+                                        "AuthApi"
+                                        "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "ResponseData" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "status")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "valid")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R GHC.Types.Bool))>_R))
+                           (Sub (Sym (AuthApi.Rep_ResponseData[0])))) <x>_N) }) -}
+70fcdda1a527e8afecbc46ea7ed8c52c
   $fGenericResponseData_$cto ::
     GHC.Generics.Rep AuthApi.ResponseData x -> AuthApi.ResponseData
-  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
-     Unfolding: InlineRule (1, True, True)
-                (\ @ x (ds :: GHC.Generics.Rep AuthApi.ResponseData x) ->
-                 AuthApi.ResponseData
-                   ds
-                     `cast`
-                   (Trans
-                        (Trans
-                             (Sub (AuthApi.Rep_ResponseData[0]))
-                             (Trans
-                                  (GHC.Generics.N:M1[0]
-                                       <GHC.Generics.D>_P
-                                       <'GHC.Generics.MetaData
-                                          "ResponseData"
-                                          "AuthApi"
-                                          "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
-                                          'GHC.Types.False>_P
-                                       <GHC.Generics.M1
-                                          GHC.Generics.C
-                                          ('GHC.Generics.MetaCons
-                                             "ResponseData" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                          (GHC.Generics.M1
-                                             GHC.Generics.S
-                                             ('GHC.Generics.MetaSel
-                                                ('GHC.Base.Just "status")
-                                                'GHC.Generics.NoSourceUnpackedness
-                                                'GHC.Generics.NoSourceStrictness
-                                                'GHC.Generics.DecidedLazy)
-                                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))>_R)
-                                  (Trans
-                                       (GHC.Generics.N:M1[0]
-                                            <GHC.Generics.C>_P
-                                            <'GHC.Generics.MetaCons
-                                               "ResponseData"
-                                               'GHC.Generics.PrefixI
-                                               'GHC.Types.True>_P
-                                            <GHC.Generics.M1
-                                               GHC.Generics.S
-                                               ('GHC.Generics.MetaSel
-                                                  ('GHC.Base.Just "status")
-                                                  'GHC.Generics.NoSourceUnpackedness
-                                                  'GHC.Generics.NoSourceStrictness
-                                                  'GHC.Generics.DecidedLazy)
-                                               (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)>_R)
-                                       (GHC.Generics.N:M1[0]
-                                            <GHC.Generics.S>_P
-                                            <'GHC.Generics.MetaSel
-                                               ('GHC.Base.Just "status")
-                                               'GHC.Generics.NoSourceUnpackedness
-                                               'GHC.Generics.NoSourceStrictness
-                                               'GHC.Generics.DecidedLazy>_P
-                                            <GHC.Generics.K1
-                                               GHC.Generics.R GHC.Base.String>_R))) <x>_N)
-                        (GHC.Generics.N:K1[0]
-                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
-b7e605469736261c995d929fa9b52307
-  $fGenericResponseToken ::
-    GHC.Generics.Generic AuthApi.ResponseToken
-  DFunId
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ AuthApi.ResponseToken
-                  AuthApi.$fGenericResponseToken_$cfrom
-                  AuthApi.$fGenericResponseToken_$cto -}
-b7e605469736261c995d929fa9b52307
-  $fGenericResponseToken_$cfrom ::
-    AuthApi.ResponseToken -> GHC.Generics.Rep AuthApi.ResponseToken x
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
      Unfolding: InlineRule (1, True, False)
-                (\ @ x (ds :: AuthApi.ResponseToken) ->
-                 case ds of wild { AuthApi.ResponseToken g1 ->
-                 g1
-                   `cast`
-                 (Trans
-                      (Sym (GHC.Generics.N:K1[0]
-                                <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                (\ @ x (ds :: GHC.Generics.Rep AuthApi.ResponseData x) ->
+                 case ds
+                        `cast`
                       (Trans
-                           (Sym (GHC.Generics.N:M1[0]
-                                     <GHC.Generics.S>_P
-                                     <'GHC.Generics.MetaSel
-                                        ('GHC.Base.Just "token")
-                                        'GHC.Generics.NoSourceUnpackedness
-                                        'GHC.Generics.NoSourceStrictness
-                                        'GHC.Generics.DecidedLazy>_P
-                                     <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R))
+                           (Sub (AuthApi.Rep_ResponseData[0]))
                            (Trans
-                                (Sym (GHC.Generics.N:M1[0]
-                                          <GHC.Generics.C>_P
-                                          <'GHC.Generics.MetaCons
-                                             "ResponseToken"
-                                             'GHC.Generics.PrefixI
-                                             'GHC.Types.True>_P
-                                          <GHC.Generics.M1
-                                             GHC.Generics.S
-                                             ('GHC.Generics.MetaSel
-                                                ('GHC.Base.Just "token")
-                                                'GHC.Generics.NoSourceUnpackedness
-                                                'GHC.Generics.NoSourceStrictness
-                                                'GHC.Generics.DecidedLazy)
-                                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)>_R))
-                                (Trans
-                                     (Sym (GHC.Generics.N:M1[0]
-                                               <GHC.Generics.D>_P
-                                               <'GHC.Generics.MetaData
-                                                  "ResponseToken"
-                                                  "AuthApi"
-                                                  "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
-                                                  'GHC.Types.False>_P
-                                               <GHC.Generics.M1
-                                                  GHC.Generics.C
-                                                  ('GHC.Generics.MetaCons
-                                                     "ResponseToken"
-                                                     'GHC.Generics.PrefixI
-                                                     'GHC.Types.True)
-                                                  (GHC.Generics.M1
-                                                     GHC.Generics.S
-                                                     ('GHC.Generics.MetaSel
-                                                        ('GHC.Base.Just "token")
-                                                        'GHC.Generics.NoSourceUnpackedness
-                                                        'GHC.Generics.NoSourceStrictness
-                                                        'GHC.Generics.DecidedLazy)
-                                                     (GHC.Generics.K1
-                                                        GHC.Generics.R GHC.Base.String))>_R))
-                                     (Sub (Sym (AuthApi.Rep_ResponseToken[0]))))) <x>_N)) }) -}
-b7e605469736261c995d929fa9b52307
-  $fGenericResponseToken_$cto ::
-    GHC.Generics.Rep AuthApi.ResponseToken x -> AuthApi.ResponseToken
-  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
-     Unfolding: InlineRule (1, True, True)
-                (\ @ x (ds :: GHC.Generics.Rep AuthApi.ResponseToken x) ->
-                 AuthApi.ResponseToken
-                   ds
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "ResponseData"
+                                        "AuthApi"
+                                        "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "ResponseData" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "status")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "valid")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R GHC.Types.Bool))>_R)
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.C>_P
+                                     <'GHC.Generics.MetaCons
+                                        "ResponseData" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "status")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
+                                      GHC.Generics.:*: GHC.Generics.M1
+                                                         GHC.Generics.S
+                                                         ('GHC.Generics.MetaSel
+                                                            ('GHC.Base.Just "valid")
+                                                            'GHC.Generics.NoSourceUnpackedness
+                                                            'GHC.Generics.NoSourceStrictness
+                                                            'GHC.Generics.DecidedLazy)
+                                                         (GHC.Generics.K1
+                                                            GHC.Generics.R
+                                                            GHC.Types.Bool)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
+                 AuthApi.ResponseData
+                   ds1
                      `cast`
                    (Trans
-                        (Trans
-                             (Sub (AuthApi.Rep_ResponseToken[0]))
-                             (Trans
-                                  (GHC.Generics.N:M1[0]
-                                       <GHC.Generics.D>_P
-                                       <'GHC.Generics.MetaData
-                                          "ResponseToken"
-                                          "AuthApi"
-                                          "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
-                                          'GHC.Types.False>_P
-                                       <GHC.Generics.M1
-                                          GHC.Generics.C
-                                          ('GHC.Generics.MetaCons
-                                             "ResponseToken" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                          (GHC.Generics.M1
-                                             GHC.Generics.S
-                                             ('GHC.Generics.MetaSel
-                                                ('GHC.Base.Just "token")
-                                                'GHC.Generics.NoSourceUnpackedness
-                                                'GHC.Generics.NoSourceStrictness
-                                                'GHC.Generics.DecidedLazy)
-                                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))>_R)
-                                  (Trans
-                                       (GHC.Generics.N:M1[0]
-                                            <GHC.Generics.C>_P
-                                            <'GHC.Generics.MetaCons
-                                               "ResponseToken"
-                                               'GHC.Generics.PrefixI
-                                               'GHC.Types.True>_P
-                                            <GHC.Generics.M1
-                                               GHC.Generics.S
-                                               ('GHC.Generics.MetaSel
-                                                  ('GHC.Base.Just "token")
-                                                  'GHC.Generics.NoSourceUnpackedness
-                                                  'GHC.Generics.NoSourceStrictness
-                                                  'GHC.Generics.DecidedLazy)
-                                               (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)>_R)
-                                       (GHC.Generics.N:M1[0]
-                                            <GHC.Generics.S>_P
-                                            <'GHC.Generics.MetaSel
-                                               ('GHC.Base.Just "token")
-                                               'GHC.Generics.NoSourceUnpackedness
-                                               'GHC.Generics.NoSourceStrictness
-                                               'GHC.Generics.DecidedLazy>_P
-                                            <GHC.Generics.K1
-                                               GHC.Generics.R GHC.Base.String>_R))) <x>_N)
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "status")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
-                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
-621fd329e5e9e92e2a797ae7d88d5ec4
+                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                   ds2
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "valid")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Types.Bool>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <GHC.Types.Bool>_R <x>_P)) }) -}
+e255ab3803b7e22f6ef93498dc63f478
   $fGenericToken :: GHC.Generics.Generic AuthApi.Token
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -946,13 +1242,21 @@ b7e605469736261c995d929fa9b52307
                   @ AuthApi.Token
                   AuthApi.$fGenericToken_$cfrom
                   AuthApi.$fGenericToken_$cto -}
-621fd329e5e9e92e2a797ae7d88d5ec4
-  $fGenericToken_$cfrom ::
-    AuthApi.Token -> GHC.Generics.Rep AuthApi.Token x
+c6db87314edb3175340662674872e8df
+  $fGenericTokenData :: GHC.Generics.Generic AuthApi.TokenData
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AuthApi.TokenData
+                  AuthApi.$fGenericTokenData_$cfrom
+                  AuthApi.$fGenericTokenData_$cto -}
+c6db87314edb3175340662674872e8df
+  $fGenericTokenData_$cfrom ::
+    AuthApi.TokenData -> GHC.Generics.Rep AuthApi.TokenData x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
      Unfolding: InlineRule (1, True, False)
-                (\ @ x (ds :: AuthApi.Token) ->
-                 case ds of wild { AuthApi.Token g1 g2 ->
+                (\ @ x (ds :: AuthApi.TokenData) ->
+                 case ds of wild { AuthApi.TokenData g1 g2 ->
                  (GHC.Generics.:*:
                     @ (GHC.Generics.M1
                          GHC.Generics.S
@@ -1002,7 +1306,7 @@ b7e605469736261c995d929fa9b52307
                       (Sym (GHC.Generics.N:M1[0]
                                 <GHC.Generics.C>_P
                                 <'GHC.Generics.MetaCons
-                                   "Token" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                   "TokenData" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
                                 <GHC.Generics.M1
                                    GHC.Generics.S
                                    ('GHC.Generics.MetaSel
@@ -1024,14 +1328,14 @@ b7e605469736261c995d929fa9b52307
                            (Sym (GHC.Generics.N:M1[0]
                                      <GHC.Generics.D>_P
                                      <'GHC.Generics.MetaData
-                                        "Token"
+                                        "TokenData"
                                         "AuthApi"
-                                        "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
+                                        "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
                                         'GHC.Types.False>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.C
                                         ('GHC.Generics.MetaCons
-                                           "Token" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                           "TokenData" 'GHC.Generics.PrefixI 'GHC.Types.True)
                                         (GHC.Generics.M1
                                            GHC.Generics.S
                                            ('GHC.Generics.MetaSel
@@ -1049,29 +1353,29 @@ b7e605469736261c995d929fa9b52307
                                                                'GHC.Generics.DecidedLazy)
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
-                           (Sub (Sym (AuthApi.Rep_Token[0])))) <x>_N) }) -}
-621fd329e5e9e92e2a797ae7d88d5ec4
-  $fGenericToken_$cto ::
-    GHC.Generics.Rep AuthApi.Token x -> AuthApi.Token
+                           (Sub (Sym (AuthApi.Rep_TokenData[0])))) <x>_N) }) -}
+c6db87314edb3175340662674872e8df
+  $fGenericTokenData_$cto ::
+    GHC.Generics.Rep AuthApi.TokenData x -> AuthApi.TokenData
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
      Unfolding: InlineRule (1, True, False)
-                (\ @ x (ds :: GHC.Generics.Rep AuthApi.Token x) ->
+                (\ @ x (ds :: GHC.Generics.Rep AuthApi.TokenData x) ->
                  case ds
                         `cast`
                       (Trans
-                           (Sub (AuthApi.Rep_Token[0]))
+                           (Sub (AuthApi.Rep_TokenData[0]))
                            (Trans
                                 (GHC.Generics.N:M1[0]
                                      <GHC.Generics.D>_P
                                      <'GHC.Generics.MetaData
-                                        "Token"
+                                        "TokenData"
                                         "AuthApi"
-                                        "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
+                                        "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
                                         'GHC.Types.False>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.C
                                         ('GHC.Generics.MetaCons
-                                           "Token" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                           "TokenData" 'GHC.Generics.PrefixI 'GHC.Types.True)
                                         (GHC.Generics.M1
                                            GHC.Generics.S
                                            ('GHC.Generics.MetaSel
@@ -1092,7 +1396,7 @@ b7e605469736261c995d929fa9b52307
                                 (GHC.Generics.N:M1[0]
                                      <GHC.Generics.C>_P
                                      <'GHC.Generics.MetaCons
-                                        "Token" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                        "TokenData" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.S
                                         ('GHC.Generics.MetaSel
@@ -1111,7 +1415,7 @@ b7e605469736261c995d929fa9b52307
                                                          (GHC.Generics.K1
                                                             GHC.Generics.R
                                                             GHC.Base.String)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
-                 AuthApi.Token
+                 AuthApi.TokenData
                    ds1
                      `cast`
                    (Trans
@@ -1138,7 +1442,119 @@ b7e605469736261c995d929fa9b52307
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-dc65d435c55992171f18235ce5563a98
+e255ab3803b7e22f6ef93498dc63f478
+  $fGenericToken_$cfrom ::
+    AuthApi.Token -> GHC.Generics.Rep AuthApi.Token x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: AuthApi.Token) ->
+                 case ds of wild { AuthApi.Token g1 ->
+                 g1
+                   `cast`
+                 (Trans
+                      (Sym (GHC.Generics.N:K1[0]
+                                <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
+                      (Trans
+                           (Sym (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.S>_P
+                                     <'GHC.Generics.MetaSel
+                                        ('GHC.Base.Just "token")
+                                        'GHC.Generics.NoSourceUnpackedness
+                                        'GHC.Generics.NoSourceStrictness
+                                        'GHC.Generics.DecidedLazy>_P
+                                     <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R))
+                           (Trans
+                                (Sym (GHC.Generics.N:M1[0]
+                                          <GHC.Generics.C>_P
+                                          <'GHC.Generics.MetaCons
+                                             "Token" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                          <GHC.Generics.M1
+                                             GHC.Generics.S
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "token")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)>_R))
+                                (Trans
+                                     (Sym (GHC.Generics.N:M1[0]
+                                               <GHC.Generics.D>_P
+                                               <'GHC.Generics.MetaData
+                                                  "Token"
+                                                  "AuthApi"
+                                                  "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
+                                                  'GHC.Types.False>_P
+                                               <GHC.Generics.M1
+                                                  GHC.Generics.C
+                                                  ('GHC.Generics.MetaCons
+                                                     "Token" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                                  (GHC.Generics.M1
+                                                     GHC.Generics.S
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "token")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.K1
+                                                        GHC.Generics.R GHC.Base.String))>_R))
+                                     (Sub (Sym (AuthApi.Rep_Token[0]))))) <x>_N)) }) -}
+e255ab3803b7e22f6ef93498dc63f478
+  $fGenericToken_$cto ::
+    GHC.Generics.Rep AuthApi.Token x -> AuthApi.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ x (ds :: GHC.Generics.Rep AuthApi.Token x) ->
+                 AuthApi.Token
+                   ds
+                     `cast`
+                   (Trans
+                        (Trans
+                             (Sub (AuthApi.Rep_Token[0]))
+                             (Trans
+                                  (GHC.Generics.N:M1[0]
+                                       <GHC.Generics.D>_P
+                                       <'GHC.Generics.MetaData
+                                          "Token"
+                                          "AuthApi"
+                                          "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
+                                          'GHC.Types.False>_P
+                                       <GHC.Generics.M1
+                                          GHC.Generics.C
+                                          ('GHC.Generics.MetaCons
+                                             "Token" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                          (GHC.Generics.M1
+                                             GHC.Generics.S
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "token")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))>_R)
+                                  (Trans
+                                       (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.C>_P
+                                            <'GHC.Generics.MetaCons
+                                               "Token" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                            <GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  ('GHC.Base.Just "token")
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)>_R)
+                                       (GHC.Generics.N:M1[0]
+                                            <GHC.Generics.S>_P
+                                            <'GHC.Generics.MetaSel
+                                               ('GHC.Base.Just "token")
+                                               'GHC.Generics.NoSourceUnpackedness
+                                               'GHC.Generics.NoSourceStrictness
+                                               'GHC.Generics.DecidedLazy>_P
+                                            <GHC.Generics.K1
+                                               GHC.Generics.R GHC.Base.String>_R))) <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
+70fcdda1a527e8afecbc46ea7ed8c52c
   $fToJSONResponseData ::
     Data.Aeson.Types.Class.ToJSON AuthApi.ResponseData
   DFunId
@@ -1147,50 +1563,30 @@ dc65d435c55992171f18235ce5563a98
                   @ AuthApi.ResponseData
                   AuthApi.$fToJSONResponseData_$ctoJSON
                   AuthApi.$fToJSONResponseData_$ctoEncoding -}
-dc65d435c55992171f18235ce5563a98
+70fcdda1a527e8afecbc46ea7ed8c52c
   $fToJSONResponseData1 ::
     AuthApi.ResponseData
     -> Data.Aeson.Types.Generic.Tagged
          Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <L,1*U(1*U)>m1, Inline: INLINE[0],
+  {- Arity: 1, Strictness: <S,1*U(1*U,U)>m1, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: AuthApi.ResponseData) ->
-                 case Data.Aeson.Types.Internal.$sfromList1
-                        @ Data.Aeson.Types.Internal.Value
-                        (GHC.Types.:
-                           @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
-                           (AuthApi.$fToJSONResponseData3,
-                            case w of wild { AuthApi.ResponseData g1 ->
-                            case AuthApi.$w$dGToJSON
-                                   @ GHC.Prim.Any
-                                   g1
-                                     `cast`
-                                   (Sym (GHC.Generics.N:K1[0]
-                                             <GHC.Generics.R>_P
-                                             <GHC.Base.String>_R
-                                             <GHC.Prim.Any>_P)) of ww { Unit# ww1 ->
-                            Data.Aeson.Types.Internal.String ww1 } })
-                           (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair))
-                        (Data.HashMap.Base.Empty
-                           @ Data.Text.Internal.Text
-                           @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
-                 (Data.Aeson.Types.Internal.Object dt)
+                 case w of ww { AuthApi.ResponseData ww1 ww2 ->
+                 case AuthApi.$w$ctoJSON ww1 ww2 of ww3 { Unit# ww4 ->
+                 (Data.Aeson.Types.Internal.Object ww4)
                    `cast`
                  (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
                            <Data.Aeson.Types.Generic.True>_P
-                           <Data.Aeson.Types.Internal.Value>_R)) }) -}
-fb0bafb11ca200876a85b1c7da4b3435
-  $fToJSONResponseData2 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-ae1006326a5a8617a7cd829c43e4728a
-  $fToJSONResponseData3 :: Data.Text.Internal.Text
+                           <Data.Aeson.Types.Internal.Value>_R)) } }) -}
+f789266574c09564e4128c3b0be984f3
+  $fToJSONResponseData2 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        AuthApi.$fToJSONResponseData4 of ds7 { (#,#) ipv ipv1 ->
+                        AuthApi.$fToJSONResponseData3 of ds7 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-3a6109af72c4584d59c5076a1c41b96f
-  $fToJSONResponseData4 ::
+86ed004c147fb11175db891c6acb6d8f
+  $fToJSONResponseData3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -1204,16 +1600,48 @@ ae1006326a5a8617a7cd829c43e4728a
                  Data.Aeson.Types.Generic.$wouter6
                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                    Data.Aeson.Types.Generic.$fFromPairM2
-                   AuthApi.$fToJSONResponseData5
+                   AuthApi.$fToJSONResponseData4
                    0#
                    ipv }) -}
-3b3474087e5820e2d4b332ee48f4c7e1
-  $fToJSONResponseData5 :: [GHC.Types.Char]
+83a00b5ac44ee4d550421d3f6b262887
+  $fToJSONResponseData4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "valid"#) -}
+61025418e82943240b8fb256bb21143e
+  $fToJSONResponseData5 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
+2ec9c04451d210a8cf7c711099c48ec0
+  $fToJSONResponseData6 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        AuthApi.$fToJSONResponseData7 of ds7 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+9e70337fa7fc3409ac7237e3b0fbcbb2
+  $fToJSONResponseData7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds7 { (#,#) ipv ipv1 ->
+                 Data.Aeson.Types.Generic.$wouter6
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Aeson.Types.Generic.$fFromPairM2
+                   AuthApi.$fToJSONResponseData8
+                   0#
+                   ipv }) -}
+000260b6700a2e5b3a54863500b6d71c
+  $fToJSONResponseData8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "status"#) -}
-dc65d435c55992171f18235ce5563a98
+70fcdda1a527e8afecbc46ea7ed8c52c
   $fToJSONResponseData_$ctoEncoding ::
     AuthApi.ResponseData -> Data.Aeson.Types.Internal.Encoding
-  {- Arity: 1, Strictness: <L,1*U(1*U)>, Inline: INLINE (sat-args=0),
+  {- Arity: 1, Strictness: <S,1*U(1*U,U)>,
+     Inline: INLINE (sat-args=0),
      Unfolding: InlineRule (0, False, False)
                 (\ (eta :: AuthApi.ResponseData) ->
                  Data.Aeson.Encode.Builder.encodeToBuilder
@@ -1221,10 +1649,10 @@ dc65d435c55992171f18235ce5563a98
                   `cast`
                 (<AuthApi.ResponseData>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-dc65d435c55992171f18235ce5563a98
+70fcdda1a527e8afecbc46ea7ed8c52c
   $fToJSONResponseData_$ctoJSON ::
     AuthApi.ResponseData -> Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <L,1*U(1*U)>m1,
+  {- Arity: 1, Strictness: <S,1*U(1*U,U)>m1,
      Unfolding: InlineRule (0, True, True)
                 AuthApi.$fToJSONResponseData1
                   `cast`
@@ -1232,29 +1660,28 @@ dc65d435c55992171f18235ce5563a98
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-b7e605469736261c995d929fa9b52307
-  $fToJSONResponseToken ::
-    Data.Aeson.Types.Class.ToJSON AuthApi.ResponseToken
+e255ab3803b7e22f6ef93498dc63f478
+  $fToJSONToken :: Data.Aeson.Types.Class.ToJSON AuthApi.Token
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
-                  @ AuthApi.ResponseToken
-                  AuthApi.$fToJSONResponseToken_$ctoJSON
-                  AuthApi.$fToJSONResponseToken_$ctoEncoding -}
-b7e605469736261c995d929fa9b52307
-  $fToJSONResponseToken1 ::
-    AuthApi.ResponseToken
+                  @ AuthApi.Token
+                  AuthApi.$fToJSONToken_$ctoJSON
+                  AuthApi.$fToJSONToken_$ctoEncoding -}
+e255ab3803b7e22f6ef93498dc63f478
+  $fToJSONToken1 ::
+    AuthApi.Token
     -> Data.Aeson.Types.Generic.Tagged
          Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <L,1*U(1*U)>m1, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, False)
-                (\ (w :: AuthApi.ResponseToken) ->
+                (\ (w :: AuthApi.Token) ->
                  case Data.Aeson.Types.Internal.$sfromList1
                         @ Data.Aeson.Types.Internal.Value
                         (GHC.Types.:
                            @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
-                           (AuthApi.$fToJSONResponseToken2,
-                            case w of wild { AuthApi.ResponseToken g1 ->
+                           (AuthApi.$fToJSONToken2,
+                            case w of wild { AuthApi.Token g1 ->
                             case AuthApi.$w$dGToJSON1
                                    @ GHC.Prim.Any
                                    g1
@@ -1273,87 +1700,14 @@ b7e605469736261c995d929fa9b52307
                  (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) }) -}
-d78f2ce2591d4a429224da6bc6818e43
-  $fToJSONResponseToken2 :: Data.Text.Internal.Text
-  {- Unfolding: (case GHC.Magic.runRW#
-                        @ 'GHC.Types.PtrRepLifted
-                        @ Data.Text.Internal.Text
-                        AuthApi.$fToJSONResponseToken3 of ds7 { (#,#) ipv ipv1 ->
-                 ipv1 }) -}
-3354dd8042a5c0b2cfeda6c7d09925c2
-  $fToJSONResponseToken3 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 1,
-     Unfolding: (\ (s1 :: GHC.Prim.State#
-                            GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.Prim.newByteArray#
-                        @ GHC.Prim.RealWorld
-                        8#
-                        s1 of ds7 { (#,#) ipv ipv1 ->
-                 Data.Aeson.Types.Generic.$wouter6
-                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                   Data.Aeson.Types.Generic.$fFromPairM2
-                   AuthApi.$fToJSONResponseToken4
-                   0#
-                   ipv }) -}
-fa1bef76875882cc79f4d365e85e527d
-  $fToJSONResponseToken4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "token"#) -}
-b7e605469736261c995d929fa9b52307
-  $fToJSONResponseToken_$ctoEncoding ::
-    AuthApi.ResponseToken -> Data.Aeson.Types.Internal.Encoding
-  {- Arity: 1, Strictness: <L,1*U(1*U)>, Inline: INLINE (sat-args=0),
-     Unfolding: InlineRule (0, False, False)
-                (\ (eta :: AuthApi.ResponseToken) ->
-                 Data.Aeson.Encode.Builder.encodeToBuilder
-                   (AuthApi.$fToJSONResponseToken_$ctoJSON eta))
-                  `cast`
-                (<AuthApi.ResponseToken>_R
-                 ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-b7e605469736261c995d929fa9b52307
-  $fToJSONResponseToken_$ctoJSON ::
-    AuthApi.ResponseToken -> Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <L,1*U(1*U)>m1,
-     Unfolding: InlineRule (0, True, True)
-                AuthApi.$fToJSONResponseToken1
-                  `cast`
-                (<AuthApi.ResponseToken>_R
-                 ->_R Data.Aeson.Types.Generic.N:Tagged[0]
-                          <Data.Aeson.Types.Generic.True>_P
-                          <Data.Aeson.Types.Internal.Value>_R) -}
-621fd329e5e9e92e2a797ae7d88d5ec4
-  $fToJSONToken :: Data.Aeson.Types.Class.ToJSON AuthApi.Token
-  DFunId
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ AuthApi.Token
-                  AuthApi.$fToJSONToken_$ctoJSON
-                  AuthApi.$fToJSONToken_$ctoEncoding -}
-621fd329e5e9e92e2a797ae7d88d5ec4
-  $fToJSONToken1 ::
-    AuthApi.Token
-    -> Data.Aeson.Types.Generic.Tagged
-         Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1, Inline: INLINE[0],
-     Unfolding: InlineRule (1, True, False)
-                (\ (w :: AuthApi.Token) ->
-                 case w of ww { AuthApi.Token ww1 ww2 ->
-                 case AuthApi.$w$ctoJSON ww1 ww2 of ww3 { Unit# ww4 ->
-                 (Data.Aeson.Types.Internal.Object ww4)
-                   `cast`
-                 (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
-                           <Data.Aeson.Types.Generic.True>_P
-                           <Data.Aeson.Types.Internal.Value>_R)) } }) -}
-e8529077ecea6a84ca40f4a09cb58448
+a296122a75e438fb7bbd974320684c80
   $fToJSONToken2 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
                         AuthApi.$fToJSONToken3 of ds7 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-5648fafd27baaada41ff2de066ae5a87
+a8b20677df8b4c9832719a24acaaee47
   $fToJSONToken3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1368,18 +1722,42 @@ e8529077ecea6a84ca40f4a09cb58448
                  Data.Aeson.Types.Generic.$wouter6
                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                    Data.Aeson.Types.Generic.$fFromPairM2
-                   AuthApi.$fFromJSONToken11
+                   AuthApi.$fFromJSONToken7
                    0#
                    ipv }) -}
-eaf162a125d4326d51cb8ecf746cece0
-  $fToJSONToken4 :: Data.Text.Internal.Text
+c6db87314edb3175340662674872e8df
+  $fToJSONTokenData ::
+    Data.Aeson.Types.Class.ToJSON AuthApi.TokenData
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ AuthApi.TokenData
+                  AuthApi.$fToJSONTokenData_$ctoJSON
+                  AuthApi.$fToJSONTokenData_$ctoEncoding -}
+c6db87314edb3175340662674872e8df
+  $fToJSONTokenData1 ::
+    AuthApi.TokenData
+    -> Data.Aeson.Types.Generic.Tagged
+         Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: AuthApi.TokenData) ->
+                 case w of ww { AuthApi.TokenData ww1 ww2 ->
+                 case AuthApi.$w$ctoJSON1 ww1 ww2 of ww3 { Unit# ww4 ->
+                 (Data.Aeson.Types.Internal.Object ww4)
+                   `cast`
+                 (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
+                           <Data.Aeson.Types.Generic.True>_P
+                           <Data.Aeson.Types.Internal.Value>_R)) } }) -}
+e8a914fa82ca00e41840e9851064221c
+  $fToJSONTokenData2 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
                         @ Data.Text.Internal.Text
-                        AuthApi.$fToJSONToken5 of ds7 { (#,#) ipv ipv1 ->
+                        AuthApi.$fToJSONTokenData3 of ds7 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-20a28968fb8c8cedf89cbe0b7d29f38c
-  $fToJSONToken5 ::
+58b72d062d8396985745a826392ee19f
+  $fToJSONTokenData3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -1393,14 +1771,61 @@ eaf162a125d4326d51cb8ecf746cece0
                  Data.Aeson.Types.Generic.$wouter6
                    (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
                    Data.Aeson.Types.Generic.$fFromPairM2
-                   AuthApi.$fFromJSONToken5
+                   AuthApi.$fFromJSONTokenData10
                    0#
                    ipv }) -}
-621fd329e5e9e92e2a797ae7d88d5ec4
-  $fToJSONToken_$ctoEncoding ::
-    AuthApi.Token -> Data.Aeson.Types.Internal.Encoding
+9f904a77104a9a9b3481116e850f24a6
+  $fToJSONTokenData4 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        AuthApi.$fToJSONTokenData5 of ds7 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+aa7b68ff14dae31a2fa135369e51f925
+  $fToJSONTokenData5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds7 { (#,#) ipv ipv1 ->
+                 Data.Aeson.Types.Generic.$wouter6
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Aeson.Types.Generic.$fFromPairM2
+                   AuthApi.$fFromJSONTokenData5
+                   0#
+                   ipv }) -}
+c6db87314edb3175340662674872e8df
+  $fToJSONTokenData_$ctoEncoding ::
+    AuthApi.TokenData -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: AuthApi.TokenData) ->
+                 Data.Aeson.Encode.Builder.encodeToBuilder
+                   (AuthApi.$fToJSONTokenData_$ctoJSON eta))
+                  `cast`
+                (<AuthApi.TokenData>_R
+                 ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
+c6db87314edb3175340662674872e8df
+  $fToJSONTokenData_$ctoJSON ::
+    AuthApi.TokenData -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
+     Unfolding: InlineRule (0, True, True)
+                AuthApi.$fToJSONTokenData1
+                  `cast`
+                (<AuthApi.TokenData>_R
+                 ->_R Data.Aeson.Types.Generic.N:Tagged[0]
+                          <Data.Aeson.Types.Generic.True>_P
+                          <Data.Aeson.Types.Internal.Value>_R) -}
+e255ab3803b7e22f6ef93498dc63f478
+  $fToJSONToken_$ctoEncoding ::
+    AuthApi.Token -> Data.Aeson.Types.Internal.Encoding
+  {- Arity: 1, Strictness: <L,1*U(1*U)>, Inline: INLINE (sat-args=0),
      Unfolding: InlineRule (0, False, False)
                 (\ (eta :: AuthApi.Token) ->
                  Data.Aeson.Encode.Builder.encodeToBuilder
@@ -1408,10 +1833,10 @@ eaf162a125d4326d51cb8ecf746cece0
                   `cast`
                 (<AuthApi.Token>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-621fd329e5e9e92e2a797ae7d88d5ec4
+e255ab3803b7e22f6ef93498dc63f478
   $fToJSONToken_$ctoJSON ::
     AuthApi.Token -> Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
+  {- Arity: 1, Strictness: <L,1*U(1*U)>m1,
      Unfolding: InlineRule (0, True, True)
                 AuthApi.$fToJSONToken1
                   `cast`
@@ -1419,95 +1844,124 @@ eaf162a125d4326d51cb8ecf746cece0
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-15fb304ac20d304ea6f33cde981b700b
+43875ef60212ee88c82b05f7332afd58
   $tc'ResponseData :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   4918827206497009738##
-                   7772470371551903084##
+                   16684857577258148411##
+                   9976237727270280777##
                    AuthApi.$trModule
                    AuthApi.$tc'ResponseData1) -}
-157c2c89d8f843432d362628d1083cfb
+d01c9d935802b72b1f238c00dc4dbdd3
   $tc'ResponseData1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'ResponseData"#) -}
-14e881178200612c9f9f490011d41f1e
-  $tc'ResponseToken :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   17801855100728701099##
-                   641283367136640463##
-                   AuthApi.$trModule
-                   AuthApi.$tc'ResponseToken1) -}
-59861a74e06f3ac365a9c7542cc16278
-  $tc'ResponseToken1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'ResponseToken"#) -}
-83683a17cac7454d897de0080c2f598e
+982934cc2f32d160f4ac89efca07ebd8
   $tc'Token :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   14828898529528609123##
-                   15149148701537932119##
+                   8544034586835448196##
+                   16588054497942654270##
                    AuthApi.$trModule
                    AuthApi.$tc'Token1) -}
-3d9938377f0829bce4309dcb00d90ec6
+b7850c6fe72ac4783216499d511eb966
   $tc'Token1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'Token"#) -}
-48e7d3b09d45b6e6586974dec3a6ef4c
+c1c95f265c9218f96356b12f0f9606dc
+  $tc'TokenData :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17805288785966690176##
+                   16793234328208626774##
+                   AuthApi.$trModule
+                   AuthApi.$tc'TokenData1) -}
+976f85df66b1de2da192a88c13616135
+  $tc'TokenData1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'TokenData"#) -}
+d68bc7421a43287dadb8a664e6b66400
   $tcResponseData :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   4321660505111957429##
-                   7604130017784662314##
+                   5260985476836338749##
+                   11725152874671312860##
                    AuthApi.$trModule
                    AuthApi.$tcResponseData1) -}
-2d592e096a40334ed2f7fb6d6bf5d5d9
+366a9c6422cd3a82f8fde4a8bbfcf228
   $tcResponseData1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "ResponseData"#) -}
-c6b29cf171d06b6c927cae76777a8977
-  $tcResponseToken :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   2352345356482042139##
-                   6374346758287037886##
-                   AuthApi.$trModule
-                   AuthApi.$tcResponseToken1) -}
-0d8b9cd523f9a88dc4d0bcd51d821380
-  $tcResponseToken1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "ResponseToken"#) -}
-bc527bcf5692a4037feeffae8efb18a5
+a3c339393ac0fd0f4f7d3c4bdb6f5592
   $tcToken :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   10949304296303773868##
-                   7525291642515699516##
+                   15832651302254404879##
+                   16361263016578295863##
                    AuthApi.$trModule
                    AuthApi.$tcToken1) -}
-1ab082dbe1a3ef4d5574802ecbc72df6
+e7511d27a400be4eb478a992cf235ac3
   $tcToken1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Token"#) -}
-917307fbcc22b095fc2bb5d5ea76bc62
+7bbe08c3409d5a45a2c7163e776b1815
+  $tcTokenData :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3008018656078445492##
+                   2367988850314200885##
+                   AuthApi.$trModule
+                   AuthApi.$tcTokenData1) -}
+a2c4076976f875c6f07cd32dc41b56fd
+  $tcTokenData1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "TokenData"#) -}
+9b8c73b3264a73ff00e032d05d08fd74
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    AuthApi.$trModule2
                    AuthApi.$trModule1) -}
-73489a4b8faf3da0ba004ec44f239d53
+b1161752031bbdf00b54d15995fcb156
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "AuthApi"#) -}
-80c41e8d8511dd5fc12fcc30a3dfafe4
+5c244b61d4b107168227ea42b588798c
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"#) -}
-caefca3235cfc47ba70c5391afcdeb4f
+                   "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"#) -}
+4b4fd468f0309b34217ac129d5d79547
   $w$ctoJSON ::
+    GHC.Base.String
+    -> GHC.Types.Bool -> (# Data.Aeson.Types.Internal.Object #)
+  {- Arity: 2, Strictness: <L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String) (ww1 :: GHC.Types.Bool) ->
+                 case Data.Aeson.Types.Internal.$sfromList1
+                        @ Data.Aeson.Types.Internal.Value
+                        (GHC.Types.:
+                           @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
+                           (AuthApi.$fToJSONResponseData6,
+                            case AuthApi.$w$dGToJSON
+                                   @ GHC.Prim.Any
+                                   ww
+                                     `cast`
+                                   (Sym (GHC.Generics.N:K1[0]
+                                             <GHC.Generics.R>_P
+                                             <GHC.Base.String>_R
+                                             <GHC.Prim.Any>_P)) of ww2 { Unit# ww3 ->
+                            Data.Aeson.Types.Internal.String ww3 })
+                           (GHC.Types.:
+                              @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
+                              (AuthApi.$fToJSONResponseData2,
+                               Data.Aeson.Types.Internal.$WBool ww1)
+                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair)))
+                        (Data.HashMap.Base.Empty
+                           @ Data.Text.Internal.Text
+                           @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
+                 (# dt #) }) -}
+9fd11ed31b5d79ceb8fcff41a7e346bb
+  $w$ctoJSON1 ::
     GHC.Base.String
     -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
   {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [0],
@@ -1516,7 +1970,7 @@ caefca3235cfc47ba70c5391afcdeb4f
                         @ Data.Aeson.Types.Internal.Value
                         (GHC.Types.:
                            @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
-                           (AuthApi.$fToJSONToken4,
+                           (AuthApi.$fToJSONTokenData4,
                             case AuthApi.$w$dGToJSON2
                                    @ GHC.Prim.Any
                                    ww
@@ -1528,7 +1982,7 @@ caefca3235cfc47ba70c5391afcdeb4f
                             Data.Aeson.Types.Internal.String ww3 })
                            (GHC.Types.:
                               @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
-                              (AuthApi.$fToJSONToken2,
+                              (AuthApi.$fToJSONTokenData2,
                                case AuthApi.$w$dGToJSON2
                                       @ GHC.Prim.Any
                                       ww1
@@ -1543,7 +1997,7 @@ caefca3235cfc47ba70c5391afcdeb4f
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
                  (# dt #) }) -}
-2410bc2c6499aab7d360fb4afbd4a4b9
+e4ef7b720ccec81e92e300ea7396cffe
   $w$dConsFromJSON' ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -1630,8 +2084,8 @@ caefca3235cfc47ba70c5391afcdeb4f
                                  'GHC.Generics.NoSourceStrictness
                                  'GHC.Generics.DecidedLazy)
                             @ (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
-                            AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel1
-                            AuthApi.$fFromJSONToken6
+                            AuthApi.$fFromJSONTokenData_$s$fSelectorMetaMetaSel1
+                            AuthApi.$fFromJSONTokenData6
                               `cast`
                             (Sym (Data.Aeson.Types.Class.N:GFromJSON[0]
                                       <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char]>_N))
@@ -1658,8 +2112,8 @@ caefca3235cfc47ba70c5391afcdeb4f
                                  'GHC.Generics.NoSourceStrictness
                                  'GHC.Generics.DecidedLazy)
                             @ (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
-                            AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel
-                            AuthApi.$fFromJSONToken6
+                            AuthApi.$fFromJSONTokenData_$s$fSelectorMetaMetaSel
+                            AuthApi.$fFromJSONTokenData6
                               `cast`
                             (Sym (Data.Aeson.Types.Class.N:GFromJSON[0]
                                       <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char]>_N))
@@ -1802,7 +2256,7 @@ caefca3235cfc47ba70c5391afcdeb4f
                                                  'GHC.Generics.DecidedLazy)
                                               (GHC.Generics.Rec0 GHC.Base.String))
                                            a)>_R))) }) -}
-fdc4af2c447aef8ab9418d4ce5c5f3f6
+00a4c78e379f51aa9c690da033700975
   $w$dGFromJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -1815,7 +2269,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
                        DEFAULT
                        -> Data.Aeson.Types.Class.typeMismatch
                             @ [GHC.Types.Char]
-                            AuthApi.$fFromJSONToken7
+                            AuthApi.$fFromJSONToken3
                             wild
                        Data.Aeson.Types.Internal.String txt
                        -> case txt of wild1 { Data.Text.Internal.Text dt dt1 dt2 ->
@@ -1906,7 +2360,111 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1>_R))) -}
-3b8d346645b8780036e8e7fc92df34be
+a7e7998c73c2f76bda5d99d814ee8042
+  $w$dGFromJSON1 ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1)
+  {- Arity: 1, Strictness: <L,1*U>, Inline: [0],
+     Unfolding: (\ @ a1 (w :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser [GHC.Types.Char]
+                   = case w of wild {
+                       DEFAULT
+                       -> Data.Aeson.Types.Class.typeMismatch
+                            @ [GHC.Types.Char]
+                            AuthApi.$fFromJSONToken3
+                            wild
+                       Data.Aeson.Types.Internal.String txt
+                       -> case txt of wild1 { Data.Text.Internal.Text dt dt1 dt2 ->
+                          let {
+                            a2 :: [GHC.Types.Char]
+                            = let {
+                                end :: GHC.Prim.Int# = GHC.Prim.+# dt1 dt2
+                              } in
+                              letrec {
+                                $wunfold :: GHC.Prim.Int# -> [GHC.Types.Char]
+                                  {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                                = \ (ww :: GHC.Prim.Int#) ->
+                                  case GHC.Prim.tagToEnum#
+                                         @ GHC.Types.Bool
+                                         (GHC.Prim.>=# ww end) of wild2 {
+                                    GHC.Types.False
+                                    -> case GHC.Prim.indexWord16Array# dt ww of r# { DEFAULT ->
+                                       case GHC.Prim.tagToEnum#
+                                              @ GHC.Types.Bool
+                                              (GHC.Prim.geWord# r# 55296##) of wild3 {
+                                         GHC.Types.False
+                                         -> GHC.Types.:
+                                              @ GHC.Types.Char
+                                              (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                              ($wunfold (GHC.Prim.+# ww 1#))
+                                         GHC.Types.True
+                                         -> case GHC.Prim.tagToEnum#
+                                                   @ GHC.Types.Bool
+                                                   (GHC.Prim.leWord# r# 56319##) of wild4 {
+                                              GHC.Types.False
+                                              -> GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   (GHC.Types.C#
+                                                      (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                                   ($wunfold (GHC.Prim.+# ww 1#))
+                                              GHC.Types.True
+                                              -> case GHC.Prim.indexWord16Array#
+                                                        dt
+                                                        (GHC.Prim.+# ww 1#) of r#1 { DEFAULT ->
+                                                 GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   (GHC.Types.C#
+                                                      (GHC.Prim.chr#
+                                                         (GHC.Prim.+#
+                                                            (GHC.Prim.+#
+                                                               (GHC.Prim.uncheckedIShiftL#
+                                                                  (GHC.Prim.-#
+                                                                     (GHC.Prim.word2Int# r#)
+                                                                     55296#)
+                                                                  10#)
+                                                               (GHC.Prim.-#
+                                                                  (GHC.Prim.word2Int# r#1)
+                                                                  56320#))
+                                                            65536#)))
+                                                   ($wunfold (GHC.Prim.+# ww 2#)) } } } }
+                                    GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
+                              } in
+                              $wunfold dt1
+                          } in
+                          (\ @ (f1 :: * -> *)
+                             @ r
+                             (_path :: Data.Aeson.Types.Internal.JSONPath)
+                             (_kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                             (ks :: Data.Aeson.Types.Internal.Success [GHC.Types.Char] f1 r) ->
+                           ks a2)
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <[GHC.Types.Char]>_R)) } }
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1) f1 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0] <[GHC.Types.Char]>_R)
+                    @ f1
+                    @ r
+                    path
+                    kf
+                    (\ (a2 :: [GHC.Types.Char]) ->
+                     ks
+                       a2
+                         `cast`
+                       (Sym (GHC.Generics.N:K1[0]
+                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P))))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1>_R))) -}
+4ec5b5ee27530b37ba7244c1e5983dfe
   $w$dGToJSON ::
     GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
     -> (# Data.Text.Internal.Text #)
@@ -1923,7 +2481,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
                                 s1 of ds1 { (#,#) ipv ipv1 ->
                          AuthApi.$wouter
                            (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                           AuthApi.$fToJSONResponseData2
+                           AuthApi.$fToJSONResponseData5
                            w `cast`
                            (GHC.Generics.N:K1[0]
                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P)
@@ -1931,7 +2489,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
                            ipv }) of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt #) } }) -}
-503fee03cf63d06f25bc6bc93f4dd532
+94c5711a0dbc3cd93a1330c57da8a184
   $w$dGToJSON1 ::
     GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
     -> (# Data.Text.Internal.Text #)
@@ -1948,7 +2506,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
                                 s1 of ds1 { (#,#) ipv ipv1 ->
                          AuthApi.$wouter1
                            (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                           AuthApi.$fToJSONResponseData2
+                           AuthApi.$fToJSONResponseData5
                            w `cast`
                            (GHC.Generics.N:K1[0]
                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P)
@@ -1956,7 +2514,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
                            ipv }) of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt #) } }) -}
-5a7fc9b60080a93cc1b3ee5720e91340
+6fc8522b1285c359a07a1b3a247915e3
   $w$dGToJSON2 ::
     GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
     -> (# Data.Text.Internal.Text #)
@@ -1973,7 +2531,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
                                 s1 of ds1 { (#,#) ipv ipv1 ->
                          AuthApi.$wouter2
                            (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                           AuthApi.$fToJSONResponseData2
+                           AuthApi.$fToJSONResponseData5
                            w `cast`
                            (GHC.Generics.N:K1[0]
                                 <GHC.Generics.R>_P <[GHC.Types.Char]>_R <a1>_P)
@@ -1981,7 +2539,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
                            ipv }) of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt #) } }) -}
-6928503d561e3d82e9f4bdbe36e6ccca
+c14bf4c52a29b322e9b6ebaf1e8796d3
   $wouter ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -1992,7 +2550,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-3109bc8db21081965deef3f4436280a1
+f2d9694a7983de0f25b022f2e2412a27
   $wouter1 ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -2003,7 +2561,7 @@ fdc4af2c447aef8ab9418d4ce5c5f3f6
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-be955c27bae91f4fb62d50b4e18a0def
+3538454e3c373ddcc8aa115b54fa6c90
   $wouter2 ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -2014,7 +2572,7 @@ be955c27bae91f4fb62d50b4e18a0def
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-cb1af7eee46ce9eefbb753bff443b974
+0641382a03d4c4b2c8468e5036e4dee9
   type AuthServiceApi =
     ("users"
      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
@@ -2022,20 +2580,28 @@ cb1af7eee46ce9eefbb753bff443b974
                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                               '[Servant.API.ContentTypes.JSON]
                                               AuthApi.ResponseData))
-    Servant.API.Alternative.:<|> ("verify"
-                                  Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
-                                                        '[Servant.API.ContentTypes.JSON] Models.User
-                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
-                                                                           '[Servant.API.ContentTypes.JSON]
-                                                                           AuthApi.ResponseToken))
-dc65d435c55992171f18235ce5563a98
+    Servant.API.Alternative.:<|> (("login"
+                                   Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                         '[Servant.API.ContentTypes.JSON]
+                                                         Models.User
+                                                       Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                            '[Servant.API.ContentTypes.JSON]
+                                                                            AuthApi.Token))
+                                  Servant.API.Alternative.:<|> ("verify"
+                                                                Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                                                      '[Servant.API.ContentTypes.JSON]
+                                                                                      AuthApi.Token
+                                                                                    Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                                                         '[Servant.API.ContentTypes.JSON]
+                                                                                                         AuthApi.ResponseData)))
+70fcdda1a527e8afecbc46ea7ed8c52c
   axiom Rep_ResponseData::
       GHC.Generics.Rep AuthApi.ResponseData
         = GHC.Generics.D1
             ('GHC.Generics.MetaData
                "ResponseData"
                "AuthApi"
-               "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
+               "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
@@ -2046,19 +2612,26 @@ dc65d435c55992171f18235ce5563a98
                      'GHC.Generics.NoSourceUnpackedness
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
-                  (GHC.Generics.Rec0 GHC.Base.String)))
-b7e605469736261c995d929fa9b52307
-  axiom Rep_ResponseToken::
-      GHC.Generics.Rep AuthApi.ResponseToken
+                  (GHC.Generics.Rec0 GHC.Base.String)
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "valid")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Types.Bool)))
+e255ab3803b7e22f6ef93498dc63f478
+  axiom Rep_Token::
+      GHC.Generics.Rep AuthApi.Token
         = GHC.Generics.D1
             ('GHC.Generics.MetaData
-               "ResponseToken"
+               "Token"
                "AuthApi"
-               "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
+               "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "ResponseToken" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                  "Token" 'GHC.Generics.PrefixI 'GHC.Types.True)
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
                      ('GHC.Base.Just "token")
@@ -2066,18 +2639,18 @@ b7e605469736261c995d929fa9b52307
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String)))
-621fd329e5e9e92e2a797ae7d88d5ec4
-  axiom Rep_Token::
-      GHC.Generics.Rep AuthApi.Token
+c6db87314edb3175340662674872e8df
+  axiom Rep_TokenData::
+      GHC.Generics.Rep AuthApi.TokenData
         = GHC.Generics.D1
             ('GHC.Generics.MetaData
-               "Token"
+               "TokenData"
                "AuthApi"
-               "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"
+               "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
-                  "Token" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                  "TokenData" 'GHC.Generics.PrefixI 'GHC.Types.True)
                (GHC.Generics.S1
                   ('GHC.Generics.MetaSel
                      ('GHC.Base.Just "email")
@@ -2092,59 +2665,70 @@ b7e605469736261c995d929fa9b52307
                                       'GHC.Generics.NoSourceStrictness
                                       'GHC.Generics.DecidedLazy)
                                    (GHC.Generics.Rec0 GHC.Base.String)))
-dc65d435c55992171f18235ce5563a98
-  data ResponseData = ResponseData {status :: GHC.Base.String}
-b7e605469736261c995d929fa9b52307
-  data ResponseToken = ResponseToken {token :: GHC.Base.String}
-621fd329e5e9e92e2a797ae7d88d5ec4
-  data Token
-    = Token {email :: GHC.Base.String, expiryTime :: GHC.Base.String}
-f7bde545870ddfd644843e5856d5bc7e
-  email :: AuthApi.Token -> GHC.Base.String
-  RecSel Left AuthApi.Token
+70fcdda1a527e8afecbc46ea7ed8c52c
+  data ResponseData
+    = ResponseData {status :: GHC.Base.String, valid :: GHC.Types.Bool}
+e255ab3803b7e22f6ef93498dc63f478
+  data Token = Token {token :: GHC.Base.String}
+c6db87314edb3175340662674872e8df
+  data TokenData
+    = TokenData {email :: GHC.Base.String,
+                 expiryTime :: GHC.Base.String}
+6b5d7f239e5a0fe1bb6004346b67381b
+  email :: AuthApi.TokenData -> GHC.Base.String
+  RecSel Left AuthApi.TokenData
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
-                (\ (ds :: AuthApi.Token) ->
-                 case ds of wild { AuthApi.Token ds1 ds2 -> ds1 }) -}
-679293c019ad9545cf68b3ee55a7ae5d
-  expiryTime :: AuthApi.Token -> GHC.Base.String
-  RecSel Left AuthApi.Token
+                (\ (ds :: AuthApi.TokenData) ->
+                 case ds of wild { AuthApi.TokenData ds1 ds2 -> ds1 }) -}
+93fa41d6683c62384307a0c2990ba7a8
+  expiryTime :: AuthApi.TokenData -> GHC.Base.String
+  RecSel Left AuthApi.TokenData
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
-                (\ (ds :: AuthApi.Token) ->
-                 case ds of wild { AuthApi.Token ds1 ds2 -> ds2 }) -}
-83818112c0a5c2bce9effd7abdb791b6
+                (\ (ds :: AuthApi.TokenData) ->
+                 case ds of wild { AuthApi.TokenData ds1 ds2 -> ds2 }) -}
+5833605c5750a809aa66881327f5521c
   status :: AuthApi.ResponseData -> GHC.Base.String
   RecSel Left AuthApi.ResponseData
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: AuthApi.ResponseData) ->
-                 case ds of wild { AuthApi.ResponseData ds1 -> ds1 }) -}
-850d58b23013459a5c309a4e1d9fe1c5
-  token :: AuthApi.ResponseToken -> GHC.Base.String
-  RecSel Left AuthApi.ResponseToken
+                 case ds of wild { AuthApi.ResponseData ds1 ds2 -> ds1 }) -}
+f19fb7ceee1aafdf37472788c93e1e7a
+  token :: AuthApi.Token -> GHC.Base.String
+  RecSel Left AuthApi.Token
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
      Unfolding: InlineRule (1, True, False)
-                (\ (ds :: AuthApi.ResponseToken) ->
-                 case ds of wild { AuthApi.ResponseToken ds1 -> ds1 }) -}
+                (\ (ds :: AuthApi.Token) ->
+                 case ds of wild { AuthApi.Token ds1 -> ds1 }) -}
+56133805829f3f85fe55b4f979d57092
+  valid :: AuthApi.ResponseData -> GHC.Types.Bool
+  RecSel Left AuthApi.ResponseData
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: AuthApi.ResponseData) ->
+                 case ds of wild { AuthApi.ResponseData ds1 ds2 -> ds2 }) -}
 instance Data.Aeson.Types.Class.FromJSON [AuthApi.Token]
   = AuthApi.$fFromJSONToken
+instance Data.Aeson.Types.Class.FromJSON [AuthApi.TokenData]
+  = AuthApi.$fFromJSONTokenData
 instance GHC.Generics.Generic [AuthApi.ResponseData]
   = AuthApi.$fGenericResponseData
-instance GHC.Generics.Generic [AuthApi.ResponseToken]
-  = AuthApi.$fGenericResponseToken
 instance GHC.Generics.Generic [AuthApi.Token]
   = AuthApi.$fGenericToken
+instance GHC.Generics.Generic [AuthApi.TokenData]
+  = AuthApi.$fGenericTokenData
 instance Data.Aeson.Types.Class.ToJSON [AuthApi.ResponseData]
   = AuthApi.$fToJSONResponseData
-instance Data.Aeson.Types.Class.ToJSON [AuthApi.ResponseToken]
-  = AuthApi.$fToJSONResponseToken
 instance Data.Aeson.Types.Class.ToJSON [AuthApi.Token]
   = AuthApi.$fToJSONToken
+instance Data.Aeson.Types.Class.ToJSON [AuthApi.TokenData]
+  = AuthApi.$fToJSONTokenData
+family instance GHC.Generics.Rep [AuthApi.TokenData]
+  = AuthApi.Rep_TokenData
 family instance GHC.Generics.Rep [AuthApi.Token]
   = AuthApi.Rep_Token
-family instance GHC.Generics.Rep [AuthApi.ResponseToken]
-  = AuthApi.Rep_ResponseToken
 family instance GHC.Generics.Rep [AuthApi.ResponseData]
   = AuthApi.Rep_ResponseData
 "SPEC/AuthApi $fSelectorMetaMetaSel @ ('Just
@@ -2165,7 +2749,7 @@ family instance GHC.Generics.Rep [AuthApi.ResponseData]
                                      $dSingI1
                                      $dSingI2
                                      $dSingI3
-  = AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel
+  = AuthApi.$fFromJSONTokenData_$s$fSelectorMetaMetaSel
 "SPEC/AuthApi $fSelectorMetaMetaSel @ ('Just
                                         "expiryTime") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                ('GHC.Base.Just
@@ -2184,7 +2768,26 @@ family instance GHC.Generics.Rep [AuthApi.ResponseData]
                                      $dSingI1
                                      $dSingI2
                                      $dSingI3
-  = AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel1
+  = AuthApi.$fFromJSONTokenData_$s$fSelectorMetaMetaSel1
+"SPEC/AuthApi $fSelectorMetaMetaSel @ ('Just
+                                        "token") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                          ('GHC.Base.Just
+                                                                                                                                                                                             "token"))
+                                                                                                                                                                            ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                           'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                            ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                           'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                            ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                           'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "token")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel
 "SPEC/AuthApi $fSelectorMetaMetaSel_$cselName @ ('Just
                                                   "email") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                               ('GHC.Base.Just
@@ -2204,7 +2807,7 @@ family instance GHC.Generics.Rep [AuthApi.ResponseData]
                                                $dSingI1
                                                $dSingI2
                                                $dSingI3
-  = AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName
+  = AuthApi.$fFromJSONTokenData_$s$fSelectorMetaMetaSel_$cselName
 "SPEC/AuthApi $fSelectorMetaMetaSel_$cselName @ ('Just
                                                   "expiryTime") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                                    ('GHC.Base.Just
@@ -2224,7 +2827,27 @@ family instance GHC.Generics.Rep [AuthApi.ResponseData]
                                                $dSingI1
                                                $dSingI2
                                                $dSingI3
-  = AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName1
+  = AuthApi.$fFromJSONTokenData_$s$fSelectorMetaMetaSel_$cselName1
+"SPEC/AuthApi $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                  "token") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                              ('GHC.Base.Just
+                                                                                                                                                                                                                 "token"))
+                                                                                                                                                                                                ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                               'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                               'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                               'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "token")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = AuthApi.$fFromJSONToken_$s$fSelectorMetaMetaSel_$cselName
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

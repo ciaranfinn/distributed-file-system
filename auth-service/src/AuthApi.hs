@@ -4,7 +4,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeOperators     #-}
 
-module AuthApi (AuthServiceApi,ResponseData(..),ResponseToken(..),Token(..)) where
+module AuthApi (AuthServiceApi,ResponseData(..),Token(..),TokenData(..)) where
 
 import Servant
 import Models
@@ -14,18 +14,19 @@ import Data.Aeson
 import Data.Aeson.TH
 
 data ResponseData = ResponseData
-                  { status :: String
-                  } deriving (Generic, ToJSON)
-
-data ResponseToken = ResponseToken
-                  { token :: String
+                  { status :: String,
+                    valid :: Bool
                   } deriving (Generic, ToJSON)
 
 data Token = Token
+             { token :: String
+             } deriving (Generic, ToJSON,FromJSON)
+
+data TokenData = TokenData
              { email :: String,
                expiryTime :: String
              } deriving (Generic, ToJSON, FromJSON)
 
 
-type AuthServiceApi = "users" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
-                  :<|>"verify" :> ReqBody '[JSON] User :> Post '[JSON] ResponseToken
+type AuthServiceApi = "create" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
+                  :<|>"login" :> ReqBody '[JSON] User :> Post '[JSON] Token

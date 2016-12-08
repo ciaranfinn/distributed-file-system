@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-07 18:00:07.201548 UTC
+2016-12-08 14:29:27.409947 UTC
 
-interface auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:Service 8001
-  interface hash: 8d62f508812951acb88819b43f31fb0c
-  ABI hash: 241b8f32f5526f372b638909e2e0ddcd
-  export-list hash: c729b44b3f02ee3e5c1d372d381a2705
-  orphan hash: aca8d8dbc934a451fce892925d39e0d2
+interface auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:Service 8001
+  interface hash: 5a57bbdc88e7319710bfeb45cb6550d9
+  ABI hash: 212461feb0febbb678ca9853b04088c1
+  export-list hash: ffb7f06d82ac94e558c5690221037a77
+  orphan hash: a9b059250aadeaa452a78e8c5d2ebabf
   flag hash: cb79fe25b2e43a87f3e6eff39d25ce76
   sig of: Nothing
   used TH splices: False
@@ -18,6 +18,8 @@ exports:
   Service.authService
   Service.convertApp
   Service.createUser
+  Service.decrypt
+  Service.encrypt
   Service.getToken
   Service.iso8601
   Service.secretKey
@@ -138,8 +140,8 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
-                         auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:AuthApi
-                         auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU:Models
+                         auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:AuthApi
+                         auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:Models
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
                          base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
@@ -188,39 +190,43 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 5c6008252675af8a24566bc8465eebdc
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Encode.Functions f206417fc4decb2bce8d36accb55ccf8
-import  -/  AuthApi 3da916033f0b030d07027517c255271e
-  exports: 75723a35b07df244ae1b135d33f41211
-  AuthServiceApi cb1af7eee46ce9eefbb753bff443b974
-  ResponseData 83aa84a2eaaac02ad18beac38c63b23a
-  ResponseData dc65d435c55992171f18235ce5563a98
-  ResponseToken 4b168e8f84718d3af817291d27936852
-  ResponseToken b7e605469736261c995d929fa9b52307
-  Token 671f45ce5cc20fe55c7e8fe71ab50a99
-  email f7bde545870ddfd644843e5856d5bc7e
-  expiryTime 679293c019ad9545cf68b3ee55a7ae5d
-  status 83818112c0a5c2bce9effd7abdb791b6
-  token 850d58b23013459a5c309a4e1d9fe1c5
-import  -/  Models c845168f25478b68c3add6967b52ad6f
-  exports: a53e57fa6ca74bca2bcdbd24ada5383c
-  User 2645ba58eff83d9fd535972fa7916fa6
-  User b7365e6a16ec2a76b4fc276c9e8eb90a
-  UserEmail c17d39f80b483df0190fe54785059db7
-  dbAction b4f6e134d819e211ab08a47ff394151b
-  userEmail 5b66c3891c896a4b1316c64f4ba063f7
-  userPassword a79f368643e916c1db63cbda6f04994c
+import  -/  AuthApi 2c103f100406c2740eea97e64c6aa774
+  exports: ac0294f42031e987f827148f1f354656
+  AuthServiceApi 6f32975f448cefd5862e781439b5ae02
+  ResponseData d5cb59b06c65b3f6826c3c4b491f1bef
+  ResponseData b3ea9835232979904b9d96f3162c197e
+  ResponseToken 27535c42d3abc0bcd2b666346c77f422
+  ResponseToken cee7b7d818781264a88c15fdc6cc3241
+  Token b10677b595d2e9bc2e8c583cfb3f8c28
+  email f53468487543ef214874ee6c140737a0
+  expiryTime 865b53140c469d584acd0aa452e54bb1
+  status f14c2b7950628a0c00876d3bd4952d81
+  token 9983b2e73eec0bb363170d03391e658b
+import  -/  Models 6b88886524ba0346e4244bb7af6c6bd0
+  exports: be767d544c2e9265f6d4fb2f70eeed39
+  User abb5de8e4cf08f82e03bc0e62544e755
+  User fb341dca24a5b678c5c687d70314f39f
+  UserEmail eac819e4e1dfecfd334b8c560c8f43ee
+  dbAction e6bec5ed03813d568557147bec56acd8
+  userEmail ef00ffb280fbaacfdf706cd9905d4a69
+  userPassword f55d91e344dc12f5d84b1991da6d64ee
 import  -/  base-4.9.0.0:Control.Monad.IO.Class d702028d883e700bd7066b031147030d
 import  -/  base-4.9.0.0:Data.Either bd9f099b82d4ed2d98c56d7144ac6957
 import  -/  base-4.9.0.0:Data.Proxy aa86c72628cf3b1ceb0816ca84687d80
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
 import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-In9M41tLtcS9QYt3QpGpNY:Data.ByteString.Base64 b407f36d6ece28c80c59592650712bcc
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString 1e4e7fc94303c79e3e10c7f5054420f7
-import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 6aef0058c6bf280aaddfe6ef70d5f28b
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Internal 96a214b84fd13ce168aecf88c70c8f1b
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy.Char8 22406b4bf44ab096084a9ba406db8a02
 import  -/  cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU:Crypto.Cipher.AES 650d8d9fdd96ebaeb5fc63da84cd1ee9
 import  -/  cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU:Crypto.Cipher.Types dd4ddfc0798c95399d91c82484d5dd30
+import  -/  cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU:Crypto.Cipher.Types.Base ec3e55f8dee939bd1c1d00f6b30ad0c0
+import  -/  cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU:Crypto.Cipher.Types.Block 527f5fb66ed182cec351582b1dc74e8a
 import  -/  cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU:Crypto.Error 9106a17a690c49dd6757058b5efd7885
+import  -/  cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU:Crypto.Error.Types 80a59e9d5bead380717da8dff2c29834
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 import  -/  mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM:Control.Monad.Error.Class f139fe3464686c34428880c6a5173636
 import  -/  mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM:Control.Monad.Except 99ba8f4995df0e7f2f512551a0ca666a
@@ -248,8 +254,9 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format 27cb95f964a30cb92bacdbe49
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Locale c145edcf6f9ed5eb13f88f2adc21a4ef
 import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Except 71b1d86204f6908788cb5223e3c73193
 import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Reader e4096b104cf1a0df8752e81669ef6a24
+import  -/  utf8-string-1.0.1.1@utf8-string-1.0.1.1-2T8mBCuEDlXDo8zed8Onw4:Data.ByteString.UTF8 c44468ec1478e8da6c2629fe45659b96
 import  -/  wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW:Network.Wai d1b73469fdcbc6b9af0b9cdf32c02363
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fApplicativeApp :: GHC.Base.Applicative Service.App
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -260,7 +267,7 @@ import  -/  wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW:Network.Wai d1b73469fd
                   Service.$fApplicativeApp_$c<*>
                   Service.$fApplicativeApp_$c*>
                   Service.$fApplicativeApp_$c<* -}
-58bd7b98eb6c15f21a5f2de0c908a8b4
+d8ab3a3ebf9434ac68daaae84cb3a57d
   $fApplicativeApp1 ::
     Control.Monad.Trans.Reader.ReaderT
       (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend)
@@ -346,7 +353,7 @@ import  -/  wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW:Network.Wai d1b73469fd
                             Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                          <b>_N)
                       eta2)) -}
-c3053ce204085258f4d18ff6fb389b52
+455f1a4d8ea2d938a5213661b037e774
   $fApplicativeApp2 ::
     Control.Monad.Trans.Reader.ReaderT
       (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend)
@@ -428,7 +435,7 @@ c3053ce204085258f4d18ff6fb389b52
                             Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                          <b>_N)
                       eta2)) -}
-bc3d67c9118ff269d73e284408160655
+2a3de035fb250050a31952400d9b1d69
   $fApplicativeApp3 ::
     Data.Either.Either
       Servant.Server.Internal.ServantErr.ServantErr (b -> b)
@@ -438,10 +445,10 @@ bc3d67c9118ff269d73e284408160655
                    @ Servant.Server.Internal.ServantErr.ServantErr
                    @ (b -> b)
                    (Service.$fApplicativeApp4 @ b)) -}
-99b9f341179f12abd52c2307a3fb4b5c
+c16771c4c29533a9f78cb94e5799c1d9
   $fApplicativeApp4 :: b -> b
   {- Arity: 1, HasNoCafRefs, Unfolding: (\ @ b (eta :: b) -> eta) -}
-c8ef1ee8fbdfe2f3ed51585a783597e9
+0cf1e29eb05d11067125c52bc1b3f9fe
   $fApplicativeApp5 ::
     a
     -> Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
@@ -461,7 +468,7 @@ c8ef1ee8fbdfe2f3ed51585a783597e9
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ a
                       eta #)) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fApplicativeApp_$c*> ::
     Service.App a -> Service.App b -> Service.App b
   {- Arity: 3, Strictness: <L,C(C1(U(U,1*U)))><L,1*C1(U)><L,U>,
@@ -480,7 +487,7 @@ c8ef1ee8fbdfe2f3ed51585a783597e9
                                        Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                                     <b>_N))
                           (Sym (Service.N:App[0]) <b>_N)) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fApplicativeApp_$c<* ::
     Service.App a -> Service.App b -> Service.App a
   {- Arity: 3, Strictness: <L,C(C1(U(U,1*U)))><L,1*C1(U)><L,U>,
@@ -499,7 +506,7 @@ c8ef1ee8fbdfe2f3ed51585a783597e9
                                        Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                                     <a>_N))
                           (Sym (Service.N:App[0]) <a>_N)) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fApplicativeApp_$c<*> ::
     Service.App (a -> b) -> Service.App a -> Service.App b
   {- Arity: 3, Strictness: <L,1*C1(U)><L,1*C1(U)><L,U>,
@@ -511,7 +518,7 @@ c8ef1ee8fbdfe2f3ed51585a783597e9
                  Sym (Service.N:App[0]) <a -> b>_N
                  ->_R Sym (Service.N:App[0]) <a>_N
                  ->_R Sym (Service.N:App[0]) <b>_N) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fApplicativeApp_$cpure :: a -> Service.App a
   {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -540,11 +547,11 @@ c8ef1ee8fbdfe2f3ed51585a783597e9
                                             GHC.Types.IO>_R
                                          <a>_N))
                                (Sym (Service.N:App[0]) <a>_N))) -}
-773305913e3a2c65267f0235c58c937b
+e83082f856e8cefbdc25bf8ea8fc558f
   $fApplicativeApp_$dFunctor :: GHC.Base.Functor GHC.Types.IO
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True) GHC.Base.$fFunctorIO -}
-de0739202976279f701dee7b2044fe13
+bc34c683aee3622a4413e6dc14271e52
   $fApplicativeApp_$s$fApplicativeReaderT_$c<*> ::
     Control.Monad.Trans.Reader.ReaderT
       r
@@ -625,7 +632,7 @@ de0739202976279f701dee7b2044fe13
                          @ a
                          v
                          r1))) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fFunctorApp :: GHC.Base.Functor Service.App
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -633,7 +640,7 @@ de0739202976279f701dee7b2044fe13
                   @ Service.App
                   Service.$fFunctorApp_$cfmap
                   Service.$fFunctorApp_$c<$ -}
-ac7fdf186136773cd61e9d62652b75db
+289a1ae62396f08da95fcb9fc31a7a2e
   $fFunctorApp1 ::
     a
     -> Control.Monad.Trans.Reader.ReaderT
@@ -691,7 +698,7 @@ ac7fdf186136773cd61e9d62652b75db
                            @ Servant.Server.Internal.ServantErr.ServantErr
                            @ a
                            eta } #) }) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fFunctorApp_$c<$ :: a -> Service.App b -> Service.App a
   {- Arity: 4, HasNoCafRefs,
      Strictness: <L,U><C(C(S(SL))),1*C1(C1(U(U,1*U)))><L,U><S,U>,
@@ -722,7 +729,7 @@ ac7fdf186136773cd61e9d62652b75db
                                             GHC.Types.IO>_R
                                          <a>_N))
                                (Sym (Service.N:App[0]) <a>_N))) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fFunctorApp_$cfmap :: (a -> b) -> Service.App a -> Service.App b
   {- Arity: 4, HasNoCafRefs,
      Strictness: <L,1*C1(U)><C(C(S(SL))),1*C1(C1(U(U,1*U)))><L,U><S,U>,
@@ -734,7 +741,7 @@ ac7fdf186136773cd61e9d62652b75db
                  <a -> b>_R
                  ->_R Sym (Service.N:App[0]) <a>_N
                  ->_R Sym (Service.N:App[0]) <b>_N) -}
-92a855e5b7597885cba2b32ce098b7f6
+6268e05a7f3a6f236ffb88a11c3a1d86
   $fFunctorApp_$s$fFunctorReaderT_$cfmap ::
     (a -> b)
     -> Control.Monad.Trans.Reader.ReaderT
@@ -852,7 +859,7 @@ ac7fdf186136773cd61e9d62652b75db
                                <Control.Monad.Trans.Except.ExceptT
                                   Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                                <b>_N)) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadApp :: GHC.Base.Monad Service.App
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -863,7 +870,7 @@ ac7fdf186136773cd61e9d62652b75db
                   Service.$fMonadApp_$c>>
                   Service.$fApplicativeApp_$cpure
                   Service.$fMonadApp_$cfail -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadApp_$c>> :: Service.App a -> Service.App b -> Service.App b
   {- Arity: 4, HasNoCafRefs,
      Strictness: <C(C(S(SS))),1*C1(C1(U(U,1*U)))><L,1*C1(C1(U(U,U)))><L,U><S,U>,
@@ -875,7 +882,7 @@ ac7fdf186136773cd61e9d62652b75db
                  Sym (Service.N:App[0]) <a>_N
                  ->_R Sym (Service.N:App[0]) <b>_N
                  ->_R Sym (Service.N:App[0]) <b>_N) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadApp_$c>>= ::
     Service.App a -> (a -> Service.App b) -> Service.App b
   {- Arity: 4, HasNoCafRefs,
@@ -888,7 +895,7 @@ ac7fdf186136773cd61e9d62652b75db
                  Sym (Service.N:App[0]) <a>_N
                  ->_R (<a>_R ->_R Sym (Service.N:App[0]) <b>_N)
                  ->_R Sym (Service.N:App[0]) <b>_N) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadApp_$cfail :: GHC.Base.String -> Service.App a
   {- Arity: 3, Strictness: <B,U><B,A><B,U>x,
      Unfolding: InlineRule (0, True, True)
@@ -897,7 +904,7 @@ ac7fdf186136773cd61e9d62652b75db
                   `cast`
                 (forall (a :: <*>_N).
                  <[GHC.Types.Char]>_R ->_R Sym (Service.N:App[0]) <a>_N) -}
-b10583fe793c26d2b4ac674c54257b4c
+2c7c3f53b901da2ad5a470e0f621133f
   $fMonadApp_$s$fMonadReaderT_$c>> ::
     Control.Monad.Trans.Reader.ReaderT
       r
@@ -1036,7 +1043,7 @@ b10583fe793c26d2b4ac674c54257b4c
                                         <Data.Either.Either
                                            Servant.Server.Internal.ServantErr.ServantErr
                                            b>_R))))) -}
-cd2f6f5ac6edfa93c2def9330c6fed43
+7573200a516eef2897544b75a78ee915
   $fMonadApp_$s$fMonadReaderT_$c>>= ::
     Control.Monad.Trans.Reader.ReaderT
       r
@@ -1177,7 +1184,7 @@ cd2f6f5ac6edfa93c2def9330c6fed43
                                         <Data.Either.Either
                                            Servant.Server.Internal.ServantErr.ServantErr
                                            b>_R))))) -}
-fa7fd8ba764cc49d3a804da1d8480a52
+8c067c7bb38f2172d5539edc9ffe626e
   $fMonadApp_$s$fMonadReaderT_$cfail ::
     GHC.Base.String
     -> Control.Monad.Trans.Reader.ReaderT
@@ -1217,7 +1224,7 @@ fa7fd8ba764cc49d3a804da1d8480a52
                            <Control.Monad.Trans.Except.ExceptT
                               Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                            <a>_N))) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadErrorApp ::
     Control.Monad.Error.Class.MonadError
       Servant.Server.Internal.ServantErr.ServantErr Service.App
@@ -1229,7 +1236,7 @@ fa7fd8ba764cc49d3a804da1d8480a52
                   Service.$fMonadApp
                   Service.$fMonadErrorApp_$cthrowError
                   Service.$fMonadErrorApp_$ccatchError -}
-48b16777307ec7c5f57df70003ea5c3c
+d7d85e46857b31784a0c50f3930494d7
   $fMonadErrorApp1 ::
     Control.Monad.Trans.Reader.ReaderT
       (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend)
@@ -1311,7 +1318,7 @@ fa7fd8ba764cc49d3a804da1d8480a52
                            @ Servant.Server.Internal.ServantErr.ServantErr
                            @ a
                            r #) } }) -}
-9bfb3b13fd05c0c8c9efc02114e3daaf
+8bbb9b1cc319ce98c011402207092da7
   $fMonadErrorApp2 ::
     Servant.Server.Internal.ServantErr.ServantErr
     -> Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
@@ -1331,7 +1338,7 @@ fa7fd8ba764cc49d3a804da1d8480a52
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ a
                       eta #)) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadErrorApp_$ccatchError ::
     Service.App a
     -> (Servant.Server.Internal.ServantErr.ServantErr -> Service.App a)
@@ -1366,7 +1373,7 @@ fa7fd8ba764cc49d3a804da1d8480a52
                                             GHC.Types.IO>_R
                                          <a>_N))
                                (Sym (Service.N:App[0]) <a>_N))) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadErrorApp_$cthrowError ::
     Servant.Server.Internal.ServantErr.ServantErr -> Service.App a
   {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><S,U>,
@@ -1396,13 +1403,13 @@ fa7fd8ba764cc49d3a804da1d8480a52
                                             GHC.Types.IO>_R
                                          <a>_N))
                                (Sym (Service.N:App[0]) <a>_N))) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadIOApp :: Control.Monad.IO.Class.MonadIO Service.App
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ Service.App Service.$fMonadApp Service.$fMonadIOApp_$cliftIO -}
-3ef82d09428bb29911d90811f476f3da
+ab8b335ca064c5160d54daf2033bb237
   $fMonadIOApp1 ::
     GHC.Types.IO a
     -> Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
@@ -1425,7 +1432,7 @@ fa7fd8ba764cc49d3a804da1d8480a52
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ a
                       ipv1 #) }) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadIOApp_$cliftIO :: GHC.Types.IO a -> Service.App a
   {- Arity: 3, HasNoCafRefs,
      Strictness: <C(S(SL)),1*C1(U(U,U))><L,A><S,U>,
@@ -1455,7 +1462,7 @@ fa7fd8ba764cc49d3a804da1d8480a52
                                             GHC.Types.IO>_R
                                          <a>_N))
                                (Sym (Service.N:App[0]) <a>_N))) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadReaderApp ::
     Control.Monad.Reader.Class.MonadReader
       Database.Persist.Sql.Types.ConnectionPool Service.App
@@ -1468,7 +1475,7 @@ fa7fd8ba764cc49d3a804da1d8480a52
                   Service.$fMonadReaderApp_$cask
                   Service.$fMonadReaderApp_$clocal
                   Service.$fMonadReaderApp_$creader -}
-a23a6cc5b86ea1d7bc4864e2949123b7
+8abff469fee37a06633c1ca3a51e8b99
   $fMonadReaderApp1 ::
     (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
      -> a)
@@ -1491,7 +1498,7 @@ a23a6cc5b86ea1d7bc4864e2949123b7
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ a
                       (eta eta1) #)) -}
-219ef2a87ec488a3942ec9574d52bc61
+8e9d356c512d7dc41a013c72c1437592
   $fMonadReaderApp2 ::
     (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
      -> Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend)
@@ -1526,7 +1533,7 @@ a23a6cc5b86ea1d7bc4864e2949123b7
                          Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                       <a>_N)
                    (eta eta2)) -}
-d44ef178c5846c5f328fc2218d9f5989
+74ca85681649fe36a4ed797f3d62e561
   $fMonadReaderApp3 ::
     Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1544,7 +1551,7 @@ d44ef178c5846c5f328fc2218d9f5989
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend)
                       eta #)) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadReaderApp_$cask ::
     Service.App Database.Persist.Sql.Types.ConnectionPool
   {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,U>,
@@ -1574,7 +1581,7 @@ d44ef178c5846c5f328fc2218d9f5989
                                     <Data.Pool.Pool
                                        Database.Persist.Sql.Types.Internal.SqlBackend>_N))
                           (Sym (Service.N:App[0]) <Database.Persist.Sql.Types.ConnectionPool>_N))) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadReaderApp_$clocal ::
     (Database.Persist.Sql.Types.ConnectionPool
      -> Database.Persist.Sql.Types.ConnectionPool)
@@ -1597,7 +1604,7 @@ d44ef178c5846c5f328fc2218d9f5989
                                        Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                                     <a>_N))
                           (Sym (Service.N:App[0]) <a>_N)) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+cc0c2cc70b56b127fae575afe3b90324
   $fMonadReaderApp_$creader ::
     (Database.Persist.Sql.Types.ConnectionPool -> a) -> Service.App a
   {- Arity: 3, HasNoCafRefs, Strictness: <L,1*C1(U)><L,U><S,U>,
@@ -1628,7 +1635,7 @@ d44ef178c5846c5f328fc2218d9f5989
                                             GHC.Types.IO>_R
                                          <a>_N))
                                (Sym (Service.N:App[0]) <a>_N))) -}
-b4bcfeab841be01aec724f7fddb5d990
+f70e8b0f73bd8b7dcdda3e23938a581b
   $s$WUserEmail2 :: [GHC.Types.Char] GHC.Types.~~ [GHC.Types.Char]
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Eq#
@@ -1637,7 +1644,7 @@ b4bcfeab841be01aec724f7fddb5d990
                    @ [GHC.Types.Char]
                    @ [GHC.Types.Char]
                    @~ <[GHC.Types.Char]>_N) -}
-7139178ebda66be21d4892efd589cc77
+9e77bd92d48e5d741547ac33ce3e2ec6
   $s$fAllCTRender:a ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseToken
@@ -1669,14 +1676,14 @@ b4bcfeab841be01aec724f7fddb5d990
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Service.$s$fAllCTRender:a1) -}
-df831b9136833f134b5fbc1a5335b1c9
+e2ac201cf0bba90a190fefb748580004
   $s$fAllCTRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseToken
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
-9adafdc4d219eb2b701ca3dcfb9f8aa7
+3bdeb85163d69e3fbe78d1956107fb76
   $s$fAllCTRender:a2 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> AuthApi.ResponseToken
@@ -1700,14 +1707,14 @@ df831b9136833f134b5fbc1a5335b1c9
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-4904d5a38c370af3d1744bdd29d2aa12
+d7ab250e42198c8b2805691145cd8ddb
   $s$fAllCTRender:a3 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON AuthApi.ResponseToken
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
-d209f1b57f8f5e8a29960b0d103419ac
+4547f99320eb00ec196194fe77c64947
   $s$fAllCTRender:a4 ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
@@ -1739,14 +1746,14 @@ d209f1b57f8f5e8a29960b0d103419ac
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Service.$s$fAllCTRender:a5) -}
-2d79b8fa720abf64b8eed6209aa7d9d1
+8281fb37ed297d4e6cb832ed431c143d
   $s$fAllCTRender:a5 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fAllMimeRender:a1 -}
-6add81d2c893b7f25e96c6f0606f3d8f
+2331fa018bbd6e925235890937517a12
   $s$fAllCTRender:a6 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> AuthApi.ResponseData
@@ -1770,14 +1777,14 @@ d209f1b57f8f5e8a29960b0d103419ac
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-038299a8c6a5a8974c7b5072818fdee1
+fce102b3fff5d92930b3196d4a0a285f
   $s$fAllCTRender:a7 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON AuthApi.ResponseData
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 -}
-79cb93f96a760c29ad5b1116e555215f
+6eb635eb1e2a87db9fc56bc11775dda2
   $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseToken
@@ -1790,7 +1797,7 @@ d209f1b57f8f5e8a29960b0d103419ac
                      @ AuthApi.ResponseToken
                      Service.$s$fAllCTRender:a3)
                   Service.$s$fAllCTRender:a2 -}
-32f123e8fced70f8a76ffe8cf5c96b84
+f9ae211b73754bf93e244034b1abc4fe
   $s$fAllCTRender:a_$s$fAllMimeRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
@@ -1803,7 +1810,7 @@ d209f1b57f8f5e8a29960b0d103419ac
                      @ AuthApi.ResponseData
                      Service.$s$fAllCTRender:a7)
                   Service.$s$fAllCTRender:a6 -}
-511543051c7802f837aa4157db3e2a16
+fad95193146e83d0c338790e6ac7d376
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON AuthApi.ResponseToken
@@ -1816,7 +1823,7 @@ d209f1b57f8f5e8a29960b0d103419ac
                      @ AuthApi.ResponseToken
                      AuthApi.$fToJSONResponseToken)
                   Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
-9be94cb27436288a67c6c8fccd8bef7d
+ac4640e4e8e7fff5f1453260bd628ed9
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON AuthApi.ResponseData
@@ -1829,7 +1836,7 @@ d209f1b57f8f5e8a29960b0d103419ac
                      @ AuthApi.ResponseData
                      AuthApi.$fToJSONResponseData)
                   Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 -}
-fa0717a123badc2c5044012943c96ace
+ded901e1c88f58b28d7667e708ac0cac
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> AuthApi.ResponseToken
@@ -1844,7 +1851,7 @@ fa0717a123badc2c5044012943c96ace
                          (AuthApi.$fToJSONResponseToken_$ctoJSON eta))
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Encoding[0])))) -}
-3ad89c389aeb23a669b1ef0992d1480b
+d087a42e7dc4edcfbe06c0da617e6e3a
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> AuthApi.ResponseData -> Data.ByteString.Lazy.Internal.ByteString
@@ -1858,7 +1865,7 @@ fa0717a123badc2c5044012943c96ace
                          (AuthApi.$fToJSONResponseData_$ctoJSON eta))
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Encoding[0])))) -}
-71d71848caf70eccec2061dce33fd026
+2f67095909fa845394d223576466c927
   $s$fAllMimeUnrender:a ::
     Servant.API.ContentTypes.AllMimeUnrender
       '[Servant.API.ContentTypes.JSON] Models.User
@@ -1878,14 +1885,14 @@ fa0717a123badc2c5044012943c96ace
                      @ '[]
                      Service.$s$fAllMimeUnrender:a1
                      (Servant.API.ContentTypes.$fAllMimeUnrender[]a @ Models.User)) -}
-0be0866d78af29567e4572c800f7f42e
+ffec494153ef81ef1394966d2cee77b1
   $s$fAllMimeUnrender:a1 ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON Models.User
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa -}
-951addafb47685982f8017c3e6c0106f
+4c136ff03daab79ee1f455d57067d070
   $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON Models.User
@@ -1900,7 +1907,7 @@ fa0717a123badc2c5044012943c96ace
                        `cast`
                      (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <Models.User>_N)))
                   Service.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
-b9f9e731e463e66c59f0471bfa0339ae
+54ff7ec3ceb08e46ec04a258c42fa614
   $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -1915,10 +1922,10 @@ b9f9e731e463e66c59f0471bfa0339ae
                      `cast`
                    (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <Models.User>_N))
                    eta) -}
-579193eb482f998ba06ba83c4c61487f
+97a4e9414d40445d851d1151dcb0f25a
   $sserve10 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "users"#) -}
-b9e9d0aeb2a5d5a7ff3e2a0d72928412
+35cb77d4b6c6643e4233c8e38a084161
   $sserve2 ::
     Data.Proxy.Proxy
       (("users"
@@ -1927,7 +1934,7 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                             Servant.API.Sub.:> Servant.API.Verbs.Post
                                                  '[Servant.API.ContentTypes.JSON]
                                                  AuthApi.ResponseData))
-       Servant.API.Alternative.:<|> ("verify"
+       Servant.API.Alternative.:<|> ("login"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -1944,7 +1951,7 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                                   Servant.API.Sub.:> Servant.API.Verbs.Post
                                                        '[Servant.API.ContentTypes.JSON]
                                                        AuthApi.ResponseData))
-             Servant.API.Alternative.:<|> ("verify"
+             Servant.API.Alternative.:<|> ("login"
                                            Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                  '[Servant.API.ContentTypes.JSON]
                                                                  Models.User
@@ -1963,7 +1970,7 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                       '[Servant.API.ContentTypes.JSON]
                                                                       AuthApi.ResponseData))
-                            Servant.API.Alternative.:<|> ("verify"
+                            Servant.API.Alternative.:<|> ("login"
                                                           Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                                 '[Servant.API.ContentTypes.JSON]
                                                                                 Models.User
@@ -1980,7 +1987,7 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                           '[Servant.API.ContentTypes.JSON]
                                                                           AuthApi.ResponseData))
-                                Servant.API.Alternative.:<|> ("verify"
+                                Servant.API.Alternative.:<|> ("login"
                                                               Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                                     '[Servant.API.ContentTypes.JSON]
                                                                                     Models.User
@@ -1998,7 +2005,7 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                                               Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                    '[Servant.API.ContentTypes.JSON]
                                                                    AuthApi.ResponseData))
-                         Servant.API.Alternative.:<|> ("verify"
+                         Servant.API.Alternative.:<|> ("login"
                                                        Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                              '[Servant.API.ContentTypes.JSON]
                                                                              Models.User
@@ -2007,7 +2014,7 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                                                                                                 AuthApi.ResponseToken))))
                    w1
                    w2 }) -}
-49b2574fc44bda8cb15c874a5e8da2af
+572415ae70126ddfc80383220785b88d
   $sserve3 ::
     Data.Proxy.Proxy
       (Servant.API.Verbs.Verb
@@ -2062,10 +2069,10 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                            200
                            '[Servant.API.ContentTypes.JSON]
                            AuthApi.ResponseToken)) }) -}
-4d66860287fa5add70d3d469d2a3517b
+1684c72451854c4da264cef952cd9c04
   $sserve4 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (200) -}
-72f384c8591f85c2e599487c15216e33
+cc3fb96c0bb97997796a469bc96c9f7e
   $sserve5 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -2083,10 +2090,10 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                    Service.$sserve6
                    0#
                    ipv }) -}
-72a94ce8cadfca9cff6a40300a15e76d
+3a4a81f61e92254bccf46f5a9333a94c
   $sserve6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "verify"#) -}
-5246ce7fc45cedd08cc0946616770272
+  {- Unfolding: (GHC.CString.unpackCString# "login"#) -}
+a61a49c5575d647403654929c63d2366
   $sserve7 ::
     Data.Proxy.Proxy
       (Servant.API.Verbs.Verb
@@ -2141,7 +2148,7 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                            200
                            '[Servant.API.ContentTypes.JSON]
                            AuthApi.ResponseData)) }) -}
-8e940c939104407d6c91457d609139c8
+1092beff85d86588255e930233aa5ca3
   $sserve8 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -2158,7 +2165,7 @@ b9e9d0aeb2a5d5a7ff3e2a0d72928412
                    Service.$s$fAllMimeUnrender:a
                    w2
                    w3) -}
-a370be6faf55970432779ac5948a4140
+d6f63bfb3d6ffb54186be79df6effea1
   $sserve9 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -2176,70 +2183,70 @@ a370be6faf55970432779ac5948a4140
                    Service.$sserve10
                    0#
                    ipv }) -}
-864bb23018032d1b8452a3dbe6d8f40a
+d08474c1f34da30ad1a9eacd7fc869df
   $tc'App :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   4361649303172763818##
-                   1319484693172386346##
+                   2429561046541680259##
+                   2907790364530610067##
                    Service.$trModule
                    Service.$tc'App1) -}
-be9f19958a217eb7667a04bbbfa03a8e
+a60e490fb485c7d8a1708aaf19d442de
   $tc'App1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'App"#) -}
-6962c7d449ebac2d53decced8f69632c
+4f8a7b2e8d0089f51271280edbdff081
   $tc'CipherKey :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   18080235299457860862##
-                   13928928348667631562##
+                   6962605530895004255##
+                   5738431786889502182##
                    Service.$trModule
                    Service.$tc'CipherKey1) -}
-6564cdde0c8202b8826a5651d30b5b4f
+973b46b42c27ec05aa3520f5d11f3f9d
   $tc'CipherKey1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'CipherKey"#) -}
-98324ded73ade0559d3c08b1e55c98e5
+860c04cc7c4d654874fb793f7d477386
   $tcApp :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   4937355525580982325##
-                   2183198839271653362##
+                   6197314724826994031##
+                   3656606459839251813##
                    Service.$trModule
                    Service.$tcApp1) -}
-ced00d27f252afce5ac658fa2e4f3556
+950c3cf399f073de4b5e76736c8ecaa6
   $tcApp1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "App"#) -}
-88d0d1103ac8da8e68c174075230ccef
+25e0695796a6f4e7be8efb7759ccc5c7
   $tcCipherKey :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   1448439929064584571##
-                   12705300573786051212##
+                   4191647005973489233##
+                   13623331436416678996##
                    Service.$trModule
                    Service.$tcCipherKey1) -}
-6035e714bff87dec965fd26d6b2fe29b
+b7545ac6d7c49ad802799242d797a3be
   $tcCipherKey1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "CipherKey"#) -}
-b655a8829e140ba7ce3d911bcbdc51cd
+36491ec5b6ae7add87bc073eab8b5191
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Service.$trModule2
                    Service.$trModule1) -}
-6ceaede0a09f234df745286236c73f71
+c7b8c38952866929d8e5ea726e80604d
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Service"#) -}
-14e099da0479866b601315f47b7ac81e
+af7270e4de0c40e1e92523aa20c67d42
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "auth-service-0.1.0.0-6hTD0XPn3Lw9fV9T7HNQU"#) -}
-235342d8a63815b76ac0f36b073b68f8
+                   "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"#) -}
+12a482e88e1cbb2f52970e588c61fb1e
   $w$dHasServer ::
     Data.Proxy.Proxy
       (("users"
@@ -2248,7 +2255,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                             Servant.API.Sub.:> Servant.API.Verbs.Post
                                                  '[Servant.API.ContentTypes.JSON]
                                                  AuthApi.ResponseData))
-       Servant.API.Alternative.:<|> ("verify"
+       Servant.API.Alternative.:<|> ("login"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2265,7 +2272,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                   Servant.API.Sub.:> Servant.API.Verbs.Post
                                                        '[Servant.API.ContentTypes.JSON]
                                                        AuthApi.ResponseData))
-             Servant.API.Alternative.:<|> ("verify"
+             Servant.API.Alternative.:<|> ("login"
                                            Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                  '[Servant.API.ContentTypes.JSON]
                                                                  Models.User
@@ -2283,7 +2290,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                       '[Servant.API.ContentTypes.JSON]
                                                                       AuthApi.ResponseData))
-                            Servant.API.Alternative.:<|> ("verify"
+                            Servant.API.Alternative.:<|> ("login"
                                                           Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                                 '[Servant.API.ContentTypes.JSON]
                                                                                 Models.User
@@ -2300,7 +2307,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                           '[Servant.API.ContentTypes.JSON]
                                                                           AuthApi.ResponseData))
-                                Servant.API.Alternative.:<|> ("verify"
+                                Servant.API.Alternative.:<|> ("login"
                                                               Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                                     '[Servant.API.ContentTypes.JSON]
                                                                                     Models.User
@@ -2370,7 +2377,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                                                               '[Servant.API.ContentTypes.JSON]
                                                                               AuthApi.ResponseData))
                                   Servant.API.Alternative.:<|> Servant.Server.Internal.ServerT
-                                                                 ("verify"
+                                                                 ("login"
                                                                   Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                                         '[Servant.API.ContentTypes.JSON]
                                                                                         Models.User
@@ -2396,7 +2403,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
                                                                               AuthApi.ResponseData))
-                                  @ ("verify"
+                                  @ ("login"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2415,7 +2422,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                       '[Servant.API.ContentTypes.JSON]
                                                                                       AuthApi.ResponseData)>_N
-                                            <"verify"
+                                            <"login"
                                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                    '[Servant.API.ContentTypes.JSON]
                                                                    Models.User
@@ -2513,7 +2520,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                     (Control.Monad.Trans.Except.ExceptT
                                        Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO)
                                   Servant.API.Alternative.:<|> Servant.Server.Internal.Server
-                                                                 ("verify"
+                                                                 ("login"
                                                                   Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                                         '[Servant.API.ContentTypes.JSON]
                                                                                         Models.User
@@ -2521,7 +2528,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                                                                                            '[Servant.API.ContentTypes.JSON]
                                                                                                            AuthApi.ResponseToken)))
                                @ (Servant.Server.Internal.Server
-                                    ("verify"
+                                    ("login"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2536,7 +2543,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
                                                                               AuthApi.ResponseData))
-                                  @ ("verify"
+                                  @ ("login"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2555,7 +2562,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                       '[Servant.API.ContentTypes.JSON]
                                                                                       AuthApi.ResponseData)>_N
-                                            <"verify"
+                                            <"login"
                                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                    '[Servant.API.ContentTypes.JSON]
                                                                    Models.User
@@ -2570,7 +2577,7 @@ b655a8829e140ba7ce3d911bcbdc51cd
                                <env>_R
                                (Sub (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                          <*>_N
-                                         <"verify">_N
+                                         <"login">_N
                                          <Servant.API.ReqBody.ReqBody
                                             '[Servant.API.ContentTypes.JSON] Models.User
                                           Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2591,23 +2598,21 @@ b655a8829e140ba7ce3d911bcbdc51cd
                       (GHC.Types.[]
                          @ (env
                             -> Servant.Server.Internal.RoutingApplication.RoutingApplication)))) -}
-6517b1bdd8e3d0221dc1588ffb0e0608
+738903ab16667281d4b0fb1fc4badf1f
   $wverify :: GHC.Base.String -> GHC.Base.String -> GHC.Types.Bool
-  {- Arity: 2, Strictness: <S,U><L,U>, Inline: [0],
+  {- Arity: 2, Strictness: <S,U><L,1*U>, Inline: [0],
      Unfolding: (\ (ww :: GHC.Base.String) (w :: GHC.Base.String) ->
-                 case GHC.List.$wlenAcc @ GHC.Types.Char ww 0# of ww2 { DEFAULT ->
-                 case Data.ByteString.Internal.$wunsafePackLenChars
-                        ww2
-                        ww of ww1 { Data.ByteString.Internal.PS ww3 ww4 ww5 ww6 ->
+                 case Data.ByteString.UTF8.fromString
+                        ww of ww1 { Data.ByteString.Internal.PS ww2 ww3 ww4 ww5 ->
                  Crypto.PasswordStore.$wverifyPasswordWith
                    Crypto.PasswordStore.pbkdf1
                    Crypto.PasswordStore.verifyPassword1
-                   (Data.ByteString.Internal.packChars w)
+                   (Data.ByteString.UTF8.fromString w)
+                   ww2
                    ww3
                    ww4
-                   ww5
-                   ww6 } }) -}
-994b784d54577b0ed4c3fe93fed4d5b5
+                   ww5 }) -}
+cc0c2cc70b56b127fae575afe3b90324
   type role App nominal
   newtype App a
     = App {runApp :: Control.Monad.Trans.Reader.ReaderT
@@ -2615,10 +2620,10 @@ b655a8829e140ba7ce3d911bcbdc51cd
                        (Control.Monad.Trans.Except.ExceptT
                           Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO)
                        a}
-6aaa77ff1de38966b8252fc8f56ad491
+828eb1eef26f17a1a2fffc6f1dda89be
   type role CipherKey phantom
-  data CipherKey k = CipherKey GHC.Base.String
-fa8fbec76eed9ea06b8dd36753cf587c
+  data CipherKey k = CipherKey Data.ByteString.Internal.ByteString
+dd20e815acf4d83845d5a070b6e9b187
   app ::
     Database.Persist.Sql.Types.ConnectionPool
     -> Network.Wai.Application
@@ -2637,7 +2642,7 @@ fa8fbec76eed9ea06b8dd36753cf587c
                                                    Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                         '[Servant.API.ContentTypes.JSON]
                                                                         AuthApi.ResponseData))
-                              Servant.API.Alternative.:<|> ("verify"
+                              Servant.API.Alternative.:<|> ("login"
                                                             Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                                   '[Servant.API.ContentTypes.JSON]
                                                                                   Models.User
@@ -2745,7 +2750,7 @@ fa8fbec76eed9ea06b8dd36753cf587c
                                                                                  GHC.Types.IO>_N)))
                                                                (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                                                               <*>_N
-                                                                              <"verify">_N
+                                                                              <"login">_N
                                                                               <Servant.API.ReqBody.ReqBody
                                                                                  '[Servant.API.ContentTypes.JSON]
                                                                                  Models.User
@@ -2763,7 +2768,7 @@ fa8fbec76eed9ea06b8dd36753cf587c
                                                             Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                  '[Servant.API.ContentTypes.JSON]
                                                                                  AuthApi.ResponseData)>_N
-                                       <"verify"
+                                       <"login"
                                         Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                               '[Servant.API.ContentTypes.JSON]
                                                               Models.User
@@ -2773,12 +2778,12 @@ fa8fbec76eed9ea06b8dd36753cf587c
                                        <Control.Monad.Trans.Except.ExceptT
                                           Servant.Server.Internal.ServantErr.ServantErr
                                           GHC.Types.IO>_N))))) -}
-e32fe0bea9069ebafdffb66b589e79ea
+d25ac64e6d0046668e7512d382faa38d
   appApi :: Data.Proxy.Proxy AuthApi.AuthServiceApi
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ AuthApi.AuthServiceApi) -}
-6fd668390e69e24127274cae0ffa4471
+11a7146427b2176c82bb79ae88188413
   appToServer ::
     Database.Persist.Sql.Types.ConnectionPool
     -> Servant.Server.Internal.Server AuthApi.AuthServiceApi
@@ -2849,7 +2854,7 @@ e32fe0bea9069ebafdffb66b589e79ea
                                                                                    GHC.Types.IO>_N)))
                                                                  (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                                                                 <*>_N
-                                                                                <"verify">_N
+                                                                                <"login">_N
                                                                                 <Servant.API.ReqBody.ReqBody
                                                                                    '[Servant.API.ContentTypes.JSON]
                                                                                    Models.User
@@ -2867,7 +2872,7 @@ e32fe0bea9069ebafdffb66b589e79ea
                                                               Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                    '[Servant.API.ContentTypes.JSON]
                                                                                    AuthApi.ResponseData)>_N
-                                         <"verify"
+                                         <"login"
                                           Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                 '[Servant.API.ContentTypes.JSON]
                                                                 Models.User
@@ -2877,7 +2882,7 @@ e32fe0bea9069ebafdffb66b589e79ea
                                          <Control.Monad.Trans.Except.ExceptT
                                             Servant.Server.Internal.ServantErr.ServantErr
                                             GHC.Types.IO>_N)))) -}
-ae1367bda503fdd973899cdd525c5676
+48d1ce9a85564c8c92215415722c6f61
   appToServer1 ::
     Database.Persist.Sql.Types.ConnectionPool
     -> (Models.User
@@ -2928,7 +2933,7 @@ ae1367bda503fdd973899cdd525c5676
                                  Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                               <AuthApi.ResponseToken>_N))
                       cp)) -}
-3e6a0d71e8fecb991a4d142cafae87af
+e205f0453ebe2fe9ea16a6255090113b
   authService ::
     Servant.Server.Internal.ServerT AuthApi.AuthServiceApi Service.App
   {- Strictness: m,
@@ -2987,7 +2992,7 @@ ae1367bda503fdd973899cdd525c5676
                                                                            <Service.App>_N)))
                                                             (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                                                            <*>_N
-                                                                           <"verify">_N
+                                                                           <"login">_N
                                                                            <Servant.API.ReqBody.ReqBody
                                                                               '[Servant.API.ContentTypes.JSON]
                                                                               Models.User
@@ -3003,7 +3008,7 @@ ae1367bda503fdd973899cdd525c5676
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
                                                                               AuthApi.ResponseData)>_N
-                                    <"verify"
+                                    <"login"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -3011,7 +3016,7 @@ ae1367bda503fdd973899cdd525c5676
                                                                               '[Servant.API.ContentTypes.JSON]
                                                                               AuthApi.ResponseToken)>_N
                                     <Service.App>_N)))) -}
-90e146efa5b5e17eaf0d6ec1adeebd41
+93399f113722738d9dbbc5fb024476d7
   authService1 ::
     (Models.User -> Service.App AuthApi.ResponseData)
     Servant.API.Alternative.:<|> (Models.User
@@ -3022,7 +3027,7 @@ ae1367bda503fdd973899cdd525c5676
                    @ (Models.User -> Service.App AuthApi.ResponseToken)
                    Service.createUser
                    Service.getToken) -}
-f651cc670e10c712ab1e2c2bef3e2484
+31ea03e54c142ecb704fa9d670d1afcb
   convertApp ::
     Database.Persist.Sql.Types.ConnectionPool
     -> Service.App
@@ -3037,7 +3042,7 @@ f651cc670e10c712ab1e2c2bef3e2484
                                <Service.App>_R
                                <Control.Monad.Trans.Except.ExceptT
                                   Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R)) -}
-3b08feff647c9c9d648f1e6d5b845b54
+79c43b72875112d84bfcf12747ee5de4
   convertApp1 ::
     Database.Persist.Sql.Types.ConnectionPool
     -> forall a.
@@ -3060,7 +3065,7 @@ f651cc670e10c712ab1e2c2bef3e2484
                               Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                            <a>_N))
                    cp) -}
-471380c05afbb6d5e41cc3a08d89e146
+2b99e62422beaf403bc3fa6941021261
   createUser :: Models.User -> Service.App AuthApi.ResponseData
   {- Arity: 1, Strictness: <L,U(U,U)>,
      Unfolding: (\ (user :: Models.User) ->
@@ -3070,16 +3075,14 @@ f651cc670e10c712ab1e2c2bef3e2484
                  } in
                  let {
                    eta :: Data.ByteString.Internal.ByteString
-                   = case user of wild { Models.User ds1 ds2 ->
-                     case GHC.List.$wlenAcc @ GHC.Types.Char ds2 0# of ww2 { DEFAULT ->
-                     Data.ByteString.Internal.$wunsafePackLenChars ww2 ds2 } }
+                   = Data.ByteString.UTF8.fromString (Models.userPassword user)
                  } in
                  (\ (r1 :: Data.Pool.Pool
                              Database.Persist.Sql.Types.Internal.SqlBackend)
                     (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                   case Crypto.PasswordStore.makePassword1
                          eta
-                         Service.createUser4
+                         Service.createUser6
                          s of ds { (#,#) ipv ipv1 ->
                   case ((Models.dbAction
                            @ Service.App
@@ -3094,7 +3097,7 @@ f651cc670e10c712ab1e2c2bef3e2484
                               @ Models.User
                               Control.Monad.IO.Class.$fMonadIOIO
                               Database.Persist.Sql.Orphan.PersistUnique.$fPersistUniqueWriteSqlBackend
-                              Service.getToken6
+                              Service.createUser4
                                 `cast`
                               (GHC.Classes.(%,%)
                                  <Database.Persist.Class.PersistEntity.PersistEntity Models.User>_N
@@ -3104,12 +3107,14 @@ f651cc670e10c712ab1e2c2bef3e2484
                                     (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
                               (case email of dt { DEFAULT ->
                                case ipv1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
-                               case Data.ByteString.Internal.$wunpackAppendCharsLazy
+                               case Data.ByteString.UTF8.$wfoldr
+                                      @ [GHC.Types.Char]
+                                      (GHC.Types.: @ GHC.Types.Char)
+                                      (GHC.Types.[] @ GHC.Types.Char)
                                       ww1
                                       ww2
                                       ww3
-                                      ww4
-                                      (GHC.Types.[] @ GHC.Types.Char) of dt1 { DEFAULT ->
+                                      ww4 of dt1 { DEFAULT ->
                                Models.User dt dt1 } } })))
                           `cast`
                         (Trans
@@ -3195,7 +3200,7 @@ f651cc670e10c712ab1e2c2bef3e2484
                                         GHC.Types.IO>_R
                                      <AuthApi.ResponseData>_N))
                            (Sym (Service.N:App[0]) <AuthApi.ResponseData>_N)))) -}
-0f191b5f78666e7effdce346e1eb11d7
+2f04a02d76f68af8d3bd9aa297689c06
   createUser1 ::
     Data.Either.Either
       Servant.Server.Internal.ServantErr.ServantErr AuthApi.ResponseData
@@ -3203,232 +3208,27 @@ f651cc670e10c712ab1e2c2bef3e2484
                    @ Servant.Server.Internal.ServantErr.ServantErr
                    @ AuthApi.ResponseData
                    Service.createUser_eta) -}
-54b51bad0e24010ea052230614b21377
+609508201b35d7415e968b31255c806f
   createUser2 :: Data.ByteString.Lazy.Internal.ByteString
   {- Unfolding: (Data.ByteString.Lazy.Internal.$wpackChunks1
                    32#
                    Service.createUser3) -}
-fd0d820b2a1cb16c134cf07a11330de5
+969afe6af86ba8ea5590fd7c4c5f4437
   createUser3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "User exists"#) -}
-10a2e90294c68402e8e2b6a0b13b2a83
-  createUser4 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 20#) -}
-4a497a03e5405304d482f866b387684d
-  createUser_eta :: Servant.Server.Internal.ServantErr.ServantErr
-  {- Strictness: m,
-     Unfolding: (Servant.Server.Internal.ServantErr.ServantErr
-                   Servant.Server.Internal.ServantErr.err51
-                   Servant.Server.Internal.ServantErr.err50
-                   Service.createUser2
-                   (GHC.Types.[] @ Network.HTTP.Types.Header.Header)) -}
-0d7ab1c64e4203272c3cc4326218e1e4
-  getToken :: Models.User -> Service.App AuthApi.ResponseToken
-  {- Arity: 1, Strictness: <L,U(U,U)>,
-     Unfolding: (\ (user :: Models.User) ->
-                 let {
-                   email :: GHC.Base.String
-                   = case user of wild { Models.User ds1 ds2 -> ds1 }
-                 } in
-                 let {
-                   lvl15 :: Service.App
-                              (GHC.Base.Maybe
-                                 (Database.Persist.Class.PersistEntity.Entity Models.User))
-                   = Models.dbAction
-                       @ Service.App
-                       @ (GHC.Base.Maybe
-                            (Database.Persist.Class.PersistEntity.Entity Models.User))
-                       Service.$fMonadReaderApp
-                       Service.$fMonadIOApp
-                       (Database.Persist.Sql.Orphan.PersistQuery.$fPersistQueryReadSqlBackend_$cselectFirst
-                          @ GHC.Types.IO
-                          @ Models.User
-                          Control.Monad.IO.Class.$fMonadIOIO
-                          Service.getToken6
-                            `cast`
-                          (GHC.Classes.(%,%)
-                             <Database.Persist.Class.PersistEntity.PersistEntity Models.User>_N
-                             ((Data.Type.Equality.~)
-                                <*>_N
-                                (Sym (Models.D:R:PersistEntityBackendUser[0]))
-                                (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
-                          (GHC.Types.:
-                             @ (Database.Persist.Class.PersistEntity.Filter Models.User)
-                             (Database.Persist.Class.PersistEntity.Filter
-                                @ Models.User
-                                @ GHC.Base.String
-                                Database.Persist.Class.PersistField.$fPersistField[]0
-                                Service.getToken5
-                                  `cast`
-                                (Sym (Models.D:R:EntityFieldUsertyp0[0]) <GHC.Base.String>_N)
-                                (Data.Either.Left @ GHC.Base.String @ [GHC.Base.String] email)
-                                Database.Persist.Types.Base.Eq)
-                             (GHC.Types.[]
-                                @ (Database.Persist.Class.PersistEntity.Filter Models.User)))
-                          (GHC.Types.[]
-                             @ (Database.Persist.Class.PersistEntity.SelectOpt Models.User)))
-                 } in
-                 let {
-                   password :: GHC.Base.String
-                   = case user of wild { Models.User ds1 ds2 -> ds2 }
-                 } in
-                 (\ (r1 :: Data.Pool.Pool
-                             Database.Persist.Sql.Types.Internal.SqlBackend)
-                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                  case Data.Time.Clock.CTimeval.getCTimeval1
-                         s of ds { (#,#) ipv ipv1 ->
-                  case (lvl15
-                          `cast`
-                        (Trans
-                             (Service.N:App[0] <GHC.Base.Maybe
-                                                  (Database.Persist.Class.PersistEntity.Entity
-                                                     Models.User)>_N)
-                             (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                  <*>_N
-                                  <Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                                  <Control.Monad.Trans.Except.ExceptT
-                                     Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
-                                  <GHC.Base.Maybe
-                                     (Database.Persist.Class.PersistEntity.Entity Models.User)>_N))
-                          r1)
-                         `cast`
-                       (Trans
-                            (Control.Monad.Trans.Except.N:ExceptT[0]
-                                 <Servant.Server.Internal.ServantErr.ServantErr>_N
-                                 <GHC.Types.IO>_R
-                                 <GHC.Base.Maybe
-                                    (Database.Persist.Class.PersistEntity.Entity Models.User)>_N)
-                            (GHC.Types.N:IO[0]
-                                 <Data.Either.Either
-                                    Servant.Server.Internal.ServantErr.ServantErr
-                                    (GHC.Base.Maybe
-                                       (Database.Persist.Class.PersistEntity.Entity
-                                          Models.User))>_R))
-                         ipv of ds1 { (#,#) ipv2 ipv3 ->
-                  case ipv3 of wild {
-                    Data.Either.Left e1
-                    -> (# ipv2,
-                          Data.Either.Left
-                            @ Servant.Server.Internal.ServantErr.ServantErr
-                            @ AuthApi.ResponseToken
-                            e1 #)
-                    Data.Either.Right x
-                    -> case x of wild1 {
-                         GHC.Base.Nothing -> (# ipv2, Service.getToken4 #)
-                         GHC.Base.Just user1
-                         -> case user1 of ww { Database.Persist.Class.PersistEntity.Entity ww1 ww2 ww3 ->
-                            case ww3 of ww4 { Models.User ww5 ww6 ->
-                            case Service.$wverify ww6 password of wild2 {
-                              GHC.Types.False -> (# ipv2, Service.getToken3 #)
-                              GHC.Types.True
-                              -> (# ipv2,
-                                    Data.Either.Right
-                                      @ Servant.Server.Internal.ServantErr.ServantErr
-                                      @ AuthApi.ResponseToken
-                                      (AuthApi.ResponseToken
-                                         (Data.ByteString.Lazy.Internal.unpackChars
-                                            (Data.ByteString.Builder.toLazyByteString
-                                               (case AuthApi.$w$ctoJSON
-                                                       email
-                                                       (Data.Time.Format.formatTime
-                                                          @ Data.Time.Clock.UTC.UTCTime
-                                                          Data.Time.Format.$fFormatTimeUTCTime_$cformatCharacter
-                                                            `cast`
-                                                          (Sym (Data.Time.Format.N:FormatTime[0]
-                                                                    <Data.Time.Clock.UTC.UTCTime>_N))
-                                                          Data.Time.Format.Locale.defaultTimeLocale
-                                                          Service.getToken2
-                                                          (case Data.Time.Clock.POSIX.$wposixSecondsToUTCTime
-                                                                  (case Data.Time.Clock.POSIX.$wposixSecondsToUTCTime
-                                                                          (Data.Time.Clock.POSIX.getCurrentTime2
-                                                                             ipv1) of ww7 { (#,#) ww8 ww9 ->
-                                                                   (GHC.Integer.Type.plusInteger
-                                                                      Service.getToken1
-                                                                      (Data.Time.Clock.POSIX.$wutcTimeToPOSIXSeconds
-                                                                         ww8
-                                                                         ww9)
-                                                                        `cast`
-                                                                      (Trans
-                                                                           (Data.Time.Clock.UTC.N:NominalDiffTime[0])
-                                                                           (Data.Fixed.N:Fixed[0]
-                                                                                <Data.Fixed.E12>_P)))
-                                                                     `cast`
-                                                                   (Trans
-                                                                        (Sym (Data.Fixed.N:Fixed[0]
-                                                                                  <Data.Fixed.E12>_P))
-                                                                        (Sym (Data.Time.Clock.UTC.N:NominalDiffTime[0]))) }) of ww7 { (#,#) ww8 ww9 ->
-                                                           Data.Time.Clock.UTC.UTCTime
-                                                             ww8
-                                                             ww9 })) of ww7 { Unit# ww8 ->
-                                                Data.Aeson.Encode.Builder.encodeToBuilder
-                                                  (Data.Aeson.Types.Internal.Object
-                                                     ww8) })))) #) } } } } } } })
-                   `cast`
-                 (Trans
-                      (<Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                       ->_R Trans
-                                (Sym (GHC.Types.N:IO[0]
-                                          <Data.Either.Either
-                                             Servant.Server.Internal.ServantErr.ServantErr
-                                             AuthApi.ResponseToken>_R))
-                                (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
-                                          <Servant.Server.Internal.ServantErr.ServantErr>_N
-                                          <GHC.Types.IO>_R
-                                          <AuthApi.ResponseToken>_N)))
-                      (Trans
-                           (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
-                                     <*>_N
-                                     <Data.Pool.Pool
-                                        Database.Persist.Sql.Types.Internal.SqlBackend>_R
-                                     <Control.Monad.Trans.Except.ExceptT
-                                        Servant.Server.Internal.ServantErr.ServantErr
-                                        GHC.Types.IO>_R
-                                     <AuthApi.ResponseToken>_N))
-                           (Sym (Service.N:App[0]) <AuthApi.ResponseToken>_N)))) -}
-be4b94c7d2b348ef558bfe7bb59bdd3e
-  getToken1 :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (3600000000000000) -}
-0fd240dd5fa47aec8695b408c2072cfd
-  getToken2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "%FT%T%q%z"#) -}
-1a347634f37972c406fd4ea6855853c9
-  getToken3 ::
-    Data.Either.Either
-      Servant.Server.Internal.ServantErr.ServantErr AuthApi.ResponseToken
-  {- Unfolding: (Data.Either.Left
-                   @ Servant.Server.Internal.ServantErr.ServantErr
-                   @ AuthApi.ResponseToken
-                   Servant.Server.Internal.ServantErr.err401) -}
-9c46d767e730e835f45dd892a28ba3da
-  getToken4 ::
-    Data.Either.Either
-      Servant.Server.Internal.ServantErr.ServantErr AuthApi.ResponseToken
-  {- Unfolding: (Data.Either.Left
-                   @ Servant.Server.Internal.ServantErr.ServantErr
-                   @ AuthApi.ResponseToken
-                   Servant.Server.Internal.ServantErr.err500) -}
-42040c4c12cc32d661b1a4b06086e025
-  getToken5 :: Models.R:EntityFieldUsertyp GHC.Base.String
-  {- HasNoCafRefs, Strictness: m2,
-     Unfolding: (Models.UserEmail
-                   @ GHC.Base.String
-                   Service.$s$WUserEmail2
-                     `cast`
-                   (Sym (Data.Type.Equality.N:~[0]
-                             <*>_N) <[GHC.Types.Char]>_N <[GHC.Types.Char]>_N)) -}
-31eae893295a8804889342964b977ddb
-  getToken6 ::
+c943408a2da316f08bd9417d3045d31b
+  createUser4 ::
     (Database.Persist.Class.PersistEntity.PersistEntity Models.User,
      Database.Persist.Sql.Types.Internal.SqlBackend
      Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend)
   {- Strictness: m,
      Unfolding: ((Models.$fPersistEntityUser,
-                  Service.getToken7
+                  Service.createUser5
                     `cast`
                   (Sym (Data.Type.Equality.N:~[0]
                             <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
-af38072c0df027d5ba3c6f1f0352a554
-  getToken7 ::
+54fd86e8a4a730a94407efedd63e685d
+  createUser5 ::
     Database.Persist.Sql.Types.Internal.SqlBackend
     GHC.Types.~~ Database.Persist.Sql.Types.Internal.SqlBackend
   {- HasNoCafRefs, Strictness: m,
@@ -3438,7 +3238,74 @@ af38072c0df027d5ba3c6f1f0352a554
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @ Database.Persist.Sql.Types.Internal.SqlBackend
                    @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
-f9b8d5ee564bba790a83f1062990de16
+540a955c521724fd6239702854811839
+  createUser6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 20#) -}
+56cb60f81ad86bdae2b1c74a36167479
+  createUser_eta :: Servant.Server.Internal.ServantErr.ServantErr
+  {- Strictness: m,
+     Unfolding: (Servant.Server.Internal.ServantErr.ServantErr
+                   Servant.Server.Internal.ServantErr.err51
+                   Servant.Server.Internal.ServantErr.err50
+                   Service.createUser2
+                   (GHC.Types.[] @ Network.HTTP.Types.Header.Header)) -}
+450fdc46258b9810b9ffeb505cb71228
+  decrypt ::
+    Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True) Service.encrypt -}
+8e36d965ec5925ebb0563d282e35b9a7
+  encrypt ::
+    Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (secret :: Data.ByteString.Internal.ByteString) ->
+                 Service.encrypt4
+                   (case Crypto.Cipher.AES.Primitive.initAES
+                           @ Data.ByteString.Internal.ByteString
+                           Data.ByteArray.Types.$fByteArrayAccessByteString
+                           secret of wild {
+                      Crypto.Error.Types.CryptoPassed a1 -> a1
+                      Crypto.Error.Types.CryptoFailed r
+                      -> (Service.encrypt3 r) `cast` (Crypto.Cipher.AES.N:AES256[0]) })
+                   Service.encrypt1) -}
+65e9ce8ea2e0c82c421a5f12f9d243f4
+  encrypt1 ::
+    Crypto.Cipher.Types.Block.IV Crypto.Cipher.AES.Primitive.AES
+  {- Unfolding: (Crypto.Cipher.Types.Block.IV
+                   @ Crypto.Cipher.AES.Primitive.AES
+                   @ Data.ByteArray.Bytes.Bytes
+                   Data.ByteArray.Bytes.$fByteArrayBytes
+                   Service.encrypt2) -}
+d43126ac016d3e091901ad7415054d80
+  encrypt2 :: Data.ByteArray.Bytes.Bytes
+  {- Unfolding: (Data.ByteArray.Methods.zero
+                   @ Data.ByteArray.Bytes.Bytes
+                   Data.ByteArray.Bytes.$fByteArrayBytes
+                   Crypto.Cipher.AES.$fBlockCipherAES2) -}
+416cf8716d3556bf2ce3e5dca6784f98
+  encrypt3 ::
+    Crypto.Error.Types.CryptoError -> Crypto.Cipher.AES.AES256
+  {- Arity: 1, Strictness: <L,U>x -}
+0b0ffac2c9c8cff83ccb55d0dbe76150
+  encrypt4 ::
+    Crypto.Cipher.AES.Primitive.AES
+    -> Crypto.Cipher.Types.Block.IV Crypto.Cipher.AES.Primitive.AES
+    -> Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+  {- Unfolding: (Crypto.Cipher.AES.Primitive.encryptCTR
+                   @ Data.ByteString.Internal.ByteString
+                   Data.ByteArray.Types.$fByteArrayByteString) -}
+16d1464219529bf5c19209a6bf3bb734
+  getToken :: Models.User -> Service.App AuthApi.ResponseToken
+  {- Arity: 1, Strictness: <L,U(U,U)> -}
+bd991617e26816d76e701b89b642a24b
+  iso1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "%FT%T%q%z"#) -}
+6be705a751e33cb3794fd706c9db23bb
   iso8601 :: Data.Time.Clock.UTC.UTCTime -> GHC.Base.String
   {- Arity: 1,
      Unfolding: (Data.Time.Format.formatTime
@@ -3448,8 +3315,8 @@ f9b8d5ee564bba790a83f1062990de16
                    (Sym (Data.Time.Format.N:FormatTime[0]
                              <Data.Time.Clock.UTC.UTCTime>_N))
                    Data.Time.Format.Locale.defaultTimeLocale
-                   Service.getToken2) -}
-56e0e86b1a61c7e80dff770cd8f8bd4f
+                   Service.iso1) -}
+2e8a29509ae4e873ee299e7652ed4241
   runApp ::
     Service.App a
     -> Control.Monad.Trans.Reader.ReaderT
@@ -3464,12 +3331,12 @@ f9b8d5ee564bba790a83f1062990de16
                   `cast`
                 (forall (a :: <*>_N).
                  <Service.App a>_R ->_R Service.N:App[0] <a>_N) -}
-5fc050ad6cd7a37efb33b79bea0995d9
+56c2aa5c7b56a16fd42787c9296859a0
   runApp1 :: Service.App a -> Service.App a
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, True)
                 (\ @ a (ds :: Service.App a) -> ds) -}
-2580eca3576d95c36ae6755f489ea2a7
+45c405f65a5288a0a000fd7039e42018
   secretKey :: Data.ByteString.Internal.ByteString
   {- Unfolding: (case GHC.Prim.newMutVar#
                         @ GHC.ForeignPtr.Finalizers
@@ -3492,11 +3359,11 @@ f9b8d5ee564bba790a83f1062990de16
                    (GHC.ForeignPtr.PlainForeignPtr ipv1)
                    0#
                    (GHC.Prim.word2Int# ds4) } }) -}
-e5de5a92c37248be8cd04b22110f70fb
+8a8f93b6021c679381456f5e5df22034
   verify ::
     Database.Persist.Class.PersistEntity.Entity Models.User
     -> GHC.Base.String -> GHC.Types.Bool
-  {- Arity: 2, Strictness: <S(LLS(LS)),1*U(A,A,1*U(A,U))><L,U>,
+  {- Arity: 2, Strictness: <S(LLS(LS)),1*U(A,A,1*U(A,U))><L,1*U>,
      Inline: INLINE[0],
      Unfolding: InlineRule (2, True, False)
                 (\ (w :: Database.Persist.Class.PersistEntity.Entity Models.User)
