@@ -35,12 +35,12 @@ resolver: lts-7.10
 # A package marked 'extra-dep: true' will only be built if demanded by a
 # non-dependency (i.e. a user package), and its test suites and benchmarks
 # will not be run. This is useful for tweaking upstream packages.
-packages:
-  - '.'
-  - location:
-      git: https://github.com/Palmik/bson-generic.git
-      commit: e078def65d0dee1ea7e3205f445e47d5937851f3
-      #latest commit 24/11/16
+# packages:
+#   - '.'
+#   - location:
+#       git: https://github.com/Palmik/bson-generic.git
+#       commit: e078def65d0dee1ea7e3205f445e47d5937851f3
+#       #latest commit 24/11/16
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)

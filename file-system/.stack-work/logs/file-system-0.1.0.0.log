@@ -1,7 +1,8 @@
+Configuring file-system-0.1.0.0...
 Preprocessing library file-system-0.1.0.0...
-Preprocessing executable 'file-system-exe' for file-system-0.1.0.0...
-Installing library in
-/Users/ciaranfinn/Desktop/distributed-systems/file-system/.stack-work/install/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/file-system-0.1.0.0-4eoDtvzcA271XCHRahcVq5
-Installing executable(s) in
-/Users/ciaranfinn/Desktop/distributed-systems/file-system/.stack-work/install/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/lts-7.10/8.0.1/bin
-Registering file-system-0.1.0.0...
+[1 of 1] Compiling Service          ( src/Service.hs, .stack-work/dist/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/Cabal-1.24.0.0/build/Service.o )
+
+src/Service.hs:41:7: error:
+    • No instance for (ToJSON User) arising from a use of ‘serve’
+    • In the expression: serve api server
+      In an equation for ‘app’: app = serve api server

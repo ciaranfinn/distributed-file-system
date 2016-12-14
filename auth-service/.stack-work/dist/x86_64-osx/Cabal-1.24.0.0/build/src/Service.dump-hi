@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-08 14:29:27.409947 UTC
+2016-12-14 23:02:18.927381 UTC
 
 interface auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:Service 8001
-  interface hash: 5a57bbdc88e7319710bfeb45cb6550d9
-  ABI hash: 212461feb0febbb678ca9853b04088c1
-  export-list hash: ffb7f06d82ac94e558c5690221037a77
-  orphan hash: a9b059250aadeaa452a78e8c5d2ebabf
+  interface hash: 41a916a513d24ba870bdfa2c19f01979
+  ABI hash: 62154c5d8ac557bab679314389d9e055
+  export-list hash: 7f942ef30daa17e40a71d40d4207364b
+  orphan hash: 435601df454c1f8ae6e162b378263d90
   flag hash: cb79fe25b2e43a87f3e6eff39d25ce76
   sig of: Nothing
   used TH splices: False
@@ -190,18 +190,19 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 5c6008252675af8a24566bc8465eebdc
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Encode.Functions f206417fc4decb2bce8d36accb55ccf8
-import  -/  AuthApi 2c103f100406c2740eea97e64c6aa774
-  exports: ac0294f42031e987f827148f1f354656
-  AuthServiceApi 6f32975f448cefd5862e781439b5ae02
-  ResponseData d5cb59b06c65b3f6826c3c4b491f1bef
-  ResponseData b3ea9835232979904b9d96f3162c197e
-  ResponseToken 27535c42d3abc0bcd2b666346c77f422
-  ResponseToken cee7b7d818781264a88c15fdc6cc3241
-  Token b10677b595d2e9bc2e8c583cfb3f8c28
-  email f53468487543ef214874ee6c140737a0
-  expiryTime 865b53140c469d584acd0aa452e54bb1
-  status f14c2b7950628a0c00876d3bd4952d81
-  token 9983b2e73eec0bb363170d03391e658b
+import  -/  AuthApi aba7b96ec86da2ae8922b06e77397057
+  exports: 97bf19fe58b6056072ed327275218829
+  AuthServiceApi ff2da08ba7c5299b1f4a426a5a44efab
+  ResponseData 912f978ebce8b099fc764012bd61ae21
+  ResponseData 70fcdda1a527e8afecbc46ea7ed8c52c
+  Token c4e87d6037d75ebdb893ff3c65a2048c
+  Token e255ab3803b7e22f6ef93498dc63f478
+  TokenData fe4c9ffdf3b1fbadd3aff0d1c722c91f
+  email 6b5d7f239e5a0fe1bb6004346b67381b
+  expiryTime 93fa41d6683c62384307a0c2990ba7a8
+  status 5833605c5750a809aa66881327f5521c
+  token f19fb7ceee1aafdf37472788c93e1e7a
+  valid 56133805829f3f85fe55b4f979d57092
 import  -/  Models 6b88886524ba0346e4244bb7af6c6bd0
   exports: be767d544c2e9265f6d4fb2f70eeed39
   User abb5de8e4cf08f82e03bc0e62544e755
@@ -1644,18 +1645,18 @@ f70e8b0f73bd8b7dcdda3e23938a581b
                    @ [GHC.Types.Char]
                    @ [GHC.Types.Char]
                    @~ <[GHC.Types.Char]>_N) -}
-9e77bd92d48e5d741547ac33ce3e2ec6
+cb0d8b59459ffa10e1dff89f90254a71
   $s$fAllCTRender:a ::
     Servant.API.ContentTypes.AllCTRender
-      '[Servant.API.ContentTypes.JSON] AuthApi.ResponseToken
+      '[Servant.API.ContentTypes.JSON] AuthApi.Token
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ '[Servant.API.ContentTypes.JSON]
-                  @ AuthApi.ResponseToken
+                  @ AuthApi.Token
                   (Servant.API.ContentTypes.$fAllCTRender:a_$cp1AllCTRender
                      @ Servant.API.ContentTypes.JSON
                      @ '[]
-                     @ AuthApi.ResponseToken
+                     @ AuthApi.Token
                      Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:Accept[0]
@@ -1667,7 +1668,7 @@ f70e8b0f73bd8b7dcdda3e23938a581b
                   (Servant.API.ContentTypes.$fAllCTRender:a_$chandleAcceptH
                      @ Servant.API.ContentTypes.JSON
                      @ '[]
-                     @ AuthApi.ResponseToken
+                     @ AuthApi.Token
                      Servant.API.ContentTypes.$fAcceptTYPEJSON_$ccontentType
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:Accept[0]
@@ -1676,30 +1677,30 @@ f70e8b0f73bd8b7dcdda3e23938a581b
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Service.$s$fAllCTRender:a1) -}
-e2ac201cf0bba90a190fefb748580004
+91b481e902cc75996571ed08cfbae48c
   $s$fAllCTRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
-      '[Servant.API.ContentTypes.JSON] AuthApi.ResponseToken
+      '[Servant.API.ContentTypes.JSON] AuthApi.Token
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
-3bdeb85163d69e3fbe78d1956107fb76
+7c08f33ae4e82b9e780a7a19e6eb70af
   $s$fAllCTRender:a2 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
-    -> AuthApi.ResponseToken
+    -> AuthApi.Token
     -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
          Data.ByteString.Lazy.Internal.ByteString)]
   {- Arity: 2, Strictness: <L,A><L,1*U(1*U)>m2,
      Unfolding: InlineRule (2, True, False)
                 (\ (eta :: Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON])
-                   (eta1 :: AuthApi.ResponseToken) ->
+                   (eta1 :: AuthApi.Token) ->
                  GHC.Types.:
                    @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                       Data.ByteString.Lazy.Internal.ByteString)
                    (Servant.API.ContentTypes.$fAcceptTYPEJSON1,
                     Data.ByteString.Builder.toLazyByteString
                       (Data.Aeson.Encode.Builder.encodeToBuilder
-                         (AuthApi.$fToJSONResponseToken1 eta1)
+                         (AuthApi.$fToJSONToken1 eta1)
                            `cast`
                          (Data.Aeson.Types.Generic.N:Tagged[0]
                               <Data.Aeson.Types.Generic.True>_P
@@ -1707,14 +1708,14 @@ e2ac201cf0bba90a190fefb748580004
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-d7ab250e42198c8b2805691145cd8ddb
+01b059c6de9114a6eca30b2f99c90a49
   $s$fAllCTRender:a3 ::
     Servant.API.ContentTypes.MimeRender
-      Servant.API.ContentTypes.JSON AuthApi.ResponseToken
+      Servant.API.ContentTypes.JSON AuthApi.Token
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
-4547f99320eb00ec196194fe77c64947
+a480f6389040a52cb1350052230e01d3
   $s$fAllCTRender:a4 ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
@@ -1746,20 +1747,20 @@ d7ab250e42198c8b2805691145cd8ddb
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Service.$s$fAllCTRender:a5) -}
-8281fb37ed297d4e6cb832ed431c143d
+a0fa87fdc572e8a9821d4ce4e8511b71
   $s$fAllCTRender:a5 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fAllMimeRender:a1 -}
-2331fa018bbd6e925235890937517a12
+4e226687da6934b3abda6449828ef2fd
   $s$fAllCTRender:a6 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> AuthApi.ResponseData
     -> [(Network.HTTP.Media.MediaType.Internal.MediaType,
          Data.ByteString.Lazy.Internal.ByteString)]
-  {- Arity: 2, Strictness: <L,A><L,1*U(1*U)>m2,
+  {- Arity: 2, Strictness: <L,A><L,1*U(1*U,U)>m2,
      Unfolding: InlineRule (2, True, False)
                 (\ (eta :: Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON])
                    (eta1 :: AuthApi.ResponseData) ->
@@ -1777,27 +1778,27 @@ d7ab250e42198c8b2805691145cd8ddb
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-fce102b3fff5d92930b3196d4a0a285f
+8ff29c46951196b64b7fe6688552d5fc
   $s$fAllCTRender:a7 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON AuthApi.ResponseData
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 -}
-6eb635eb1e2a87db9fc56bc11775dda2
+a9f8c4a229da3f68d6f45379abd48efd
   $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
     Servant.API.ContentTypes.AllMimeRender
-      '[Servant.API.ContentTypes.JSON] AuthApi.ResponseToken
+      '[Servant.API.ContentTypes.JSON] AuthApi.Token
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ '[Servant.API.ContentTypes.JSON]
-                  @ AuthApi.ResponseToken
+                  @ AuthApi.Token
                   (Servant.API.ContentTypes.$fAllMimeRender:a0_$cp1AllMimeRender
                      @ Servant.API.ContentTypes.JSON
-                     @ AuthApi.ResponseToken
+                     @ AuthApi.Token
                      Service.$s$fAllCTRender:a3)
                   Service.$s$fAllCTRender:a2 -}
-f9ae211b73754bf93e244034b1abc4fe
+dac3cbaefa72bfa36447c864ea46a2c1
   $s$fAllCTRender:a_$s$fAllMimeRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] AuthApi.ResponseData
@@ -1810,20 +1811,20 @@ f9ae211b73754bf93e244034b1abc4fe
                      @ AuthApi.ResponseData
                      Service.$s$fAllCTRender:a7)
                   Service.$s$fAllCTRender:a6 -}
-fad95193146e83d0c338790e6ac7d376
+06bb8c36ae84314e15a7546e4630a488
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeRender
-      Servant.API.ContentTypes.JSON AuthApi.ResponseToken
+      Servant.API.ContentTypes.JSON AuthApi.Token
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ *
                   @ Servant.API.ContentTypes.JSON
-                  @ AuthApi.ResponseToken
+                  @ AuthApi.Token
                   (Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cp1MimeRender
-                     @ AuthApi.ResponseToken
-                     AuthApi.$fToJSONResponseToken)
+                     @ AuthApi.Token
+                     AuthApi.$fToJSONToken)
                   Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
-ac4640e4e8e7fff5f1453260bd628ed9
+82c1e8f688f0cbe1aff72cb6f9444919
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON AuthApi.ResponseData
@@ -1836,26 +1837,25 @@ ac4640e4e8e7fff5f1453260bd628ed9
                      @ AuthApi.ResponseData
                      AuthApi.$fToJSONResponseData)
                   Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 -}
-ded901e1c88f58b28d7667e708ac0cac
+d6fc0de6ee211aa812c504f75397411c
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
-    -> AuthApi.ResponseToken
-    -> Data.ByteString.Lazy.Internal.ByteString
+    -> AuthApi.Token -> Data.ByteString.Lazy.Internal.ByteString
   {- Arity: 2, Strictness: <L,A><L,1*U(1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
-                   (eta :: AuthApi.ResponseToken) ->
+                   (eta :: AuthApi.Token) ->
                  Data.ByteString.Builder.toLazyByteString
                    (Data.Aeson.Types.Internal.fromEncoding
                       (Data.Aeson.Encode.Builder.encodeToBuilder
-                         (AuthApi.$fToJSONResponseToken_$ctoJSON eta))
+                         (AuthApi.$fToJSONToken_$ctoJSON eta))
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Encoding[0])))) -}
-d087a42e7dc4edcfbe06c0da617e6e3a
+f60f67108556c6e191453f55b135f972
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1 ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> AuthApi.ResponseData -> Data.ByteString.Lazy.Internal.ByteString
-  {- Arity: 2, Strictness: <L,A><L,1*U(1*U)>,
+  {- Arity: 2, Strictness: <L,A><L,1*U(1*U,U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
                    (eta :: AuthApi.ResponseData) ->
@@ -1922,13 +1922,13 @@ ffec494153ef81ef1394966d2cee77b1
                      `cast`
                    (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <Models.User>_N))
                    eta) -}
-97a4e9414d40445d851d1151dcb0f25a
+4fe4ebbc47b0909d10045cd26bbdf3ad
   $sserve10 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "users"#) -}
-35cb77d4b6c6643e4233c8e38a084161
+  {- Unfolding: (GHC.CString.unpackCString# "create"#) -}
+47b1f2ac4171b765ce2c770609284ccb
   $sserve2 ::
     Data.Proxy.Proxy
-      (("users"
+      (("create"
         Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                               '[Servant.API.ContentTypes.JSON] Models.User
                             Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -1940,12 +1940,12 @@ ffec494153ef81ef1394966d2cee77b1
                                                            Models.User
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
-                                                                              AuthApi.ResponseToken)))
+                                                                              AuthApi.Token)))
     -> Servant.Server.Internal.Context.Context '[]
     -> Servant.Server.Internal.RoutingApplication.Delayed
          env
          (Servant.Server.Internal.Server
-            (("users"
+            (("create"
               Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                     '[Servant.API.ContentTypes.JSON] Models.User
                                   Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -1957,14 +1957,14 @@ ffec494153ef81ef1394966d2cee77b1
                                                                  Models.User
                                                                Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                     '[Servant.API.ContentTypes.JSON]
-                                                                                    AuthApi.ResponseToken))))
+                                                                                    AuthApi.Token))))
     -> Servant.Server.Internal.Router.Router'
          env Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Arity: 3, Strictness: <S,1*H><L,U><L,U>, Inline: INLINE[0],
      Unfolding: InlineRule (3, True, False)
                 (\ @ env
                    (w :: Data.Proxy.Proxy
-                           (("users"
+                           (("create"
                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                    '[Servant.API.ContentTypes.JSON] Models.User
                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -1976,12 +1976,12 @@ ffec494153ef81ef1394966d2cee77b1
                                                                                 Models.User
                                                                               Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                    '[Servant.API.ContentTypes.JSON]
-                                                                                                   AuthApi.ResponseToken))))
+                                                                                                   AuthApi.Token))))
                    (w1 :: Servant.Server.Internal.Context.Context '[])
                    (w2 :: Servant.Server.Internal.RoutingApplication.Delayed
                             env
                             (Servant.Server.Internal.Server
-                               (("users"
+                               (("create"
                                  Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                        '[Servant.API.ContentTypes.JSON] Models.User
                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -1993,13 +1993,13 @@ ffec494153ef81ef1394966d2cee77b1
                                                                                     Models.User
                                                                                   Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                        '[Servant.API.ContentTypes.JSON]
-                                                                                                       AuthApi.ResponseToken))))) ->
+                                                                                                       AuthApi.Token))))) ->
                  case w of w3 { Data.Proxy.Proxy ->
                  Service.$w$dHasServer
                    @ env
                    (Data.Proxy.Proxy
                       @ *
-                      @ (("users"
+                      @ (("create"
                           Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                 '[Servant.API.ContentTypes.JSON] Models.User
                                               Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2011,17 +2011,17 @@ ffec494153ef81ef1394966d2cee77b1
                                                                              Models.User
                                                                            Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                 '[Servant.API.ContentTypes.JSON]
-                                                                                                AuthApi.ResponseToken))))
+                                                                                                AuthApi.Token))))
                    w1
                    w2 }) -}
-572415ae70126ddfc80383220785b88d
+d7f7573140df58e6509924003ef45b6f
   $sserve3 ::
     Data.Proxy.Proxy
       (Servant.API.Verbs.Verb
          'Network.HTTP.Types.Method.POST
          200
          '[Servant.API.ContentTypes.JSON]
-         AuthApi.ResponseToken)
+         AuthApi.Token)
     -> Servant.Server.Internal.Context.Context '[]
     -> Servant.Server.Internal.RoutingApplication.Delayed
          env
@@ -2030,7 +2030,7 @@ ffec494153ef81ef1394966d2cee77b1
                'Network.HTTP.Types.Method.POST
                200
                '[Servant.API.ContentTypes.JSON]
-               AuthApi.ResponseToken))
+               AuthApi.Token))
     -> Servant.Server.Internal.Router.Router env
   {- Arity: 2, Strictness: <S,1*H><L,A>,
      Unfolding: InlineRule (2, True, False)
@@ -2040,13 +2040,13 @@ ffec494153ef81ef1394966d2cee77b1
                                'Network.HTTP.Types.Method.POST
                                200
                                '[Servant.API.ContentTypes.JSON]
-                               AuthApi.ResponseToken))
+                               AuthApi.Token))
                    (w4 :: Servant.Server.Internal.Context.Context '[]) ->
                  case w3 of w5 { Data.Proxy.Proxy ->
                  Servant.Server.Internal.$w$croute8
                    @ Network.HTTP.Types.Method.StdMethod
                    @ '[Servant.API.ContentTypes.JSON]
-                   @ AuthApi.ResponseToken
+                   @ AuthApi.Token
                    @ 'Network.HTTP.Types.Method.POST
                    @ 200
                    @ '[]
@@ -2068,7 +2068,7 @@ ffec494153ef81ef1394966d2cee77b1
                            'Network.HTTP.Types.Method.POST
                            200
                            '[Servant.API.ContentTypes.JSON]
-                           AuthApi.ResponseToken)) }) -}
+                           AuthApi.Token)) }) -}
 1684c72451854c4da264cef952cd9c04
   $sserve4 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (200) -}
@@ -2093,7 +2093,7 @@ cc3fb96c0bb97997796a469bc96c9f7e
 3a4a81f61e92254bccf46f5a9333a94c
   $sserve6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "login"#) -}
-a61a49c5575d647403654929c63d2366
+38de99b1cdd5b671656900ae2df2e0b6
   $sserve7 ::
     Data.Proxy.Proxy
       (Servant.API.Verbs.Verb
@@ -2165,7 +2165,7 @@ a61a49c5575d647403654929c63d2366
                    Service.$s$fAllMimeUnrender:a
                    w2
                    w3) -}
-d6f63bfb3d6ffb54186be79df6effea1
+3a6e66c36d4e033ab573e72cf00b81be
   $sserve9 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -2246,10 +2246,10 @@ af7270e4de0c40e1e92523aa20c67d42
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC"#) -}
-12a482e88e1cbb2f52970e588c61fb1e
+2abfbf3bb55ed2f817124d4c76cb8026
   $w$dHasServer ::
     Data.Proxy.Proxy
-      (("users"
+      (("create"
         Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                               '[Servant.API.ContentTypes.JSON] Models.User
                             Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2261,12 +2261,12 @@ af7270e4de0c40e1e92523aa20c67d42
                                                            Models.User
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
-                                                                              AuthApi.ResponseToken)))
+                                                                              AuthApi.Token)))
     -> Servant.Server.Internal.Context.Context '[]
     -> Servant.Server.Internal.RoutingApplication.Delayed
          env
          (Servant.Server.Internal.Server
-            (("users"
+            (("create"
               Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                     '[Servant.API.ContentTypes.JSON] Models.User
                                   Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2278,13 +2278,13 @@ af7270e4de0c40e1e92523aa20c67d42
                                                                  Models.User
                                                                Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                     '[Servant.API.ContentTypes.JSON]
-                                                                                    AuthApi.ResponseToken))))
+                                                                                    AuthApi.Token))))
     -> Servant.Server.Internal.Router.Router'
          env Servant.Server.Internal.RoutingApplication.RoutingApplication
   {- Arity: 3, Strictness: <S,1*H><L,U><L,U>, Inline: [0],
      Unfolding: (\ @ env
                    (w :: Data.Proxy.Proxy
-                           (("users"
+                           (("create"
                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                    '[Servant.API.ContentTypes.JSON] Models.User
                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2296,12 +2296,12 @@ af7270e4de0c40e1e92523aa20c67d42
                                                                                 Models.User
                                                                               Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                    '[Servant.API.ContentTypes.JSON]
-                                                                                                   AuthApi.ResponseToken))))
+                                                                                                   AuthApi.Token))))
                    (w1 :: Servant.Server.Internal.Context.Context '[])
                    (w2 :: Servant.Server.Internal.RoutingApplication.Delayed
                             env
                             (Servant.Server.Internal.Server
-                               (("users"
+                               (("create"
                                  Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                        '[Servant.API.ContentTypes.JSON] Models.User
                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2313,7 +2313,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                                                                     Models.User
                                                                                   Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                        '[Servant.API.ContentTypes.JSON]
-                                                                                                       AuthApi.ResponseToken))))) ->
+                                                                                                       AuthApi.Token))))) ->
                  Servant.Server.Internal.Router.choice
                    @ env
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -2369,7 +2369,7 @@ af7270e4de0c40e1e92523aa20c67d42
                             (Servant.Server.Internal.RoutingApplication.$fFunctorDelayed_$cfmap
                                @ env
                                @ (Servant.Server.Internal.Server
-                                    ("users"
+                                    ("create"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2383,12 +2383,12 @@ af7270e4de0c40e1e92523aa20c67d42
                                                                                         Models.User
                                                                                       Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                            '[Servant.API.ContentTypes.JSON]
-                                                                                                           AuthApi.ResponseToken))
+                                                                                                           AuthApi.Token))
                                                                  (Control.Monad.Trans.Except.ExceptT
                                                                     Servant.Server.Internal.ServantErr.ServantErr
                                                                     GHC.Types.IO))
                                @ (Servant.Server.Internal.Server
-                                    ("users"
+                                    ("create"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2396,7 +2396,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                                                               '[Servant.API.ContentTypes.JSON]
                                                                               AuthApi.ResponseData)))
                                (Servant.Server.Internal.$fHasServerTYPE:<|>context2
-                                  @ ("users"
+                                  @ ("create"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2409,13 +2409,13 @@ af7270e4de0c40e1e92523aa20c67d42
                                                            Models.User
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
-                                                                              AuthApi.ResponseToken)))
+                                                                              AuthApi.Token)))
                                w2
                                  `cast`
                                (Servant.Server.Internal.RoutingApplication.Delayed
                                   <env>_R
                                   (Sub (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
-                                            <"users"
+                                            <"create"
                                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                    '[Servant.API.ContentTypes.JSON]
                                                                    Models.User
@@ -2428,7 +2428,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                                                    Models.User
                                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                       '[Servant.API.ContentTypes.JSON]
-                                                                                      AuthApi.ResponseToken)>_N
+                                                                                      AuthApi.Token)>_N
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))_R)
@@ -2437,7 +2437,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                <env>_R
                                (Sub (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                          <*>_N
-                                         <"users">_N
+                                         <"create">_N
                                          <Servant.API.ReqBody.ReqBody
                                             '[Servant.API.ContentTypes.JSON] Models.User
                                           Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2480,7 +2480,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                  'Network.HTTP.Types.Method.POST
                                  200
                                  '[Servant.API.ContentTypes.JSON]
-                                 AuthApi.ResponseToken)
+                                 AuthApi.Token)
                             @ '[]
                             Service.$sserve8
                               `cast`
@@ -2494,7 +2494,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                          'Network.HTTP.Types.Method.POST
                                          200
                                          '[Servant.API.ContentTypes.JSON]
-                                         AuthApi.ResponseToken>_N
+                                         AuthApi.Token>_N
                                       <'[]>_N))
                             @ env
                             (Data.Proxy.Proxy
@@ -2505,12 +2505,12 @@ af7270e4de0c40e1e92523aa20c67d42
                                                        'Network.HTTP.Types.Method.POST
                                                        200
                                                        '[Servant.API.ContentTypes.JSON]
-                                                       AuthApi.ResponseToken))
+                                                       AuthApi.Token))
                             w1
                             (Servant.Server.Internal.RoutingApplication.$fFunctorDelayed_$cfmap
                                @ env
                                @ (Servant.Server.Internal.ServerT
-                                    ("users"
+                                    ("create"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2526,7 +2526,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                                                                         Models.User
                                                                                       Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                            '[Servant.API.ContentTypes.JSON]
-                                                                                                           AuthApi.ResponseToken)))
+                                                                                                           AuthApi.Token)))
                                @ (Servant.Server.Internal.Server
                                     ("login"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
@@ -2534,9 +2534,9 @@ af7270e4de0c40e1e92523aa20c67d42
                                                            Models.User
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
-                                                                              AuthApi.ResponseToken)))
+                                                                              AuthApi.Token)))
                                (Servant.Server.Internal.$fHasServerTYPE:<|>context1
-                                  @ ("users"
+                                  @ ("create"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -2549,13 +2549,13 @@ af7270e4de0c40e1e92523aa20c67d42
                                                            Models.User
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
-                                                                              AuthApi.ResponseToken)))
+                                                                              AuthApi.Token)))
                                w2
                                  `cast`
                                (Servant.Server.Internal.RoutingApplication.Delayed
                                   <env>_R
                                   (Sub (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
-                                            <"users"
+                                            <"create"
                                              Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                    '[Servant.API.ContentTypes.JSON]
                                                                    Models.User
@@ -2568,7 +2568,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                                                    Models.User
                                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                       '[Servant.API.ContentTypes.JSON]
-                                                                                      AuthApi.ResponseToken)>_N
+                                                                                      AuthApi.Token)>_N
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))_R)
@@ -2582,7 +2582,7 @@ af7270e4de0c40e1e92523aa20c67d42
                                             '[Servant.API.ContentTypes.JSON] Models.User
                                           Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                '[Servant.API.ContentTypes.JSON]
-                                                               AuthApi.ResponseToken>_N
+                                                               AuthApi.Token>_N
                                          <Control.Monad.Trans.Except.ExceptT
                                             Servant.Server.Internal.ServantErr.ServantErr
                                             GHC.Types.IO>_N)))_R)
@@ -2623,7 +2623,7 @@ cc0c2cc70b56b127fae575afe3b90324
 828eb1eef26f17a1a2fffc6f1dda89be
   type role CipherKey phantom
   data CipherKey k = CipherKey Data.ByteString.Internal.ByteString
-dd20e815acf4d83845d5a070b6e9b187
+8cd1784e38e11d6ad09e0ce1d973a85a
   app ::
     Database.Persist.Sql.Types.ConnectionPool
     -> Network.Wai.Application
@@ -2636,7 +2636,7 @@ dd20e815acf4d83845d5a070b6e9b187
                      `cast`
                    (Sym (Servant.Server.Internal.N:HasServer[0]
                              <*>_N
-                             <("users"
+                             <("create"
                                Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                      '[Servant.API.ContentTypes.JSON] Models.User
                                                    Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2648,7 +2648,7 @@ dd20e815acf4d83845d5a070b6e9b187
                                                                                   Models.User
                                                                                 Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                      '[Servant.API.ContentTypes.JSON]
-                                                                                                     AuthApi.ResponseToken))>_N
+                                                                                                     AuthApi.Token))>_N
                              <'[]>_N))
                    (Data.Proxy.Proxy @ * @ AuthApi.AuthServiceApi)
                    Servant.Server.Internal.Context.$WEmptyContext
@@ -2662,7 +2662,7 @@ dd20e815acf4d83845d5a070b6e9b187
                          -> Control.Monad.Trans.Except.ExceptT
                               Servant.Server.Internal.ServantErr.ServantErr
                               GHC.Types.IO
-                              AuthApi.ResponseToken)
+                              AuthApi.Token)
                       (\ (a1 :: Models.User) ->
                        (Service.createUser a1)
                          `cast`
@@ -2679,13 +2679,13 @@ dd20e815acf4d83845d5a070b6e9b187
                        (Service.getToken a1)
                          `cast`
                        (Trans
-                            (Service.N:App[0] <AuthApi.ResponseToken>_N)
+                            (Service.N:App[0] <AuthApi.Token>_N)
                             (Control.Monad.Trans.Reader.N:ReaderT[0]
                                  <*>_N
                                  <Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
                                  <Control.Monad.Trans.Except.ExceptT
                                     Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
-                                 <AuthApi.ResponseToken>_N))
+                                 <AuthApi.Token>_N))
                          cp))
                      `cast`
                    (Trans
@@ -2715,7 +2715,7 @@ dd20e815acf4d83845d5a070b6e9b187
                                                     GHC.Types.IO>_N)))
                                   (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                                  <*>_N
-                                                 <"users">_N
+                                                 <"create">_N
                                                  <Servant.API.ReqBody.ReqBody
                                                     '[Servant.API.ContentTypes.JSON] Models.User
                                                   Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2729,7 +2729,7 @@ dd20e815acf4d83845d5a070b6e9b187
                                                            ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
                                                                               <Network.HTTP.Types.Method.StdMethod>_N
                                                                               <'[Servant.API.ContentTypes.JSON]>_N
-                                                                              <AuthApi.ResponseToken>_N
+                                                                              <AuthApi.Token>_N
                                                                               <'Network.HTTP.Types.Method.POST>_N
                                                                               <200>_N
                                                                               <Control.Monad.Trans.Except.ExceptT
@@ -2744,7 +2744,7 @@ dd20e815acf4d83845d5a070b6e9b187
                                                                                  'Network.HTTP.Types.Method.POST
                                                                                  200
                                                                                  '[Servant.API.ContentTypes.JSON]
-                                                                                 AuthApi.ResponseToken>_N
+                                                                                 AuthApi.Token>_N
                                                                               <Control.Monad.Trans.Except.ExceptT
                                                                                  Servant.Server.Internal.ServantErr.ServantErr
                                                                                  GHC.Types.IO>_N)))
@@ -2756,12 +2756,12 @@ dd20e815acf4d83845d5a070b6e9b187
                                                                                  Models.User
                                                                                Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                     '[Servant.API.ContentTypes.JSON]
-                                                                                                    AuthApi.ResponseToken>_N
+                                                                                                    AuthApi.Token>_N
                                                                               <Control.Monad.Trans.Except.ExceptT
                                                                                  Servant.Server.Internal.ServantErr.ServantErr
                                                                                  GHC.Types.IO>_N)))))_R
                         (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
-                                       <"users"
+                                       <"create"
                                         Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                               '[Servant.API.ContentTypes.JSON]
                                                               Models.User
@@ -2774,16 +2774,16 @@ dd20e815acf4d83845d5a070b6e9b187
                                                               Models.User
                                                             Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                  '[Servant.API.ContentTypes.JSON]
-                                                                                 AuthApi.ResponseToken)>_N
+                                                                                 AuthApi.Token)>_N
                                        <Control.Monad.Trans.Except.ExceptT
                                           Servant.Server.Internal.ServantErr.ServantErr
                                           GHC.Types.IO>_N))))) -}
-d25ac64e6d0046668e7512d382faa38d
+7f0c8388c0ca02418c520e4106ba1eb9
   appApi :: Data.Proxy.Proxy AuthApi.AuthServiceApi
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ AuthApi.AuthServiceApi) -}
-11a7146427b2176c82bb79ae88188413
+b1fda5c8fcd68d34504b089bff022ada
   appToServer ::
     Database.Persist.Sql.Types.ConnectionPool
     -> Servant.Server.Internal.Server AuthApi.AuthServiceApi
@@ -2819,7 +2819,7 @@ d25ac64e6d0046668e7512d382faa38d
                                                       GHC.Types.IO>_N)))
                                     (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                                    <*>_N
-                                                   <"users">_N
+                                                   <"create">_N
                                                    <Servant.API.ReqBody.ReqBody
                                                       '[Servant.API.ContentTypes.JSON] Models.User
                                                     Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2833,7 +2833,7 @@ d25ac64e6d0046668e7512d382faa38d
                                                              ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
                                                                                 <Network.HTTP.Types.Method.StdMethod>_N
                                                                                 <'[Servant.API.ContentTypes.JSON]>_N
-                                                                                <AuthApi.ResponseToken>_N
+                                                                                <AuthApi.Token>_N
                                                                                 <'Network.HTTP.Types.Method.POST>_N
                                                                                 <200>_N
                                                                                 <Control.Monad.Trans.Except.ExceptT
@@ -2848,7 +2848,7 @@ d25ac64e6d0046668e7512d382faa38d
                                                                                    'Network.HTTP.Types.Method.POST
                                                                                    200
                                                                                    '[Servant.API.ContentTypes.JSON]
-                                                                                   AuthApi.ResponseToken>_N
+                                                                                   AuthApi.Token>_N
                                                                                 <Control.Monad.Trans.Except.ExceptT
                                                                                    Servant.Server.Internal.ServantErr.ServantErr
                                                                                    GHC.Types.IO>_N)))
@@ -2860,12 +2860,12 @@ d25ac64e6d0046668e7512d382faa38d
                                                                                    Models.User
                                                                                  Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                       '[Servant.API.ContentTypes.JSON]
-                                                                                                      AuthApi.ResponseToken>_N
+                                                                                                      AuthApi.Token>_N
                                                                                 <Control.Monad.Trans.Except.ExceptT
                                                                                    Servant.Server.Internal.ServantErr.ServantErr
                                                                                    GHC.Types.IO>_N)))))_R
                           (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
-                                         <"users"
+                                         <"create"
                                           Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                                 '[Servant.API.ContentTypes.JSON]
                                                                 Models.User
@@ -2878,11 +2878,11 @@ d25ac64e6d0046668e7512d382faa38d
                                                                 Models.User
                                                               Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                    '[Servant.API.ContentTypes.JSON]
-                                                                                   AuthApi.ResponseToken)>_N
+                                                                                   AuthApi.Token)>_N
                                          <Control.Monad.Trans.Except.ExceptT
                                             Servant.Server.Internal.ServantErr.ServantErr
                                             GHC.Types.IO>_N)))) -}
-48d1ce9a85564c8c92215415722c6f61
+a0dc6c4cae5563c5be109884f5e5b305
   appToServer1 ::
     Database.Persist.Sql.Types.ConnectionPool
     -> (Models.User
@@ -2894,7 +2894,7 @@ d25ac64e6d0046668e7512d382faa38d
                                      -> Control.Monad.Trans.Except.ExceptT
                                           Servant.Server.Internal.ServantErr.ServantErr
                                           GHC.Types.IO
-                                          AuthApi.ResponseToken)
+                                          AuthApi.Token)
   {- Arity: 1, Strictness: <L,U>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (cp :: Database.Persist.Sql.Types.ConnectionPool) ->
@@ -2908,7 +2908,7 @@ d25ac64e6d0046668e7512d382faa38d
                       -> Control.Monad.Trans.Except.ExceptT
                            Servant.Server.Internal.ServantErr.ServantErr
                            GHC.Types.IO
-                           AuthApi.ResponseToken)
+                           AuthApi.Token)
                    (\ (a1 :: Models.User) ->
                     (Service.createUser a1)
                       `cast`
@@ -2925,15 +2925,15 @@ d25ac64e6d0046668e7512d382faa38d
                     (Service.getToken a1)
                       `cast`
                     (Trans
-                         (Service.N:App[0] <AuthApi.ResponseToken>_N)
+                         (Service.N:App[0] <AuthApi.Token>_N)
                          (Control.Monad.Trans.Reader.N:ReaderT[0]
                               <*>_N
                               <Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
                               <Control.Monad.Trans.Except.ExceptT
                                  Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
-                              <AuthApi.ResponseToken>_N))
+                              <AuthApi.Token>_N))
                       cp)) -}
-e205f0453ebe2fe9ea16a6255090113b
+91b61376aa29cb3df79476be02e11a47
   authService ::
     Servant.Server.Internal.ServerT AuthApi.AuthServiceApi Service.App
   {- Strictness: m,
@@ -2963,7 +2963,7 @@ e205f0453ebe2fe9ea16a6255090113b
                                               <Service.App>_N)))
                                (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                               <*>_N
-                                              <"users">_N
+                                              <"create">_N
                                               <Servant.API.ReqBody.ReqBody
                                                  '[Servant.API.ContentTypes.JSON] Models.User
                                                Servant.API.Sub.:> Servant.API.Verbs.Post
@@ -2975,7 +2975,7 @@ e205f0453ebe2fe9ea16a6255090113b
                                                         ->_R Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPEVerbm0[0]
                                                                            <Network.HTTP.Types.Method.StdMethod>_N
                                                                            <'[Servant.API.ContentTypes.JSON]>_N
-                                                                           <AuthApi.ResponseToken>_N
+                                                                           <AuthApi.Token>_N
                                                                            <'Network.HTTP.Types.Method.POST>_N
                                                                            <200>_N
                                                                            <Service.App>_N)))
@@ -2988,7 +2988,7 @@ e205f0453ebe2fe9ea16a6255090113b
                                                                               'Network.HTTP.Types.Method.POST
                                                                               200
                                                                               '[Servant.API.ContentTypes.JSON]
-                                                                              AuthApi.ResponseToken>_N
+                                                                              AuthApi.Token>_N
                                                                            <Service.App>_N)))
                                                             (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:>m4[0]
                                                                            <*>_N
@@ -2998,10 +2998,10 @@ e205f0453ebe2fe9ea16a6255090113b
                                                                               Models.User
                                                                             Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                                                  '[Servant.API.ContentTypes.JSON]
-                                                                                                 AuthApi.ResponseToken>_N
+                                                                                                 AuthApi.Token>_N
                                                                            <Service.App>_N)))))_R
                      (Sub (Sym (Servant.Server.Internal.D:R:ServerTTYPE:<|>m[0]
-                                    <"users"
+                                    <"create"
                                      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                                                            '[Servant.API.ContentTypes.JSON]
                                                            Models.User
@@ -3014,17 +3014,17 @@ e205f0453ebe2fe9ea16a6255090113b
                                                            Models.User
                                                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                               '[Servant.API.ContentTypes.JSON]
-                                                                              AuthApi.ResponseToken)>_N
+                                                                              AuthApi.Token)>_N
                                     <Service.App>_N)))) -}
-93399f113722738d9dbbc5fb024476d7
+2102d7fbb1128f4731e46a239785ac72
   authService1 ::
     (Models.User -> Service.App AuthApi.ResponseData)
     Servant.API.Alternative.:<|> (Models.User
-                                  -> Service.App AuthApi.ResponseToken)
+                                  -> Service.App AuthApi.Token)
   {- Strictness: m,
      Unfolding: (Servant.API.Alternative.:<|>
                    @ (Models.User -> Service.App AuthApi.ResponseData)
-                   @ (Models.User -> Service.App AuthApi.ResponseToken)
+                   @ (Models.User -> Service.App AuthApi.Token)
                    Service.createUser
                    Service.getToken) -}
 31ea03e54c142ecb704fa9d670d1afcb
@@ -3065,7 +3065,7 @@ e205f0453ebe2fe9ea16a6255090113b
                               Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO>_R
                            <a>_N))
                    cp) -}
-2b99e62422beaf403bc3fa6941021261
+a7b502dac49ec4d685e69d0cd4ff24fd
   createUser :: Models.User -> Service.App AuthApi.ResponseData
   {- Arity: 1, Strictness: <L,U(U,U)>,
      Unfolding: (\ (user :: Models.User) ->
@@ -3177,7 +3177,8 @@ e205f0453ebe2fe9ea16a6255090113b
                                             x#
                                             (GHC.Types.[]
                                                @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
-                                     GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) #) } } } })
+                                     GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                                    GHC.Types.True) #) } } } })
                    `cast`
                  (Trans
                       (<Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend>_R
@@ -3200,7 +3201,7 @@ e205f0453ebe2fe9ea16a6255090113b
                                         GHC.Types.IO>_R
                                      <AuthApi.ResponseData>_N))
                            (Sym (Service.N:App[0]) <AuthApi.ResponseData>_N)))) -}
-2f04a02d76f68af8d3bd9aa297689c06
+091741e6bed5c93449acb1bb5c86f146
   createUser1 ::
     Data.Either.Either
       Servant.Server.Internal.ServantErr.ServantErr AuthApi.ResponseData
@@ -3299,8 +3300,8 @@ d43126ac016d3e091901ad7415054d80
   {- Unfolding: (Crypto.Cipher.AES.Primitive.encryptCTR
                    @ Data.ByteString.Internal.ByteString
                    Data.ByteArray.Types.$fByteArrayByteString) -}
-16d1464219529bf5c19209a6bf3bb734
-  getToken :: Models.User -> Service.App AuthApi.ResponseToken
+8f661ba4284051c6b7b530c4eb78d77d
+  getToken :: Models.User -> Service.App AuthApi.Token
   {- Arity: 1, Strictness: <L,U(U,U)> -}
 bd991617e26816d76e701b89b642a24b
   iso1 :: [GHC.Types.Char]
@@ -3336,7 +3337,7 @@ bd991617e26816d76e701b89b642a24b
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, True)
                 (\ @ a (ds :: Service.App a) -> ds) -}
-45c405f65a5288a0a000fd7039e42018
+18a4b6ceb46b45f8e22cd0d1045c952d
   secretKey :: Data.ByteString.Internal.ByteString
   {- Unfolding: (case GHC.Prim.newMutVar#
                         @ GHC.ForeignPtr.Finalizers
@@ -3344,7 +3345,7 @@ bd991617e26816d76e701b89b642a24b
                         GHC.ForeignPtr.NoFinalizers
                         GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
                  let {
-                   addr# :: GHC.Prim.Addr# = "012-456-89A-CDE-012-456-89A-CDE-"#
+                   addr# :: GHC.Prim.Addr# = "010-DIS-TOB-UTI-ONR-OCK-S01-010-"#
                  } in
                  case {__pkg_ccall bytestring-0.10.8.1@bytestring-0.10.8.1 strlen GHC.Prim.Addr#
                                                                                   -> GHC.Prim.State#
@@ -3397,16 +3398,16 @@ instance Control.Monad.Reader.Class.MonadReader [Data.Pool.Pool,
                                            $dAllMime
                                            $dAllMimeRender
   = Service.$s$fAllCTRender:a4
-"SPEC/Service $fAllCTRender:a @ JSON @ '[] @ ResponseToken" [ALWAYS] forall ($dAccept :: Servant.API.ContentTypes.Accept
-                                                                                           Servant.API.ContentTypes.JSON)
-                                                                            ($dAllMime :: Servant.API.ContentTypes.AllMime
-                                                                                            '[])
-                                                                            ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
-                                                                                                  '[Servant.API.ContentTypes.JSON]
-                                                                                                  AuthApi.ResponseToken)
+"SPEC/Service $fAllCTRender:a @ JSON @ '[] @ Token" [ALWAYS] forall ($dAccept :: Servant.API.ContentTypes.Accept
+                                                                                   Servant.API.ContentTypes.JSON)
+                                                                    ($dAllMime :: Servant.API.ContentTypes.AllMime
+                                                                                    '[])
+                                                                    ($dAllMimeRender :: Servant.API.ContentTypes.AllMimeRender
+                                                                                          '[Servant.API.ContentTypes.JSON]
+                                                                                          AuthApi.Token)
   Servant.API.ContentTypes.$fAllCTRender:a @ Servant.API.ContentTypes.JSON
                                            @ '[]
-                                           @ AuthApi.ResponseToken
+                                           @ AuthApi.Token
                                            $dAccept
                                            $dAllMime
                                            $dAllMimeRender
@@ -3418,11 +3419,11 @@ instance Control.Monad.Reader.Class.MonadReader [Data.Pool.Pool,
                                               @ AuthApi.ResponseData
                                               $dMimeRender
   = Service.$s$fAllCTRender:a_$s$fAllMimeRender:a1
-"SPEC/Service $fAllMimeRender:a0 @ JSON @ ResponseToken" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
-                                                                                            Servant.API.ContentTypes.JSON
-                                                                                            AuthApi.ResponseToken)
+"SPEC/Service $fAllMimeRender:a0 @ JSON @ Token" [ALWAYS] forall ($dMimeRender :: Servant.API.ContentTypes.MimeRender
+                                                                                    Servant.API.ContentTypes.JSON
+                                                                                    AuthApi.Token)
   Servant.API.ContentTypes.$fAllMimeRender:a0 @ Servant.API.ContentTypes.JSON
-                                              @ AuthApi.ResponseToken
+                                              @ AuthApi.Token
                                               $dMimeRender
   = Service.$s$fAllCTRender:a_$s$fAllMimeRender:a0
 "SPEC/Service $fAllMimeUnrender:a @ JSON @ User @ '[]" [ALWAYS] forall ($dMimeUnrender :: Servant.API.ContentTypes.MimeUnrender
@@ -3464,9 +3465,9 @@ instance Control.Monad.Reader.Class.MonadReader [Data.Pool.Pool,
   Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ AuthApi.ResponseData
                                                  $dToJSON
   = Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa1
-"SPEC/Service $fMimeRenderTYPEJSONa @ ResponseToken" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
-                                                                                    AuthApi.ResponseToken)
-  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ AuthApi.ResponseToken
+"SPEC/Service $fMimeRenderTYPEJSONa @ Token" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
+                                                                            AuthApi.Token)
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa @ AuthApi.Token
                                                  $dToJSON
   = Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa
 "SPEC/Service $fMimeRenderTYPEJSONa_$cmimeRender @ ResponseData" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
@@ -3474,9 +3475,9 @@ instance Control.Monad.Reader.Class.MonadReader [Data.Pool.Pool,
   Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ AuthApi.ResponseData
                                                               $dToJSON
   = Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender1
-"SPEC/Service $fMimeRenderTYPEJSONa_$cmimeRender @ ResponseToken" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
-                                                                                                 AuthApi.ResponseToken)
-  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ AuthApi.ResponseToken
+"SPEC/Service $fMimeRenderTYPEJSONa_$cmimeRender @ Token" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.Class.ToJSON
+                                                                                         AuthApi.Token)
+  Servant.API.ContentTypes.$fMimeRenderTYPEJSONa_$cmimeRender @ AuthApi.Token
                                                               $dToJSON
   = Service.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender
 "SPEC/Service $fMimeUnrenderTYPEJSONa @ User" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.Class.FromJSON

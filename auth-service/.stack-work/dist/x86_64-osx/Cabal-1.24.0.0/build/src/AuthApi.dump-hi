@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-08 15:09:21.533077 UTC
+2016-12-14 23:02:17.873453 UTC
 
 interface auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:AuthApi [family instance module] 8001
-  interface hash: a43175f8f4f27a3b4f7ecfe90f747b51
-  ABI hash: 01192683a04ec30d35ae20435a0fc8d2
+  interface hash: 15e73cdbf03e875df4c090806260ae56
+  ABI hash: aba7b96ec86da2ae8922b06e77397057
   export-list hash: 97bf19fe58b6056072ed327275218829
   orphan hash: ef06412821529af5c65052fbe8f6b7a5
   flag hash: d36aeae6dbc808ed13205c6874028e80
@@ -2572,28 +2572,20 @@ f2d9694a7983de0f25b022f2e2412a27
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-0641382a03d4c4b2c8468e5036e4dee9
+ff2da08ba7c5299b1f4a426a5a44efab
   type AuthServiceApi =
-    ("users"
+    ("create"
      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
                            '[Servant.API.ContentTypes.JSON] Models.User
                          Servant.API.Sub.:> Servant.API.Verbs.Post
                                               '[Servant.API.ContentTypes.JSON]
                                               AuthApi.ResponseData))
-    Servant.API.Alternative.:<|> (("login"
-                                   Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
-                                                         '[Servant.API.ContentTypes.JSON]
-                                                         Models.User
-                                                       Servant.API.Sub.:> Servant.API.Verbs.Post
-                                                                            '[Servant.API.ContentTypes.JSON]
-                                                                            AuthApi.Token))
-                                  Servant.API.Alternative.:<|> ("verify"
-                                                                Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
-                                                                                      '[Servant.API.ContentTypes.JSON]
-                                                                                      AuthApi.Token
-                                                                                    Servant.API.Sub.:> Servant.API.Verbs.Post
-                                                                                                         '[Servant.API.ContentTypes.JSON]
-                                                                                                         AuthApi.ResponseData)))
+    Servant.API.Alternative.:<|> ("login"
+                                  Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                                                        '[Servant.API.ContentTypes.JSON] Models.User
+                                                      Servant.API.Sub.:> Servant.API.Verbs.Post
+                                                                           '[Servant.API.ContentTypes.JSON]
+                                                                           AuthApi.Token))
 70fcdda1a527e8afecbc46ea7ed8c52c
   axiom Rep_ResponseData::
       GHC.Generics.Rep AuthApi.ResponseData

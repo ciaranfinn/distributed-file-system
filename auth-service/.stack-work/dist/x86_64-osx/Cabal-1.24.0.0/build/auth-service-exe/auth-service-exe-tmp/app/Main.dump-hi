@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-08 14:29:28.839148 UTC
+2016-12-14 23:02:20.975831 UTC
 
 interface main@main:Main 8001
-  interface hash: 9d8ca6f1f2808e05cb1085c6ee1f3145
-  ABI hash: af0ebe76ab5e0b75004ce939a7b44553
-  export-list hash: c53d7fc0ac65f176914ed46059b897f0
-  orphan hash: b1ef4f0e08ad541467fe27bc9d30a0f6
+  interface hash: f60bea23cb1e1ee058bd6fdd2bb5aa98
+  ABI hash: 036e0aac2d348950fafa3d461ae7a787
+  export-list hash: 1b5afd432d189542f38040d661acc1ab
+  orphan hash: 7c3560eee66c4468308fe62dfed79e8a
   flag hash: a0d4534c7f37e0e51e81fc1a548cf058
   sig of: Nothing
   used TH splices: False
@@ -194,7 +194,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:Models 6b88886524ba0346e4244bb7af6c6bd0
-import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:Service 212461feb0febbb678ca9853b04088c1
+import  -/  auth-service-0.1.0.0@auth-service-0.1.0.0-ALMkMTwMeAKALAHT3PbtpC:Service 62154c5d8ac557bab679314389d9e055
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 import  -/  monad-logger-0.3.20.1@monad-logger-0.3.20.1-Id6Qefl6M7BBA3QajigPhK:Control.Monad.Logger 2f87c925edad5966dbd05a4d603919f5
@@ -264,7 +264,7 @@ import  -/  warp-3.2.9@warp-3.2.9-1T06si5IpgT9ocLo3cujDp:Network.Wai.Handler.War
                   (Control.Monad.Logger.$fFunctorLoggingT_$c<$
                      @ GHC.Types.IO
                      Main.$s$fApplicativeLoggingT_$dMonad) -}
-b5040ca15d4e51a6f76fb35194209d09
+9b6d5e31feb3fd403e6309d4a03f225b
   $s$fMonadBaseControlbLoggingT ::
     Control.Monad.Trans.Control.MonadBaseControl
       GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
@@ -281,14 +281,14 @@ b5040ca15d4e51a6f76fb35194209d09
                      @ GHC.Types.IO
                      @ GHC.Types.IO
                      Control.Monad.Trans.Control.$fMonadBaseControlIOIO) -}
-91069ac674c111f5aaf6b5f1c5dd8cee
+0e8ff1bc88098ff5a4443240b9bab584
   $s$fMonadBaseControlbLoggingT_$s$fMonadBaseControlbLoggingT_$cp1MonadBaseControl ::
     Control.Monad.Base.MonadBase
       GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT -}
-7f4040ee11a5934b2a2c3cda38e3ec81
+9829b8b193f5221a6337191aeaa67b06
   $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT ::
     Control.Monad.Base.MonadBase
       GHC.Types.IO (Control.Monad.Logger.LoggingT GHC.Types.IO)
@@ -299,7 +299,7 @@ b5040ca15d4e51a6f76fb35194209d09
                   GHC.Base.$fApplicativeIO
                   Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase
                   GHC.Base.$fMonadIO
-                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cp1MonadIO
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
                   Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cliftIO -}
 d819fd2fd1502642cf3635eedefc2481
   $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase ::
@@ -307,6 +307,12 @@ d819fd2fd1502642cf3635eedefc2481
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Main.$s$fApplicativeLoggingT -}
+e342cd5064a49c6a47faf44b9b00c6df
+  $s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase ::
+    GHC.Base.Monad (Control.Monad.Logger.LoggingT GHC.Types.IO)
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT -}
 622f2c31e50cb0c8c5635f25480582df
   $s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cliftIO ::
     GHC.Types.IO a -> Control.Monad.Logger.LoggingT GHC.Types.IO a
@@ -325,12 +331,6 @@ d819fd2fd1502642cf3635eedefc2481
                    `cast`
                  (Sym (Control.Monad.Logger.N:LoggingT[0]
                            <GHC.Types.IO>_R <a>_N))) -}
-2c7d713dd7c3f7277a84b0bafe2e3ff3
-  $s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cp1MonadIO ::
-    GHC.Base.Monad (Control.Monad.Logger.LoggingT GHC.Types.IO)
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Main.$s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT -}
 a1feb1209d4c91f85320b782558a313c
   $s$fMonadBaseControlbLoggingT_$s$fMonadLoggingT ::
     GHC.Base.Monad (Control.Monad.Logger.LoggingT GHC.Types.IO)
@@ -359,23 +359,23 @@ b3d0e6d35987e80a795650db75debc8f
                    @ a
                    Main.$s$fApplicativeLoggingT_$dMonad
                    eta) -}
-5318ecff490a101bf48507b3c44d166d
+92264ac9b23f2144cb242ec0ede54c6b
   $s$fMonadIOLoggingT ::
     Control.Monad.IO.Class.MonadIO
       (Control.Monad.Logger.LoggingT GHC.Types.IO)
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
-                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cp1MonadIO
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
                   Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cliftIO -}
-85544a96d327cb154d7f94bc1948f9f7
+833319c3f7570142ddb16cd7c5c860bd
   $s$fMonadLoggerLoggingT ::
     Control.Monad.Logger.MonadLogger
       (Control.Monad.Logger.LoggingT GHC.Types.IO)
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ (Control.Monad.Logger.LoggingT GHC.Types.IO)
-                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cp1MonadIO
+                  Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
                   Main.$s$fMonadLoggerLoggingT_$s$fMonadLoggerLoggingT_$cmonadLoggerLog -}
 7d86bd8cf4d6d18bb34e443f4be4ecd5
   $s$fMonadLoggerLoggingT_$s$fMonadLoggerLoggingT_$cmonadLoggerLog ::
@@ -446,12 +446,12 @@ f1dcc66070a646abebb1b99a2d0b1e06
                    (GHC.ForeignPtr.PlainForeignPtr ipv1)
                    0#
                    (GHC.Prim.word2Int# ds4) } }) -}
-49064ede44c7ff4328c1a49ef144acb9
+b323459c54064e978ce580c325c26386
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-353717ae6c0063e4262ea7f971d586a1
+f76433f833312f42554bba80e6b867bf
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -611,7 +611,7 @@ f2167f1e9f2e6612a2fffe827321581d
      Unfolding: (\ (ds :: Database.PostgreSQL.Simple.Internal.Connection)
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  (# eta, GHC.Tuple.() #)) -}
-2b31e11955c3a808bcd4a0b99b390406
+5760f38d7e69d69e63d08f826ec5cf90
   main7 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -663,6 +663,13 @@ ea181f4c0bb6dadd84d5dfe1cb8a014e
                                                           @ GHC.Types.IO
                                                           $dMonadBase
   = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp2MonadBase
+"SPEC/Main $fMonadBasebLoggingT_$cp4MonadBase @ IO @ IO" [ALWAYS] forall ($dMonadBase :: Control.Monad.Base.MonadBase
+                                                                                           GHC.Types.IO
+                                                                                           GHC.Types.IO)
+  Control.Monad.Logger.$fMonadBasebLoggingT_$cp4MonadBase @ GHC.Types.IO
+                                                          @ GHC.Types.IO
+                                                          $dMonadBase
+  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadBasebLoggingT_$cp4MonadBase
 "SPEC/Main $fMonadIOLoggingT @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
                                                                    GHC.Types.IO)
   Control.Monad.Logger.$fMonadIOLoggingT @ GHC.Types.IO $dMonadIO
@@ -672,11 +679,6 @@ ea181f4c0bb6dadd84d5dfe1cb8a014e
   Control.Monad.Logger.$fMonadIOLoggingT_$cliftIO @ GHC.Types.IO
                                                   $dMonadIO
   = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cliftIO
-"SPEC/Main $fMonadIOLoggingT_$cp1MonadIO @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
-                                                                               GHC.Types.IO)
-  Control.Monad.Logger.$fMonadIOLoggingT_$cp1MonadIO @ GHC.Types.IO
-                                                     $dMonadIO
-  = Main.$s$fMonadBaseControlbLoggingT_$s$fMonadIOLoggingT_$cp1MonadIO
 "SPEC/Main $fMonadLoggerLoggingT @ IO" [ALWAYS] forall ($dMonadIO :: Control.Monad.IO.Class.MonadIO
                                                                        GHC.Types.IO)
   Control.Monad.Logger.$fMonadLoggerLoggingT @ GHC.Types.IO $dMonadIO

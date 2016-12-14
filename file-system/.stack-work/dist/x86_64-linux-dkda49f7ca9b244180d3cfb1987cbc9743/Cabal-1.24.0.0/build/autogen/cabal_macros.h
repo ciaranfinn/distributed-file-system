@@ -98,6 +98,13 @@
   (major1) == 3 && (major2) <  2 || \
   (major1) == 3 && (major2) == 2 && (minor) <= 1)
 
+/* package wai-logger-2.3.0 */
+#define VERSION_wai_logger "2.3.0"
+#define MIN_VERSION_wai_logger(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  3 || \
+  (major1) == 2 && (major2) == 3 && (minor) <= 0)
+
 /* package warp-3.2.9 */
 #define VERSION_warp "3.2.9"
 #define MIN_VERSION_warp(major1,major2,minor) (\
@@ -189,7 +196,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "file-system-0.1.0.0-4eoDtvzcA271XCHRahcVq5"
+#define CURRENT_COMPONENT_ID "file-system-0.1.0.0-AZCZxFLWuDB9Vg2p9fVhU"
 
-#define CURRENT_PACKAGE_KEY "file-system-0.1.0.0-4eoDtvzcA271XCHRahcVq5"
+#define CURRENT_PACKAGE_KEY "file-system-0.1.0.0-AZCZxFLWuDB9Vg2p9fVhU"
 

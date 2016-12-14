@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/ciaranfinn/Desktop/distributed-systems/file-system/.stack-work/install/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/lts-7.10/8.0.1/bin"
-libdir     = "/Users/ciaranfinn/Desktop/distributed-systems/file-system/.stack-work/install/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/file-system-0.1.0.0-4eoDtvzcA271XCHRahcVq5"
+libdir     = "/Users/ciaranfinn/Desktop/distributed-systems/file-system/.stack-work/install/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/lts-7.10/8.0.1/lib/x86_64-linux-ghc-8.0.1/file-system-0.1.0.0-AZCZxFLWuDB9Vg2p9fVhU"
 datadir    = "/Users/ciaranfinn/Desktop/distributed-systems/file-system/.stack-work/install/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/lts-7.10/8.0.1/share/x86_64-linux-ghc-8.0.1/file-system-0.1.0.0"
 libexecdir = "/Users/ciaranfinn/Desktop/distributed-systems/file-system/.stack-work/install/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/lts-7.10/8.0.1/libexec"
 sysconfdir = "/Users/ciaranfinn/Desktop/distributed-systems/file-system/.stack-work/install/x86_64-linux-dkda49f7ca9b244180d3cfb1987cbc9743/lts-7.10/8.0.1/etc"

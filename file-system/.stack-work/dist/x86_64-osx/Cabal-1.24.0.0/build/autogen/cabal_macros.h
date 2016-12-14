@@ -7,12 +7,12 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 
-/* package aeson-0.11.2.1 */
-#define VERSION_aeson "0.11.2.1"
+/* package aeson-1.0.2.1 */
+#define VERSION_aeson "1.0.2.1"
 #define MIN_VERSION_aeson(major1,major2,minor) (\
-  (major1) <  0 || \
-  (major1) == 0 && (major2) <  11 || \
-  (major1) == 0 && (major2) == 11 && (minor) <= 2)
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  0 || \
+  (major1) == 1 && (major2) == 0 && (minor) <= 2)
 
 /* package base-4.9.0.0 */
 #define VERSION_base "4.9.0.0"
@@ -27,6 +27,13 @@
   (major1) <  0 || \
   (major1) == 0 && (major2) <  3 || \
   (major1) == 0 && (major2) == 3 && (minor) <= 2)
+
+/* package bson-generic-0.0.8 */
+#define VERSION_bson_generic "0.0.8"
+#define MIN_VERSION_bson_generic(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  0 || \
+  (major1) == 0 && (major2) == 0 && (minor) <= 8)
 
 /* package bytestring-0.10.8.1 */
 #define VERSION_bytestring "0.10.8.1"
@@ -49,26 +56,26 @@
   (major1) == 2 && (major2) <  2 || \
   (major1) == 2 && (major2) == 2 && (minor) <= 1)
 
-/* package servant-0.8.1 */
-#define VERSION_servant "0.8.1"
+/* package servant-0.9.1.1 */
+#define VERSION_servant "0.9.1.1"
 #define MIN_VERSION_servant(major1,major2,minor) (\
   (major1) <  0 || \
-  (major1) == 0 && (major2) <  8 || \
-  (major1) == 0 && (major2) == 8 && (minor) <= 1)
+  (major1) == 0 && (major2) <  9 || \
+  (major1) == 0 && (major2) == 9 && (minor) <= 1)
 
-/* package servant-client-0.8.1 */
-#define VERSION_servant_client "0.8.1"
+/* package servant-client-0.9.1.1 */
+#define VERSION_servant_client "0.9.1.1"
 #define MIN_VERSION_servant_client(major1,major2,minor) (\
   (major1) <  0 || \
-  (major1) == 0 && (major2) <  8 || \
-  (major1) == 0 && (major2) == 8 && (minor) <= 1)
+  (major1) == 0 && (major2) <  9 || \
+  (major1) == 0 && (major2) == 9 && (minor) <= 1)
 
-/* package servant-server-0.8.1 */
-#define VERSION_servant_server "0.8.1"
+/* package servant-server-0.9.1.1 */
+#define VERSION_servant_server "0.9.1.1"
 #define MIN_VERSION_servant_server(major1,major2,minor) (\
   (major1) <  0 || \
-  (major1) == 0 && (major2) <  8 || \
-  (major1) == 0 && (major2) == 8 && (minor) <= 1)
+  (major1) == 0 && (major2) <  9 || \
+  (major1) == 0 && (major2) == 9 && (minor) <= 1)
 
 /* package text-1.2.2.1 */
 #define VERSION_text "1.2.2.1"
@@ -97,6 +104,13 @@
   (major1) <  3 || \
   (major1) == 3 && (major2) <  2 || \
   (major1) == 3 && (major2) == 2 && (minor) <= 1)
+
+/* package wai-logger-2.3.0 */
+#define VERSION_wai_logger "2.3.0"
+#define MIN_VERSION_wai_logger(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  3 || \
+  (major1) == 2 && (major2) == 3 && (minor) <= 0)
 
 /* package warp-3.2.9 */
 #define VERSION_warp "3.2.9"
@@ -154,7 +168,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 1)
 
-#define CURRENT_COMPONENT_ID "file-system-0.1.0.0-4eoDtvzcA271XCHRahcVq5"
+#define CURRENT_COMPONENT_ID "file-system-0.1.0.0-9juVlPd7GhVJ96IueCmvBB"
 
-#define CURRENT_PACKAGE_KEY "file-system-0.1.0.0-4eoDtvzcA271XCHRahcVq5"
+#define CURRENT_PACKAGE_KEY "file-system-0.1.0.0-9juVlPd7GhVJ96IueCmvBB"
 
