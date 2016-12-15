@@ -26,3 +26,8 @@ authstore:
     - "5433:5432"
   environment:
     POSTGRES_USER: docker
+
+registry:
+  image: redis
+  ports:
+  - "6379:6379"

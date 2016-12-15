@@ -39,20 +39,13 @@ secretKey = "010-DIS-TOB-UTI-ONR-OCK-S01-010-"
 
 data CipherKey k = CipherKey ByteString
 
-
-newtype App a = App
-    { runApp :: ReaderT ConnectionPool (ExceptT ServantErr IO) a
-    } deriving ( Functor, Applicative, Monad, MonadReader ConnectionPool,
-                 MonadError ServantErr, MonadIO)
+type App = ReaderT ConnectionPool Handler
 
 app :: ConnectionPool -> Application
 app cp = serve appApi (appToServer cp)
 
 appToServer :: ConnectionPool -> Server AuthServiceApi
-appToServer cp = enter (convertApp cp) authService
-
-convertApp :: ConnectionPool -> App :~> ExceptT ServantErr IO
-convertApp cp = Nat (flip runReaderT cp . runApp)
+appToServer cp = enter (runReaderTNat cp) authService
 
 appApi :: Proxy AuthServiceApi
 appApi = Proxy

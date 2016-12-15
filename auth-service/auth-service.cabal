@@ -17,6 +17,7 @@ library
   hs-source-dirs:      src
   exposed-modules:   Service
                      , Models
+                     , AuthApi
   build-depends:       base >= 4.7 && < 5
                      , monad-logger
                      , persistent
