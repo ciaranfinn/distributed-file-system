@@ -1,14 +1,10 @@
-file-system:
-  image: file-system
+fileserver-service:
+  image: fileserver-service
   environment:
-    # The start of active environment variables. Set as needed.
     - MONGODB_IP=docstore
     - POSTGRESQL_IP=authstore
-    # - MONGODB_PORT
-    # - MONGODB_DATABASE=USE_HASKELL_DB
-    # - https_proxy=http://www-proxy.scss.tcd.ie:8080
-    # - http_proxy=http://www-proxy.scss.tcd.ie:8080
-  command: /usr/local/bin/file-system-exe
+
+  command: /usr/local/bin/fileserver-service-exe
   ports:
     - "8080:8080"
   links:

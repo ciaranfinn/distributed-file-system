@@ -1,6 +1,6 @@
 module Main where
 
-import Service
+import Lib
 
 main :: IO ()
-main = return
+main = startApp

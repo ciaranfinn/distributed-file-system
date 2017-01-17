@@ -2,11 +2,14 @@
 {-# LANGUAGE TypeOperators   #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE FlexibleContexts #-}
-
+{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveAnyClass #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE OverloadedStrings          #-}
 
 module Service (startApp) where
 
-import Api                                 (API,Subscriber(..))
+import Api                                 (API,Subscriber(..),RResponse(..))
 import Data.Aeson
 import Data.Aeson.TH
 import Network.Wai
@@ -15,6 +18,10 @@ import Servant
 import Database.Redis
 import Control.Monad.IO.Class
 import Control.Monad.Reader                 (MonadIO, MonadReader,ReaderT(..), runReaderT,ask)
+import Data.ByteString                      (ByteString)
+import Data.ByteString.Char8                (pack)
+import qualified Data.ByteString.Lazy.Char8 as BS
+import Data.ByteString.UTF8                 (toString,fromString)
 
 
 startApp :: IO ()
@@ -34,7 +41,7 @@ appApi :: Proxy API
 appApi = Proxy
 
 authService :: ServerT API App
-authService = register
+authService = register :<|> fsServices
 
 
 myRunRedis :: (MonadReader Connection m, MonadIO m) => Redis a -> m a
@@ -42,12 +49,26 @@ myRunRedis query = do
     conn <- ask
     liftIO $ runRedis conn query
 
-register :: Subscriber -> App Subscriber
+
+-- Register File system.
+register :: Subscriber -> App RResponse
 register arg = do
+  let a = pack $ address arg
+  let d = fromString $ (show arg)
+  liftIO $ print d
   myRunRedis $ do
-     set "hello" "hello"
-     set "world" "world"
-     hello <- get "hello"
-     world <- get "world"
-     liftIO $ print (hello,world)
-  pure Subscriber{ip_address = "yo", port = 10, message = "a", service_type = "a"}
+     rstatus <- sadd "registry" [d]
+     pure $ case rstatus of
+       Right a -> RResponse{status = "ok", registered = True}
+       _ -> RResponse{status = "This service has not been registered", registered = False}
+
+
+-- Return all the registered service memebers
+fsServices :: App [Subscriber]
+fsServices = do
+  let services = []
+  myRunRedis $ do
+    list <- smembers "registry"
+    pure $ case list of
+      Right l -> map read $ map toString l
+      _ -> []

@@ -23,6 +23,8 @@ library
                      , warp
                      , hedis
                      , mtl
+                     , bytestring
+                     , utf8-string
                      , servant
                      , servant-server
                      , servant-client

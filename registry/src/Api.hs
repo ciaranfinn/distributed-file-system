@@ -4,20 +4,28 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeOperators     #-}
 
-module Api (Subscriber(..), API) where
+module Api (Subscriber(..),RResponse(..), API) where
 
 import Servant
 import Data.Aeson
 import GHC.Generics
 import Data.Aeson.TH
 
-
+-- The file service pings the registry to let it know its alive
 data Subscriber =  Subscriber
-  { ip_address :: String,
+  { address :: String,
     port :: Int,
     message :: String,
     service_type :: String
-  } deriving(Generic,ToJSON,FromJSON)
+  } deriving(Generic,Show,ToJSON,FromJSON,Read)
 
 
-type API = "register" :> ReqBody '[JSON] Subscriber :> Post '[JSON] Subscriber
+data RResponse = RResponse
+  {
+    status :: String,
+    registered :: Bool
+  } deriving(Generic, ToJSON, FromJSON)
+
+
+type API = "register" :> ReqBody '[JSON] Subscriber :> Post '[JSON] RResponse
+        :<|> "registered" :> Get '[JSON] [Subscriber]
