@@ -52,6 +52,8 @@ executable auth-service-exe
                      , monad-logger
                      , warp
                      , wai
+                     , hslogger
+                     , bytestring
                      , persistent-postgresql
                      , auth-service
   default-language:    Haskell2010

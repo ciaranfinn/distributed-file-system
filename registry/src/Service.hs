@@ -35,13 +35,13 @@ app :: Connection -> Application
 app conn = serve appApi (appToServer conn)
 
 appToServer :: Connection -> Server API
-appToServer conn = enter (runReaderTNat conn) authService
+appToServer conn = enter (runReaderTNat conn) registryService
 
 appApi :: Proxy API
 appApi = Proxy
 
-authService :: ServerT API App
-authService = register :<|> fsServices
+registryService :: ServerT API App
+registryService = register :<|> fsServices
 
 
 myRunRedis :: (MonadReader Connection m, MonadIO m) => Redis a -> m a
