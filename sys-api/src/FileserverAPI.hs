@@ -1,4 +1,3 @@
-
 {-# LANGUAGE DataKinds            #-}
 {-# LANGUAGE DeriveAnyClass       #-}
 {-# LANGUAGE DeriveGeneric        #-}
@@ -10,7 +9,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module FsAPi (ResponseData(..),API(..),Message(..)) where
+module FileserverAPI (ResponseData(..),APIfs(..), UpPayload(..)) where
 
 import           Data.Aeson
 import           Data.Aeson.TH
@@ -18,14 +17,16 @@ import           Data.Bson.Generic
 import           GHC.Generics
 import           Network.Wai
 import           Network.Wai.Handler.Warp
-import           Network.Wai.Logger
 import           Servant
 
 
 
-data Message = Message { filename :: String
-                       , filedata :: String
+data UpPayload = UpPayload { e_ident :: String
+                           , e_contents :: String
+                       --     , session_key :: String
+                       --     , e_path :: String
                        } deriving (Generic, FromJSON, ToBSON, FromBSON, ToJSON)
+
 
 deriving instance FromBSON String
 deriving instance ToBSON   String
@@ -36,5 +37,4 @@ data ResponseData = ResponseData { response :: String
 
 
 
-type API = "upload" :> ReqBody '[JSON] Message :> Post '[JSON] Bool
-        :<|> "searchMessage" :> QueryParam "name" String :> Get '[JSON] [Message]
+type APIfs = "store" :> ReqBody '[JSON] UpPayload :> Post '[JSON] Bool

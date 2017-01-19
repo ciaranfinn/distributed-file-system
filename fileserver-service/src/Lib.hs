@@ -39,7 +39,7 @@ import           System.Log.Handler           (setFormatter)
 import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
-import           FsAPi                        (API, ResponseData, Message(..))
+import           FileserverAPI                (APIfs, ResponseData, UpPayload(..))
 import           Database.MongoDB
 import           System.Environment           (getProgName)
 import           MongoDb                      (drainCursor, runMongo, logLevel)
@@ -65,38 +65,26 @@ taskScheduler delay = do
 app :: Application
 app = serve api server
 
-api :: Proxy API
+api :: Proxy APIfs
 api = Proxy
 
-server :: Server API
-server = upload :<|> searchMessage
+server :: Server APIfs
+server = store
   where
 
 
-    upload :: Message -> Handler Bool
-    upload msg@(Message key _) = liftIO $ do
+    store :: UpPayload -> Handler Bool
+    store msg@(UpPayload key _) = liftIO $ do
       warnLog $ "Storing message under key " ++ key ++ "."
       runMongo $ upsert (select ["name" =: key] "MESSAGE_RECORD") $ toBSON msg
       return True
-
-    searchMessage :: Maybe String -> Handler [Message]
-    searchMessage (Just key) = liftIO $ do
-      warnLog $ "Searching for value for key: " ++ key
-
-      runMongo $ do
-        docs <- find (select ["name" =: key] "MESSAGE_RECORD") >>= drainCursor
-        return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Message) docs
-
-    searchMessage Nothing = liftIO $ do
-      warnLog $ "No key for searching."
-      return $ ([] :: [Message])
 
 
 
 iso8601 :: UTCTime -> String
 iso8601 = formatTime defaultTimeLocale "%FT%T%q%z"
 
--- global login functions
+-- global logging functions
 debugLog, warnLog, errorLog :: String -> IO ()
 debugLog = doLog debugM
 warnLog  = doLog warningM

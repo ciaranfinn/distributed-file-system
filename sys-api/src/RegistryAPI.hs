@@ -4,7 +4,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeOperators     #-}
 
-module Api (Subscriber(..),RResponse(..), API) where
+module RegistryAPI (Subscriber(..),RResponse(..), APIreg) where
 
 import Servant
 import Data.Aeson
@@ -27,5 +27,5 @@ data RResponse = RResponse
   } deriving(Generic, ToJSON, FromJSON)
 
 
-type API = "register" :> ReqBody '[JSON] Subscriber :> Post '[JSON] RResponse
+type APIreg = "register" :> ReqBody '[JSON] Subscriber :> Post '[JSON] RResponse
         :<|> "registered" :> Get '[JSON] [Subscriber]
