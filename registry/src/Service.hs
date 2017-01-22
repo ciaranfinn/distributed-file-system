@@ -9,7 +9,7 @@
 
 module Service (startApp) where
 
-import RegistryAPI                          (APIreg,Subscriber(..),RResponse(..))
+import RegistryAPI                          (APIreg,regAPI,Subscriber(..),RResponse(..))
 import Data.Aeson
 import Data.Aeson.TH
 import Network.Wai
@@ -32,13 +32,10 @@ startApp = do
 type App = ReaderT Connection Handler
 
 app :: Connection -> Application
-app conn = serve appApi (appToServer conn)
+app conn = serve regAPI (appToServer conn)
 
 appToServer :: Connection -> Server APIreg
 appToServer conn = enter (runReaderTNat conn) registryService
-
-appApi :: Proxy APIreg
-appApi = Proxy
 
 registryService :: ServerT APIreg App
 registryService = register :<|> fsServices

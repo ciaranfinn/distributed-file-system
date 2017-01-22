@@ -22,6 +22,7 @@ library
                      , warp
                      , hedis
                      , mtl
+                     , bson
                      , bytestring
                      , utf8-string
                      , servant
