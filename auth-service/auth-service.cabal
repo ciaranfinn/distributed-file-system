@@ -17,13 +17,11 @@ library
   hs-source-dirs:      src
   exposed-modules:   Service
                      , Models
-                     , AuthApi
   build-depends:       base >= 4.7 && < 5
                      , monad-logger
                      , persistent
                      , persistent-postgresql
                      , persistent-template
-                     , time
                      , text
                      , mtl
                      , aeson
@@ -40,6 +38,8 @@ library
                      , cryptocipher
                      , cryptonite
                      , base64-bytestring
+                     , sys-api
+                     , frequent
   default-language:    Haskell2010
 
 executable auth-service-exe

@@ -17,14 +17,6 @@
 #  location: "./custom-snapshot.yaml"
 resolver: nightly-2016-12-10
 
-image:
-  container:
-    name: fileserver-service
-    base: fpco/stack-run
-
-docker:
-  enable: false
-
 # User packages to be built.
 # Various formats can be used as shown in the example below.
 #
@@ -46,7 +38,6 @@ docker:
 packages:
 - '.'
 - ../sys-api
-- ../frequent
 - location:
     git: https://github.com/Palmik/bson-generic.git
     commit: e078def65d0dee1ea7e3205f445e47d5937851f3

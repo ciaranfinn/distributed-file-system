@@ -43,6 +43,7 @@ import           FileserverAPI                (APIfs, ResponseData, UpPayload(..
 import           Database.MongoDB
 import           System.Environment           (getProgName)
 import           MongoDb                      (drainCursor, runMongo, logLevel)
+import           Frequent
 
 
 startApp :: IO ()
@@ -74,15 +75,12 @@ server = store
 
 
     store :: UpPayload -> Handler Bool
-    store msg@(UpPayload key _) = liftIO $ do
-      warnLog $ "Storing message under key " ++ key ++ "."
-      runMongo $ upsert (select ["name" =: key] "MESSAGE_RECORD") $ toBSON msg
+    store msg@(UpPayload e_contents e_session_key e_path) = liftIO $ do
+      warnLog $ "Storing message under key " ++ e_path ++ "."
+      runMongo $ upsert (select ["name" =: e_path] "MESSAGE_RECORD") $ toBSON msg
       return True
 
 
-
-iso8601 :: UTCTime -> String
-iso8601 = formatTime defaultTimeLocale "%FT%T%q%z"
 
 -- global logging functions
 debugLog, warnLog, errorLog :: String -> IO ()

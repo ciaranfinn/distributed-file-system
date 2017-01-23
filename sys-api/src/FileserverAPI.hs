@@ -21,10 +21,9 @@ import           Servant
 
 
 
-data UpPayload = UpPayload { e_ident :: String
+data UpPayload = UpPayload { e_session_key :: String
+                           , e_path :: String
                            , e_contents :: String
-                       --     , session_key :: String
-                       --     , e_path :: String
                        } deriving (Generic, FromJSON, ToBSON, FromBSON, ToJSON)
 
 

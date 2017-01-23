@@ -16,7 +16,6 @@ import           Database.Persist.Postgresql          (Entity(..),
 import           Control.Monad.Except
 import           Control.Monad.Reader                 (MonadIO, MonadReader,ReaderT, runReaderT)
 import           Control.Monad.Reader.Class
-import           AuthApi                              (AuthServiceApi,ResponseData(..),Token(..),TokenData(..))
 import           Models
 import           Servant
 import           Crypto.PasswordStore                 (makePassword,pbkdf2,verifyPassword)
@@ -30,14 +29,12 @@ import           Crypto.Cipher.AES (AES256)
 import           Crypto.Cipher.Types                  (BlockCipher(..), Cipher(..),nullIV)
 import           Crypto.Error                         (CryptoFailable(..))
 import qualified Data.ByteString.Base64 as B64
+import           Frequent
+import           AuthAPI                              (ResponseData(..),Token(..),TokenData(..))
 
 
--- Program Encode Secret
-secretKey :: ByteString
-secretKey = "010-DIS-TOB-UTI-ONR-OCK-S01-010-"
-
-
-data CipherKey k = CipherKey ByteString
+type AuthServiceApi = "create" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
+                  :<|>"login" :> ReqBody '[JSON] User :> Post '[JSON] Token
 
 type App = ReaderT ConnectionPool Handler
 
@@ -67,9 +64,6 @@ createUser user = do
             pure ResponseData {status = show (fromSqlKey user), valid = True}
 
 
-iso8601 :: UTCTime -> String
-iso8601 = formatTime defaultTimeLocale "%FT%T%q%z"
-
 verify :: (Entity User) -> String -> Bool
 verify user password = do
     let hash_pass = (userPassword $ entityVal user)
@@ -96,21 +90,3 @@ getToken user = do
         Nothing ->
             -- User has no account therfore is forbidden
             throwError err500
-
-
--- ENCRYPTION STUFF --
-
-encrypt :: ByteString -> ByteString -> ByteString
-encrypt secret = ctrCombine ctx nullIV
-  where
-    ctx = cipherInitNoErr (cipherMakeKey (undefined :: AES256) secret)
-    cipherInitNoErr :: BlockCipher c => CipherKey c -> c
-    cipherInitNoErr (CipherKey k) = case cipherInit k of
-      CryptoPassed a -> a
-      CryptoFailed e -> error (show e)
-
-    cipherMakeKey :: Cipher cipher => cipher -> ByteString -> CipherKey cipher
-    cipherMakeKey _ = CipherKey
-
-decrypt :: ByteString -> ByteString -> ByteString
-decrypt = encrypt
