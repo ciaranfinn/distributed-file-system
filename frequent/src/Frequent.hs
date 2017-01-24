@@ -40,13 +40,11 @@ encrypt secret = ctrCombine ctx nullIV
 decrypt :: ByteString -> ByteString -> ByteString
 decrypt = encrypt
 
-validateToken :: Token -> IO String
-validateToken t = do
-    let value = token t
-    let decrypted_data = toString (decrypt secretKey (B64.decodeLenient (fromString value)))
-    let tokenData = decode (BS.pack decrypted_data) :: Maybe TokenData
-    case tokenData of
-        Just internal -> do
-            pure (expiryTime internal)
-        Nothing ->
-            pure ""
+
+extract :: String -> String
+extract encrypted = toString (decrypt secretKey (B64.decodeLenient (fromString encrypted)))
+-- validateToken ::  -> IO String
+-- validateToken t = do
+--     let value = token t
+--     let decrypted_data = toString (decrypt secretKey (B64.decodeLenient (fromString value)))
+--     pure decrypted_data

@@ -13,7 +13,6 @@ module FileserverAPI (ResponseData(..),APIfs(..), UpPayload(..)) where
 
 import           Data.Aeson
 import           Data.Aeson.TH
-import           Data.Bson.Generic
 import           GHC.Generics
 import           Network.Wai
 import           Network.Wai.Handler.Warp
@@ -23,17 +22,14 @@ import           Servant
 
 data UpPayload = UpPayload { e_session_key :: String
                            , e_path :: String
-                           , e_contents :: String
-                       } deriving (Generic, FromJSON, ToBSON, FromBSON, ToJSON)
+                           , e_filedata :: String
+                       } deriving (Generic, FromJSON, ToJSON)
 
 
-deriving instance FromBSON String
-deriving instance ToBSON   String
-
-
-data ResponseData = ResponseData { response :: String
-                                 } deriving (Generic, ToJSON, FromJSON,FromBSON)
+data ResponseData = ResponseData { message :: String,
+                                   saved :: Bool
+                                 } deriving (Generic, ToJSON, FromJSON)
 
 
 
-type APIfs = "store" :> ReqBody '[JSON] UpPayload :> Post '[JSON] Bool
+type APIfs = "store" :> ReqBody '[JSON] UpPayload :> Post '[JSON] ResponseData

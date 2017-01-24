@@ -39,7 +39,7 @@ import           System.Log.Handler           (setFormatter)
 import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
-import           FileserverAPI                (APIfs, ResponseData, UpPayload(..))
+import           FileserverAPI                (APIfs, ResponseData(..), UpPayload(..))
 import           Database.MongoDB
 import           System.Environment           (getProgName)
 import           MongoDb                      (drainCursor, runMongo, logLevel)
@@ -74,11 +74,12 @@ server = store
   where
 
 
-    store :: UpPayload -> Handler Bool
-    store msg@(UpPayload e_contents e_session_key e_path) = liftIO $ do
+    store :: UpPayload -> Handler ResponseData
+    store msg@(UpPayload e_session_key e_path e_filedata) = liftIO $ do
+      let filedata = extract e_filedata
+      writeFile ("bucket/" ++ e_path) (extract e_filedata)
       warnLog $ "Storing message under key " ++ e_path ++ "."
-      runMongo $ upsert (select ["name" =: e_path] "MESSAGE_RECORD") $ toBSON msg
-      return True
+      return ResponseData{ message = "ok", saved = True}
 
 
 
