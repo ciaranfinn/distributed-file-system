@@ -39,12 +39,15 @@ import           System.Log.Handler           (setFormatter)
 import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
-import           FileserverAPI                (APIfs, ResponseData(..), UpPayload(..))
+import           FileserverAPI                (APIfs, ResponseData(..), UpPayload(..), DownPayload(..), DownRequest(..))
 import           AuthAPI                      (TokenData(..))
+import           System.Directory             (doesFileExist)
 import           Database.MongoDB
 import           System.Environment           (getProgName)
 import           MongoDb                      (drainCursor, runMongo, logLevel)
 import           Frequent
+import qualified Data.ByteString.Base64 as B64
+import           Data.ByteString.UTF8         (toString,fromString)
 
 
 startApp :: IO ()
@@ -71,7 +74,7 @@ api :: Proxy APIfs
 api = Proxy
 
 server :: Server APIfs
-server = store
+server = store :<|> download
   where
 
     -- Store file payload in the bucket within the service
@@ -87,13 +90,39 @@ server = store
                   -- If the token is out of date, fling the user out of the system
                   if (sys < expiry)
                     then do
-                      writeFile ("bucket" ++ path) (extract e_filedata)
+                      writeFile ("bucket/" ++ path) (extract e_filedata)
                       return ResponseData{ message = "file has been saved", saved = True}
                     else
                       return ResponseData{ message = "expired token", saved = False}
 
         Nothing -> return ResponseData{ message = "invalid token", saved = False}
 
+
+    --  Supply a path and get the encrypted file in the response payload
+    download :: DownRequest -> Handler DownPayload
+    download msg@(DownRequest filepath session_key ) = liftIO $ do
+      let token = getTokenData session_key
+      case token of
+        Just t -> do
+                  systemt <- systemTime
+                  let expiry = convertTime $ expiryTime t
+                  let sys = convertTime systemt
+
+                  if (sys < expiry)
+                    then do
+                      present <- liftIO $ doesFileExist ("bucket/" ++ filepath)
+                      if present
+                        then do
+                          file <- liftIO $ readFile ("bucket/" ++ filepath)
+                          let encrypted_file = toString $ B64.encode (encrypt secretKey (fromString file))
+                          liftIO $ return DownPayload{ filename = filepath, e_data = encrypted_file}
+                        else
+                          return DownPayload{ filename = "File doesn't exist", e_data = ""}
+                    else
+                      return DownPayload{ filename = "", e_data = ""}
+
+        -- unauthorised
+        Nothing -> return DownPayload{ filename = "", e_data = ""}
 
 
 

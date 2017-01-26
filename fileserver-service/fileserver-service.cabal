@@ -24,6 +24,7 @@ library
                      , servant-client
                      , transformers
                      , wai
+                     , directory
                      , warp
                      , wai-logger
                      , mongoDB
@@ -37,6 +38,8 @@ library
                      , mtl
                      , http-client
                      , frequent
+                     , base64-bytestring
+                     , utf8-string
                      , sys-api
   default-language:    Haskell2010
 

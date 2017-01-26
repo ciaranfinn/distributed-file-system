@@ -49,12 +49,16 @@ Request | Route | Payload | Response
 Request | Route | Payload | Response
 --- | --- | --- | ---
 *POST* | /store | `{ "e_session_key":"...","path":"...","e_filedata":"..."}` | `{"saved": true,"message": "file has been saved"}`
-*GET* | /download | `~`| `~`
+*POST* | /download | `{ "filepath":"/apple.txt","session_key":"nnVzMlP92zhJEkVfsI5BrL3NlDsaP3tMlhm1nq9bazTtITrzcserBahvmCVTaSRuFL785q9r+5hLrLjct+tNVL3Qe1Q="}`| `{"e_data": "pj53LVP6l1waXkgW59Qc8M2Ax28+","filename": "/apple.txt"}`
 
 Error Responses |
 --- |
 `{"saved": false,"message": "expired token"}` |
 `{"saved": false,"message": "invalid token"}` |
+
+
+### Directory Service / Locaking Implemtation:
+This service is responsible for the allocation of file services. This 
 
 
 ####Starting The Services:
