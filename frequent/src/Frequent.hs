@@ -23,13 +23,12 @@ import           Data.Time.ISO8601
 
 
 
+-- Return the current system time as a formatted String
 systemTime :: IO String
 systemTime = do
   currentTime <- getCurrentTime
   let formatted = formatISO8601 (addUTCTime 0 currentTime)
   return formatted
-
-
 
 
 convertTime :: String -> Int
