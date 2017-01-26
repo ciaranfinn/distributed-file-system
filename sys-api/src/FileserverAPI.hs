@@ -21,7 +21,7 @@ import           Servant
 
 
 data UpPayload = UpPayload { e_session_key :: String
-                           , e_path :: String
+                           , path :: String
                            , e_filedata :: String
                        } deriving (Generic, FromJSON, ToJSON)
 

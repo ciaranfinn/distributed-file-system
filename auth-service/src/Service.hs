@@ -31,6 +31,8 @@ import           Crypto.Error                         (CryptoFailable(..))
 import qualified Data.ByteString.Base64 as B64
 import           Frequent
 import           AuthAPI                              (ResponseData(..),Token(..),TokenData(..))
+import           Data.Time.ISO8601
+
 
 
 type AuthServiceApi = "create" :> ReqBody '[JSON] User :> Post '[JSON] ResponseData
@@ -79,7 +81,7 @@ getToken user = do
     case maybeUser of
         Just user ->
             if (verify user password) then do
-                let expire_time = iso8601 (addUTCTime 3600 currentTime)
+                let expire_time = formatISO8601 (addUTCTime 3600 currentTime)
                 let token = BS.unpack $ encode TokenData {email = email, expiryTime = expire_time}
                 let encrypted_token = toString $ B64.encode (encrypt secretKey (fromString token))
                 return Token {token = encrypted_token}

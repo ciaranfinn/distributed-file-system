@@ -40,6 +40,7 @@ import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
 import           FileserverAPI                (APIfs, ResponseData(..), UpPayload(..))
+import           AuthAPI                      (TokenData(..))
 import           Database.MongoDB
 import           System.Environment           (getProgName)
 import           MongoDb                      (drainCursor, runMongo, logLevel)
@@ -73,13 +74,22 @@ server :: Server APIfs
 server = store
   where
 
-
+    -- Store file payload in the bucket within the service
     store :: UpPayload -> Handler ResponseData
-    store msg@(UpPayload e_session_key e_path e_filedata) = liftIO $ do
-      let filedata = extract e_filedata
-      writeFile ("bucket/" ++ e_path) (extract e_filedata)
-      warnLog $ "Storing message under key " ++ e_path ++ "."
-      return ResponseData{ message = "ok", saved = True}
+    store msg@(UpPayload e_session_key path e_filedata) = liftIO $ do
+      let token = getTokenData e_session_key
+      case token of
+        Just t -> do
+                  let expiry = (expiryTime t)
+                  print $ convertTime expiry
+
+                  writeFile ("bucket/" ++ path) (extract e_filedata)
+                  return ResponseData{ message = expiry, saved = True}
+
+        Nothing -> return ResponseData{ message = "invalid token", saved = False}
+
+
+
 
 
 
