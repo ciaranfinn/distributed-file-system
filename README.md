@@ -6,14 +6,19 @@ The task for this project was to dicover more about the topology of a modern dis
 Student: **Ciaran Finn (13320900)**
 
 ####Language of Choice:
-`Haskell`
+* Haskell
 
 ####Required Services:
-1. File Server / Caching
-2. Directory / Locking
-3. Registry
-4. Auth Service
+1. File Server ✔︎
+2. Directory / Locking ~
+3. Registry ✔︎
+4. Auth Service ✔︎
 
+####Libraries:
+1. `sys-api`
+2. `frequent`
+
+*The above two libraries help to clean up the cruft within the system. If pieces of code are frequently used they are placed into the frequent library. Otherwise all the RESTFul/Servant api code in grouped into the sys-api library. This helps to stop the repetition of functions throughout the project*
 
 
 ### Registry Service (Personal Experimentation):
