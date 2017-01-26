@@ -9,7 +9,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module FileserverAPI (ResponseData(..),APIfs(..), UpPayload(..)) where
+module FileserverAPI (ResponseData(..),APIfs(..), UpPayload(..), DownPayload(..)) where
 
 import           Data.Aeson
 import           Data.Aeson.TH
@@ -29,6 +29,11 @@ data UpPayload = UpPayload { e_session_key :: String
 data ResponseData = ResponseData { message :: String,
                                    saved :: Bool
                                  } deriving (Generic, ToJSON, FromJSON)
+
+
+data DownPayload = DownPayload { filepath :: String
+                               , e_data :: String
+                             } deriving (Generic, ToJSON, FromJSON)
 
 
 

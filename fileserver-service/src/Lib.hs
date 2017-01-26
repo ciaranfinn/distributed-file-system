@@ -80,11 +80,17 @@ server = store
       let token = getTokenData e_session_key
       case token of
         Just t -> do
-                  let expiry = (expiryTime t)
-                  print $ convertTime expiry
+                  systemt <- systemTime
+                  let expiry = convertTime $ expiryTime t
+                  let sys = convertTime systemt
 
-                  writeFile ("bucket/" ++ path) (extract e_filedata)
-                  return ResponseData{ message = expiry, saved = True}
+                  -- If the token is out of date, fling the user out of the system
+                  if (sys < expiry)
+                    then do
+                      writeFile ("bucket" ++ path) (extract e_filedata)
+                      return ResponseData{ message = "file has been saved", saved = True}
+                    else
+                      return ResponseData{ message = "expired token", saved = False}
 
         Nothing -> return ResponseData{ message = "invalid token", saved = False}
 

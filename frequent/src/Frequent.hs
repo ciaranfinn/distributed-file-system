@@ -23,19 +23,21 @@ import           Data.Time.ISO8601
 
 
 
--- sysTime :: UTCTime
--- sysTime = do
---             apple <- liftIO $ getCurrentTime
---             pure apple
+systemTime :: IO String
+systemTime = do
+  currentTime <- getCurrentTime
+  let formatted = formatISO8601 (addUTCTime 0 currentTime)
+  return formatted
+
 
 
 
 convertTime :: String -> Int
 convertTime time = do
-                let b = parseISO8601 time
-                case b of
-                  Just c -> floor $ utctDayTime c :: Int
-                  Nothing -> 0
+  let b = parseISO8601 time
+  case b of
+    Just c -> floor $ utctDayTime c :: Int
+    Nothing -> 0
 
 
 -- Used to send the time down the REST API
