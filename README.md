@@ -1,14 +1,14 @@
 ## Distributed File System
 
-####Task:
-The task for this project was to dicover more about the topology of a modern distributed system. The project focused on implementing a distributed system using REST as the messaging protocol. Throughout this project I discovered many opotunities to question why and how I was building the system. I also got to learn more about the servant libary and Haskell. 
-
 Student: **Ciaran Finn (13320900)**
+
+####Task:
+The task for this project was to dicover more about the topology of a modern distributed system. The project focused on implementing a distributed system using REST as the messaging protocol. Throughout this project I discovered many opotunities to question why and how I was building the system. I also got to learn more about the servant libary and Haskell, which was a plus.
 
 ####Language of Choice:
 * Haskell
 
-####Required Services:
+####Main Services:
 1. File Server ✔︎
 2. Directory / Locking ~
 3. Registry ✔︎
@@ -36,7 +36,7 @@ The model I have tried to implement within my project was primarly the [Andrew F
 9. Replicate files to other nodes
 
 ### Registry Service (Personal Experimentation):
-- Though it wasn't a specification of the project I attempted to implement a registry service. The idea behind this service was to act as a monitor for all the available nodes in the network. Upon starting up, the file servers and directory, they would subscribe to the registry in order to notify the system of the resource. I thought this service would be helpful as it could be possibly used for election processes. In the case that a directory service terminated, you could access the nodes and then elect a new directory form a pool. Another approach which I learned would have been to implement the directory logic into the file service to alleviate having a pool. This would utilise resources more effectively and allow all spun up nodes to be operational instead of sitting in a pool. The one overhead is that this approach added complexity to the file system nodes.
+- Though it wasn't a specification of the project I attempted to implement a registry service. The idea behind this service was to act as a monitor for all the available nodes in the network. Upon starting up the file servers, they would subscribe to the registry in order to notify the system of the resource. I thought this service would be helpful as it could be used for election processes. In the case that a fileserver service terminated, you could access the nodes and then elect a new fileserver form a pool. Another approach which I learned would have been to implement the directory logic into the file service to alleviate having a pool. This would utilise resources more effectively and allow all spun up nodes to be operational instead of sitting in a pool. The one overhead is that this approach added complexity to the file system nodes.
 
 - This serivce makes use of an interesting technoloy called redis. This is a key value store. This application is spun up in docker and allows the service to maintain the subsriber list of the system nodes.
 
@@ -92,5 +92,5 @@ This service is responsible for the allocation of file services. This
 * `stack ghci`
 * `main`
 
-####Downfalls:
+####Conclusion:
 > The project took a bit of a lul during the christmas period as I dedicated some time to exam preperation. Another factor that slowed me down was the use of haskell within the project. Though it is a great language, my lack of familiarity with some paradigms and types caused me great difficulty throughout. The submitted work represents my best attempt at an implementation of a distributed file server. 
