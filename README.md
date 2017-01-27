@@ -14,12 +14,26 @@ Student: **Ciaran Finn (13320900)**
 3. Registry ✔︎
 4. Auth Service ✔︎
 
-####Libraries:
+####Created Libraries:
 1. `sys-api`
 2. `frequent`
 
 *The above two libraries help to clean up the cruft within the system. If pieces of code are frequently used they are placed into the frequent library. Otherwise all the RESTFul/Servant api code in grouped into the sys-api library. This helps to stop the repetition of functions throughout the project*
 
+####System Architecture:
+The model I have tried to implement within my project was primarly the [Andrew File System](https://en.wikipedia.org/wiki/Andrew_File_System) (**AFS**) model. In the AFS model its ability to scale is one of the key features. To the client, the service looks homogeneous. In reality, many nodes are servicing requests in order to create this illusion of a single service. The template I choose was a basic upload/download strategy which resided closesly to the AFS model attributes. Though my implementation is different from the model, it tries its best to represent the ideas from it.
+
+
+####File System Processes
+1. Create User
+2. Login User
+3. Obtain token
+4. Contact directory
+5. Get assigned a fileserver - (from pool of file server nodes)
+6. Create lock if necessary
+7. Preform action
+8. Unlock file
+9. Replicate files to other nodes
 
 ### Registry Service (Personal Experimentation):
 - Though it wasn't a specification of the project I attempted to implement a registry service. The idea behind this service was to act as a monitor for all the available nodes in the network. Upon starting up, the file servers and directory, they would subscribe to the registry in order to notify the system of the resource. I thought this service would be helpful as it could be possibly used for election processes. In the case that a directory service terminated, you could access the nodes and then elect a new directory form a pool. Another approach which I learned would have been to implement the directory logic into the file service to alleviate having a pool. This would utilise resources more effectively and allow all spun up nodes to be operational instead of sitting in a pool. The one overhead is that this approach added complexity to the file system nodes.
@@ -50,11 +64,12 @@ Request | Route | Payload | Response
 
 - The file service stores the files in a directory on the given instance `/bucket/..`. Though I could have utilised mongodb, and stored the files as documents, I felt that this method was much easier to implement and provided the same result to the client.
 
+
 #####Request Types
 Request | Route | Payload | Response
 --- | --- | --- | ---
 *POST* | /store | `{ "e_session_key":"...","path":"...","e_filedata":"..."}` | `{"saved": true,"message": "file has been saved"}`
-*POST* | /download | `{ "filepath":"/apple.txt","session_key":"nnVzMlP92zhJEkVfsI5BrL3NlDsaP3tMlhm1nq9bazTtITrzcserBahvmCVTaSRuFL785q9r+5hLrLjct+tNVL3Qe1Q="}`| `{"e_data": "pj53LVP6l1waXkgW59Qc8M2Ax28+","filename": "/apple.txt"}`
+*POST* | /download | `{ "filepath":"/apple.txt","session_key":"nnVzMlP92zhJEkVfsI5BrL3NlDsaP3tMlhm1nq9bazTtITrzcserBahvmCVTaSRuFL785q9r+5hLrLjct+tNVL3Qe1Q="}`| `{"e_data": "pj53LVP6l1waXkgW59Qc8M2Ax28+","filename": "..."}`
 
 Error Responses |
 --- |
@@ -62,7 +77,7 @@ Error Responses |
 `{"saved": false,"message": "invalid token"}` |
 
 
-### Directory Service / Locaking Implemtation:
+### Directory Service / Locking Implemtation:
 This service is responsible for the allocation of file services. This 
 
 
@@ -76,3 +91,6 @@ This service is responsible for the allocation of file services. This
 * `stack setup && stack build` or
 * `stack ghci`
 * `main`
+
+####Downfalls:
+> The project took a bit of a lul during the christmas period as I dedicated some time to exam preperation. Another factor that slowed me down was the use of haskell within the project. Though it is a great language, my lack of familiarity with some paradigms and types caused me great difficulty throughout. The submitted work represents my best attempt at an implementation of a distributed file server. 
