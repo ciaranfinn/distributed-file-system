@@ -53,7 +53,6 @@ import           Data.ByteString.UTF8         (toString,fromString)
 startApp :: IO ()
 startApp = withLogging $ \ aplogger -> do
   warnLog "Starting File Server Service"
-
   forkIO $ taskScheduler 5
   let settings = setPort 8080 $ setLogger aplogger defaultSettings
   runSettings settings app

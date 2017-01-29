@@ -9,7 +9,7 @@
 
 module Service (startApp) where
 
-import RegistryAPI                          (APIreg,regAPI,Subscriber(..),RResponse(..))
+import RegistryAPI
 import Data.Aeson
 import Data.Aeson.TH
 import Network.Wai
@@ -27,7 +27,7 @@ import Data.ByteString.UTF8                 (toString,fromString)
 startApp :: IO ()
 startApp = do
   conn <- checkedConnect defaultConnectInfo
-  run 8080 $ app conn
+  run 9000 $ app conn
 
 type App = ReaderT Connection Handler
 

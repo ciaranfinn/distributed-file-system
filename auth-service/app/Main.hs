@@ -20,7 +20,7 @@ import           Data.ByteString.Char8        (pack)
 
 
 
-serviceRunPort = 8080
+serviceRunPort = 8000
 
 main :: IO ()
 main = do

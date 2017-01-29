@@ -6,7 +6,7 @@
 {-# LANGUAGE StandaloneDeriving #-}
 
 
-module RegistryAPI (APIreg,Subscriber(..),RResponse(..), regAPI) where
+module RegistryAPI where
 
 import           Data.Aeson
 import           Data.Aeson.TH
@@ -39,7 +39,7 @@ type APIreg = "register" :> ReqBody '[JSON] Subscriber :> Post '[JSON] RResponse
 regAPI :: Proxy APIreg
 regAPI = Proxy
 
-register :: Subscriber -> ClientM RResponse
+subscribe :: Subscriber -> ClientM RResponse
 getRegistered :: ClientM [Subscriber]
 
-(register :<|> getRegistered) = client regAPI
+(subscribe :<|> getRegistered) = client regAPI
