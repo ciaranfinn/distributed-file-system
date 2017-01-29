@@ -1,25 +1,10 @@
-fileserver-service:
-  image: fileserver-service
-  environment:
-    - MONGODB_IP=docstore
-
-  command: /usr/local/bin/fileserver-service-exe
-  ports:
-    - "8000:8080"
-  links:
-    - docstore
+# Lauch these services with docker and expose the ports
+# I decided to run the other services locally.
 
 docstore:
   image: mongo:3.2.11
   ports:
     - "27017:27017"
-
-
-auth-service:
-  image: auth-service
-  command: /usr/local/bin/auth-service-exe
-  ports:
-    - "8001:8080"
 
 authstore:
   restart: always

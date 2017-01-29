@@ -24,8 +24,11 @@ import           Data.Time.ISO8601
 
 
 -- Services
-auth_service :: String
-auth_service = "http://localhost:8000"
+getHost :: String
+getHost = "localhost"
+
+auth_service :: (String,Int)
+auth_service = ("localhost",8000)
 
 registry_service :: (String,Int)
 registry_service = ("localhost",9000)

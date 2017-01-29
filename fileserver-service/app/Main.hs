@@ -11,23 +11,26 @@ import           Control.Concurrent           (forkIO, threadDelay)
 
 main :: IO ()
 main = do
-        registerFs
-        startApp
+        putStrLn "Please provide a startup port >>"
+        port <- getLine
+        let sPort = read port :: Int
+        print "Subscribing to Registry.."
+        registerFs sPort
+        startApp sPort
 
 
 -- We Subscribe to the registry prior to running
 -- the file Service
-registerFs :: IO ()
-registerFs = do
-        let subscriber = Subscriber "999.999.999.999" 80 "alive" "fs"
+registerFs :: Int -> IO ()
+registerFs port = do
+        let subscriber = Subscriber getHost port "active" "fs"
         response <- (SC.runClientM (subscribe subscriber) =<< env)
         case response of
                 Right a -> print "File service successfully subscribed"
                 Left e -> do
-                        threadDelay (3 * 3600 * 600)
+                        threadDelay (3 * 3600 * 600) -- wait for a period and then retry to subscribe
                         print "Retry to subscribe"
-                        registerFs
-
+                        registerFs port
         where env = do
                manager <- newManager defaultManagerSettings
                let (host,port) = registry_service

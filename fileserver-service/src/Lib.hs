@@ -26,7 +26,7 @@ import           Data.Maybe                   (catMaybes)
 import           Data.Time.Clock              (UTCTime, getCurrentTime)
 import           Data.Time.Format             (defaultTimeLocale, formatTime)
 import           GHC.Generics
-import           Network.HTTP.Client          (defaultManagerSettings,
+import           Network.HTTP.Client          (Manager,defaultManagerSettings,
                                                newManager)
 import           Network.Wai
 import           Network.Wai.Handler.Warp
@@ -39,7 +39,7 @@ import           System.Log.Handler           (setFormatter)
 import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
-import           FileserverAPI                (APIfs, ResponseData(..), UpPayload(..), DownPayload(..), DownRequest(..))
+import           FileserverAPI
 import           AuthAPI                      (TokenData(..))
 import           System.Directory             (doesFileExist)
 import           Database.MongoDB
@@ -48,29 +48,41 @@ import           MongoDb                      (drainCursor, runMongo, logLevel)
 import           Frequent
 import qualified Data.ByteString.Base64 as B64
 import           Data.ByteString.UTF8         (toString,fromString)
+import           MongoDb
 
 
-startApp :: IO ()
-startApp = withLogging $ \ aplogger -> do
+startApp :: Int -> IO ()
+startApp sPort = withLogging $ \ aplogger -> do
   warnLog "Starting File Server Service"
   forkIO $ taskScheduler 5
-  let settings = setPort 8080 $ setLogger aplogger defaultSettings
+  let settings = setPort sPort $ setLogger aplogger defaultSettings
   runSettings settings app
 
 
 taskScheduler :: Int -> IO ()
 taskScheduler delay = do
   warnLog $ "Task scheduler operating."
-
   threadDelay $ delay * 1000000
   taskScheduler delay
 
 
-app :: Application
-app = serve api server
+runReplicator :: UpPayload -> IO ()
+runReplicator file = do
+  manager <- newManager defaultManagerSettings
+  liftIO $ forkIO $ replicateFile file manager
+  print "Ran replicator"
 
-api :: Proxy APIfs
-api = Proxy
+
+-- Replicate file to another file-server node in the network
+replicateFile :: UpPayload -> Manager -> IO ()
+replicateFile file manager = do
+  response <- (SC.runClientM (upload file) (SC.ClientEnv manager (SC.BaseUrl SC.Http "localhost" 8001 ""))) -- Hard coded node to replicate to.
+  print "replicated to new node"
+
+
+app :: Application
+app = serve fsAPI server
+
 
 server :: Server APIfs
 server = store :<|> download
@@ -78,7 +90,7 @@ server = store :<|> download
 
     -- Store file payload in the bucket within the service
     store :: UpPayload -> Handler ResponseData
-    store msg@(UpPayload e_session_key path e_filedata) = liftIO $ do
+    store file@(UpPayload e_session_key path e_filedata) = liftIO $ do
       let token = getTokenData e_session_key
       case token of
         Just t -> do
@@ -89,8 +101,19 @@ server = store :<|> download
                   -- If the token is out of date, fling the user out of the system
                   if (sys < expiry)
                     then do
-                      writeFile ("bucket/" ++ path) (extract e_filedata)
-                      return ResponseData{ message = "file has been saved", saved = True}
+                      doc <- runMongo $ do
+                          docs <- find (select ["filename" =: path] "FILE_STORE") >>= drainCursor
+                          return docs
+
+                      -- if we don't see that the file is saved we will add it
+                      if (null doc)
+                        then do
+                          runMongo $ upsert (select ["filename" =: path] "FILE_STORE") ["filename" =: path]
+                          writeFile ("bucket/" ++ path) (extract e_filedata)
+                          runReplicator file
+                          return ResponseData{ message = "file has been saved", saved = True}
+                        else
+                          return ResponseData{ message = "file has been saved", saved = True}
                     else
                       return ResponseData{ message = "expired token", saved = False}
 
@@ -122,9 +145,6 @@ server = store :<|> download
 
         -- unauthorised
         Nothing -> return DownPayload{ filename = "", e_data = ""}
-
-
-
 
 
 -- global logging functions

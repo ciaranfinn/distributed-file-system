@@ -9,7 +9,7 @@
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module FileserverAPI (ResponseData(..),APIfs(..), UpPayload(..), DownPayload(..), DownRequest(..)) where
+module FileserverAPI where
 
 import           Data.Aeson
 import           Data.Aeson.TH
@@ -17,6 +17,9 @@ import           GHC.Generics
 import           Network.Wai
 import           Network.Wai.Handler.Warp
 import           Servant
+import           Servant.API
+import           Servant.Client
+
 
 
 
@@ -40,6 +43,14 @@ data DownRequest = DownRequest { filepath :: String,
                                } deriving (Generic, FromJSON, ToJSON)
 
 
-
 type APIfs = "store" :> ReqBody '[JSON] UpPayload :> Post '[JSON] ResponseData
         :<|> "download" :> ReqBody '[JSON] DownRequest :> Post '[JSON] DownPayload
+
+fsAPI :: Proxy APIfs
+fsAPI = Proxy
+
+
+upload :: UpPayload -> ClientM ResponseData
+getFile :: DownRequest -> ClientM DownPayload
+
+(upload :<|> getFile) = client fsAPI
