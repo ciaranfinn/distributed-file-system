@@ -18,9 +18,29 @@ library
   exposed-modules:     Lib
   build-depends:       base >= 4.7 && < 5
                      , aeson
+                     , servant
                      , servant-server
+                     , servant-client
+                     , transformers
                      , wai
+                     , directory
                      , warp
+                     , wai-logger
+                     , mongoDB
+                     , hslogger
+                     , time
+                     , bson-generic
+                     , resourcet
+                     , text
+                     , bytestring
+                     , bson
+                     , mtl
+                     , http-client
+                     , frequent
+                     , base64-bytestring
+                     , utf8-string
+                     , sys-api
+                     , random
   default-language:    Haskell2010
 
 executable directory-service-exe

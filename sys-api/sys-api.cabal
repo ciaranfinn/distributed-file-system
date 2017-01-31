@@ -17,6 +17,7 @@ library
   exposed-modules:     RegistryAPI
                      , FileserverAPI
                      , AuthAPI
+                     , DirectoryAPI
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , servant

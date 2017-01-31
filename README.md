@@ -70,7 +70,7 @@ Request | Route | Payload | Response
 Request | Route | Payload | Response
 --- | --- | --- | ---
 *POST* | /store | `{ "e_session_key":"...","path":"...","e_filedata":"..."}` | `{"saved": true,"message": "file has been saved"}`
-*POST* | /download | `{ "filepath":"/apple.txt","session_key":"nnVzMlP92zhJEkVfsI5BrL3NlDsaP3tMlhm1nq9bazTtITrzcserBahvmCVTaSRuFL785q9r+5hLrLjct+tNVL3Qe1Q="}`| `{"e_data": "pj53LVP6l1waXkgW59Qc8M2Ax28+","filename": "..."}`
+*POST* | /download | `{ "filepath":"/apple.txt","session_key":"nnVzMlP92zhJ.."}`| `{"e_data": "pj53LVP6l1waXkgW59Qc8M2Ax28+","filename": "..."}`
 
 Error Responses |
 --- |
@@ -78,8 +78,16 @@ Error Responses |
 `{"saved": false,"message": "invalid token"}` |
 
 
-### Directory Service / Locking Implemtation:
-This service is responsible for the allocation of file services. This
+### Directory Service:
+This service is responsible for the allocation of file services. At the minute the service returns a random file service to cater for the clients request. The ideal approach is to keep a record of the assignments and then assign the servers in a way that they get equal use. This will work but isn't the optimal solution to assigning the resources. The Directory service will return an encrypted file-system node.
+
+#####Request Types
+Request | Route | Payload | Response
+--- | --- | --- | ---
+*GET* | /getFSNode |`{"my_session_key":"nnVzMlP92zhJEkV.."}` | `{"node":"tiJ0LFHm3n.."}`
+
+
+
 
 #### Replication (Within File Service)
 Though I didn't manage to compleletly finish this feature I had a good idea about how it was to work. My plan was that when a file is uploaded it would get replicated onto another file server. When a file is written, the server should contact another node to share the file for replication. When the node gets the file, it will check to see if it has the file before it attempts to save it. If it doesn't have the file, it will mark that it has gotten it, and then proceed to write the file to its own bucket. This can be imagined as form of chained replication. Each file service should be able to replicate the files until each node in the network has the file.
