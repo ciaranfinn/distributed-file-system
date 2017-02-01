@@ -21,16 +21,13 @@ import           Servant.API
 import           Servant.Client
 
 
-
-
 data UpPayload = UpPayload { e_session_key :: String
                            , path :: String
                            , e_filedata :: String
                        } deriving (Generic, FromJSON, ToJSON)
 
 
-data ResponseData = ResponseData { message :: String,
-                                   saved :: Bool
+data ResponseData = ResponseData { saved :: Bool
                                  } deriving (Generic, ToJSON, FromJSON)
 
 

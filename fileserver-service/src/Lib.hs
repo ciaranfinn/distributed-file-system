@@ -15,7 +15,8 @@ module Lib (startApp) where
 import           Control.Concurrent           (forkIO, threadDelay)
 import           Control.Monad                (when)
 import           Control.Monad.IO.Class
-import           Control.Monad.Trans.Except   (ExceptT)
+import           Control.Monad.Except         (runExceptT)
+import           Control.Monad.Reader         (MonadIO, MonadReader,ReaderT, runReaderT, asks)
 import           Control.Monad.Trans.Resource
 import           Data.Aeson
 import           Data.Aeson.TH
@@ -49,14 +50,16 @@ import           Frequent
 import qualified Data.ByteString.Base64 as B64
 import           Data.ByteString.UTF8         (toString,fromString)
 import           MongoDb
+import           RegistryAPI
+import           System.Random                       (randomRIO)
 
 
 startApp :: Int -> IO ()
-startApp sPort = withLogging $ \ aplogger -> do
+startApp runPort = withLogging $ \ aplogger -> do
   warnLog "Starting File Server Service"
   forkIO $ taskScheduler 5
-  let settings = setPort sPort $ setLogger aplogger defaultSettings
-  runSettings settings app
+  let settings = setPort runPort $ setLogger aplogger defaultSettings
+  runSettings settings (app runPort)
 
 
 taskScheduler :: Int -> IO ()
@@ -66,85 +69,132 @@ taskScheduler delay = do
   taskScheduler delay
 
 
-runReplicator :: UpPayload -> IO ()
-runReplicator file = do
+runReplicator :: Int -> UpPayload -> IO ()
+runReplicator port file = do
+  print "Replicate file"
   manager <- newManager defaultManagerSettings
-  liftIO $ forkIO $ replicateFile file manager
-  print "Ran replicator"
+  liftIO $ forkIO $ replicateFile port file manager
+  pure ()
 
 
 -- Replicate file to another file-server node in the network
-replicateFile :: UpPayload -> Manager -> IO ()
-replicateFile file manager = do
-  response <- (SC.runClientM (upload file) (SC.ClientEnv manager (SC.BaseUrl SC.Http "localhost" 8001 ""))) -- Hard coded node to replicate to.
-  print "replicated to new node"
+replicateFile :: Int -> UpPayload -> Manager -> IO ()
+replicateFile runPort file manager = do
+  print "Discovering FS Services"
+  node <- findServer runPort
+  case node of
+    Just fs -> do
+      response <- (SC.runClientM (upload file) (SC.ClientEnv manager (SC.BaseUrl SC.Http (address fs) (port fs) "")))
+      print "replicated to new node"
+
+    Nothing -> print "Registry is offline, no replication occured"
 
 
-app :: Application
-app = serve fsAPI server
+
+-- Make a request to the registry to obtain the list of registered file servers
+findServer :: Int -> IO (Maybe Subscriber)
+findServer runPort = do
+        response <- (SC.runClientM getRegistered =<< env)
+        case response of
+                Right subscribers -> do
+                    -- If server list is empty no replication can occur
+                    if (null subscribers)
+                      then do
+                        pure Nothing
+                      else do
+                        server <- pickRandomServer runPort subscribers
+                        pure $ Just server
+
+                Left e -> pure Nothing
+
+        where env = do
+               manager <- newManager defaultManagerSettings
+               let (host,port) = registry_service
+               return (SC.ClientEnv manager (SC.BaseUrl SC.Http host port ""))
 
 
-server :: Server APIfs
-server = store :<|> download
-  where
+
+-- Choose a server yet do not pick the current one as we will loop (replication to ourself)
+-- we can identify ourself via our port. Each Fileserver will be spun up on a different node.
+pickRandomServer :: Int -> [Subscriber] -> IO Subscriber
+pickRandomServer runPort xs = do
+  let availableNodes = filter ((runPort /=) . (port)) xs
+  liftIO $ randomRIO (0, length availableNodes - 1) >>= return . (availableNodes !!)
+
+
+
+data Important = Important {sPort :: Int}
+
+type App = ReaderT Important Handler
+
+app :: Int -> Application
+app port = serve fsAPI (appToServer (Important $ port))
+
+appToServer :: Important -> Server APIfs
+appToServer p = enter (runReaderTNat p) fsService
+
+fsService :: ServerT APIfs App
+fsService = store :<|> download
 
     -- Store file payload in the bucket within the service
-    store :: UpPayload -> Handler ResponseData
-    store file@(UpPayload e_session_key path e_filedata) = liftIO $ do
-      let token = getTokenData e_session_key
-      case token of
-        Just t -> do
-                  systemt <- systemTime
-                  let expiry = convertTime $ expiryTime t
-                  let sys = convertTime systemt
+store :: UpPayload -> App ResponseData
+store file@(UpPayload e_session_key path e_filedata) = do
+  runPort <- asks sPort
+  liftIO $ do
+    let token = getTokenData e_session_key
+    case token of
+      Just t -> do
+                systemt <- systemTime
+                let expiry = convertTime $ expiryTime t
+                let sys = convertTime systemt
 
-                  -- If the token is out of date, fling the user out of the system
-                  if (sys < expiry)
+                -- If the token is out of date, fling the user out of the system
+                if (sys < expiry)
+                  then do
+                    doc <- runMongo $ do
+                        docs <- find (select ["filename" =: path] "FILE_STORE") >>= drainCursor
+                        return docs
+
+                    -- if we don't see that the file is saved we will add it
+                    if (null doc)
+                      then do
+                        runMongo $ upsert (select ["filename" =: path] "FILE_STORE") ["filename" =: path]
+                        writeFile ("bucket/" ++ path) (extract e_filedata)
+                        runReplicator runPort file
+                        return ResponseData{ saved = True}
+                      else
+                        return ResponseData{ saved = True}
+                  else
+                    return ResponseData{ saved = False}
+
+      Nothing -> return ResponseData{ saved = False}
+
+
+--  Supply a path and get the encrypted file in the response payload
+download :: DownRequest -> App DownPayload
+download msg@(DownRequest filepath session_key ) = liftIO $ do
+  let token = getTokenData session_key
+  case token of
+    Just t -> do
+              systemt <- systemTime
+              let expiry = convertTime $ expiryTime t
+              let sys = convertTime systemt
+
+              if (sys < expiry)
+                then do
+                  present <- liftIO $ doesFileExist ("bucket/" ++ filepath)
+                  if present
                     then do
-                      doc <- runMongo $ do
-                          docs <- find (select ["filename" =: path] "FILE_STORE") >>= drainCursor
-                          return docs
-
-                      -- if we don't see that the file is saved we will add it
-                      if (null doc)
-                        then do
-                          runMongo $ upsert (select ["filename" =: path] "FILE_STORE") ["filename" =: path]
-                          writeFile ("bucket/" ++ path) (extract e_filedata)
-                          runReplicator file
-                          return ResponseData{ message = "file has been saved", saved = True}
-                        else
-                          return ResponseData{ message = "file has been saved", saved = True}
+                      file <- liftIO $ readFile ("bucket/" ++ filepath)
+                      let encrypted_file = toString $ B64.encode (encrypt secretKey (fromString file))
+                      liftIO $ return DownPayload{ filename = filepath, e_data = encrypted_file}
                     else
-                      return ResponseData{ message = "expired token", saved = False}
+                      return DownPayload{ filename = "File doesn't exist", e_data = ""}
+                else
+                  return DownPayload{ filename = "", e_data = ""}
 
-        Nothing -> return ResponseData{ message = "invalid token", saved = False}
-
-
-    --  Supply a path and get the encrypted file in the response payload
-    download :: DownRequest -> Handler DownPayload
-    download msg@(DownRequest filepath session_key ) = liftIO $ do
-      let token = getTokenData session_key
-      case token of
-        Just t -> do
-                  systemt <- systemTime
-                  let expiry = convertTime $ expiryTime t
-                  let sys = convertTime systemt
-
-                  if (sys < expiry)
-                    then do
-                      present <- liftIO $ doesFileExist ("bucket/" ++ filepath)
-                      if present
-                        then do
-                          file <- liftIO $ readFile ("bucket/" ++ filepath)
-                          let encrypted_file = toString $ B64.encode (encrypt secretKey (fromString file))
-                          liftIO $ return DownPayload{ filename = filepath, e_data = encrypted_file}
-                        else
-                          return DownPayload{ filename = "File doesn't exist", e_data = ""}
-                    else
-                      return DownPayload{ filename = "", e_data = ""}
-
-        -- unauthorised
-        Nothing -> return DownPayload{ filename = "", e_data = ""}
+    -- unauthorised
+    Nothing -> return DownPayload{ filename = "", e_data = ""}
 
 
 -- global logging functions

@@ -10,10 +10,11 @@ The task for this project was to discover more about the topology of a modern di
 
 ####Main Services:
 1. File Server ✔︎
-2. Directory / Locking ~
+2. Directory ✔︎
+3. Locking ~ (not completed)
 3. Registry ✔︎
 4. Auth Service ✔︎
-5. Replication ✔︎ (Partially)
+5. Replication ✔︎
 
 ####Created Libraries:
 1. `sys-api`
@@ -90,7 +91,7 @@ Request | Route | Payload | Response
 
 
 #### Replication (Within File Service)
-Though I didn't manage to compleletly finish this feature I had a good idea about how it was to work. My plan was that when a file is uploaded it would get replicated onto another file server. When a file is written, the server should contact another node to share the file for replication. When the node gets the file, it will check to see if it has the file before it attempts to save it. If it doesn't have the file, it will mark that it has gotten it, and then proceed to write the file to its own bucket. This can be imagined as form of chained replication. Each file service should be able to replicate the files until each node in the network has the file.
+For this feature I used a chain replication approach. When a file is uploaded, it would get replicated onto another file server. When a file is written, the server should contact another node to share the file for replication. When the node gets the file, it will check to see if it has the file before it attempts to save it. If it doesn't have the file, it will mark that it has gotten it, and then proceed to write the file to its own bucket. This can be imagined as form of chained. Each file service should be able to replicate the files until each node in the network has the file. This is a good to use as it means that one node doesn't hold the sole responsibility to share the file with all the other nodes in the network.
 
 #####Example
 * Images two file server nodes
@@ -114,6 +115,9 @@ Though I didn't manage to compleletly finish this feature I had a good idea abou
 * `stack setup && stack build` or
 * `stack ghci`
 * `main`
+
+####Docker
+* The database,caching services require docker to startup. Otherwise the I had issues within my resolver when trying to build docker images. In the end I exposed the ports on the db services, and then ran the other services locally.
 
 ####Conclusion:
 > The project took a bit of a lul during the Christmas period as I dedicated some time to exam preparation. Another factor that slowed me down was the use of Haskell within the project. Though it is a great language, my lack of familiarity with some paradigms and types caused me great difficulty throughout. The submitted work represents my best attempt at an implementation of a distributed file server.
