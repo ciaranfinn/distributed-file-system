@@ -90,7 +90,6 @@ replicateFile runPort file manager = do
     Nothing -> print "Registry is offline, no replication occured"
 
 
-
 -- Make a request to the registry to obtain the list of registered file servers
 findServer :: Int -> IO (Maybe Subscriber)
 findServer runPort = do
@@ -121,8 +120,7 @@ pickRandomServer runPort xs = do
   let availableNodes = filter ((runPort /=) . (port)) xs
   liftIO $ randomRIO (0, length availableNodes - 1) >>= return . (availableNodes !!)
 
-
-
+-- We will need to use this to eliminate our node when taking certian actions.
 data Important = Important {sPort :: Int}
 
 type App = ReaderT Important Handler
