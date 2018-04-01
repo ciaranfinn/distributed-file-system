@@ -56,8 +56,8 @@ Request | Route | Payload | Response
 #### Request Types
 Request | Route | Payload | Response
 --- | --- | --- | ---
-*POST* | /create | `{"email": "cifinn@tcd.ie", "password":"12345678"}` | `{"status": "5","valid": true}`
-*POST* | /login | `{"email": "cifinn@tcd.ie", "password":"12345678"}`| `{"token": "nnVzMlP92zhJEkVfsI5BrL3NlDsaP3tMlhm1nq9bazTtITrzcserBahvmCVTaSRuFL785K9r/JhPqbjYsOxMUrzQe1Q="}`
+*POST* | /create | `{"email": "example@mailsevr.com", "password":"12345678"}` | `{"status": "5","valid": true}`
+*POST* | /login | `{"email": "example@mailsevr.com", "password":"12345678"}`| `{"token": "nnVzMlP92zhJEkVfsI5BrL3NlDsaP3tMlhm1nq9bazTtITrzcserBahvmCVTaSRuFL785K9r/JhPqbjYsOxMUrzQe1Q="}`
 
 ### File Service:
 - This service provides the core functionality to the system. The service supports two actions. These actions are the storing and downloading of files. When a user uploads a file they will send the encrypted file data, contents and the session key to the RESTful endpoint. The service will then check the validity of the provided token. The system decrypts the token using the shared secret (encryption key). Once the payload is decrypted the service parses the expiry of the token and checks that it is still valid. It does this by checking if the expiry time was before the current system time. In the case the token is expired the user will be thrown out of the system and will have no rights to use the service. On the other hand the user will be allowed to carry out actions with the service.
@@ -69,7 +69,7 @@ Request | Route | Payload | Response
 Request | Route | Payload | Response
 --- | --- | --- | ---
 *POST* | /store | `{ "e_session_key":"...","path":"...","e_filedata":"..."}` | `{"saved": true,"message": "file has been saved"}`
-*POST* | /download | `{ "filepath":"/apple.txt","session_key":"nnVzMlP92zhJ.."}`| `{"e_data": "pj53LVP6l1waXkgW59Qc8M2Ax28+","filename": "..."}`
+*POST* | /download | `{ "filepath":"/file.txt","session_key":"nnVzMlP92zhJ.."}`| `{"e_data": "pj53LVP6l1waXkgW59Qc8M2Ax28+","filename": "..."}`
 
 Error Responses |
 --- |
@@ -115,7 +115,7 @@ For this feature I used a chain replication approach. When a file is uploaded, i
 * `main`
 
 #### Docker
-* The database,caching services require docker to startup. Otherwise the I had issues within my resolver when trying to build docker images. In the end I exposed the ports on the db services, and then ran the other services locally.
+* The database, caching services require docker to startup. Otherwise I had issues within my resolver when trying to build docker images. In the end I exposed the ports on the db services, and ran the other services locally.
 
 #### Conclusion:
-> The project took a bit of a lul during the Christmas period as I dedicated some time to exam preparation. Another factor that slowed me down was the use of Haskell within the project. Though it is a great language, my lack of familiarity with some paradigms and types caused me great difficulty throughout. The submitted work represents my best attempt at an implementation of a distributed file server.
+> The project took a bit of a lul during the christmas period as I dedicated time to exam preparation. The submitted work represents my best attempt at an implementation of a distributed file server.
