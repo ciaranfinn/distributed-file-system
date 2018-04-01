@@ -1,32 +1,30 @@
-## Distributed File System
+## Distributed File System  🗃
 
-Student: **Ciaran Finn (13320900)**
-
-####Task:
+#### Task:
 The task for this project was to discover more about the topology of a modern distributed system. The project focused on implementing a distributed system using REST as the messaging protocol. Throughout this project I discovered many opportunities to question why and how I was building the system. I also got to learn more about the servant library and Haskell, which was a plus.
 
-####Language of Choice:
+#### Language of Choice:
 * Haskell
 
-####Main Services:
+#### Main Services:
 1. File Server ✔︎
 2. Directory ✔︎
-3. Locking ~ (not completed)
+3. Locking ~ (need to finish)
 3. Registry ✔︎
 4. Auth Service ✔︎
 5. Replication ✔︎
 
-####Created Libraries:
+#### Created Libraries:
 1. `sys-api`
 2. `frequent`
 
 *The above two libraries help to clean up the cruft within the system. If pieces of code are frequently used they are placed into the frequent library. Otherwise all the RESTFul/Servant api code in grouped into the sys-api library. This helps to stop the repetition of functions throughout the project*
 
-####System Architecture:
+#### System Architecture:
 The model I have tried to implement within my project was primarily the [Andrew File System](https://en.wikipedia.org/wiki/Andrew_File_System) (**AFS**) model. In the AFS model its ability to scale is one of the key features. To the client, the service looks homogeneous. In reality, many nodes are servicing requests in order to create this illusion of a single service. The template I choose was a basic upload/download strategy which resided closely to the AFS model attributes. Though my implementation is different from the model, it tries its best to represent the ideas from it.
 
 
-####File System Processes
+#### File System Processes
 1. Create User
 2. Login User
 3. Obtain token
@@ -55,7 +53,7 @@ Request | Route | Payload | Response
 ### Auth Service:
 - Within this project I tried to make my authentication service as realistic as possible. The service allows for the creation of new accounts via the api. Upon creation of an account, the service hashes the users password and stores the password in a PostgreSQL database. The next action the service supports is login. When the user submits their credentials the service checks them against the database. If the credentials are successful the service will return a token to the user. This token is formed with an expiry date and the users email. The token is then encrypted and base64 encoded in order to pipe it back via a RESTful api post. The secret used for encryption is shared with the other services so that they will be able to verify the tokens authenticity. This token is needed to interact with the other services within the system. For every other call made the client is required to pass its token in each request before it is granted permission to utilize services.
 
-#####Request Types
+#### Request Types
 Request | Route | Payload | Response
 --- | --- | --- | ---
 *POST* | /create | `{"email": "cifinn@tcd.ie", "password":"12345678"}` | `{"status": "5","valid": true}`
@@ -67,7 +65,7 @@ Request | Route | Payload | Response
 - The file service stores the files in a directory on the given instance `/bucket/..`. Though I could have utilized mongodb, and stored the files as documents, I felt that this method was much easier to implement and provided the same result to the client.
 
 
-#####Request Types
+#### Request Types
 Request | Route | Payload | Response
 --- | --- | --- | ---
 *POST* | /store | `{ "e_session_key":"...","path":"...","e_filedata":"..."}` | `{"saved": true,"message": "file has been saved"}`
@@ -82,7 +80,7 @@ Error Responses |
 ### Directory Service:
 This service is responsible for the allocation of file services. At the minute the service returns a random file service to cater for the clients request. The ideal approach is to keep a record of the assignments and then assign the servers in a way that they get equal use. This will work but isn't the optimal solution to assigning the resources. The Directory service will return an encrypted file-system node.
 
-#####Request Types
+#### Request Types
 Request | Route | Payload | Response
 --- | --- | --- | ---
 *GET* | /getFSNode |`{"my_session_key":"nnVzMlP92zhJEkV.."}` | `{"node":"tiJ0LFHm3n.."}`
@@ -93,7 +91,7 @@ Request | Route | Payload | Response
 #### Replication (Within File Service)
 For this feature I used a chain replication approach. When a file is uploaded, it would get replicated onto another file server. When a file is written, the server should contact another node to share the file for replication. When the node gets the file, it will check to see if it has the file before it attempts to save it. If it doesn't have the file, it will mark that it has gotten it, and then proceed to write the file to its own bucket. This can be imagined as form of chained. Each file service should be able to replicate the files until each node in the network has the file. This is a good to use as it means that one node doesn't hold the sole responsibility to share the file with all the other nodes in the network.
 
-#####Example
+#### Example
 * Images two file server nodes
 * FILE --> FS1 --> FS2 --> FS1 --> Stop
 * File Saved to FS1
@@ -105,7 +103,7 @@ For this feature I used a chain replication approach. When a file is uploaded, i
 * Never replicate to ourself (Infinite Loops :/ )
 
 
-####Starting The Services:
+#### Starting The Services:
 1. Run the docker file to initiate the database services.
 	* Mongodb, PostgreSQL, Redis
 2. Start up the registry service as the other services will need to subscribe to this.
@@ -116,8 +114,8 @@ For this feature I used a chain replication approach. When a file is uploaded, i
 * `stack ghci`
 * `main`
 
-####Docker
+#### Docker
 * The database,caching services require docker to startup. Otherwise the I had issues within my resolver when trying to build docker images. In the end I exposed the ports on the db services, and then ran the other services locally.
 
-####Conclusion:
+#### Conclusion:
 > The project took a bit of a lul during the Christmas period as I dedicated some time to exam preparation. Another factor that slowed me down was the use of Haskell within the project. Though it is a great language, my lack of familiarity with some paradigms and types caused me great difficulty throughout. The submitted work represents my best attempt at an implementation of a distributed file server.
